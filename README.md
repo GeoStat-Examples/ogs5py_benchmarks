@@ -15,6 +15,7 @@ The following were skipped:
 + `uc_pris`    GLI not valid (SRF not present for VOLUME)
 + `brand_m1_l1`    GLI not valid (TIN and Polylines at the same time[?])
 + `2d_h_us_line_Warrick`    lonesome mmp
++ `model_1`    $AREA in msh (not supported by ogs5py)
 
 The following benchmarks have multiple sub keywords in some files, which is
 not convertable to a ogs5py script at the moment. Therefore the following are skipped as well:
@@ -33,10 +34,13 @@ not convertable to a ogs5py script at the moment. Therefore the following are sk
 Generation
 ----------
 
-+ The scripts were generated with the python script
-      gen_benchmark_scripts.py
-+ You can run all generated scripts for testing with the python script
-      run_ogs5py_scripts.py
+The scripts were generated with the python script
+
+        gen_benchmark_scripts.py
+        
+You can run all generated scripts for testing with the python script
+ 
+        run_ogs5py_scripts.py
 
 
 Created January 2019, Copyright Sebastian Müller 2019
