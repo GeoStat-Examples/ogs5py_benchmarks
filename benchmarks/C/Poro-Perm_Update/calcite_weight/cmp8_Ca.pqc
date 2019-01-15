@@ -1,0 +1,28 @@
+SOLUTION 0
+units mol/kgw 
+temp 25.000000 
+pH   7.06      charge  # comp 1
+pe   4.0         # comp 8
+Ca   0.0         # comp 2
+Na   0.0         # comp
+Cl   2.00e-3     # comp 4
+C(4) 0.0         # comp 5
+#ende
+EQUILIBRIUM_PHASES 0
+Calcite    0.0 0.0 # comp 6
+#ende
+PRINT
+ -reset true
+ -selected_output true
+#ende
+SELECTED_OUTPUT
+-file phout_sel.dat
+-high_precision
+-reset false
+#ende
+USER_PUNCH 
+20 PUNCH TOT("Ca"), TOT("Mg"), TOT("Cl"), TOT("C(4)")
+30 PUNCH -LA("H+"), -LA("e-") 
+70 PUNCH MOL("Calcite"), MOL("Dolomite")
+#ende
+ END

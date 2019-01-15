@@ -1,0 +1,120 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0
+1 1000.0 87.49 0.0
+2 1000.0 -87.49 0.0
+3 0.0 0.0 -1.0
+4 1000.0 87.49 -1.0
+5 1000.0 -87.49 -1.0
+6 9.639 0.0 0.0 $NAME OBS1
+7 9.639 0.0 -1.0 $NAME OBS2
+#POLYLINE
+  $NAME
+   WELL
+  $POINTS
+   3
+   0
+#POLYLINE
+  $NAME
+   L
+  $POINTS
+   4
+   1
+#POLYLINE
+  $NAME
+   T
+  $POINTS
+   1
+   2
+#POLYLINE
+  $NAME
+   R
+  $POINTS
+   2
+   5
+#POLYLINE
+  $NAME
+   D
+  $POINTS
+   5
+   4
+#POLYLINE
+  $NAME
+   POLYGON_B
+  $POINTS
+   4
+   1
+   2
+   5
+   4
+#POLYLINE
+  $NAME
+   POLYGON_T
+  $POINTS
+   0
+   1
+   2
+   0
+#POLYLINE
+  $NAME
+   POLYGON_D
+  $POINTS
+   3
+   4
+   5
+   3
+#POLYLINE
+  $NAME
+   POLYGON_L
+  $POINTS
+   3
+   0
+   1
+   4
+   3
+#POLYLINE
+  $NAME
+   POLYGON_R
+  $POINTS
+   3
+   0
+   2
+   5
+   3
+#SURFACE
+  $NAME
+   INFINIT
+  $TYPE
+   0
+  $POLYLINES
+   POLYGON_B
+#SURFACE
+  $NAME
+   S_T
+  $TYPE
+   0
+  $POLYLINES
+   POLYGON_T
+#SURFACE
+  $NAME
+   S_D
+  $TYPE
+   0
+  $POLYLINES
+   POLYGON_D
+#SURFACE
+  $NAME
+   S_L
+  $TYPE
+   0
+  $POLYLINES
+   POLYGON_L
+#SURFACE
+  $NAME
+   S_R
+  $TYPE
+   0
+  $POLYLINES
+   POLYGON_R
+#STOP
+|-- Written with ogs5py (0.5.0rc1) on: 2019-01-15_16-49-41 --|

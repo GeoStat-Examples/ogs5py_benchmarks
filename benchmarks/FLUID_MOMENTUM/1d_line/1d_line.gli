@@ -1,0 +1,20 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0 $NAME BC_LEFT $MD 0.0
+1 100.0 0.0 0.0 $NAME BC_RIGHT $MD 0.0
+#POLYLINE
+  $ID
+   0
+  $NAME
+   LINE
+  $TYPE
+   2
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   -1
+  $POINTS
+   0
+   1
+#STOP
+|-- Written with ogs5py (0.5.0rc1) on: 2019-01-15_16-49-41 --|

@@ -1,0 +1,1116 @@
+1 HT - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/HT/ht_frac_line3D
+OK...loading successfull
+2 COUPLED_FLOW - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/COUPLED_FLOW/Wool_lines_coup
+OK...loading successfull
+3 COUPLED_FLOW - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/COUPLED_FLOW/abdulLab
+OK...loading successfull
+4 COUPLED_FLOW - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/COUPLED_FLOW/abdul
+OK...loading successfull
+5 TH2M - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/TH2M/th2m_quad
+OK...loading successfull
+6 PETSc - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/Richards
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc
+7 OVERLAND_FLOW - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/OVERLAND_FLOW/gian_quad
+OK...loading successfull
+8 OVERLAND_FLOW - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/OVERLAND_FLOW/govin_quad
+OK...loading successfull
+9 OVERLAND_FLOW - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/OVERLAND_FLOW/Wool_quad
+OK...loading successfull
+10 OVERLAND_FLOW - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/OVERLAND_FLOW/gian_tri
+OK...loading successfull
+11 OVERLAND_FLOW - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/OVERLAND_FLOW/govin_line
+OK...loading successfull
+12 C - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/calcite_ChemApp
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C
+13 C - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/1D_isofrac
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C
+14 C - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/calcite_pqc
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C
+15 C - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/FG_3ports
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C
+16 C - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/calcite_gems
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C
+17 GUI - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/SMART_stations
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI
+18 GUI - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/SMART_min_mean_max
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI
+19 RWPT - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/RWPT/2DGrains
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/RWPT
+20 MPI - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/MPI/m_sdc
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/MPI
+21 H - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/h_frac
+OK...loading successfull
+22 H - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/h_frac_line2D
+OK...loading successfull
+23 H - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/Theis
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (Theis) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H
+24 H - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/h_frac_line2d
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (h_frac_line2d) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H
+25 TCR - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/TCR/Temperature_Disp
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/TCR
+26 H2 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/LabGasInjec
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2
+27 H2 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/Liakopoulos
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2
+28 M - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_cc_tri_s
+OK...loading successfull
+29 M - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_e_transiso_2D
+OK...loading successfull
+30 M - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_ssy_quad
+OK...loading successfull
+31 M - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_mises
+OK...loading successfull
+32 M - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_brick_l
+OK...loading successfull
+33 M - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_drift_init
+OK...loading successfull
+34 M - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_sdc
+OK...loading successfull
+35 M - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/3D_oedometer_mohr_coulomb
+OK...loading successfull
+36 M - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_excav
+OK...loading successfull
+37 M - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_drift
+OK...loading successfull
+38 M - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_triax_lubby1
+OK...loading successfull
+39 M - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/creep
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (creep) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M
+40 M - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_cc_quad_s
+OK...loading successfull
+41 M - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/AnisoPlas
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (AnisoPlas) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M
+42 TM - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/TM/tm_02_3Du
+OK...loading successfull
+43 TM - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/TM/tm_01_3Du
+OK...loading successfull
+44 TM - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/TM/tm3d
+OK...loading successfull
+45 TM - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/TM/TM_axi
+OK...loading successfull
+46 TM - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/TM/tm2d
+OK...loading successfull
+47 H_ELE - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_ELE/h_ele
+OK...loading successfull
+48 T - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/T_1D_axi
+OK...loading successfull
+49 T - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/t_tri
+OK...loading successfull
+50 T - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/2units2faults
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (2units2faults) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T
+51 T - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Ogata-Banks
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (Ogata-Banks) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T
+52 T - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Vgl Ergebnisse analytisch
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (Vgl Ergebnisse analytisch) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T
+53 GROUNDWATER_FLOW - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GROUNDWATER_FLOW/uc_tri
+OK...loading successfull
+54 GROUNDWATER_FLOW - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GROUNDWATER_FLOW/riv1_hex
+OK...loading successfull
+55 GROUNDWATER_FLOW - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GROUNDWATER_FLOW/uc_quad
+OK...loading successfull
+56 GROUNDWATER_FLOW - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GROUNDWATER_FLOW/q_hex
+OK...loading successfull
+57 GROUNDWATER_FLOW - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GROUNDWATER_FLOW/riv2_hex
+OK...loading successfull
+58 GROUNDWATER_FLOW - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GROUNDWATER_FLOW/q_quad
+OK...loading successfull
+59 GROUNDWATER_FLOW - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GROUNDWATER_FLOW/riv1_quad
+OK...loading successfull
+60 GROUNDWATER_FLOW - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GROUNDWATER_FLOW/riv1_pris
+OK...loading successfull
+61 GROUNDWATER_FLOW - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GROUNDWATER_FLOW/Dokumentation
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (Dokumentation) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GROUNDWATER_FLOW
+62 THM - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/THM/thm_decov
+OK...loading successfull
+63 THM - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/THM/thm_decov.little-endian-32bit
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (thm_decov.little-endian-32bit) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/THM
+64 THM - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/THM/thm_decov.little-endian-64bit
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (thm_decov.little-endian-64bit) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/THM
+65 H2M - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2M/fivespot
+OK...loading successfull
+66 HM - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/HM/hm_cc_tri_s
+OK...loading successfull
+67 HM - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/HM/hm_foot_tri
+OK...loading successfull
+68 HM - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/HM/hm_dyn_tri
+OK...loading successfull
+69 HM - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/HM/hm_foot_tet
+OK...loading successfull
+70 HM - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/HM/hm_unsat
+OK...loading successfull
+71 HM - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/HM/hm_tri
+OK...loading successfull
+72 HM - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/HM/hm_foot_tet_DEFORMATION_FLOW_ST_RHS
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (hm_foot_tet_DEFORMATION_FLOW_ST_RHS) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/HM
+73 NUMERICS/SUPG - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/NUMERICS/SUPG/T_adv_diff_transient_SUPG_line
+OK...loading successfull
+74 NUMERICS/SUPG - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/NUMERICS/SUPG/T_adv_diff_steady_SUPG_line
+OK...loading successfull
+75 NUMERICS/FEM_FCT - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/NUMERICS/FEM_FCT/mass_adv_line
+OK...loading successfull
+76 NUMERICS/DISCRETE_FEATURES/InclinedFeature - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/NUMERICS/DISCRETE_FEATURES/InclinedFeature/H_incline_45r_quad
+OK...loading successfull
+77 NUMERICS/DISCRETE_FEATURES/InclinedFeature - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/NUMERICS/DISCRETE_FEATURES/InclinedFeature/H_incline_45r_line
+OK...loading successfull
+78 NUMERICS/DISCRETE_FEATURES/Lauwerier - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/NUMERICS/DISCRETE_FEATURES/Lauwerier/Lauwerier
+OK...loading successfull
+79 NUMERICS/DISCRETE_FEATURES/FractureNetwork - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/NUMERICS/DISCRETE_FEATURES/FractureNetwork/tracer_2.5D_kluefte
+OK...loading successfull
+80 NUMERICS/DISCRETE_FEATURES/FractureNetwork - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/NUMERICS/DISCRETE_FEATURES/FractureNetwork/TH_3D_fracture_matrix
+OK...loading successfull
+81 TH2M/Newton - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/TH2M/Newton/th2m_quad
+OK...loading successfull
+82 TH2M/H2M_TEP - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/TH2M/H2M_TEP/w_exp
+OK...loading successfull
+83 TH2M/JFNK - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/TH2M/JFNK/th2m_quad
+OK...loading successfull
+84 MULTIPHASE/BuckleyLeverett - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/MULTIPHASE/BuckleyLeverett/h2_line
+OK...loading successfull
+85 MULTIPHASE/McWhorterProblem - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/MULTIPHASE/McWhorterProblem/h2_line
+OK...loading successfull
+86 MULTIPHASE/KueperProblem-PS - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/MULTIPHASE/KueperProblem-PS/kueper
+OK...loading successfull
+87 MULTIPHASE/KueperProblem-PcPnw - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/MULTIPHASE/KueperProblem-PcPnw/kueper
+OK...loading successfull
+88 PETSc/tm1_3Dorigin - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/tm1_3Dorigin/tm1_3Dorigin
+OK...loading successfull
+89 PETSc/th2m - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/th2m/th2m_quad
+OK...loading successfull
+90 PETSc/h_tri - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/h_tri/h_tri
+OK...loading successfull
+91 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_m_bIC_gem_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_m_bIC_gem_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+92 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_5-Cl_primary_value_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_5-Cl_primary_value_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+93 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_7-H_primary_value_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_7-H_primary_value_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+94 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_11-Na_primary_value_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_11-Na_primary_value_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+95 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_2-Ba_primary_value_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_2-Ba_primary_value_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+96 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_3-C_primary_value_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_3-C_primary_value_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+97 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_1-Al_primary_value_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_1-Al_primary_value_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+98 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_15-Sr_primary_value_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_15-Sr_primary_value_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+99 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_m_bIC_gem_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_m_bIC_gem_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+100 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_m_porosity_gem_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_m_porosity_gem_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+101 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_6-Fe_primary_value_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_6-Fe_primary_value_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+102 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_16-Zz_primary_value_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_16-Zz_primary_value_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+103 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_13-S_primary_value_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_13-S_primary_value_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+104 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_3-C_primary_value_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_3-C_primary_value_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+105 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_RICHARDS_FLOW_PRESSURE1_primary_value_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_RICHARDS_FLOW_PRESSURE1_primary_value_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+106 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_9-K_primary_value_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_9-K_primary_value_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+107 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_13-S_primary_value_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_13-S_primary_value_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+108 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_12-O_primary_value_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_12-O_primary_value_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+109 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_16-Zz_primary_value_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_16-Zz_primary_value_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+110 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_6-Fe_primary_value_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_6-Fe_primary_value_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+111 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_6-Fe_primary_value_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_6-Fe_primary_value_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+112 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_7-H_primary_value_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_7-H_primary_value_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+113 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_15-Sr_primary_value_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_15-Sr_primary_value_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+114 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_m_xDC_gem_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_m_xDC_gem_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+115 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_m_porosity_gem_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_m_porosity_gem_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+116 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_4-Ca_primary_value_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_4-Ca_primary_value_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+117 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_10-Mg_primary_value_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_10-Mg_primary_value_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+118 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_m_porosity_gem_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_m_porosity_gem_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+119 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_RICHARDS_FLOW_PRESSURE1_primary_value_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_RICHARDS_FLOW_PRESSURE1_primary_value_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+120 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_4-Ca_primary_value_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_4-Ca_primary_value_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+121 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_7-H_primary_value_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_7-H_primary_value_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+122 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_14-Si_primary_value_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_14-Si_primary_value_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+123 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_12-O_primary_value_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_12-O_primary_value_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+124 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_9-K_primary_value_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_9-K_primary_value_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+125 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_5-Cl_primary_value_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_5-Cl_primary_value_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+126 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_12-O_primary_value_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_12-O_primary_value_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+127 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_4-Ca_primary_value_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_4-Ca_primary_value_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+128 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_5-Cl_primary_value_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_5-Cl_primary_value_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+129 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_time_gem_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_time_gem_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+130 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_10-Mg_primary_value_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_10-Mg_primary_value_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+131 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_8-Inrt_primary_value_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_8-Inrt_primary_value_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+132 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_time_gem_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_time_gem_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+133 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_9-K_primary_value_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_9-K_primary_value_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+134 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_16-Zz_primary_value_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_16-Zz_primary_value_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+135 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_14-Si_primary_value_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_14-Si_primary_value_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+136 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_m_fluid_volume_gem_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_m_fluid_volume_gem_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+137 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_5-Cl_primary_value_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_5-Cl_primary_value_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+138 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_7-H_primary_value_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_7-H_primary_value_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+139 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_16-Zz_primary_value_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_16-Zz_primary_value_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+140 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_11-Na_primary_value_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_11-Na_primary_value_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+141 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_13-S_primary_value_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_13-S_primary_value_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+142 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_14-Si_primary_value_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_14-Si_primary_value_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+143 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_6-Fe_primary_value_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_6-Fe_primary_value_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+144 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_m_xDC_gem_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_m_xDC_gem_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+145 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_3-C_primary_value_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_3-C_primary_value_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+146 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_m_xDC_gem_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_m_xDC_gem_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+147 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_11-Na_primary_value_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_11-Na_primary_value_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+148 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_m_bIC_gem_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_m_bIC_gem_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+149 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_11-Na_primary_value_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_11-Na_primary_value_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+150 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_RICHARDS_FLOW_PRESSURE1_primary_value_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_RICHARDS_FLOW_PRESSURE1_primary_value_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+151 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_RICHARDS_FLOW_PRESSURE1_primary_value_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_RICHARDS_FLOW_PRESSURE1_primary_value_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+152 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_m_fluid_volume_gem_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_m_fluid_volume_gem_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+153 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_9-K_primary_value_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_9-K_primary_value_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+154 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_8-Inrt_primary_value_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_8-Inrt_primary_value_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+155 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_1-Al_primary_value_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_1-Al_primary_value_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+156 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_time_gem_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_time_gem_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+157 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_3-C_primary_value_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_3-C_primary_value_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+158 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_12-O_primary_value_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_12-O_primary_value_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+159 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_2-Ba_primary_value_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_2-Ba_primary_value_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+160 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_m_bIC_gem_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_m_bIC_gem_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+161 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_m_fluid_volume_gem_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_m_fluid_volume_gem_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+162 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_15-Sr_primary_value_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_15-Sr_primary_value_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+163 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_m_fluid_volume_gem_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_m_fluid_volume_gem_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+164 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_2-Ba_primary_value_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_2-Ba_primary_value_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+165 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_10-Mg_primary_value_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_10-Mg_primary_value_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+166 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_1-Al_primary_value_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_1-Al_primary_value_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+167 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_time_gem_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_time_gem_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+168 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_14-Si_primary_value_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_14-Si_primary_value_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+169 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_8-Inrt_primary_value_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_8-Inrt_primary_value_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+170 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_13-S_primary_value_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_13-S_primary_value_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+171 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_1-Al_primary_value_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_1-Al_primary_value_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+172 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_4-Ca_primary_value_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_4-Ca_primary_value_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+173 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_2-Ba_primary_value_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_2-Ba_primary_value_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+174 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_15-Sr_primary_value_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_15-Sr_primary_value_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+175 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_m_xDC_gem_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_m_xDC_gem_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+176 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_10-Mg_primary_value_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_10-Mg_primary_value_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+177 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_m_porosity_gem_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_m_porosity_gem_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+178 PETSc/TransLay2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d/lag2d_MASS_TRANSPORT_8-Inrt_primary_value_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (lag2d_MASS_TRANSPORT_8-Inrt_primary_value_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/TransLay2d
+179 PETSc/m_tri - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/m_tri/m_tri
+OK...loading successfull
+180 PETSc/m1_3Dload - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/m1_3Dload/m1_3Dload
+OK...loading successfull
+181 PETSc/Richards - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/Richards/h_us_quad
+OK...loading successfull
+182 PETSc/hm1_1Dbeam - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/hm1_1Dbeam/hm1_1Dbeam
+OK...loading successfull
+183 PETSc/T_tri - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/T_tri/t_tri
+OK...loading successfull
+184 PETSc/hm_tri - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/hm_tri/hm_tri
+OK...loading successfull
+185 PETSc/KueperProblem-PS - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/KueperProblem-PS/kueper
+OK...loading successfull
+186 PETSc/McWhorter - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/PETSc/McWhorter/mcwt
+OK...loading successfull
+187 T2HC/Convection_2D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T2HC/Convection_2D/conv_2D_cart
+OK...loading successfull
+188 T2HC/Convection_2D_axi - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T2HC/Convection_2D_axi/conv_2D_axi
+OK...loading successfull
+189 T2HC/heat_of_reaction - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T2HC/heat_of_reaction/reaction_heat
+OK...loading successfull
+190 T2HC/friction - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T2HC/friction/Friction_test
+OK...loading successfull
+191 T2HC/heat_transfer - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T2HC/heat_transfer/heat_transfer
+OK...loading successfull
+192 C/1D_isofrac - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/1D_isofrac/1d_isofrac
+OK...loading successfull
+193 C/1D_isofrac - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/1D_isofrac/1d_isofrac_AS
+OK...loading successfull
+194 C/ion_exchange - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/ion_exchange/pqc1
+OK...loading successfull
+195 C/1d_TCEaufEisen - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/1d_TCEaufEisen/1d_TCE_Ion
+OK...loading successfull
+196 C/ChemAppCoupling - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/ChemAppCoupling/slow_kin_cap_act_precalc
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/ChemAppCoupling
+197 C/monod - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/monod/rt1
+OK...loading successfull
+198 C/1d_degradation_network - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/1d_degradation_network/ce
+OK...loading successfull
+199 C/FG_3ports - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/FG_3ports/rt1
+OK...loading successfull
+200 C/comedy2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/cement2d_MASS_TRANSPORT_3-Cl_primary_value
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (cement2d_MASS_TRANSPORT_3-Cl_primary_value) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d
+201 C/comedy2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/cement2d_MASS_TRANSPORT_9-Zz_primary_value
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (cement2d_MASS_TRANSPORT_9-Zz_primary_value) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d
+202 C/comedy2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/cement2d_MASS_TRANSPORT_8-Si_primary_value
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (cement2d_MASS_TRANSPORT_8-Si_primary_value) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d
+203 C/comedy2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/cement2d_MASS_TRANSPORT_1-C_primary_value
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (cement2d_MASS_TRANSPORT_1-C_primary_value) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d
+204 C/comedy2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/cement2d_m_xDC_gem
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (cement2d_m_xDC_gem) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d
+205 C/comedy2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/cement2d_time_gem
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (cement2d_time_gem) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d
+206 C/comedy2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/cement2d_m_porosity_gem
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (cement2d_m_porosity_gem) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d
+207 C/comedy2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/cement2d_MASS_TRANSPORT_7-Oxa_primary_value
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (cement2d_MASS_TRANSPORT_7-Oxa_primary_value) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d
+208 C/comedy2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/cement2d_MASS_TRANSPORT_2-Ca_primary_value
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (cement2d_MASS_TRANSPORT_2-Ca_primary_value) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d
+209 C/comedy2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/cement2d_m_fluid_volume_gem
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (cement2d_m_fluid_volume_gem) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d
+210 C/comedy2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/cement2d_m_bIC_gem
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (cement2d_m_bIC_gem) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d
+211 C/comedy2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/cement2d_MASS_TRANSPORT_6-O_primary_value
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (cement2d_MASS_TRANSPORT_6-O_primary_value) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d
+212 C/comedy2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/cement2d_GROUNDWATER_FLOW_HEAD_primary_value
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (cement2d_GROUNDWATER_FLOW_HEAD_primary_value) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d
+213 C/comedy2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/cement2d_MASS_TRANSPORT_5-Na_primary_value
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (cement2d_MASS_TRANSPORT_5-Na_primary_value) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d
+214 C/comedy2d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/cement2d_MASS_TRANSPORT_4-H_primary_value
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (cement2d_MASS_TRANSPORT_4-H_primary_value) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d
+215 C/sorption - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/sorption/Vgl GS_RF Sorp Ergebnisse
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/sorption
+216 C/sorption - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/sorption/Vgl Ergebnisse Sorption
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/sorption
+217 C/calcite_ChemApp - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/calcite_ChemApp/eq
+OK...loading successfull
+218 C/HAYEKIT - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT/ab1d
+OK...loading successfull
+219 C/HAYEKIT - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT/ab1d_MASS_TRANSPORT_6-Zz_primary_value
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (ab1d_MASS_TRANSPORT_6-Zz_primary_value) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT
+220 C/HAYEKIT - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT/ab1d_MASS_TRANSPORT_5-O_primary_value
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (ab1d_MASS_TRANSPORT_5-O_primary_value) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT
+221 C/HAYEKIT - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT/ab1d_m_xDC_gem
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (ab1d_m_xDC_gem) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT
+222 C/HAYEKIT - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT/ab1d_m_porosity_gem
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (ab1d_m_porosity_gem) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT
+223 C/HAYEKIT - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT/ab1d_MASS_TRANSPORT_3-H_primary_value
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (ab1d_MASS_TRANSPORT_3-H_primary_value) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT
+224 C/HAYEKIT - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT/ab1d_m_bIC_gem
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (ab1d_m_bIC_gem) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT
+225 C/HAYEKIT - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT/ab1d_m_fluid_volume_gem
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (ab1d_m_fluid_volume_gem) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT
+226 C/HAYEKIT - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT/ab1d_MASS_TRANSPORT_1-Ael_primary_value
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (ab1d_MASS_TRANSPORT_1-Ael_primary_value) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT
+227 C/HAYEKIT - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT/ab1d_MASS_TRANSPORT_4-Inrt_primary_value
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (ab1d_MASS_TRANSPORT_4-Inrt_primary_value) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT
+228 C/HAYEKIT - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT/ab1d_GROUNDWATER_FLOW_HEAD_primary_value
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (ab1d_GROUNDWATER_FLOW_HEAD_primary_value) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT
+229 C/HAYEKIT - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT/ab1d_MASS_TRANSPORT_2-Bel_primary_value
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (ab1d_MASS_TRANSPORT_2-Bel_primary_value) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT
+230 C/HAYEKIT - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT/ab1d_time_gem
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (ab1d_time_gem) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT
+231 C/calcite_pqc - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/calcite_pqc/pds
+OK...loading successfull
+232 C/NAPL-dissolution - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_trans
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution
+233 C/sorption_decay - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/sorption_decay/HC_decay_sorp_henry_1Du
+OK...loading successfull
+234 C/1d_xylene_degradation - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/1d_xylene_degradation/h2_line
+OK...loading successfull
+235 C/2d_analyt - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/2d_analyt/2d_1
+OK...loading successfull
+236 C/diffusion - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/diffusion/diff_aniso
+OK...loading successfull
+237 C/diffusion - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/diffusion/Diff_HTO_test
+OK...loading successfull
+238 C/1d_analyt - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/1d_analyt/1d_1
+OK...loading successfull
+239 C/decay - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/decay/HC_decay_1Du
+OK...loading successfull
+240 C/calcite_gems - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/calcite_gems/calcite
+OK...loading successfull
+241 C/calcite_gems - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/calcite_gems/calcite.gem
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (calcite.gem) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/calcite_gems
+242 C/matrix_diffusion/OGS_vs_PICNIC - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/matrix_diffusion/OGS_vs_PICNIC/mdif
+OK...loading successfull
+243 C/matrix_diffusion/OGS_vs_PICNIC - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/matrix_diffusion/OGS_vs_PICNIC/mdif_time_POINT555_MASS_TRANSPORT_md-sorption
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (mdif_time_POINT555_MASS_TRANSPORT_md-sorption) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/matrix_diffusion/OGS_vs_PICNIC
+244 C/matrix_diffusion/OGS_vs_PICNIC - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/matrix_diffusion/OGS_vs_PICNIC/mdif_time_POINT555_MASS_TRANSPORT_ade
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (mdif_time_POINT555_MASS_TRANSPORT_ade) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/matrix_diffusion/OGS_vs_PICNIC
+245 C/matrix_diffusion/OGS_vs_PICNIC - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/matrix_diffusion/OGS_vs_PICNIC/mdif_time_POINT555_MASS_TRANSPORT_md
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (mdif_time_POINT555_MASS_TRANSPORT_md) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/matrix_diffusion/OGS_vs_PICNIC
+246 C/Engesgaard/Additional_pqc_output - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Engesgaard/Additional_pqc_output/pds
+OK...loading successfull
+247 C/Engesgaard/2Kin - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Engesgaard/2Kin/slow_kin_pqc_krc
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Engesgaard/2Kin
+248 C/Engesgaard/2Kin - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Engesgaard/2Kin/slow_kin_pqc
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Engesgaard/2Kin
+249 C/Engesgaard/Kin - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Engesgaard/Kin/slow_kin_pqc_krc
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Engesgaard/Kin
+250 C/Engesgaard/Kin - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Engesgaard/Kin/fast_kin_pqc_krc
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Engesgaard/Kin
+251 C/Engesgaard/Kin - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Engesgaard/Kin/slow_kin_pqc
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Engesgaard/Kin
+252 C/Engesgaard/Kin - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Engesgaard/Kin/fast_kin_pqc
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Engesgaard/Kin
+253 C/Engesgaard/equi/calcite_pqc_volume - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Engesgaard/equi/calcite_pqc_volume/pds
+OK...loading successfull
+254 C/Engesgaard/equi/calcite_pqc_weight - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Engesgaard/equi/calcite_pqc_weight/pds
+OK...loading successfull
+255 C/Engesgaard/2Kin/slow_kin_pqc_krc - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Engesgaard/2Kin/slow_kin_pqc_krc/pds
+OK...loading successfull
+256 C/Engesgaard/2Kin/slow_kin_pqc - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Engesgaard/2Kin/slow_kin_pqc/pds
+OK...loading successfull
+257 C/Engesgaard/Kin/slow_kin_pqc_krc - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Engesgaard/Kin/slow_kin_pqc_krc/pds
+OK...loading successfull
+258 C/Engesgaard/Kin/fast_kin_pqc_krc - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Engesgaard/Kin/fast_kin_pqc_krc/pds
+OK...loading successfull
+259 C/Engesgaard/Kin/slow_kin_pqc - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Engesgaard/Kin/slow_kin_pqc/pds
+OK...loading successfull
+260 C/Engesgaard/Kin/fast_kin_pqc - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Engesgaard/Kin/fast_kin_pqc/pds
+OK...loading successfull
+261 C/IPhreeqcCoupling/isotope_fractionation - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/IPhreeqcCoupling/isotope_fractionation/1d_isofrac
+OK...loading successfull
+262 C/ChemAppCoupling/Wagrien_BatchEqui_PVLE_CAP - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/ChemAppCoupling/Wagrien_BatchEqui_PVLE_CAP/wagrien_1D
+OK...loading successfull
+263 C/ChemAppCoupling/cation_exchange - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/ChemAppCoupling/cation_exchange/cmp9
+OK...loading successfull
+264 C/ChemAppCoupling/slow_kin_cap_act_precalc - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/ChemAppCoupling/slow_kin_cap_act_precalc/cmp8
+OK...loading successfull
+265 C/Poro-Perm_Update/calcite_vol - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Poro-Perm_Update/calcite_vol/cmp8_Ca
+OK...loading successfull
+266 C/Poro-Perm_Update/calcite_vol - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Poro-Perm_Update/calcite_vol/conc
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (conc) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Poro-Perm_Update/calcite_vol
+267 C/Poro-Perm_Update/calcite_vol - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Poro-Perm_Update/calcite_vol/poro
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (poro) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Poro-Perm_Update/calcite_vol
+268 C/Poro-Perm_Update/Lagneau_Diffusion - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Poro-Perm_Update/Lagneau_Diffusion/pds
+OK...loading successfull
+269 C/Poro-Perm_Update/Lagneau_Diffusion - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Poro-Perm_Update/Lagneau_Diffusion/analyt
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (analyt) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Poro-Perm_Update/Lagneau_Diffusion
+270 C/Poro-Perm_Update/Lagneau_Batch - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Poro-Perm_Update/Lagneau_Batch/pds
+OK...loading successfull
+271 C/Poro-Perm_Update/Lagneau_Batch - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Poro-Perm_Update/Lagneau_Batch/analyt_poro
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (analyt_poro) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Poro-Perm_Update/Lagneau_Batch
+272 C/Poro-Perm_Update/Lagneau_Batch - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Poro-Perm_Update/Lagneau_Batch/analyt
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (analyt) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Poro-Perm_Update/Lagneau_Batch
+273 C/Poro-Perm_Update/calcite_weight - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Poro-Perm_Update/calcite_weight/cmp8_Ca
+OK...loading successfull
+274 C/Poro-Perm_Update/calcite_weight - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Poro-Perm_Update/calcite_weight/conc
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (conc) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Poro-Perm_Update/calcite_weight
+275 C/Poro-Perm_Update/calcite_weight - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Poro-Perm_Update/calcite_weight/poro
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (poro) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/Poro-Perm_Update/calcite_weight
+276 C/ReactDeact/1D_isofrac_deac3 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/ReactDeact/1D_isofrac_deac3/1d_isofrac
+OK...loading successfull
+277 C/ReactDeact/1D_isofrac_deac3 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/ReactDeact/1D_isofrac_deac3/1d_isofrac_AS
+OK...loading successfull
+278 C/ReactDeact/FG_3ports_deac_3 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/ReactDeact/FG_3ports_deac_3/rt1
+OK...loading successfull
+279 C/ReactDeact/1D_isofrac_deac2 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/ReactDeact/1D_isofrac_deac2/1d_isofrac
+OK...loading successfull
+280 C/ReactDeact/1D_isofrac_deac2 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/ReactDeact/1D_isofrac_deac2/1d_isofrac_AS
+OK...loading successfull
+281 C/ReactDeact/1D_isofrac_deac1 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/ReactDeact/1D_isofrac_deac1/1d_isofrac
+OK...loading successfull
+282 C/ReactDeact/1D_isofrac_deac1 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/ReactDeact/1D_isofrac_deac1/1d_isofrac_AS
+OK...loading successfull
+283 C/comedy2d/RESTART - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART/cement2d_MASS_TRANSPORT_3-Cl_primary_value
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART
+284 C/comedy2d/RESTART - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART/cement2d_MASS_TRANSPORT_9-Zz_primary_value
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART
+285 C/comedy2d/RESTART - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART/cement2d_MASS_TRANSPORT_8-Si_primary_value
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART
+286 C/comedy2d/RESTART - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART/cement2d_MASS_TRANSPORT_1-C_primary_value
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART
+287 C/comedy2d/RESTART - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART/cement2d_m_xDC_gem
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART
+288 C/comedy2d/RESTART - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART/cement2d_time_gem
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART
+289 C/comedy2d/RESTART - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART/cement2d_m_porosity_gem
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART
+290 C/comedy2d/RESTART - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART/cement2d_MASS_TRANSPORT_7-Oxa_primary_value
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART
+291 C/comedy2d/RESTART - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART/cement2d_MASS_TRANSPORT_2-Ca_primary_value
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART
+292 C/comedy2d/RESTART - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART/cement2d_m_fluid_volume_gem
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART
+293 C/comedy2d/RESTART - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART/cement2d_m_bIC_gem
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART
+294 C/comedy2d/RESTART - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART/cement2d_MASS_TRANSPORT_6-O_primary_value
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART
+295 C/comedy2d/RESTART - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART/cement2d_GROUNDWATER_FLOW_HEAD_primary_value
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART
+296 C/comedy2d/RESTART - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART/cement2d_MASS_TRANSPORT_5-Na_primary_value
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART
+297 C/comedy2d/RESTART - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART/cement2d_MASS_TRANSPORT_4-H_primary_value
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/comedy2d/RESTART
+298 C/sorption/Freundlich - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/sorption/Freundlich/HC_sorp_Freundl_1D
+OK...loading successfull
+299 C/sorption/Langmuir - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/sorption/Langmuir/HC_sorp_langmuir_1D
+OK...loading successfull
+300 C/sorption/Henry - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/sorption/Henry/HC_sorp_henry_1D
+OK...loading successfull
+301 C/HAYEKIT/START - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT/START/setup-OGSGEMS
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/HAYEKIT/START
+302 C/NAPL-dissolution/1D_NAPL-diss_dissolution - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_dissolution/1D_TPF_resS_trans
+OK...loading successfull
+303 C/NAPL-dissolution/1D_NAPL-diss_flow/lin - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_flow/lin/1D_TPF_resS_flow
+OK...loading successfull
+304 C/NAPL-dissolution/1D_NAPL-diss_flow/pri - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_flow/pri/1D_TPF_resS_flow
+OK...loading successfull
+305 C/NAPL-dissolution/1D_NAPL-diss_flow/quad - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_flow/quad/1D_TPF_resS_flow
+OK...loading successfull
+306 C/NAPL-dissolution/1D_NAPL-diss_flow/tri - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_flow/tri/1D_TPF_resS_flow
+OK...loading successfull
+307 C/NAPL-dissolution/1D_NAPL-diss_flow/hex - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_flow/hex/1D_TPF_resS_flow
+OK...loading successfull
+308 C/NAPL-dissolution/1D_NAPL-diss_flow/tet - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_flow/tet/1D_TPF_resS_flow
+OK...loading successfull
+309 C/NAPL-dissolution/1D_NAPL-diss_trans/lin - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_trans/lin/1D_TPF_resS_trans
+OK...loading successfull
+310 C/NAPL-dissolution/1D_NAPL-diss_trans/pri - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_trans/pri/1D_TPF_resS_trans
+OK...loading successfull
+311 C/NAPL-dissolution/1D_NAPL-diss_trans/quad - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_trans/quad/1D_TPF_resS_trans
+OK...loading successfull
+312 C/NAPL-dissolution/1D_NAPL-diss_trans/tri - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_trans/tri/1D_TPF_resS_trans
+OK...loading successfull
+313 C/NAPL-dissolution/1D_NAPL-diss_trans/hex - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_trans/hex/1D_TPF_resS_trans
+OK...loading successfull
+314 C/NAPL-dissolution/1D_NAPL-diss_trans/tet - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_trans/tet/1D_TPF_resS_trans
+OK...loading successfull
+315 GUI/HT - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/HT/model_1_ascii
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (model_1_ascii) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/HT
+316 GUI/FLAC - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/FLAC/flac
+OK...loading successfull
+317 GUI/SHP - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/SHP/modeldomain
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/SHP
+318 GUI/H - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/H/model_1_ascii
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (model_1_ascii) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/H
+319 GUI/H - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/H/materials
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (materials) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/H
+320 GUI/M - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/M/model_1_ascii
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (model_1_ascii) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/M
+321 GUI/M - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/M/mmp
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (mmp) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/M
+322 GUI/M - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/M/msp
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (msp) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/M
+323 GUI/T - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/T/model_1_ascii
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (model_1_ascii) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/T
+324 GUI/T - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/T/mmp
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (mmp) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/T
+325 GUI/T - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/T/msp
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (msp) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/T
+326 GUI/HM - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/HM/model_1_ascii
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (model_1_ascii) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GUI/HM
+327 RWPT/3DGrain - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/RWPT/3DGrain/3d_grain
+OK...loading successfull
+328 RWPT/Forchheimer - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/RWPT/Forchheimer/forchheimer_rwpt
+OK...loading successfull
+329 RWPT/Harter - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/RWPT/Harter/colloid_t
+OK...loading successfull
+330 RWPT/HomoCube - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/RWPT/HomoCube/3DRWPTCubTet
+OK...loading successfull
+331 RWPT/2DGrains - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/RWPT/2DGrains/2d_grains
+OK...loading successfull
+332 RWPT/Veri1000 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/RWPT/Veri1000/quad_homo
+OK...loading successfull
+333 MPI/m_sdc - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/MPI/m_sdc/m_sdc
+OK...loading successfull
+334 MPI/h_tri - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/MPI/h_tri/h_tri
+OK...loading successfull
+335 MPI/cube - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/MPI/cube/metis
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/MPI/cube
+336 MPI/m_tri - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/MPI/m_tri/m_tri
+OK...loading successfull
+337 MPI/hm_tri - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/MPI/hm_tri/hm_tri
+OK...loading successfull
+338 MPI/urach - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/MPI/urach/urach
+OK...loading successfull
+339 MPI/THM - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/MPI/THM/thm_decov
+OK...loading successfull
+340 MPI/THM - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/MPI/THM/thm_decov.little-endian-32bit
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (thm_decov.little-endian-32bit) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/MPI/THM
+341 MPI/THM - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/MPI/THM/thm_decov.little-endian-64bit
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (thm_decov.little-endian-64bit) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/MPI/THM
+342 MPI/McWhorter - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/MPI/McWhorter/mcwt
+OK...loading successfull
+343 MPI/cube/thm - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/MPI/cube/thm/thm_cube
+OK...loading successfull
+344 DENSITY-DEPENDENT_FLOW/Elder - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/DENSITY-DEPENDENT_FLOW/Elder/elder
+OK...loading successfull
+345 DENSITY-DEPENDENT_FLOW/goswami-clement/constrBC_PressAsHead_tri - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/DENSITY-DEPENDENT_FLOW/goswami-clement/constrBC_PressAsHead_tri/HM
+OK...loading successfull
+346 DENSITY-DEPENDENT_FLOW/goswami-clement/wholeBC_PressAsHead_tri - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/DENSITY-DEPENDENT_FLOW/goswami-clement/wholeBC_PressAsHead_tri/HM
+OK...loading successfull
+347 GAS_FLOW/Gravity - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/Gravity/Gravity
+OK...loading successfull
+348 GAS_FLOW/Gravity - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/Gravity/Analytical
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (Analytical) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/Gravity
+349 GAS_FLOW/gas_flow - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/gas_flow/h_gas_line
+OK...loading successfull
+350 GAS_FLOW/nonisothermal_gas_flow - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/nonisothermal_gas_flow/h_gas_line
+OK...loading successfull
+351 GAS_FLOW/JTC - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/JTC/analytical_no_solid_phase
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/JTC
+352 GAS_FLOW/JTC - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/JTC/analytical_with_solid_phase
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/JTC
+353 GAS_FLOW/BHP - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/BHP/bhp
+OK...loading successfull
+354 GAS_FLOW/BHP - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/BHP/Injection_q
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (Injection_q) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/BHP
+355 GAS_FLOW/BHP - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/BHP/Measured_p
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (Measured_p) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/BHP
+356 GAS_FLOW/Plume - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/Plume/Plume
+OK...loading successfull
+357 GAS_FLOW/JTC/JT-Cooling_without_matrix - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/JTC/JT-Cooling_without_matrix/JTCooling
+OK...loading successfull
+358 GAS_FLOW/JTC/JT-Cooling_with_matrix - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/JTC/JT-Cooling_with_matrix/JTCooling
+OK...loading successfull
+359 GAS_FLOW/Tracertest/AdvDiffSorption - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/Tracertest/AdvDiffSorption/advdiffsorption
+OK...loading successfull
+360 GAS_FLOW/Tracertest/AdvDiffSorption - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/Tracertest/AdvDiffSorption/ads_Analytical_time_POINT3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (ads_Analytical_time_POINT3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/Tracertest/AdvDiffSorption
+361 GAS_FLOW/Tracertest/AdvDiffSorption - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/Tracertest/AdvDiffSorption/ads_Analytical_time_POINT2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (ads_Analytical_time_POINT2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/Tracertest/AdvDiffSorption
+362 GAS_FLOW/Tracertest/AdvDiff - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/Tracertest/AdvDiff/advdiff
+OK...loading successfull
+363 GAS_FLOW/Tracertest/AdvDiff - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/Tracertest/AdvDiff/ad_Analytical_time_POINT2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (ad_Analytical_time_POINT2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/Tracertest/AdvDiff
+364 GAS_FLOW/Tracertest/AdvDiff - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/Tracertest/AdvDiff/ad_Analytical_time_POINT3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (ad_Analytical_time_POINT3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/Tracertest/AdvDiff
+365 GAS_FLOW/EoS/CO2 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/EoS/CO2/CO2
+OK...loading successfull
+366 GAS_FLOW/EoS/CO2 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/EoS/CO2/nist_co_eos
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (nist_co_eos) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/EoS/CO2
+367 GAS_FLOW/EoS/H2O - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/EoS/H2O/H2O
+OK...loading successfull
+368 GAS_FLOW/EoS/H2O - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/EoS/H2O/nist_ho_eos
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (nist_ho_eos) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/EoS/H2O
+369 GAS_FLOW/element_test/qud - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/element_test/qud/h_gas_ele
+OK...loading successfull
+370 GAS_FLOW/element_test/line - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/element_test/line/h_gas_ele
+OK...loading successfull
+371 GAS_FLOW/element_test/pri - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/element_test/pri/h_gas_ele
+OK...loading successfull
+372 GAS_FLOW/element_test/tri - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/element_test/tri/h_gas_ele
+OK...loading successfull
+373 GAS_FLOW/element_test/hex - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/element_test/hex/h_gas_ele
+OK...loading successfull
+374 GAS_FLOW/element_test/tet - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/element_test/tet/h_gas_ele
+OK...loading successfull
+375 FLUID_PROPERTIES/H2T_McWhorter_PwSnw - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/FLUID_PROPERTIES/H2T_McWhorter_PwSnw/h2t_line
+OK...loading successfull
+376 Books/BMB3/Vogel - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m1_3Dwaves
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel
+377 Books/BMB3/Vogel - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m1_3Dwings
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel
+378 Books/BMB3/Vogel/tm1_3Dorigin/ogs5mpi - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/tm1_3Dorigin/ogs5mpi/tm1_3Dorigin
+OK...loading successfull
+379 Books/BMB3/Vogel/tm1_3Dorigin/ogs5 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/tm1_3Dorigin/ogs5/tm1_3Dorigin
+OK...loading successfull
+380 Books/BMB3/Vogel/tm1_2Dbeam/ogs5mpi - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/tm1_2Dbeam/ogs5mpi/tm1_2Dbeam
+OK...loading successfull
+381 Books/BMB3/Vogel/tm1_2Dbeam/ogs5 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/tm1_2Dbeam/ogs5/tm1_2Dbeam
+OK...loading successfull
+382 Books/BMB3/Vogel/m1_3Dtorsion/ogs5mpi - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m1_3Dtorsion/ogs5mpi/m1_3Dtorsion
+OK...loading successfull
+383 Books/BMB3/Vogel/m1_3Dtorsion/ogs5 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m1_3Dtorsion/ogs5/m1_3Dtorsion
+OK...loading successfull
+384 Books/BMB3/Vogel/hm2_1Dcolumn2/ogs5 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/hm2_1Dcolumn2/ogs5/hm2_1Dcolumn2
+OK...loading successfull
+385 Books/BMB3/Vogel/m2_3Dloadbt/ogs5mpi - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m2_3Dloadbt/ogs5mpi/m2_3Dloadbt
+OK...loading successfull
+386 Books/BMB3/Vogel/m2_3Dloadbt/ogs5 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m2_3Dloadbt/ogs5/m2_3Dloadbt
+OK...loading successfull
+387 Books/BMB3/Vogel/m1_2Dload/ogs5mpi - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m1_2Dload/ogs5mpi/m1_2Dload
+OK...loading successfull
+388 Books/BMB3/Vogel/m1_2Dload/ogs5 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m1_2Dload/ogs5/m1_2Dload
+OK...loading successfull
+389 Books/BMB3/Vogel/m2_1Dlozenge/ogs5mpi - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m2_1Dlozenge/ogs5mpi/m2_1Dlozenge
+OK...loading successfull
+390 Books/BMB3/Vogel/m2_1Dlozenge/ogs5 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m2_1Dlozenge/ogs5/m2_1Dlozenge
+OK...loading successfull
+391 Books/BMB3/Vogel/hm2_1Dcolumn1/ogs5 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/hm2_1Dcolumn1/ogs5/hm2_1Dcolumn1
+OK...loading successfull
+392 Books/BMB3/Vogel/m1_3Dload/ogs5mpi - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m1_3Dload/ogs5mpi/m1_3Dload
+OK...loading successfull
+393 Books/BMB3/Vogel/m1_3Dload/ogs5 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m1_3Dload/ogs5/m1_3Dload
+OK...loading successfull
+394 Books/BMB3/Vogel/m2_2Dload/ogs5mpi - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m2_2Dload/ogs5mpi/m2_2Dload
+OK...loading successfull
+395 Books/BMB3/Vogel/m2_2Dload/ogs5 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m2_2Dload/ogs5/m2_2Dload
+OK...loading successfull
+396 Books/BMB3/Vogel/m2_3Dload/ogs5mpi - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m2_3Dload/ogs5mpi/m2_3Dload
+OK...loading successfull
+397 Books/BMB3/Vogel/m2_3Dload/ogs5 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m2_3Dload/ogs5/m2_3Dload
+OK...loading successfull
+398 Books/BMB3/Vogel/tm1_3Dsquare/ogs5mpi - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/tm1_3Dsquare/ogs5mpi/tm1_3Dsquare
+OK...loading successfull
+399 Books/BMB3/Vogel/tm1_3Dsquare/ogs5 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/tm1_3Dsquare/ogs5/tm1_3Dsquare
+OK...loading successfull
+400 Books/BMB3/Vogel/m1_3Dwaves/ogs5mpi - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m1_3Dwaves/ogs5mpi/m1_3Dwaves
+OK...loading successfull
+401 Books/BMB3/Vogel/m1_3Dwaves/ogs5 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m1_3Dwaves/ogs5/m1_3Dwaves
+OK...loading successfull
+402 Books/BMB3/Vogel/m2_2Dloadbt/ogs5mpi - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m2_2Dloadbt/ogs5mpi/m2_2Dloadbt
+OK...loading successfull
+403 Books/BMB3/Vogel/m2_2Dloadbt/ogs5 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m2_2Dloadbt/ogs5/m2_2Dloadbt
+OK...loading successfull
+404 Books/BMB3/Vogel/m1_1Dlozenge/ogs5mpi - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m1_1Dlozenge/ogs5mpi/m1_1Dlozenge
+OK...loading successfull
+405 Books/BMB3/Vogel/m1_1Dlozenge/ogs5 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m1_1Dlozenge/ogs5/m1_1Dlozenge
+OK...loading successfull
+406 Books/BMB3/Vogel/m1_3Dwings/ogs5mpi - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m1_3Dwings/ogs5mpi/m1_3Dwings
+OK...loading successfull
+407 Books/BMB3/Vogel/m1_3Dwings/ogs5 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m1_3Dwings/ogs5/m1_3Dwings
+OK...loading successfull
+408 Books/BMB3/Vogel/m2_1Dlozengebt/ogs5mpi - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m2_1Dlozengebt/ogs5mpi/m2_1Dlozengebt
+OK...loading successfull
+409 Books/BMB3/Vogel/m2_1Dlozengebt/ogs5 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/m2_1Dlozengebt/ogs5/m2_1Dlozengebt
+OK...loading successfull
+410 Books/BMB3/Vogel/hm2_2Dmandel/ogs5 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Books/BMB3/Vogel/hm2_2Dmandel/ogs5/hm2_2Dmandel
+OK...loading successfull
+411 H/sat_1D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/sat_1D/H_sat_flow_1d
+OK...loading successfull
+412 H/sat_1D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/sat_1D/H_sat_flow_1d_PLY_PLY_0
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (H_sat_flow_1d_PLY_PLY_0) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/sat_1D
+413 H/Theis_1D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/Theis_1D/h_quad_axisym
+OK...loading successfull
+414 H/Theis_2D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/Theis_2D/Thies_quad_2d
+OK...loading successfull
+415 H/sat_2D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/sat_2D/H_sat_flow_K_ortho
+OK...loading successfull
+416 H/sat_2D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/sat_2D/H_sat_flow_K_ortho_rf_y
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (H_sat_flow_K_ortho_rf_y) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/sat_2D
+417 H/sat_2D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/sat_2D/H_sat_flow_K_ortho_rf_x
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (H_sat_flow_K_ortho_rf_x) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/sat_2D
+418 H/sat_2D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/sat_2D/K_ortho_PLY_PLY_2 I
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (K_ortho_PLY_PLY_2 I) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/sat_2D
+419 H/sat_2D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/sat_2D/AnisotropyMatrix
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (AnisotropyMatrix) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/sat_2D
+420 H/sat_2D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/sat_2D/Vgl Ergebnisse I
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (Vgl Ergebnisse I) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/sat_2D
+421 H/Theis/GWF_Theis_2-5D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/Theis/GWF_Theis_2-5D/GWF_Theis
+OK...loading successfull
+422 H/Theis/LF_Theis_2-5D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/Theis/LF_Theis_2-5D/LF_Theis
+OK...loading successfull
+423 H/Theis/LF_Theis_1-5D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/Theis/LF_Theis_1-5D/LF_Theis
+OK...loading successfull
+424 H/Theis/GWF_Theis_3D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/Theis/GWF_Theis_3D/GWF_Theis_3D
+OK...loading successfull
+425 H/Theis/LF_Theis_3D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/Theis/LF_Theis_3D/LF_Theis_3D
+OK...loading successfull
+426 H/Theis/LF_Theis_2D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/Theis/LF_Theis_2D/LF_Theis_2D
+OK...loading successfull
+427 H/Theis/GWF_Theis_2D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/Theis/GWF_Theis_2D/GWF_Theis_2d
+OK...loading successfull
+428 H/Theis/GWF_Theis_1-5D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/Theis/GWF_Theis_1-5D/GWF_Theis
+OK...loading successfull
+429 H/HetGWFlow/3D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/HetGWFlow/3D/3D_HGW
+OK...loading successfull
+430 H/HetGWFlow/2D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/HetGWFlow/2D/2D1P-GWFlow
+OK...loading successfull
+431 TCR/Temperature_Diff - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/TCR/Temperature_Diff/HBr_10C_Diff_new
+OK...loading successfull
+432 TCR/Temperature_NAPLdiss_PhaseDiff - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/TCR/Temperature_NAPLdiss_PhaseDiff/TCE_10C_new
+OK...loading successfull
+433 TCR/Temperature_NAPLdiss_Csat - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/TCR/Temperature_NAPLdiss_Csat/TCE_10C_new
+OK...loading successfull
+434 TCR/Temperature_Disp - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/TCR/Temperature_Disp/HBr_Disp
+OK...loading successfull
+435 H2/LabGasInjec - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/LabGasInjec/H2_Permeability_GasPressure
+OK...loading successfull
+436 H2/BuckleyLeverett - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/BuckleyLeverett/buck
+OK...loading successfull
+437 H2/HeatPipe - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/HeatPipe/Heatpipe
+OK...loading successfull
+438 H2/HeatPipe - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/HeatPipe/Analytical
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (Analytical) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/HeatPipe
+439 H2/McWhorter - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/McWhorter/mcwt
+OK...loading successfull
+440 H2/Liakopoulos/Quad - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/Liakopoulos/Quad/h2_Liako
+OK...loading successfull
+441 H2/Liakopoulos/Tet - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/Liakopoulos/Tet/h2_Liako
+OK...loading successfull
+442 H2/Liakopoulos/Tri - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/Liakopoulos/Tri/h2_Liako
+OK...loading successfull
+443 H2/Liakopoulos/Hex - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/Liakopoulos/Hex/h2_Liako
+OK...loading successfull
+444 H2/Liakopoulos/Line - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/Liakopoulos/Line/h2_Liako
+OK...loading successfull
+445 H2/McWhorter/1D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/McWhorter/1D/mcwt
+OK...loading successfull
+446 M/elasticity - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/elasticity/M_e_stress_3Du
+OK...loading successfull
+447 M/elasticity - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/elasticity/m_e_transiso_3D
+OK...loading successfull
+448 M/elasticity - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/elasticity/M_e_displacement_3Du
+OK...loading successfull
+449 M/excavation - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/excavation/m_3d_excav
+OK...loading successfull
+450 M/creep - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/creep/uc_creep01
+OK...loading successfull
+451 M/creep - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/creep/creep3d
+OK...loading successfull
+452 M/creep - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/creep/m_crp_bgr
+OK...loading successfull
+453 M/creep - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/creep/m_crp_tri
+OK...loading successfull
+454 M/creep - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/creep/BGRa
+OK...loading successfull
+455 M/creep - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/creep/m_triax_lubby2
+OK...loading successfull
+456 M/pressure - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/pressure/Sphere_plastic
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/pressure
+457 M/pressure - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/pressure/Sphere_elastic
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/pressure
+458 M/AnisoPlas/90 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/AnisoPlas/90/3D_UniAxiLoad
+OK...loading successfull
+459 M/AnisoPlas/45 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/AnisoPlas/45/3D_UniAxiLoad
+OK...loading successfull
+460 M/AnisoPlas/0 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/AnisoPlas/0/3D_UniAxiLoad
+OK...loading successfull
+461 M/excavation/3D_EX - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/excavation/3D_EX/3D_excav
+OK...loading successfull
+462 M/excavation/3D_EX - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/excavation/3D_EX/3D_excav_DEFORMATION_BC_ST
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (3D_excav_DEFORMATION_BC_ST) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/excavation/3D_EX
+463 M/excavation/3D_Time_Controlled - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/excavation/3D_Time_Controlled/3D_Excav_Time_Controlled
+OK...loading successfull
+464 M/excavation/3D_EX/init - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/excavation/3D_EX/init/3D_excav
+OK...loading successfull
+465 M/pressure/Tube - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/pressure/Tube/m_tube_elastic
+OK...loading successfull
+466 M/pressure/Sphere_plastic - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/pressure/Sphere_plastic/m_sphere_plastic
+OK...loading successfull
+467 M/pressure/Sphere_elastic - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/pressure/Sphere_elastic/m_sphere_elastic
+OK...loading successfull
+468 H_us/Darcy - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Darcy/analytical_darcy_calculation
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Darcy
+469 H_us/Drainage - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Drainage/h_us_drainage
+OK...loading successfull
+470 H_us/RSM - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/RSM/AT_5
+OK...loading successfull
+471 H_us/Dual - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Dual/dual_van
+OK...loading successfull
+472 H_us/Dual - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Dual/dual_vl
+OK...loading successfull
+473 H_us/Wet - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet/h_us_tri_freebc
+OK...loading successfull
+474 H_us/Wet - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet/1d_ho
+OK...loading successfull
+475 H_us/Wet - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet/falk221_6
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (falk221_6) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet
+476 H_us/Wet - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet/h_us_line_warrick
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (h_us_line_warrick) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet
+477 H_us/Wet - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet/falk221_4
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (falk221_4) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet
+478 H_us/Wet - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet/falk221_3
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (falk221_3) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet
+479 H_us/Wet - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet/falk221_5
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (falk221_5) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet
+480 H_us/Wet - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet/falk221_2
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (falk221_2) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet
+481 H_us/Wet - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet/h_us_line_Forsyth
+OK...loading successfull
+482 H_us/Wet - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet/Transient
+OK...loading successfull
+483 H_us/Wet - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet/h_us_line_celia
+OK...loading successfull
+484 H_us/Wet - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet/h_us_line_Warrick
+OK...loading successfull
+485 H_us/Wet - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet/h_us_line_Halm
+OK...loading successfull
+486 H_us/Wet - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet/h_us_quad
+OK...loading successfull
+487 H_us/Wet - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet/falk221_1
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (falk221_1) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet
+488 H_us/Darcy/unconf_W_rch - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Darcy/unconf_W_rch/unconf
+OK...loading successfull
+489 H_us/Darcy/unconf_WO_rch - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Darcy/unconf_WO_rch/unconf
+OK...loading successfull
+490 T/TDiff - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/TDiff
+OK...loading successfull
+491 T/TDiff - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/Analytical solution-TDiff
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (Analytical solution-TDiff) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff
+492 T/TDiff - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/Model evaluation-TDiff
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (Model evaluation-TDiff) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff
+493 T/TDiff - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/Images
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (Images) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff
+494 T/1d_thermal_expansion - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/1d_thermal_expansion/exp1
+OK...loading successfull
+495 T/2units2faults - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/2units2faults/2units2faults
+OK...loading successfull
+496 T/TDiff-wall - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff-wall/TDiff-Wall
+OK...loading successfull
+497 T/TDiff-wall - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff-wall/Analytical_solution_U(x,t)-TDiffWall
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (Analytical_solution_U(x,t)-TDiffWall) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff-wall
+498 T/TDiff-wall - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff-wall/Images
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (Images) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff-wall
+499 T/TDiff-wall - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff-wall/Model_Evaluation-TDiffWall
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (Model_Evaluation-TDiffWall) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff-wall
+500 T/Ogata-Banks - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Ogata-Banks/Ogata-Banks
+OK...loading successfull
+501 T/Ogata-Banks - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Ogata-Banks/Figures
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (Figures) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Ogata-Banks
+502 T/Lauwerier - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Lauwerier/Lauwerier
+OK...loading successfull
+503 T/Lauwerier - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Lauwerier/Figures
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (Figures) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Lauwerier
+504 T/CopyValueBHE - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/CopyValueBHE/CopyValue
+OK...loading successfull
+505 T/t3d - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/t3d/t3d
+OK...loading successfull
+506 T/TDiff/Images - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/Images/tvsz_2months
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/Images
+507 T/TDiff/Images - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/Images/tvsz_2years
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/Images
+508 T/TDiff/Images - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/Images/tvst_1m
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/Images
+509 T/TDiff/Images - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/Images/tvsz_4years
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/Images
+510 T/TDiff/Images - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/Images/tvst_10m
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/Images
+511 T/TDiff/Images - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/Images/tvsz_6months
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/Images
+512 T/TDiff/Images - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/Images/tvst_2m
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/Images
+513 T/TDiff/Images - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/Images/tvst_20m
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/Images
+514 T/TDiff/Images - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/Images/tvsz_1year
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/Images
+515 T/2units2faults/FCT - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/2units2faults/FCT/2units2faults_FCT
+OK...loading successfull
+516 T/Ogata-Banks/Figures - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Ogata-Banks/Figures/Ad-Diff
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Ogata-Banks/Figures
+517 T/Ogata-Banks/Figures - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Ogata-Banks/Figures/advection
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Ogata-Banks/Figures
+518 T/Lauwerier/Figures - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Lauwerier/Figures/lauwerier-fracture
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Lauwerier/Figures
+519 T/Lauwerier/Figures - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Lauwerier/Figures/lauwerier-points
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Lauwerier/Figures
+520 T/Lauwerier/Figures - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Lauwerier/Figures/lauwerier-rock
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Lauwerier/Figures
+521 GROUNDWATER_FLOW/Transient_flow - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/GROUNDWATER_FLOW/Transient_flow/trans_bd_homo
+OK...loading successfull
+522 FLUID_MOMENTUM/1d_tet - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/FLUID_MOMENTUM/1d_tet/1d_tet
+OK...loading successfull
+523 FLUID_MOMENTUM/1d_quad - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/FLUID_MOMENTUM/1d_quad/1d_quad
+OK...loading successfull
+524 FLUID_MOMENTUM/1d_tri - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/FLUID_MOMENTUM/1d_tri/1d_tri
+OK...loading successfull
+525 FLUID_MOMENTUM/1d_line - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/FLUID_MOMENTUM/1d_line/1d_line
+OK...loading successfull
+526 FLUID_MOMENTUM/1d_pyra - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/FLUID_MOMENTUM/1d_pyra/1d_pyra
+OK...loading successfull
+527 FLUID_MOMENTUM/1d_hex - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/FLUID_MOMENTUM/1d_hex/1d_hex
+OK...loading successfull
+528 FLUID_MOMENTUM/1d_pri - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/FLUID_MOMENTUM/1d_pri/1d_pri
+OK...loading successfull
+529 Anisotropy/permeability - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Anisotropy/permeability/soil_layer
+OK...loading successfull
+530 Anisotropy/permeability - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Anisotropy/permeability/AnisotropyMatrix
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (AnisotropyMatrix) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Anisotropy/permeability
+531 Anisotropy/moleculardiffusion - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Anisotropy/moleculardiffusion/soil_layer
+OK...loading successfull
+532 Anisotropy/moleculardiffusion - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Anisotropy/moleculardiffusion/soil_layer.mmp
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (soil_layer.mmp) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Anisotropy/moleculardiffusion
+533 Anisotropy/moleculardiffusion - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Anisotropy/moleculardiffusion/AnisotropyMatrix
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (AnisotropyMatrix) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/Anisotropy/moleculardiffusion
+534 THM/init - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/THM/init/thm_decov
+OK...loading successfull
+535 THM/deco_2015_b2s1 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/THM/deco_2015_b2s1/deco_b2s1
+OK...loading successfull
+536 ECLIPSE_DUMUX/2phase_flow_2phase_tracertransport - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/2phase_flow_2phase_tracertransport/2pf_2pt_MASS_TRANSPORT_BC_ST
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (2pf_2pt_MASS_TRANSPORT_BC_ST) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/2phase_flow_2phase_tracertransport
+537 ECLIPSE_DUMUX/2phase_flow_radialmodel - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/2phase_flow_radialmodel/2pf_radialmodel
+OK...loading successfull
+538 ECLIPSE_DUMUX/2phase_flow_radialmodel - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/2phase_flow_radialmodel/2pf_radialmodel_LIQUID_FLOW_ST_RHS
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (2pf_radialmodel_LIQUID_FLOW_ST_RHS) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/2phase_flow_radialmodel
+539 ECLIPSE_DUMUX/2phase_flow_radialmodel - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/2phase_flow_radialmodel/2pf_radialmodel_MULTI_PHASE_FLOW_ST_RHS
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (2pf_radialmodel_MULTI_PHASE_FLOW_ST_RHS) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/2phase_flow_radialmodel
+540 ECLIPSE_DUMUX/2phase_flow_radialmodel - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/2phase_flow_radialmodel/2pf_radialmodel_LIQUID_FLOW_BC_ST
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (2pf_radialmodel_LIQUID_FLOW_BC_ST) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/2phase_flow_radialmodel
+541 ECLIPSE_DUMUX/kinetic_CO2phase_generation_E100 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/kinetic_CO2phase_generation_E100/CO2phase_gen_E100
+OK...loading successfull
+542 ECLIPSE_DUMUX/kinetic_CO2phase_generation_E300 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/kinetic_CO2phase_generation_E300/CO2phase_gen_E300
+OK...loading successfull
+543 ECLIPSE_DUMUX/kinetic_CO2phase_generation_E300 - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/kinetic_CO2phase_generation_E300/CO2phase_gen_E300_MULTI_PHASE_FLOW_ST_RHS
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (CO2phase_gen_E300_MULTI_PHASE_FLOW_ST_RHS) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/kinetic_CO2phase_generation_E300
+544 ECLIPSE_DUMUX/1phase_radialflow_1phase_transport - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/1phase_radialflow_1phase_transport/1pf_1pt
+OK...loading successfull
+545 ECLIPSE_DUMUX/1phase_radialflow_1phase_transport - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/1phase_radialflow_1phase_transport/1pf_1pt_LIQUID_FLOW_ST_RHS
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (1pf_1pt_LIQUID_FLOW_ST_RHS) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/1phase_radialflow_1phase_transport
+546 ECLIPSE_DUMUX/1phase_radialflow_1phase_transport - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/1phase_radialflow_1phase_transport/1pf_1pt_LIQUID_FLOW_BC_ST
+FAIL...ogs5py.OGS.load_model - didn't find given task_id (1pf_1pt_LIQUID_FLOW_BC_ST) at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/1phase_radialflow_1phase_transport
+547 ECLIPSE_DUMUX/2phase_flow_2phase_tracertransport/eclipse - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/2phase_flow_2phase_tracertransport/eclipse/ECL
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/2phase_flow_2phase_tracertransport/eclipse
+548 ECLIPSE_DUMUX/2phase_flow_radialmodel/eclipse - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/2phase_flow_radialmodel/eclipse/ecl
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/2phase_flow_radialmodel/eclipse
+549 ECLIPSE_DUMUX/kinetic_CO2phase_generation_E100/eclipse - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/kinetic_CO2phase_generation_E100/eclipse/ECL
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/kinetic_CO2phase_generation_E100/eclipse
+550 ECLIPSE_DUMUX/kinetic_CO2phase_generation_E300/eclipse - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/kinetic_CO2phase_generation_E300/eclipse/ECL
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/kinetic_CO2phase_generation_E300/eclipse
+551 ECLIPSE_DUMUX/1phase_radialflow_1phase_transport/eclipse - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/1phase_radialflow_1phase_transport/eclipse/ECL
+FAIL...ogs5py.OGS.laod_model - nothing was found at: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/1phase_radialflow_1phase_transport/eclipse
+552 TES/Convection_2D - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/TES/Convection_2D/conv_2D_cart
+OK...loading successfull
+553 TES/Convection_2D_axi - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/TES/Convection_2D_axi/conv_2D_axi
+OK...loading successfull
+554 TES/heat_of_reaction - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/TES/heat_of_reaction/reaction_heat
+OK...loading successfull
+555 TES/friction - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/TES/friction/Friction_test
+OK...loading successfull
+556 HM/excavation - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/HM/excavation/3D_excav
+OK...loading successfull
+557 HM/LinearSwelling - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/HM/LinearSwelling/hm_swelling
+OK...loading successfull
+558 HM/excavation/BoreholeExcavation - load: /home/muellese/benchmark_scripts/ogs5_benchmarks_raw/ogs5-benchmarks-master/HM/excavation/BoreholeExcavation/borehole_excav
+OK...loading successfull

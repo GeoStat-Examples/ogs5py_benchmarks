@@ -1,0 +1,31 @@
+SOLUTION 0
+units mol/kgw 
+temp 25.000000 
+pH 8.0 charge   # comp 6
+pe 8.0          # comp 7
+Ca 6.000000e-04 # comp 1
+Cl 1.200000e-03 # comp 2
+K 3.071607e-16  # comp 3
+Na 2.763435e-17 # comp 4
+N(5) 4.681546e-18 # comp 5
+#ende
+EXCHANGE 0
+CaX2 0.0 # comp 8  5.499989e-04
+NaX 0.0  # comp 9  4.910335e-19
+KX 2.865452e-17   # comp 10
+#ende
+PRINT
+ -reset true
+ -selected_output true
+#ende
+SELECTED_OUTPUT
+-file phout_sel.dat
+-high_precision
+-reset false
+#ende
+USER_PUNCH 
+20 PUNCH TOT("Ca"), TOT("Cl"), TOT("K"), TOT("Na"), TOT("N(5)") 
+30 PUNCH -LA("H+"), -LA("e-") 
+70 PUNCH MOL("CaX2"), MOL("NaX"), MOL("KX") 
+#ende
+ END

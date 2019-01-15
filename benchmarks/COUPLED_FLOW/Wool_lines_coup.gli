@@ -1,0 +1,36 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 10.0 $NAME POINT0 $MD 100.0
+1 12.2 0.0 9.878 $NAME POINT1 $MD 100.0
+2 5.49 0.0 9.9451 $NAME POINT2 $MD 100.0
+3 5.49 0.0 9.6451 $NAME POINT3 $MD 100.0
+#POLYLINE
+  $ID
+   0
+  $NAME
+   UP
+  $TYPE
+   -1
+  $EPSILON
+   0.0001
+  $MAT_GROUP
+   -1
+  $POINTS
+   0
+   1
+#POLYLINE
+  $ID
+   0
+  $NAME
+   SATURATION
+  $TYPE
+   0
+  $EPSILON
+   0.0001
+  $MAT_GROUP
+   -1
+  $POINTS
+   2
+   3
+#STOP
+|-- Written with ogs5py (0.5.0rc1) on: 2019-01-15_16-49-41 --|

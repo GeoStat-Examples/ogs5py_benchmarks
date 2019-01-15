@@ -1,0 +1,50 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0
+1 100.0 0.0 0.0
+2 100.0 2.0 0.0
+3 0.0 2.0 0.0
+4 0.0 1.0 0.0
+5 100.0 1.0 0.0
+#POLYLINE
+  $NAME
+   LEFT
+  $TYPE
+   -1
+  $EPSILON
+   0.1
+  $POINTS
+   0
+   3
+#POLYLINE
+  $NAME
+   RIGHT
+  $TYPE
+   -1
+  $EPSILON
+   0.1
+  $POINTS
+   1
+   2
+#POLYLINE
+  $NAME
+   WHOLE_AREA
+  $TYPE
+   -1
+  $EPSILON
+   0.1
+  $POINTS
+   0
+   1
+   2
+   3
+   0
+#SURFACE
+  $NAME
+   AREA
+  $TYPE
+   0
+  $POLYLINES
+   WHOLE_AREA
+#STOP
+|-- Written with ogs5py (0.5.0rc1) on: 2019-01-15_16-49-41 --|

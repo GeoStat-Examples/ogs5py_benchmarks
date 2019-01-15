@@ -1,0 +1,307 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0 $NAME m0
+1 0.41 0.0 0.0 $NAME m1
+2 0.59 0.0 0.0 $NAME m2
+3 0.77 0.0 0.0 $NAME m3
+4 0.95 0.0 0.0 $NAME m4
+5 1.13 0.0 0.0 $NAME m5
+6 1.5 0.0 0.0 $NAME m6
+7 3.0 0.0 0.0 $NAME m7
+8 5.0 0.0 0.0 $NAME m8
+9 10.0 0.0 0.0 $NAME m9
+10 25.0 0.0 0.0 $NAME m10
+11 0.0 0.02 0.0 $NAME o0
+12 0.41 0.02 0.0 $NAME o1
+13 0.59 0.02 0.0 $NAME o2
+14 0.77 0.02 0.0 $NAME o3
+15 0.95 0.02 0.0 $NAME o4
+16 1.13 0.02 0.0 $NAME o5
+17 1.5 0.02 0.0 $NAME o6
+18 3.0 0.02 0.0 $NAME o7
+19 5.0 0.02 0.0 $NAME o8
+20 10.0 0.02 0.0 $NAME o9
+21 25.0 0.02 0.0 $NAME o10
+22 0.0 -0.02 0.0 $NAME u0
+23 0.41 -0.02 0.0 $NAME u1
+24 0.59 -0.02 0.0 $NAME u2
+25 0.77 -0.02 0.0 $NAME u3
+26 0.95 -0.02 0.0 $NAME u4
+27 1.13 -0.02 0.0 $NAME u5
+28 1.5 -0.02 0.0 $NAME u6
+29 3.0 -0.02 0.0 $NAME u7
+30 5.0 -0.02 0.0 $NAME u8
+31 10.0 -0.02 0.0 $NAME u9
+32 25.0 -0.02 0.0 $NAME u10
+33 1.12521 -0.02 0.0 $NAME IF1U
+34 1.1282 -0.02 0.0 $NAME IF2U
+35 1.12861 -0.02 0.0 $NAME IF2BU
+36 1.12902 -0.02 0.0 $NAME IF3U
+37 1.12952 -0.02 0.0 $NAME IF4U
+38 1.12982 -0.02 0.0 $NAME IF5U
+39 1.12521 0.02 0.0 $NAME IF1O
+40 1.1282 0.02 0.0 $NAME IF2O
+41 1.12861 0.02 0.0 $NAME IF2BO
+42 1.12902 0.02 0.0 $NAME IF3O
+43 1.12952 0.02 0.0 $NAME IF4O
+44 1.12982 0.02 0.0 $NAME IF5O
+45 1.1267 -0.02 0.0 $NAME IF1BU
+46 1.1267 0.02 0.0 $NAME IF1BO
+#POLYLINE
+  $NAME
+   mitte
+  $EPSILON
+   0.0001
+  $POINTS
+   0
+   10
+#POLYLINE
+  $NAME
+   oben
+  $EPSILON
+   0.0001
+  $POINTS
+   11
+   21
+#POLYLINE
+  $NAME
+   unten
+  $EPSILON
+   0.0001
+  $POINTS
+   22
+   32
+#POLYLINE
+  $NAME
+   links
+  $EPSILON
+   0.0001
+  $POINTS
+   22
+   11
+#POLYLINE
+  $NAME
+   rechts
+  $EPSILON
+   0.0001
+  $POINTS
+   32
+   21
+#POLYLINE
+  $NAME
+   overpack
+  $EPSILON
+   0.0001
+  $POINTS
+   22
+   23
+   12
+   11
+   22
+#POLYLINE
+  $NAME
+   buffer
+  $EPSILON
+   0.0001
+  $POINTS
+   23
+   27
+   16
+   12
+   23
+#POLYLINE
+  $NAME
+   rock
+  $EPSILON
+   0.0001
+  $POINTS
+   27
+   16
+   21
+   32
+   27
+#POLYLINE
+  $NAME
+   all
+  $EPSILON
+   0.0001
+  $POINTS
+   22
+   32
+   21
+   11
+   22
+#POLYLINE
+  $NAME
+   b1
+  $EPSILON
+   0.0001
+  $POINTS
+   23
+   12
+#POLYLINE
+  $NAME
+   b2
+  $EPSILON
+   0.0001
+  $POINTS
+   24
+   13
+#POLYLINE
+  $NAME
+   b3
+  $EPSILON
+   0.0001
+  $POINTS
+   25
+   14
+#POLYLINE
+  $NAME
+   b4
+  $EPSILON
+   0.0001
+  $POINTS
+   26
+   15
+#POLYLINE
+  $NAME
+   b5
+  $EPSILON
+   0.0001
+  $POINTS
+   27
+   16
+#POLYLINE
+  $NAME
+   r1
+  $EPSILON
+   0.0001
+  $POINTS
+   27
+   16
+#POLYLINE
+  $NAME
+   r2
+  $EPSILON
+   0.0001
+  $POINTS
+   28
+   17
+#POLYLINE
+  $NAME
+   r3
+  $EPSILON
+   0.0001
+  $POINTS
+   29
+   18
+#POLYLINE
+  $NAME
+   r4
+  $EPSILON
+   0.0001
+  $POINTS
+   30
+   19
+#POLYLINE
+  $NAME
+   r5
+  $EPSILON
+   0.0001
+  $POINTS
+   31
+   20
+#POLYLINE
+  $NAME
+   r6
+  $EPSILON
+   0.0001
+  $POINTS
+   32
+   21
+#POLYLINE
+  $NAME
+   IF1
+  $EPSILON
+   0.0001
+  $POINTS
+   33
+   39
+#POLYLINE
+  $NAME
+   IF1B
+  $EPSILON
+   0.0001
+  $POINTS
+   45
+   46
+#POLYLINE
+  $NAME
+   IF2
+  $EPSILON
+   0.0001
+  $POINTS
+   34
+   40
+#POLYLINE
+  $NAME
+   IF2B
+  $EPSILON
+   0.0001
+  $POINTS
+   35
+   41
+#POLYLINE
+  $NAME
+   IF3
+  $EPSILON
+   0.0001
+  $POINTS
+   36
+   42
+#POLYLINE
+  $NAME
+   IF4
+  $EPSILON
+   0.0001
+  $POINTS
+   37
+   43
+#POLYLINE
+  $NAME
+   IF5
+  $EPSILON
+   5e-05
+  $POINTS
+   38
+   44
+#SURFACE
+  $NAME
+   all
+  $TYPE
+   0
+  $POLYLINES
+   all
+#SURFACE
+  $NAME
+   overpack
+  $TYPE
+   0
+  $POLYLINES
+   overpack
+#SURFACE
+  $NAME
+   buffer
+  $TYPE
+   0
+  $POLYLINES
+   buffer
+#SURFACE
+  $NAME
+   rock
+  $TYPE
+   0
+  $POLYLINES
+   rock
+#STOP
+|-- Written with ogs5py (0.5.0rc1) on: 2019-01-15_16-49-41 --|

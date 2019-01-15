@@ -1,0 +1,84 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0 $NAME POINT0 $MD 100.0
+1 0.7 0.0 0.0 $NAME POINT1 $MD 100.0
+2 0.7 0.0 0.5 $NAME POINT2 $MD 100.0
+3 0.0 0.0 0.5 $NAME POINT3 $MD 100.0
+4 0.4 0.0 0.5 $NAME POINT4 $MD 100.0
+5 0.3 0.0 0.5 $NAME POINT5 $MD 100.0
+6 0.0 0.0 0.25 $NAME POINT6 $MD 100.0
+7 0.7 0.0 0.25 $NAME POINT7 $MD 100.0
+#POLYLINE
+  $ID
+   0
+  $NAME
+   BOTTOM
+  $TYPE
+   0
+  $EPSILON
+   0.0
+  $MAT_GROUP
+   -1
+  $POINTS
+   0
+   1
+#POLYLINE
+  $ID
+   1
+  $NAME
+   EAST
+  $TYPE
+   0
+  $EPSILON
+   0.0
+  $MAT_GROUP
+   -1
+  $POINTS
+   1
+   7
+   2
+#POLYLINE
+  $ID
+   2
+  $NAME
+   TOP
+  $TYPE
+   0
+  $EPSILON
+   0.0
+  $MAT_GROUP
+   -1
+  $POINTS
+   2
+   3
+#POLYLINE
+  $ID
+   3
+  $NAME
+   WEST
+  $TYPE
+   0
+  $EPSILON
+   0.0
+  $MAT_GROUP
+   -1
+  $POINTS
+   3
+   6
+   0
+#POLYLINE
+  $ID
+   4
+  $NAME
+   SOURCE
+  $TYPE
+   0
+  $EPSILON
+   0.0
+  $MAT_GROUP
+   -1
+  $POINTS
+   5
+   4
+#STOP
+|-- Written with ogs5py (0.5.0rc1) on: 2019-01-15_16-49-41 --|

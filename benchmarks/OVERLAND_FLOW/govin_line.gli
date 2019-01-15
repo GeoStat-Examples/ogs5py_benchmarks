@@ -1,0 +1,23 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0 $NAME POINT0
+1 100.0 0.0 1.0 $NAME POINT1
+#POLYLINE
+  $NAME
+   CHANNEL
+  $TYPE
+   -1
+  $EPSILON
+   0.01
+  $POINTS
+   0
+   1
+#SURFACE
+  $NAME
+   SFCTOP
+  $TYPE
+   3
+  $POLYLINES
+   CHANNEL
+#STOP
+|-- Written with ogs5py (0.5.0rc1) on: 2019-01-15_16-49-41 --|

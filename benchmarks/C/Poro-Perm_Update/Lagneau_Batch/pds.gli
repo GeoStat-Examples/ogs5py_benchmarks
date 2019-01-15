@@ -1,0 +1,31 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0 $NAME POINT0
+1 0.05 0.0 0.0 $NAME POINT1
+2 0.025 0.0 0.0 $NAME POINT2
+#POLYLINE
+  $NAME
+   OUT_LINE
+  $EPSILON
+   0.0001
+  $POINTS
+   0
+   1
+#POLYLINE
+  $NAME
+   diss
+  $EPSILON
+   0.0001
+  $POINTS
+   0
+   2
+#POLYLINE
+  $NAME
+   precip
+  $EPSILON
+   0.0001
+  $POINTS
+   2
+   1
+#STOP
+|-- Written with ogs5py (0.5.0rc1) on: 2019-01-15_16-49-41 --|

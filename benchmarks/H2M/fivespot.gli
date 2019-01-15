@@ -1,0 +1,156 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0
+1 10.0 0.0 0.0 $NAME inject_b
+2 10.0 10.0 0.0
+3 0.0 10.0 0.0 $NAME PUMP_b
+4 10.0 10.0 1.0
+5 0.0 10.0 1.0 $NAME PUMP_t
+6 0.0 0.0 1.0
+7 10.0 0.0 1.0 $NAME inject_t
+#POLYLINE
+  $NAME
+   inject
+  $EPSILON
+   0.001
+  $POINTS
+   7
+   1
+#POLYLINE
+  $NAME
+   pump
+  $EPSILON
+   0.001
+  $POINTS
+   5
+   3
+#POLYLINE
+  $NAME
+   prof_y
+  $EPSILON
+   0.001
+  $POINTS
+   1
+   2
+#POLYLINE
+  $NAME
+   Left
+  $EPSILON
+   0.001
+  $POINTS
+   0
+   1
+   7
+   6
+   0
+#POLYLINE
+  $NAME
+   Right
+  $EPSILON
+   0.001
+  $POINTS
+   2
+   4
+   5
+   3
+   2
+#POLYLINE
+  $NAME
+   Front
+  $EPSILON
+   0.001
+  $POINTS
+   1
+   7
+   4
+   2
+   1
+#POLYLINE
+  $NAME
+   back
+  $EPSILON
+   0.001
+  $POINTS
+   0
+   6
+   5
+   3
+   0
+#POLYLINE
+  $NAME
+   bottom
+  $EPSILON
+   0.001
+  $POINTS
+   0
+   1
+   2
+   3
+   0
+#POLYLINE
+  $NAME
+   top
+  $EPSILON
+   0.001
+  $POINTS
+   4
+   5
+   6
+   7
+   4
+#SURFACE
+  $NAME
+   Left
+  $EPSILON
+   0.001
+  $TYPE
+   0
+  $POLYLINES
+   Left
+#SURFACE
+  $NAME
+   Right
+  $EPSILON
+   0.001
+  $TYPE
+   0
+  $POLYLINES
+   Right
+#SURFACE
+  $NAME
+   Front
+  $EPSILON
+   0.001
+  $TYPE
+   0
+  $POLYLINES
+   Front
+#SURFACE
+  $NAME
+   back
+  $EPSILON
+   0.001
+  $TYPE
+   0
+  $POLYLINES
+   back
+#SURFACE
+  $NAME
+   bottom
+  $EPSILON
+   0.001
+  $TYPE
+   0
+  $POLYLINES
+   bottom
+#SURFACE
+  $NAME
+   top
+  $EPSILON
+   0.001
+  $TYPE
+   0
+  $POLYLINES
+   top
+#STOP
+|-- Written with ogs5py (0.5.0rc1) on: 2019-01-15_16-49-41 --|

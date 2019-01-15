@@ -1,0 +1,35 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0
+1 0.038 0.0 0.0
+2 0.25 0.0 0.0
+#POLYLINE
+  $NAME
+   PLY_0
+  $EPSILON
+   1e-05
+  $POINTS
+   0
+   2
+#POLYLINE
+  $NAME
+   PLY_1
+  $EPSILON
+   1e-05
+  $MAT_GROUP
+   0
+  $POINTS
+   0
+   1
+#POLYLINE
+  $NAME
+   PLY_2
+  $EPSILON
+   1e-05
+  $MAT_GROUP
+   1
+  $POINTS
+   1
+   2
+#STOP
+|-- Written with ogs5py (0.5.0rc1) on: 2019-01-15_16-49-41 --|

@@ -1,0 +1,50 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 -1.0 $NAME P00
+1 1.1 0.0 -1.0 $NAME P01
+2 2.2 0.0 -1.0 $NAME P02
+3 1.056 0.0 -1.0 $NAME P03
+4 1.074 0.0 -1.0 $NAME P04
+5 1.126 0.0 -1.0 $NAME P05
+6 1.145 0.0 -1.0 $NAME P06
+7 1.065 0.0 -1.0 $NAME P07
+8 1.056 0.0 0.0 $NAME P08
+9 1.074 0.0 0.0 $NAME P09
+10 1.126 0.0 0.0 $NAME P10
+11 1.144 0.0 0.0 $NAME P11
+12 1.135 0.0 -1.0 $NAME P12
+13 1.135 0.0 0.0 $NAME P13
+#POLYLINE
+  $NAME
+   BC_LOW_LEFT
+  $EPSILON
+   1e-06
+  $POINTS
+   3
+   4
+#POLYLINE
+  $NAME
+   BC_LOW_RIGHT
+  $EPSILON
+   1e-06
+  $POINTS
+   5
+   6
+#POLYLINE
+  $NAME
+   BC_UP_LEFT
+  $EPSILON
+   1e-06
+  $POINTS
+   8
+   9
+#POLYLINE
+  $NAME
+   BC_UP_RIGHT
+  $EPSILON
+   1e-06
+  $POINTS
+   10
+   11
+#STOP
+|-- Written with ogs5py (0.5.0rc1) on: 2019-01-15_16-49-41 --|

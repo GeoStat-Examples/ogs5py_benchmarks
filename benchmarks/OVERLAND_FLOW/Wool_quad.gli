@@ -1,0 +1,46 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 1.0 $NAME POINT0 $MD 100.0
+1 12.2 0.0 0.878 $NAME POINT1 $MD 100.0
+2 12.2 0.051 0.878 $NAME POINT2 $MD 100.0
+3 0.0 0.051 1.0 $NAME POINT3 $MD 100.0
+4 5.49 0.0 0.9451 $NAME POINT4 $MD 100.0
+#POLYLINE
+  $ID
+   1
+  $NAME
+   EAST
+  $TYPE
+   -1
+  $EPSILON
+   0.1
+  $MAT_GROUP
+   -1
+  $POINTS
+   1
+   2
+#POLYLINE
+  $ID
+   3
+  $NAME
+   WEST
+  $TYPE
+   0
+  $EPSILON
+   0.0
+  $MAT_GROUP
+   -1
+  $POINTS
+   3
+   0
+#SURFACE
+  $ID
+   0
+  $NAME
+   UP
+  $TIN
+   TIN_UP.tin
+  $MAT_GROUP
+   -1
+#STOP
+|-- Written with ogs5py (0.5.0rc1) on: 2019-01-15_16-49-41 --|

@@ -1,0 +1,52 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0 $NAME P0
+1 100.0 0.0 0.0 $NAME P1
+2 100.0 0.0 10.0 $NAME P2
+3 0.0 0.0 10.0 $NAME P3
+#POLYLINE
+  $NAME
+   border
+  $MAT_GROUP
+   0
+  $POINTS
+   0
+   1
+   2
+   3
+   0
+#POLYLINE
+  $NAME
+   top
+  $EPSILON
+   0.01
+  $POINTS
+   2
+   3
+#POLYLINE
+  $NAME
+   left
+  $POINTS
+   0
+   3
+#POLYLINE
+  $NAME
+   right
+  $POINTS
+   1
+   2
+#POLYLINE
+  $NAME
+   bottom
+  $POINTS
+   0
+   1
+#SURFACE
+  $NAME
+   border_surface
+  $TYPE
+   0
+  $POLYLINES
+   border
+#STOP
+|-- Written with ogs5py (0.5.0rc1) on: 2019-01-15_16-49-41 --|

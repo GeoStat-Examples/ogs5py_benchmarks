@@ -1,0 +1,51 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0
+1 0.0 0.0 -1.0
+2 0.0 1.0 -1.0
+3 0.0 1.0 0.0
+4 100.0 0.0 0.0
+5 100.0 0.0 -1.0
+6 100.0 1.0 -1.0
+7 100.0 1.0 0.0
+8 50.0 0.0 0.0 $NAME POINT8
+#POLYLINE
+  $NAME
+   OUT_LINE
+  $POINTS
+   0
+   4
+#POLYLINE
+  $NAME
+   LEFTPLINE
+  $POINTS
+   0
+   1
+   2
+   3
+   0
+#POLYLINE
+  $NAME
+   RIGHTPLINE
+  $POINTS
+   4
+   5
+   6
+   7
+   4
+#SURFACE
+  $NAME
+   LEFTSURF
+  $TYPE
+   0
+  $POLYLINES
+   LEFTPLINE
+#SURFACE
+  $NAME
+   RIGHTSURF
+  $TYPE
+   0
+  $POLYLINES
+   RIGHTPLINE
+#STOP
+|-- Written with ogs5py (0.5.0rc1) on: 2019-01-15_16-49-41 --|

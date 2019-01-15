@@ -1,0 +1,74 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0 $MD 3.0
+1 100.0 0.0 0.0 $MD 3.0
+2 100.0 100.0 0.0 $MD 3.0
+3 0.0 100.0 0.0 $MD 3.0
+4 25.0 0.0 0.0 $MD 3.0
+5 50.0 0.0 0.0 $MD 3.0
+6 50.0 75.0 0.0 $MD 3.0
+7 25.0 75.0 0.0 $MD 3.0
+8 0.0 50.0 0.0 $MD 3.0
+9 100.0 50.0 0.0 $MD 3.0
+#POLYLINE
+  $ID
+   0
+  $NAME
+   L_BC
+  $TYPE
+   0
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   0
+  $POINTS
+   0
+   8
+   3
+#POLYLINE
+  $ID
+   1
+  $NAME
+   R_BC
+  $TYPE
+   0
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   0
+  $POINTS
+   1
+   9
+   2
+#POLYLINE
+  $ID
+   2
+  $NAME
+   U_BC
+  $TYPE
+   0
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   0
+  $POINTS
+   3
+   2
+#POLYLINE
+  $ID
+   3
+  $NAME
+   LO_BC
+  $TYPE
+   0
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   0
+  $POINTS
+   0
+   4
+   5
+   1
+#STOP
+|-- Written with ogs5py (0.5.0rc1) on: 2019-01-15_16-49-41 --|

@@ -1,0 +1,108 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0 $NAME POINT0
+1 0.053 0.0 0.0 $NAME POINT1
+2 0.053 0.053 0.0 $NAME POINT2
+3 0.0 0.053 0.0 $NAME POINT3
+4 0.053 0.0 0.053 $NAME POINT4
+5 0.053 0.053 0.053 $NAME POINT5
+6 0.0 0.053 0.053 $NAME POINT6
+7 0.0 0.0 0.053 $NAME POINT7
+#POLYLINE
+  $NAME
+   PLY_1
+  $POINTS
+   1
+   2
+   5
+   4
+   1
+#POLYLINE
+  $NAME
+   PLY_2
+  $POINTS
+   2
+   3
+   6
+   5
+   2
+#POLYLINE
+  $NAME
+   PLY_3
+  $POINTS
+   0
+   3
+   6
+   7
+   0
+#POLYLINE
+  $NAME
+   PLY_4
+  $POINTS
+   0
+   1
+   4
+   7
+   0
+#POLYLINE
+  $NAME
+   PLY_5
+  $POINTS
+   7
+   4
+   5
+   6
+   7
+#POLYLINE
+  $NAME
+   PLY_6
+  $POINTS
+   0
+   1
+   2
+   3
+   0
+#SURFACE
+  $NAME
+   RIGHT
+  $TYPE
+   0
+  $POLYLINES
+   PLY_1
+#SURFACE
+  $NAME
+   BACK
+  $TYPE
+   0
+  $POLYLINES
+   PLY_2
+#SURFACE
+  $NAME
+   LEFT
+  $TYPE
+   0
+  $POLYLINES
+   PLY_3
+#SURFACE
+  $NAME
+   FROUNT
+  $TYPE
+   0
+  $POLYLINES
+   PLY_4
+#SURFACE
+  $NAME
+   TOP
+  $TYPE
+   0
+  $POLYLINES
+   PLY_5
+#SURFACE
+  $NAME
+   BOTTOM
+  $TYPE
+   0
+  $POLYLINES
+   PLY_6
+#STOP
+|-- Written with ogs5py (0.5.0rc1) on: 2019-01-15_16-49-41 --|

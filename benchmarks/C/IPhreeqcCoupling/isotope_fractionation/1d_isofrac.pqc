@@ -1,0 +1,140 @@
+SOLUTION 1
+units mol/kgw 
+temp 25.000000 
+pH 9.91 charge # comp 5
+pe 4.0 	O2(g) -0.68	# comp 6
+Pce_l 0 # comp
+Tce_l 0 # comp
+Dce_l 0 # comp
+Vc_l 0 # comp
+Eth_l 0 # comp
+Pce_h 0 # comp
+Tce_h 0 # comp
+Dce_h 0 # comp
+Vc_h 0 # comp
+Eth_h 0 # comp
+Chl 0 # comp
+#ende
+
+KINETICS 1
+Pce_l_rd
+-formula Pce_l 1 Chl -1 Tce_l -1
+-parms 6.366e-8 # first-order degradation rate per second for PCE
+-steps 100 in 1 steps
+
+Pce_h_rd
+-formula Pce_h 1 Chl -1 Tce_h -1
+-parms -5.2 # kinetic isotopic enrichment factor (epsilon) for PCE
+Tce_l_rd
+-formula Tce_l 1 Chl -1 Dce_l -1
+-parms 3.125e-8 # first-order degradation rate per second for TCE
+Tce_h_rd
+-formula Tce_h 1 Chl -1 Dce_h -1
+-parms -8.5 # kinetic isotopic enrichment factor (epsilon) for TCE
+Dce_l_rd
+-formula Dce_l 1 Chl -1 Vc_l -1
+-parms 2.199e-8 # first-order degradation rate per second for cDCE
+Dce_h_rd
+-formula Dce_h 1 Chl -1 Vc_h -1
+-parms -17.8 # kinetic isotopic enrichment factor (epsilon) for cDCE
+Vc_l_rd
+-formula Vc_l 1 Chl -1 Eth_l -1
+-parms 1.273e-8 # first-order degradation rate per second for VC
+Vc_h_rd
+-formula Vc_h 1 Chl -1 Eth_h -1
+-parms -23.2 # kinetic isotopic enrichment factor (epsilon) for VC
+
+RATES
+Pce_l_rd
+-start
+5 if (tot("Pce_l")+tot("Pce_h")) < 1e-9 then goto 60
+10 rate = parm(1)*(tot("Pce_l")+tot("Pce_h"))
+20 ratio = tot("Pce_l")/(tot("Pce_l")+tot("Pce_h"))
+30 moles = -ratio * rate * time
+40 put(rate, 1)
+50 put(ratio, 2)
+60 save moles
+-end
+Pce_h_rd
+-start
+5 if (tot("Pce_l")+tot("Pce_h")) < 1e-9 then goto 40
+10 rate = get(1)
+20 ratio = 1-get(2)
+30 moles = - ((parm(1)/1000)+1) * ratio * rate * time
+40 save moles
+-end
+Tce_l_rd
+-start
+5 if (tot("Tce_l")+tot("Tce_h")) < 1e-9 then goto 60
+10 rate = parm(1)*(tot("Tce_l")+tot("Tce_h"))
+20 ratio = tot("Tce_l")/(tot("Tce_l")+tot("Tce_h"))
+30 moles = -ratio * rate * time
+40 put(rate, 3)
+50 put(ratio, 4)
+60 save moles
+-end
+Tce_h_rd
+-start
+5 if (tot("Tce_l")+tot("Tce_h")) < 1e-9 then goto 40
+10 rate = get(3)
+20 ratio = 1-get(4)
+30 moles = - ((parm(1)/1000)+1) * ratio * rate * time
+40 save moles
+-end
+Dce_l_rd
+-start
+5 if (tot("Dce_l")+tot("Dce_h")) < 1e-9 then goto 60
+10 rate = parm(1)*(tot("Dce_l")+tot("Dce_h"))
+20 ratio = tot("Dce_l")/(tot("Dce_l")+tot("Dce_h"))
+30 moles = -ratio * rate * time
+40 put(rate, 5)
+50 put(ratio, 6)
+60 save moles
+-end
+Dce_h_rd
+-start
+5 if (tot("Dce_l")+tot("Dce_h")) < 1e-9 then goto 40
+10 rate = get(5)
+20 ratio = 1-get(6)
+30 moles = - ((parm(1)/1000)+1) * ratio * rate * time
+40 save moles
+-end
+Vc_l_rd
+-start
+5 if (tot("Vc_l")+tot("Vc_h")) < 1e-9 then goto 60
+10 rate = parm(1)*(tot("Vc_l")+tot("Vc_h"))
+20 ratio = tot("Vc_l")/(tot("Vc_l")+tot("Vc_h"))
+30 moles = -ratio * rate * time
+40 put(rate, 7)
+50 put(ratio, 8)
+60 save moles
+-end
+Vc_h_rd
+-start
+5 if (tot("Vc_l")+tot("Vc_h")) < 1e-9 then goto 40
+10 rate = get(7)
+20 ratio = 1-get(8)
+30 moles = - ((parm(1)/1000)+1) * ratio * rate * time
+40 save moles
+-end
+#ende
+
+PRINT
+ -reset false
+ -selected_output true
+ -status false
+#ende
+
+SELECTED_OUTPUT
+-file phout_sel.dat
+-high_precision
+-reset false
+#ende
+
+USER_PUNCH 
+20 PUNCH TOT("Pce_l"), TOT("Tce_l"), TOT("Dce_l"), TOT("Vc_l") TOT("Pce_h"), TOT("Tce_h"), TOT("Dce_h"), TOT("Vc_h"),TOT("Eth_h"),TOT("Eth_l"), TOT("Chl") 
+30 PUNCH -LA("H+"), -LA("e-") 
+#ende
+END
+ 
+

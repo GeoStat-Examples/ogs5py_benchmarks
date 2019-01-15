@@ -1,0 +1,149 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0
+1 4.0 0.0 0.0
+2 4.0 0.0 4.0
+3 0.0 0.0 4.0
+4 4.0 9.0 0.0
+5 4.0 9.0 4.0
+6 0.0 9.0 4.0
+7 0.0 9.0 0.0
+8 0.330000000000001 0.0 0.0
+9 0.330000000000001 3.0 0.0
+10 4.0 3.0 0.0
+11 0.0 1.5 0.0
+12 4.0 1.5 0.0
+#POLYLINE
+  $NAME
+   FROUNT
+  $POINTS
+   0
+   1
+   2
+   3
+   0
+#POLYLINE
+  $NAME
+   BACK
+  $POINTS
+   7
+   4
+   5
+   6
+   7
+#POLYLINE
+  $NAME
+   LEFT
+  $POINTS
+   0
+   7
+   6
+   3
+   0
+#POLYLINE
+  $NAME
+   RIGHT
+  $POINTS
+   1
+   4
+   5
+   2
+   1
+#POLYLINE
+  $NAME
+   BOTTOM
+  $POINTS
+   0
+   7
+   4
+   1
+   0
+#POLYLINE
+  $NAME
+   TOP
+  $POINTS
+   6
+   5
+   2
+   3
+   6
+#POLYLINE
+  $NAME
+   PLY_8
+  $POINTS
+   8
+   1
+#POLYLINE
+  $NAME
+   PLY_9
+  $POINTS
+   0
+   1
+#POLYLINE
+  $NAME
+   PLY_10
+  $POINTS
+   9
+   10
+#POLYLINE
+  $NAME
+   PLY_10a
+  $POINTS
+   11
+   12
+#SURFACE
+  $NAME
+   FROUNT
+  $EPSILON
+   0.005
+  $TYPE
+   0
+  $POLYLINES
+   FROUNT
+#SURFACE
+  $NAME
+   BACK
+  $EPSILON
+   0.005
+  $TYPE
+   0
+  $POLYLINES
+   BACK
+#SURFACE
+  $NAME
+   LEFT
+  $EPSILON
+   0.005
+  $TYPE
+   0
+  $POLYLINES
+   LEFT
+#SURFACE
+  $NAME
+   RIGHT
+  $EPSILON
+   0.005
+  $TYPE
+   0
+  $POLYLINES
+   RIGHT
+#SURFACE
+  $NAME
+   BOTTOM
+  $EPSILON
+   0.005
+  $TYPE
+   0
+  $POLYLINES
+   BOTTOM
+#SURFACE
+  $NAME
+   TOP
+  $EPSILON
+   0.005
+  $TYPE
+   0
+  $POLYLINES
+   TOP
+#STOP
+|-- Written with ogs5py (0.5.0rc1) on: 2019-01-15_16-49-41 --|

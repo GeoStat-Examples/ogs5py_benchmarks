@@ -1,0 +1,51 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0
+1 0.0001 0.0 0.0
+2 0.0 3.0 0.0
+3 1.0 3.0 0.0 $NAME POINT3
+4 0.0001 3.0 0.0
+5 1.0 0.0 0.0
+6 0.399999999999995 3.0 0.0 $NAME POINT6
+#POLYLINE
+  $NAME
+   TOP
+  $TYPE
+   2
+  $EPSILON
+   1e-05
+  $POINTS
+   2
+   3
+#POLYLINE
+  $NAME
+   BOTTOM
+  $TYPE
+   2
+  $EPSILON
+   1e-05
+  $POINTS
+   5
+   0
+#POLYLINE
+  $NAME
+   LD_CORNER
+  $TYPE
+   2
+  $EPSILON
+   1e-05
+  $POINTS
+   0
+   1
+#POLYLINE
+  $NAME
+   LT_CORNER
+  $TYPE
+   2
+  $EPSILON
+   1e-05
+  $POINTS
+   2
+   4
+#STOP
+|-- Written with ogs5py (0.5.0rc1) on: 2019-01-15_16-49-41 --|

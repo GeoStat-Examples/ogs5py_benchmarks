@@ -1,0 +1,79 @@
+SOLUTION 1
+units mol/kgw 
+temp 25.000000 
+pH 9.91 charge # comp 5
+pe 4.0 	O2(g) -0.68	# comp 6
+C(4) 1.2279e-4 # comp 1
+Ca 1.2279e-4 	# comp 2
+Mg 0.0 		# comp 3
+Cl 0.0 		# comp 4
+#ende
+
+
+EQUILIBRIUM_PHASES 1
+Calcite  0.0  3.906e-5  	# comp  7
+#ende
+
+
+
+KINETICS
+Dolomite(dis)  # comp
+  -m 0  # 10% K-fsp in 0.1 mm cubes,  in mol/l pore volume
+  -steps 100 in 1 steps
+#ende
+
+
+RATES
+Dolomite(dis)
+  -start
+rem kmech = k25*exp(-Eact/R*(1/T-1/298.15))*Product([Ci]^nyi);
+10  R = 8.314472
+11  deltaT = 1/TK - 1/298.15
+12  e = 2.7183
+13  Ea = 36100
+14  logK25 = -3.19
+15  ny = 0.5
+rem 16  mech_a = (10^logK25) * (e^(-Ea/R*deltaT)) * ACT("H+")^ny
+16  mech_a = (10^logK25) * ACT("H+")^ny
+23  Ea = 52200
+24  logK25 = -7.53
+rem 26  mech_b = (10^logK25) * (e^(-Ea/R*deltaT)) 
+26  mech_b = (10^logK25) 
+30  rate = mech_a + mech_b
+40  teta = 1 
+41  eta = 1
+42  Area = .001
+70  rate = Area * rate * (1 - SR("Dolomite(dis)")^teta)^eta
+80  moles = rate * time
+100 save moles
+      -end
+#ende
+
+
+SECONDARY_SPECIES_OUTPUT
+CO3-2 # comp 
+#ende
+
+
+
+
+
+PRINT
+ -reset true
+ -selected_output true
+#ende
+
+SELECTED_OUTPUT
+-file phout_sel.dat
+-high_precision
+-reset false
+#ende
+
+
+USER_PUNCH 
+20 PUNCH TOT("C(4)"), TOT("Ca"), TOT("Mg"), TOT("Cl") 
+30 PUNCH -LA("H+"), -LA("e-") 
+60 PUNCH EQUI("Calcite") 
+70 PUNCH KIN("Dolomite(dis)")
+#ende
+END

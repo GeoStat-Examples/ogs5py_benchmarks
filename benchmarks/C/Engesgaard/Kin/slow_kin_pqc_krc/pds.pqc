@@ -1,0 +1,46 @@
+SOLUTION 1
+units mol/kgw 
+temp 25.000000 
+pH 9.91 charge # comp 5
+pe 4.0 	O2(g) -0.68	# comp 6
+C(4) 1.2279e-4 # comp 1
+Ca 1.2279e-4 	# comp 2
+Mg 0.0 		# comp 3
+Cl 0.0 		# comp 4
+#ende
+
+EQUILIBRIUM_PHASES 1
+Calcite  0.0  3.906e-5  	# comp  7
+#ende
+
+
+ADDITIONAL_OUTPUT
+CO3-2 # comp
+#ende
+
+ADDITIONAL_PUNCH
+PUNCH MOL("CO3-2")
+#ende 
+
+PRINT
+ -reset true
+ -selected_output true
+#ende
+
+SELECTED_OUTPUT
+-file phout_sel.dat
+-high_precision
+-reset false
+#ende
+
+
+
+USER_PUNCH 
+20 PUNCH TOT("C(4)"), TOT("Ca"), TOT("Mg"), TOT("Cl") 
+25 PUNCH MOL("CO3-2")
+30 PUNCH -LA("H+"), -LA("e-") 
+60 PUNCH EQUI("Calcite") 
+#ende
+END
+ 
+

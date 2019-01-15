@@ -1,0 +1,1677 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.330000000000001 0.0 0.0
+1 0.3259 0.0 0.0516000000000001
+2 0.3138 0.0 0.1019
+3 0.294 0.0 0.1498
+4 0.2669 0.0 0.1939
+5 0.2333 0.0 0.2333
+6 0.1939 0.0 0.2669
+7 0.1498 0.0 0.294
+8 0.1019 0.0 0.3138
+9 0.0516000000000001 0.0 0.3259
+10 -0.0001 0.0 0.3299
+11 0.330000000000001 1.5 0.0
+12 0.3259 1.5 0.0516000000000001
+13 0.3138 1.5 0.1019
+14 0.294 1.5 0.1498
+15 0.2669 1.5 0.1939
+16 0.2333 1.5 0.2333
+17 0.1939 1.5 0.2669
+18 0.1498 1.5 0.294
+19 0.1019 1.5 0.3138
+20 0.0516000000000001 1.5 0.3259
+21 -0.0001 1.5 0.3299
+22 0.3259 3.0 0.0516000000000001
+23 0.3138 3.0 0.1019
+24 0.294 3.0 0.1498
+25 0.2669 3.0 0.1939
+26 0.2333 3.0 0.2333
+27 0.1939 3.0 0.2669
+28 0.1498 3.0 0.294
+29 0.1019 3.0 0.3138
+30 0.0516000000000001 3.0 0.3259
+31 -0.0001 3.0 0.3299
+32 0.330000000000001 4.5 0.0
+33 0.3259 4.5 0.0516000000000001
+34 0.3138 4.5 0.1019
+35 0.294 4.5 0.1498
+36 0.2669 4.5 0.1939
+37 0.2333 4.5 0.2333
+38 0.1939 4.5 0.2669
+39 0.1498 4.5 0.294
+40 0.1019 4.5 0.3138
+41 0.0516000000000001 4.5 0.3259
+42 -0.0001 4.5 0.3299
+43 0.330000000000001 6.0 0.0
+44 0.3259 6.0 0.0516000000000001
+45 0.3138 6.0 0.1019
+46 0.294 6.0 0.1498
+47 0.2669 6.0 0.1939
+48 0.2333 6.0 0.2333
+49 0.1939 6.0 0.2669
+50 0.1498 6.0 0.294
+51 0.1019 6.0 0.3138
+52 0.0516000000000001 6.0 0.3259
+53 -0.0001 6.0 0.3299
+54 0.330000000000001 7.5 0.0
+55 0.3259 7.5 0.0516000000000001
+56 0.3138 7.5 0.1019
+57 0.294 7.5 0.1498
+58 0.2669 7.5 0.1939
+59 0.2333 7.5 0.2333
+60 0.1939 7.5 0.2669
+61 0.1498 7.5 0.294
+62 0.1019 7.5 0.3138
+63 0.0516000000000001 7.5 0.3259
+64 -0.0001 7.5 0.3299
+65 0.330000000000001 9.0 0.0
+66 0.3259 9.0 0.0516000000000001
+67 0.3138 9.0 0.1019
+68 0.294 9.0 0.1498
+69 0.2669 9.0 0.1939
+70 0.2333 9.0 0.2333
+71 0.1939 9.0 0.2669
+72 0.1498 9.0 0.294
+73 0.1019 9.0 0.3138
+74 0.0516000000000001 9.0 0.3259
+75 -0.0001 9.0 0.3299
+76 -0.0001 0.0 4.0
+77 4.0 0.0 4.0
+78 4.0 0.0 0.0
+79 -5.00000000000049e-05 0.0 -4.9999999999998e-05
+80 4.0 9.0 4.0
+81 4.0 9.0 0.0
+82 -0.0001 9.0 4.0
+83 -5.00000000000049e-05 9.0 -4.9999999999998e-05
+84 -5.00000000000049e-05 1.5 -4.9999999999998e-05
+85 0.330000000000001 3.0 0.0
+86 -5.00000000000049e-05 3.0 -4.9999999999998e-05
+87 -5.00000000000049e-05 4.5 -4.9999999999998e-05
+88 4.0 3.0 0.0
+#POLYLINE
+  $NAME
+   PLY_0
+  $MAT_GROUP
+   1
+  $POINTS
+   0
+   1
+   12
+   11
+   0
+#POLYLINE
+  $NAME
+   PLY_1
+  $MAT_GROUP
+   1
+  $POINTS
+   1
+   2
+   13
+   12
+   1
+#POLYLINE
+  $NAME
+   PLY_2
+  $MAT_GROUP
+   1
+  $POINTS
+   2
+   3
+   14
+   13
+   2
+#POLYLINE
+  $NAME
+   PLY_3
+  $MAT_GROUP
+   1
+  $POINTS
+   3
+   4
+   15
+   14
+   3
+#POLYLINE
+  $NAME
+   PLY_4
+  $MAT_GROUP
+   1
+  $POINTS
+   4
+   5
+   16
+   15
+   4
+#POLYLINE
+  $NAME
+   PLY_5
+  $MAT_GROUP
+   1
+  $POINTS
+   5
+   6
+   17
+   16
+   5
+#POLYLINE
+  $NAME
+   PLY_6
+  $MAT_GROUP
+   1
+  $POINTS
+   6
+   7
+   18
+   17
+   6
+#POLYLINE
+  $NAME
+   PLY_7
+  $MAT_GROUP
+   1
+  $POINTS
+   7
+   8
+   19
+   18
+   7
+#POLYLINE
+  $NAME
+   PLY_8
+  $MAT_GROUP
+   1
+  $POINTS
+   8
+   9
+   20
+   19
+   8
+#POLYLINE
+  $NAME
+   PLY_9
+  $MAT_GROUP
+   1
+  $POINTS
+   9
+   10
+   21
+   20
+   9
+#POLYLINE
+  $NAME
+   PLY_10
+  $MAT_GROUP
+   2
+  $POINTS
+   11
+   12
+   22
+   85
+   11
+#POLYLINE
+  $NAME
+   PLY_11
+  $MAT_GROUP
+   2
+  $POINTS
+   12
+   13
+   23
+   22
+   12
+#POLYLINE
+  $NAME
+   PLY_12
+  $MAT_GROUP
+   2
+  $POINTS
+   13
+   14
+   24
+   23
+   13
+#POLYLINE
+  $NAME
+   PLY_13
+  $MAT_GROUP
+   2
+  $POINTS
+   14
+   15
+   25
+   24
+   14
+#POLYLINE
+  $NAME
+   PLY_14
+  $MAT_GROUP
+   2
+  $POINTS
+   15
+   16
+   26
+   25
+   15
+#POLYLINE
+  $NAME
+   PLY_15
+  $MAT_GROUP
+   2
+  $POINTS
+   16
+   17
+   27
+   26
+   16
+#POLYLINE
+  $NAME
+   PLY_16
+  $MAT_GROUP
+   2
+  $POINTS
+   17
+   18
+   28
+   27
+   17
+#POLYLINE
+  $NAME
+   PLY_17
+  $MAT_GROUP
+   2
+  $POINTS
+   18
+   19
+   29
+   28
+   18
+#POLYLINE
+  $NAME
+   PLY_18
+  $MAT_GROUP
+   2
+  $POINTS
+   19
+   20
+   30
+   29
+   19
+#POLYLINE
+  $NAME
+   PLY_19
+  $MAT_GROUP
+   2
+  $POINTS
+   20
+   21
+   31
+   30
+   20
+#POLYLINE
+  $NAME
+   PLY_20
+  $MAT_GROUP
+   3
+  $POINTS
+   22
+   23
+   34
+   33
+   22
+#POLYLINE
+  $NAME
+   PLY_21
+  $MAT_GROUP
+   3
+  $POINTS
+   23
+   24
+   35
+   34
+   23
+#POLYLINE
+  $NAME
+   PLY_22
+  $MAT_GROUP
+   3
+  $POINTS
+   24
+   25
+   36
+   35
+   24
+#POLYLINE
+  $NAME
+   PLY_23
+  $MAT_GROUP
+   3
+  $POINTS
+   25
+   26
+   37
+   36
+   25
+#POLYLINE
+  $NAME
+   PLY_24
+  $MAT_GROUP
+   3
+  $POINTS
+   26
+   27
+   38
+   37
+   26
+#POLYLINE
+  $NAME
+   PLY_25
+  $MAT_GROUP
+   3
+  $POINTS
+   27
+   28
+   39
+   38
+   27
+#POLYLINE
+  $NAME
+   PLY_26
+  $MAT_GROUP
+   3
+  $POINTS
+   28
+   29
+   40
+   39
+   28
+#POLYLINE
+  $NAME
+   PLY_27
+  $MAT_GROUP
+   3
+  $POINTS
+   29
+   30
+   41
+   40
+   29
+#POLYLINE
+  $NAME
+   PLY_28
+  $MAT_GROUP
+   3
+  $POINTS
+   30
+   31
+   42
+   41
+   30
+#POLYLINE
+  $NAME
+   PLY_29
+  $MAT_GROUP
+   3
+  $POINTS
+   22
+   33
+   32
+   85
+   22
+#POLYLINE
+  $NAME
+   PLY_30
+  $MAT_GROUP
+   4
+  $POINTS
+   33
+   34
+   45
+   44
+   33
+#POLYLINE
+  $NAME
+   PLY_31
+  $MAT_GROUP
+   4
+  $POINTS
+   34
+   35
+   46
+   45
+   34
+#POLYLINE
+  $NAME
+   PLY_32
+  $MAT_GROUP
+   4
+  $POINTS
+   35
+   36
+   47
+   46
+   35
+#POLYLINE
+  $NAME
+   PLY_33
+  $MAT_GROUP
+   4
+  $POINTS
+   36
+   37
+   48
+   47
+   36
+#POLYLINE
+  $NAME
+   PLY_34
+  $MAT_GROUP
+   4
+  $POINTS
+   37
+   38
+   49
+   48
+   37
+#POLYLINE
+  $NAME
+   PLY_35
+  $MAT_GROUP
+   4
+  $POINTS
+   38
+   39
+   50
+   49
+   38
+#POLYLINE
+  $NAME
+   PLY_36
+  $MAT_GROUP
+   4
+  $POINTS
+   39
+   40
+   51
+   50
+   39
+#POLYLINE
+  $NAME
+   PLY_37
+  $MAT_GROUP
+   4
+  $POINTS
+   40
+   41
+   52
+   51
+   40
+#POLYLINE
+  $NAME
+   PLY_38
+  $MAT_GROUP
+   4
+  $POINTS
+   41
+   42
+   53
+   52
+   41
+#POLYLINE
+  $NAME
+   PLY_39
+  $MAT_GROUP
+   4
+  $POINTS
+   33
+   44
+   43
+   32
+   33
+#POLYLINE
+  $NAME
+   PLY_40
+  $MAT_GROUP
+   5
+  $POINTS
+   44
+   45
+   56
+   55
+   44
+#POLYLINE
+  $NAME
+   PLY_41
+  $MAT_GROUP
+   5
+  $POINTS
+   45
+   46
+   57
+   56
+   45
+#POLYLINE
+  $NAME
+   PLY_42
+  $MAT_GROUP
+   5
+  $POINTS
+   46
+   47
+   58
+   57
+   46
+#POLYLINE
+  $NAME
+   PLY_43
+  $MAT_GROUP
+   5
+  $POINTS
+   47
+   48
+   59
+   58
+   47
+#POLYLINE
+  $NAME
+   PLY_44
+  $MAT_GROUP
+   5
+  $POINTS
+   48
+   49
+   60
+   59
+   48
+#POLYLINE
+  $NAME
+   PLY_45
+  $MAT_GROUP
+   5
+  $POINTS
+   49
+   50
+   61
+   60
+   49
+#POLYLINE
+  $NAME
+   PLY_46
+  $MAT_GROUP
+   5
+  $POINTS
+   50
+   51
+   62
+   61
+   50
+#POLYLINE
+  $NAME
+   PLY_47
+  $MAT_GROUP
+   5
+  $POINTS
+   51
+   52
+   63
+   62
+   51
+#POLYLINE
+  $NAME
+   PLY_48
+  $MAT_GROUP
+   5
+  $POINTS
+   52
+   53
+   64
+   63
+   52
+#POLYLINE
+  $NAME
+   PLY_49
+  $MAT_GROUP
+   5
+  $POINTS
+   44
+   55
+   54
+   43
+   44
+#POLYLINE
+  $NAME
+   PLY_50
+  $MAT_GROUP
+   6
+  $POINTS
+   55
+   56
+   67
+   66
+   55
+#POLYLINE
+  $NAME
+   PLY_51
+  $MAT_GROUP
+   6
+  $POINTS
+   56
+   57
+   68
+   67
+   56
+#POLYLINE
+  $NAME
+   PLY_52
+  $MAT_GROUP
+   6
+  $POINTS
+   57
+   58
+   69
+   68
+   57
+#POLYLINE
+  $NAME
+   PLY_53
+  $MAT_GROUP
+   6
+  $POINTS
+   58
+   59
+   70
+   69
+   58
+#POLYLINE
+  $NAME
+   PLY_54
+  $MAT_GROUP
+   6
+  $POINTS
+   59
+   60
+   71
+   70
+   59
+#POLYLINE
+  $NAME
+   PLY_55
+  $MAT_GROUP
+   6
+  $POINTS
+   60
+   61
+   72
+   71
+   60
+#POLYLINE
+  $NAME
+   PLY_56
+  $MAT_GROUP
+   6
+  $POINTS
+   61
+   62
+   73
+   72
+   61
+#POLYLINE
+  $NAME
+   PLY_57
+  $MAT_GROUP
+   6
+  $POINTS
+   62
+   63
+   74
+   73
+   62
+#POLYLINE
+  $NAME
+   PLY_58
+  $MAT_GROUP
+   6
+  $POINTS
+   63
+   64
+   75
+   74
+   63
+#POLYLINE
+  $NAME
+   PLY_59
+  $MAT_GROUP
+   6
+  $POINTS
+   55
+   66
+   65
+   54
+   55
+#POLYLINE
+  $NAME
+   PLY_70
+  $POINTS
+   86
+   85
+   11
+   84
+   86
+#POLYLINE
+  $NAME
+   PLY_71
+  $POINTS
+   86
+   84
+   21
+   31
+   86
+#POLYLINE
+  $NAME
+   PLY_72
+  $POINTS
+   77
+   78
+   81
+   80
+   77
+#POLYLINE
+  $NAME
+   PLY_73
+  $POINTS
+   76
+   77
+   78
+   79
+   76
+#POLYLINE
+  $NAME
+   PLY_74
+  $POINTS
+   80
+   81
+   83
+   82
+   80
+#POLYLINE
+  $NAME
+   PLY_75
+  $POINTS
+   83
+   79
+   76
+   82
+   83
+#POLYLINE
+  $NAME
+   PLY_76
+  $POINTS
+   83
+   79
+   78
+   81
+   83
+#POLYLINE
+  $NAME
+   PLY_77
+  $POINTS
+   76
+   77
+   80
+   82
+   76
+#POLYLINE
+  $NAME
+   PLY_78
+  $POINTS
+   79
+   0
+   11
+   84
+   79
+#POLYLINE
+  $NAME
+   PLY_79
+  $POINTS
+   84
+   79
+   10
+   21
+   84
+#POLYLINE
+  $NAME
+   PLY_80
+  $POINTS
+   86
+   31
+   42
+   87
+   86
+#POLYLINE
+  $NAME
+   PLY_81
+  $POINTS
+   86
+   85
+   32
+   87
+   86
+#POLYLINE
+  $NAME
+   PLY_72a
+  $POINTS
+   5
+   77
+#POLYLINE
+  $NAME
+   PLY_73a
+  $POINTS
+   85
+   88
+#POLYLINE
+  $NAME
+   PLY_82
+  $POINTS
+   0
+   78
+#POLYLINE
+  $NAME
+   PLY_83
+  $POINTS
+   10
+   76
+#SURFACE
+  $NAME
+   bottom_tun2
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   2
+  $POLYLINES
+   PLY_0
+#SURFACE
+  $NAME
+   left_tun2
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   2
+  $POLYLINES
+   PLY_1
+#SURFACE
+  $NAME
+   bottom_tun3
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   3
+  $POLYLINES
+   PLY_2
+#SURFACE
+  $NAME
+   left_tun3
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   3
+  $POLYLINES
+   PLY_3
+#SURFACE
+  $NAME
+   left_tun1
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   1
+  $POLYLINES
+   PLY_4
+#SURFACE
+  $NAME
+   bottom_tun1
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   1
+  $POLYLINES
+   PLY_5
+#SURFACE
+  $NAME
+   top
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   0
+  $POLYLINES
+   PLY_6
+#SURFACE
+  $NAME
+   bottom
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   0
+  $POLYLINES
+   PLY_7
+#SURFACE
+  $NAME
+   left
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   0
+  $POLYLINES
+   PLY_8
+#SURFACE
+  $NAME
+   back
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   0
+  $POLYLINES
+   PLY_9
+#SURFACE
+  $NAME
+   front
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   0
+  $POLYLINES
+   PLY_10
+#SURFACE
+  $NAME
+   right
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   0
+  $POLYLINES
+   PLY_11
+#SURFACE
+  $NAME
+   SURF_0
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   1
+  $POLYLINES
+   PLY_12
+#SURFACE
+  $NAME
+   SURF_1
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   1
+  $POLYLINES
+   PLY_13
+#SURFACE
+  $NAME
+   SURF_2
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   1
+  $POLYLINES
+   PLY_14
+#SURFACE
+  $NAME
+   SURF_3
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   1
+  $POLYLINES
+   PLY_15
+#SURFACE
+  $NAME
+   SURF_4
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   1
+  $POLYLINES
+   PLY_16
+#SURFACE
+  $NAME
+   SURF_5
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   1
+  $POLYLINES
+   PLY_17
+#SURFACE
+  $NAME
+   SURF_6
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   1
+  $POLYLINES
+   PLY_18
+#SURFACE
+  $NAME
+   SURF_7
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   1
+  $POLYLINES
+   PLY_19
+#SURFACE
+  $NAME
+   SURF_8
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   1
+  $POLYLINES
+   PLY_20
+#SURFACE
+  $NAME
+   SURF_9
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   1
+  $POLYLINES
+   PLY_21
+#SURFACE
+  $NAME
+   SURF_10
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   2
+  $POLYLINES
+   PLY_22
+#SURFACE
+  $NAME
+   SURF_11
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   2
+  $POLYLINES
+   PLY_23
+#SURFACE
+  $NAME
+   SURF_12
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   2
+  $POLYLINES
+   PLY_24
+#SURFACE
+  $NAME
+   SURF_13
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   2
+  $POLYLINES
+   PLY_25
+#SURFACE
+  $NAME
+   SURF_14
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   2
+  $POLYLINES
+   PLY_26
+#SURFACE
+  $NAME
+   SURF_15
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   2
+  $POLYLINES
+   PLY_27
+#SURFACE
+  $NAME
+   SURF_16
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   2
+  $POLYLINES
+   PLY_28
+#SURFACE
+  $NAME
+   SURF_17
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   2
+  $POLYLINES
+   PLY_29
+#SURFACE
+  $NAME
+   SURF_18
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   2
+  $POLYLINES
+   PLY_30
+#SURFACE
+  $NAME
+   SURF_19
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   2
+  $POLYLINES
+   PLY_31
+#SURFACE
+  $NAME
+   SURF_20
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   3
+  $POLYLINES
+   PLY_32
+#SURFACE
+  $NAME
+   SURF_21
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   3
+  $POLYLINES
+   PLY_33
+#SURFACE
+  $NAME
+   SURF_22
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   3
+  $POLYLINES
+   PLY_34
+#SURFACE
+  $NAME
+   SURF_23
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   3
+  $POLYLINES
+   PLY_35
+#SURFACE
+  $NAME
+   SURF_24
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   3
+  $POLYLINES
+   PLY_36
+#SURFACE
+  $NAME
+   SURF_25
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   3
+  $POLYLINES
+   PLY_37
+#SURFACE
+  $NAME
+   SURF_26
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   3
+  $POLYLINES
+   PLY_38
+#SURFACE
+  $NAME
+   SURF_27
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   3
+  $POLYLINES
+   PLY_39
+#SURFACE
+  $NAME
+   SURF_28
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   3
+  $POLYLINES
+   PLY_40
+#SURFACE
+  $NAME
+   SURF_29
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   3
+  $POLYLINES
+   PLY_41
+#SURFACE
+  $NAME
+   SURF_30
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   4
+  $POLYLINES
+   PLY_42
+#SURFACE
+  $NAME
+   SURF_31
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   4
+  $POLYLINES
+   PLY_43
+#SURFACE
+  $NAME
+   SURF_32
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   4
+  $POLYLINES
+   PLY_44
+#SURFACE
+  $NAME
+   SURF_33
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   4
+  $POLYLINES
+   PLY_45
+#SURFACE
+  $NAME
+   SURF_34
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   4
+  $POLYLINES
+   PLY_46
+#SURFACE
+  $NAME
+   SURF_35
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   4
+  $POLYLINES
+   PLY_47
+#SURFACE
+  $NAME
+   SURF_36
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   4
+  $POLYLINES
+   PLY_48
+#SURFACE
+  $NAME
+   SURF_37
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   4
+  $POLYLINES
+   PLY_49
+#SURFACE
+  $NAME
+   SURF_38
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   4
+  $POLYLINES
+   PLY_50
+#SURFACE
+  $NAME
+   SURF_39
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   4
+  $POLYLINES
+   PLY_51
+#SURFACE
+  $NAME
+   SURF_40
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   5
+  $POLYLINES
+   PLY_52
+#SURFACE
+  $NAME
+   SURF_41
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   5
+  $POLYLINES
+   PLY_53
+#SURFACE
+  $NAME
+   SURF_42
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   5
+  $POLYLINES
+   PLY_54
+#SURFACE
+  $NAME
+   SURF_43
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   5
+  $POLYLINES
+   PLY_55
+#SURFACE
+  $NAME
+   SURF_44
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   5
+  $POLYLINES
+   PLY_56
+#SURFACE
+  $NAME
+   SURF_45
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   5
+  $POLYLINES
+   PLY_57
+#SURFACE
+  $NAME
+   SURF_46
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   5
+  $POLYLINES
+   PLY_58
+#SURFACE
+  $NAME
+   SURF_47
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   5
+  $POLYLINES
+   PLY_59
+#SURFACE
+  $NAME
+   SURF_48
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   5
+  $POLYLINES
+   PLY_70
+#SURFACE
+  $NAME
+   SURF_49
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   5
+  $POLYLINES
+   PLY_71
+#SURFACE
+  $NAME
+   SURF_50
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   6
+  $POLYLINES
+   PLY_72
+#SURFACE
+  $NAME
+   SURF_51
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   6
+  $POLYLINES
+   PLY_73
+#SURFACE
+  $NAME
+   SURF_52
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   6
+  $POLYLINES
+   PLY_74
+#SURFACE
+  $NAME
+   SURF_53
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   6
+  $POLYLINES
+   PLY_75
+#SURFACE
+  $NAME
+   SURF_54
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   6
+  $POLYLINES
+   PLY_76
+#SURFACE
+  $NAME
+   SURF_55
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   6
+  $POLYLINES
+   PLY_77
+#SURFACE
+  $NAME
+   SURF_56
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   6
+  $POLYLINES
+   PLY_78
+#SURFACE
+  $NAME
+   SURF_57
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   6
+  $POLYLINES
+   PLY_79
+#SURFACE
+  $NAME
+   SURF_58
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   6
+  $POLYLINES
+   PLY_80
+#SURFACE
+  $NAME
+   SURF_59
+  $EPSILON
+   0.0001
+  $TYPE
+   0
+  $MAT_GROUP
+   6
+  $POLYLINES
+   PLY_81
+#STOP
+|-- Written with ogs5py (0.5.0rc1) on: 2019-01-15_16-49-41 --|
