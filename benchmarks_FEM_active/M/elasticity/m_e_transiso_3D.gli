@@ -1,0 +1,155 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0 $NAME POINT0
+1 0.01 0.0 0.0 $NAME POINT1
+2 0.01 0.01 0.0 $NAME POINT2
+3 0.0 0.01 0.0 $NAME POINT3
+4 0.0 0.0 0.001 $NAME POINT4
+5 0.01 0.0 0.001 $NAME POINT5
+6 0.01 0.01 0.001 $NAME POINT6
+7 0.0 0.01 0.001 $NAME POINT7
+8 0.0 0.0 0.0005 $NAME POINT8
+#POLYLINE
+  $NAME
+   PLY_0
+  $TYPE
+   2
+  $EPSILON
+   1e-06
+  $POINTS
+   0
+   1
+   5
+   4
+   0
+#POLYLINE
+  $NAME
+   PLY_1
+  $TYPE
+   2
+  $EPSILON
+   1e-06
+  $POINTS
+   3
+   2
+   6
+   7
+   3
+#POLYLINE
+  $NAME
+   PLY_2
+  $TYPE
+   2
+  $EPSILON
+   1e-06
+  $POINTS
+   0
+   3
+   7
+   4
+   0
+#POLYLINE
+  $NAME
+   PLY_3
+  $TYPE
+   2
+  $EPSILON
+   1e-06
+  $POINTS
+   1
+   2
+   6
+   5
+   1
+#POLYLINE
+  $NAME
+   PLY_4
+  $TYPE
+   2
+  $EPSILON
+   1e-06
+  $POINTS
+   0
+   1
+   2
+   3
+   0
+#POLYLINE
+  $NAME
+   PLY_5
+  $TYPE
+   2
+  $EPSILON
+   1e-06
+  $POINTS
+   4
+   5
+   6
+   7
+   4
+#POLYLINE
+  $NAME
+   PLY_6
+  $TYPE
+   2
+  $EPSILON
+   1e-06
+  $POINTS
+   0
+   4
+#SURFACE
+  $NAME
+   SURF_FORW
+  $EPSILON
+   1e-06
+  $TYPE
+   0
+  $POLYLINES
+   PLY_0
+#SURFACE
+  $NAME
+   SURF_BACK
+  $EPSILON
+   1e-06
+  $TYPE
+   0
+  $POLYLINES
+   PLY_1
+#SURFACE
+  $NAME
+   SURF_LEFT
+  $EPSILON
+   1e-06
+  $TYPE
+   0
+  $POLYLINES
+   PLY_2
+#SURFACE
+  $NAME
+   SURF_RIGHT
+  $EPSILON
+   1e-06
+  $TYPE
+   0
+  $POLYLINES
+   PLY_3
+#SURFACE
+  $NAME
+   SURF_BOT
+  $EPSILON
+   1e-06
+  $TYPE
+   0
+  $POLYLINES
+   PLY_4
+#SURFACE
+  $NAME
+   SURF_TOP
+  $EPSILON
+   1e-06
+  $TYPE
+   0
+  $POLYLINES
+   PLY_5
+#STOP
+|-- Written with ogs5py (0.5.0) on: 2019-01-18_23-54-57 --|

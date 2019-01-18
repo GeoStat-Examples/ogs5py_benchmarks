@@ -1,0 +1,274 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0
+1 100.0 0.0 0.0
+2 100.0 50.0 0.0
+3 0.0 50.0 0.0
+4 0.0 21.0 0.0
+5 0.0 29.0 0.0
+6 0.0 36.0 0.0
+7 0.0 0.0 1.0
+8 100.0 0.0 1.0
+9 100.0 50.0 1.0
+10 0.0 50.0 1.0
+11 0.0 21.0 1.0
+12 0.0 29.0 1.0
+13 0.0 36.0 1.0
+14 0.0 25.0 0.0
+15 100.0 25.0 0.0
+16 60.0 0.0 0.0
+17 60.0 50.0 0.0
+18 80.0 0.0 0.0
+19 80.0 50.0 0.0
+#POLYLINE
+  $NAME
+   OUT1
+  $TYPE
+   0
+  $EPSILON
+   0.0001
+  $POINTS
+   16
+   17
+#POLYLINE
+  $NAME
+   OUT2
+  $TYPE
+   0
+  $EPSILON
+   0.0001
+  $POINTS
+   18
+   19
+#POLYLINE
+  $NAME
+   OUTLINE
+  $TYPE
+   0
+  $EPSILON
+   0.0001
+  $POINTS
+   0
+   1
+#POLYLINE
+  $NAME
+   OUTLINE2
+  $TYPE
+   0
+  $EPSILON
+   0.0001
+  $POINTS
+   14
+   15
+#POLYLINE
+  $NAME
+   BCLEFT_LOW
+  $TYPE
+   3
+  $EPSILON
+   0.0001
+  $POINTS
+   0
+   3
+#POLYLINE
+  $NAME
+   BCLEFT_HIGH
+  $TYPE
+   3
+  $EPSILON
+   0.0001
+  $POINTS
+   7
+   10
+#POLYLINE
+  $NAME
+   Caesar
+  $TYPE
+   3
+  $EPSILON
+   0.0001
+  $POINTS
+   0
+   3
+   10
+   7
+   0
+#POLYLINE
+  $NAME
+   Doris
+  $TYPE
+   3
+  $EPSILON
+   0.0001
+  $POINTS
+   1
+   2
+   9
+   8
+   1
+#POLYLINE
+  $NAME
+   BCRECHTS_LOW
+  $TYPE
+   3
+  $EPSILON
+   0.0001
+  $POINTS
+   1
+   2
+#POLYLINE
+  $NAME
+   BCRECHTS_HIGH
+  $TYPE
+   3
+  $EPSILON
+   0.0001
+  $POINTS
+   8
+   9
+#POLYLINE
+  $NAME
+   Anton
+  $TYPE
+   3
+  $EPSILON
+   0.0001
+  $POINTS
+   4
+   5
+   12
+   11
+   4
+#POLYLINE
+  $NAME
+   BCLEFT1_LOW
+  $TYPE
+   3
+  $EPSILON
+   0.0001
+  $POINTS
+   4
+   5
+#POLYLINE
+  $NAME
+   Berta
+  $TYPE
+   3
+  $EPSILON
+   0.0001
+  $POINTS
+   5
+   6
+   13
+   12
+   5
+#POLYLINE
+  $NAME
+   Emil
+  $TYPE
+   3
+  $EPSILON
+   0.0001
+  $POINTS
+   0
+   4
+   11
+   7
+   0
+#POLYLINE
+  $NAME
+   Franz
+  $TYPE
+   3
+  $EPSILON
+   0.0001
+  $POINTS
+   5
+   3
+   10
+   12
+   5
+#POLYLINE
+  $NAME
+   Gerda
+  $TYPE
+   3
+  $EPSILON
+   0.0001
+  $POINTS
+   0
+   5
+   12
+   7
+   0
+#POLYLINE
+  $NAME
+   Herta
+  $TYPE
+   3
+  $EPSILON
+   0.0001
+  $POINTS
+   6
+   3
+   10
+   13
+   6
+#SURFACE
+  $NAME
+   AntonSURF
+  $TYPE
+   3
+  $POLYLINES
+   Anton
+#SURFACE
+  $NAME
+   BertaSURF
+  $TYPE
+   3
+  $POLYLINES
+   Berta
+#SURFACE
+  $NAME
+   CaesarSURF
+  $TYPE
+   3
+  $POLYLINES
+   Caesar
+#SURFACE
+  $NAME
+   DorisSURF
+  $TYPE
+   3
+  $POLYLINES
+   Doris
+#SURFACE
+  $NAME
+   EmilSURF
+  $TYPE
+   3
+  $POLYLINES
+   Emil
+#SURFACE
+  $NAME
+   FranzSURF
+  $TYPE
+   3
+  $POLYLINES
+   Franz
+#SURFACE
+  $NAME
+   GerdaSURF
+  $TYPE
+   3
+  $POLYLINES
+   Gerda
+#SURFACE
+  $NAME
+   HertaSURF
+  $TYPE
+   3
+  $POLYLINES
+   Herta
+#STOP
+|-- Written with ogs5py (0.5.0) on: 2019-01-18_23-54-57 --|

@@ -1,0 +1,159 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 -0.5 0.0 -0.5 $NAME POINT0
+1 0.5 0.0 -0.5 $NAME POINT1
+2 0.5 0.0 0.5 $NAME POINT2
+3 -0.5 0.0 0.5 $NAME POINT3
+4 -0.5 1.5 -0.5 $NAME POINT4
+5 0.5 1.5 -0.5 $NAME POINT5
+6 0.5 1.5 0.5 $NAME POINT6
+7 -0.5 1.5 0.5 $NAME POINT7
+8 0.0 0.0 0.0429 $NAME POINT8
+9 0.0 10.0 0.0429 $NAME POINT9
+10 0.0 0.5 0.0 $NAME POINT10
+11 0.5 0.5 0.0 $NAME POINT11
+12 0.0 0.5 0.5 $NAME POINT12
+#POLYLINE
+  $NAME
+   front
+  $MAT_GROUP
+   0
+  $POINTS
+   0
+   1
+   2
+   3
+   0
+#POLYLINE
+  $NAME
+   left
+  $MAT_GROUP
+   0
+  $POINTS
+   0
+   3
+   7
+   4
+   0
+#POLYLINE
+  $NAME
+   upper
+  $MAT_GROUP
+   0
+  $POINTS
+   3
+   2
+   6
+   7
+   3
+#POLYLINE
+  $NAME
+   bottom
+  $MAT_GROUP
+   0
+  $POINTS
+   0
+   1
+   5
+   4
+   0
+#POLYLINE
+  $NAME
+   back
+  $MAT_GROUP
+   0
+  $POINTS
+   4
+   5
+   6
+   7
+   4
+#POLYLINE
+  $NAME
+   right
+  $MAT_GROUP
+   0
+  $POINTS
+   2
+   1
+   5
+   6
+   2
+#POLYLINE
+  $NAME
+   horizon
+  $POINTS
+   10
+   11
+#POLYLINE
+  $NAME
+   vertikal
+  $POINTS
+   10
+   12
+#SURFACE
+  $NAME
+   left
+  $EPSILON
+   0.001
+  $TYPE
+   0
+  $MAT_GROUP
+   0
+  $POLYLINES
+   left
+#SURFACE
+  $NAME
+   upper
+  $EPSILON
+   0.001
+  $TYPE
+   0
+  $MAT_GROUP
+   0
+  $POLYLINES
+   upper
+#SURFACE
+  $NAME
+   bottom
+  $EPSILON
+   0.001
+  $TYPE
+   0
+  $MAT_GROUP
+   0
+  $POLYLINES
+   bottom
+#SURFACE
+  $NAME
+   back
+  $EPSILON
+   0.001
+  $TYPE
+   0
+  $MAT_GROUP
+   0
+  $POLYLINES
+   back
+#SURFACE
+  $NAME
+   right
+  $EPSILON
+   0.001
+  $TYPE
+   0
+  $MAT_GROUP
+   0
+  $POLYLINES
+   right
+#SURFACE
+  $NAME
+   front
+  $EPSILON
+   0.001
+  $TYPE
+   0
+  $POLYLINES
+   front
+#STOP
+|-- Written with ogs5py (0.5.0) on: 2019-01-18_23-54-57 --|

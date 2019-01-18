@@ -1,0 +1,84 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0
+1 100.0 0.0 0.0
+2 100.0 100.0 0.0
+3 0.0 100.0 0.0
+4 0.0 0.0 50.0
+5 100.0 0.0 50.0
+6 100.0 100.0 50.0
+7 0.0 100.0 50.0
+#POLYLINE
+  $NAME
+   L_BC
+  $TYPE
+   2
+  $EPSILON
+   0.01
+  $POINTS
+   7
+   4
+#POLYLINE
+  $NAME
+   R_BC
+  $TYPE
+   2
+  $EPSILON
+   0.01
+  $POINTS
+   6
+   5
+#POLYLINE
+  $NAME
+   Closed_L_BC
+  $TYPE
+   2
+  $EPSILON
+   0.01
+  $POINTS
+   7
+   3
+   0
+   4
+   7
+#POLYLINE
+  $NAME
+   Closed_R_BC
+  $TYPE
+   2
+  $EPSILON
+   0.01
+  $POINTS
+   6
+   2
+   1
+   5
+   6
+#SURFACE
+  $ID
+   0
+  $NAME
+   R_SF
+  $EPSILON
+   0.01
+  $TYPE
+   0
+  $MAT_GROUP
+   0
+  $POLYLINES
+   Closed_R_BC
+#SURFACE
+  $ID
+   1
+  $NAME
+   L_SF
+  $EPSILON
+   0.01
+  $TYPE
+   0
+  $MAT_GROUP
+   0
+  $POLYLINES
+   Closed_L_BC
+#STOP
+|-- Written with ogs5py (0.5.0) on: 2019-01-18_23-54-57 --|

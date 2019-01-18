@@ -1,0 +1,268 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 1.0 0.0 $NAME POINT0 $MD 0.05
+1 0.0 0.0 0.0 $NAME POINT1 $MD 0.05
+2 1.0 0.0 0.0 $NAME POINT2 $MD 0.05
+3 1.0 1.0 0.0 $NAME POINT3 $MD 0.05
+4 0.0 0.65 0.0 $NAME POINT4 $MD 0.05
+5 0.0 0.35 0.0 $NAME POINT5 $MD 0.05
+6 0.3 0.0 0.0 $NAME POINT6 $MD 0.05
+7 0.55 0.0 0.0 $NAME POINT7 $MD 0.05
+8 0.85 0.0 0.0 $NAME POINT8 $MD 0.05
+9 1.0 0.15 0.0 $NAME POINT9 $MD 0.05
+10 1.0 0.45 0.0 $NAME POINT10 $MD 0.05
+11 1.0 0.7 0.0 $NAME POINT11 $MD 0.05
+12 0.65 1.0 0.0 $NAME POINT12 $MD 0.05
+13 0.35 1.0 0.0 $NAME POINT13 $MD 0.05
+#POLYLINE
+  $ID
+   0
+  $NAME
+   POLYLINE0
+  $TYPE
+   2
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   -1
+  $POINTS
+   0
+   4
+   13
+   0
+#POLYLINE
+  $ID
+   1
+  $NAME
+   POLYLINE1
+  $TYPE
+   2
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   -1
+  $POINTS
+   4
+   5
+   12
+   13
+   4
+#POLYLINE
+  $ID
+   2
+  $NAME
+   POLYLINE2
+  $TYPE
+   2
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   -1
+  $POINTS
+   5
+   1
+   3
+   12
+   5
+#POLYLINE
+  $ID
+   3
+  $NAME
+   POLYLINE3
+  $TYPE
+   2
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   -1
+  $POINTS
+   1
+   6
+   11
+   3
+   1
+#POLYLINE
+  $ID
+   4
+  $NAME
+   POLYLINE4
+  $TYPE
+   2
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   -1
+  $POINTS
+   6
+   7
+   10
+   11
+   6
+#POLYLINE
+  $ID
+   5
+  $NAME
+   POLYLINE5
+  $TYPE
+   2
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   -1
+  $POINTS
+   7
+   8
+   9
+   10
+   7
+#POLYLINE
+  $ID
+   6
+  $NAME
+   POLYLINE6
+  $TYPE
+   2
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   -1
+  $POINTS
+   8
+   2
+   9
+   8
+#POLYLINE
+  $ID
+   7
+  $NAME
+   POLYLINE7
+  $TYPE
+   2
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   -1
+  $POINTS
+   0
+   3
+#POLYLINE
+  $ID
+   8
+  $NAME
+   POLYLINE8
+  $TYPE
+   2
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   -1
+  $POINTS
+   1
+   2
+#POLYLINE
+  $ID
+   9
+  $NAME
+   POLYLINE9
+  $TYPE
+   2
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   -1
+  $POINTS
+   0
+   1
+#POLYLINE
+  $ID
+   10
+  $NAME
+   POLYLINE10
+  $TYPE
+   2
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   -1
+  $POINTS
+   2
+   3
+#POLYLINE
+  $ID
+   10
+  $NAME
+   POLYLINE11
+  $TYPE
+   2
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   -1
+  $POINTS
+   4
+   13
+#SURFACE
+  $ID
+   0
+  $NAME
+   SURFACE0
+  $MAT_GROUP
+   -1
+  $POLYLINES
+   POLYLINE0
+#SURFACE
+  $ID
+   1
+  $NAME
+   SURFACE1
+  $MAT_GROUP
+   -1
+  $POLYLINES
+   POLYLINE1
+#SURFACE
+  $ID
+   2
+  $NAME
+   SURFACE2
+  $MAT_GROUP
+   -1
+  $POLYLINES
+   POLYLINE2
+#SURFACE
+  $ID
+   3
+  $NAME
+   SURFACE3
+  $MAT_GROUP
+   -1
+  $POLYLINES
+   POLYLINE3
+#SURFACE
+  $ID
+   4
+  $NAME
+   SURFACE4
+  $MAT_GROUP
+   -1
+  $POLYLINES
+   POLYLINE4
+#SURFACE
+  $ID
+   5
+  $NAME
+   SURFACE5
+  $MAT_GROUP
+   -1
+  $POLYLINES
+   POLYLINE5
+#SURFACE
+  $ID
+   6
+  $NAME
+   SURFACE6
+  $MAT_GROUP
+   -1
+  $POLYLINES
+   POLYLINE6
+#STOP
+|-- Written with ogs5py (0.5.0) on: 2019-01-18_23-54-57 --|

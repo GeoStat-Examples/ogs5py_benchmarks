@@ -1,0 +1,61 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0 $NAME POINT0
+1 0.1 0.0 0.0 $NAME POINT1
+2 0.1 0.0125 0.0 $NAME POINT2
+3 0.0 0.0125 0.0 $NAME POINT3
+4 0.0 0.0126 0.0 $NAME POINT4
+5 0.1 0.025 0.0 $NAME POINT5
+6 0.0 0.025 0.0 $NAME POINT6
+#POLYLINE
+  $NAME
+   PLY_Model_Area
+  $EPSILON
+   1e-09
+  $POINTS
+   0
+   1
+   5
+   6
+   0
+#POLYLINE
+  $NAME
+   PLY_BC_LEFT_unten
+  $EPSILON
+   1e-09
+  $POINTS
+   0
+   3
+#POLYLINE
+  $NAME
+   PLY_BC_LEFT_oben
+  $EPSILON
+   1e-09
+  $POINTS
+   4
+   6
+#POLYLINE
+  $NAME
+   PLY_BC_LEFT
+  $EPSILON
+   1e-09
+  $POINTS
+   0
+   6
+#POLYLINE
+  $NAME
+   PLY_BC_RIGHT
+  $EPSILON
+   1e-08
+  $POINTS
+   1
+   5
+#SURFACE
+  $NAME
+   SURF_Model_Area
+  $TYPE
+   0
+  $POLYLINES
+   PLY_Model_Area
+#STOP
+|-- Written with ogs5py (0.5.0) on: 2019-01-18_23-54-57 --|

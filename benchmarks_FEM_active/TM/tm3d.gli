@@ -1,0 +1,177 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 10.0 0.0
+1 0.0 10.0 10.0
+2 0.0 0.0 10.0
+3 1.0 0.0 10.0
+4 1.0 0.0 0.0
+5 1.0 10.0 0.0
+6 0.5 10.0 0.0
+7 0.5 10.0 10.0
+8 1.0 10.0 10.0
+9 0.5 0.0 0.0
+10 0.5 0.0 10.0
+11 0.0 0.0 0.0
+12 0.5 5.0 5.0 $NAME POINT12
+#POLYLINE
+  $NAME
+   PLY_0
+  $POINTS
+   8
+   5
+   6
+   7
+   8
+#POLYLINE
+  $NAME
+   PLY_1
+  $POINTS
+   7
+   6
+   0
+   1
+   7
+#POLYLINE
+  $NAME
+   PLY_2
+  $POINTS
+   3
+   4
+   9
+   10
+   3
+#POLYLINE
+  $NAME
+   PLY_3
+  $POINTS
+   10
+   9
+   11
+   2
+   10
+#POLYLINE
+  $NAME
+   PLY_4
+  $POINTS
+   8
+   3
+   4
+   5
+   8
+#POLYLINE
+  $NAME
+   PLY_5
+  $POINTS
+   1
+   2
+   11
+   0
+   1
+#POLYLINE
+  $NAME
+   PLY_6
+  $POINTS
+   3
+   8
+   7
+   10
+   3
+#POLYLINE
+  $NAME
+   PLY_7
+  $POINTS
+   7
+   10
+   2
+   1
+   7
+#POLYLINE
+  $NAME
+   PLY_8
+  $POINTS
+   5
+   4
+   9
+   6
+   5
+#POLYLINE
+  $NAME
+   PLY_9
+  $POINTS
+   6
+   9
+   11
+   0
+   6
+#SURFACE
+  $NAME
+   SURF_0
+  $TYPE
+   0
+  $POLYLINES
+   PLY_0
+#SURFACE
+  $NAME
+   SURF_1
+  $TYPE
+   0
+  $POLYLINES
+   PLY_1
+#SURFACE
+  $NAME
+   SURF_2
+  $TYPE
+   0
+  $POLYLINES
+   PLY_2
+#SURFACE
+  $NAME
+   SURF_3
+  $TYPE
+   0
+  $POLYLINES
+   PLY_3
+#SURFACE
+  $NAME
+   SURF_4
+  $TYPE
+   0
+  $POLYLINES
+   PLY_4
+#SURFACE
+  $NAME
+   SURF_5
+  $TYPE
+   0
+  $POLYLINES
+   PLY_5
+#SURFACE
+  $NAME
+   SURF_6
+  $TYPE
+   0
+  $POLYLINES
+   PLY_6
+#SURFACE
+  $NAME
+   SURF_7
+  $TYPE
+   0
+  $POLYLINES
+   PLY_7
+#SURFACE
+  $NAME
+   SURF_8
+  $TYPE
+   0
+  $POLYLINES
+   PLY_8
+#SURFACE
+  $NAME
+   SURF_9
+  $TYPE
+   0
+  $POLYLINES
+   PLY_9
+#STOP
+|-- Written with ogs5py (0.5.0) on: 2019-01-18_23-54-57 --|

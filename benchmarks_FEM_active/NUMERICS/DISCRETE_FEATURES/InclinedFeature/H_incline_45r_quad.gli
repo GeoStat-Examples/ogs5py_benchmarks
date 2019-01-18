@@ -1,0 +1,42 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0
+1 0.0 7.07106838616246 -7.07106723756844
+2 10.0 7.07106838616246 -7.07106723756844
+3 10.0 0.0 0.0
+#POLYLINE
+  $NAME
+   PLY_0
+  $POINTS
+   0
+   1
+   2
+   3
+   0
+#POLYLINE
+  $NAME
+   PLY_1
+  $POINTS
+   0
+   1
+#POLYLINE
+  $NAME
+   TOP
+  $POINTS
+   1
+   2
+#POLYLINE
+  $NAME
+   BOTTOM
+  $POINTS
+   0
+   3
+#SURFACE
+  $NAME
+   SURF_0
+  $TYPE
+   0
+  $POLYLINES
+   PLY_0
+#STOP
+|-- Written with ogs5py (0.5.0) on: 2019-01-18_23-54-57 --|

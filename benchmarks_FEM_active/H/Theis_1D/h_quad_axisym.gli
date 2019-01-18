@@ -1,0 +1,26 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.3048 0.0 0.0
+1 304.8 0.0 0.0
+2 9.639 0.0 0.0
+3 0.3048 1.0 0.0
+4 304.8 1.0 0.0
+5 9.639 1.0 0.0 $NAME POINT5
+#POLYLINE
+  $NAME
+   WELL
+  $TYPE
+   0
+  $POINTS
+   0
+   3
+#POLYLINE
+  $NAME
+   INIFINIT
+  $TYPE
+   0
+  $POINTS
+   1
+   4
+#STOP
+|-- Written with ogs5py (0.5.0) on: 2019-01-18_23-54-57 --|

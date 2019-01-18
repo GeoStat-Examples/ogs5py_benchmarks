@@ -1,0 +1,178 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0 $MD 1.0
+1 50.0 0.0 0.0
+2 50.0 50.0 0.0
+3 0.0 50.0 0.0
+4 5.0 0.0 0.0 $MD 0.5
+5 4.93844170116065 0.782172336660859 0.0 $MD 0.5
+6 4.755282574305 1.5450849939441 0.0 $MD 0.5
+7 4.45503260513949 2.26995252971158 0.0 $MD 0.5
+8 4.0450849445955 2.93892629900901 0.0 $MD 0.5
+9 3.53553386491152 3.53553394695395 0.0 $MD 0.5
+10 2.9389262051424 4.04508501279359 0.0 $MD 0.5
+11 2.26995242633209 4.45503265781398 0.0 $MD 0.5
+12 1.54508488359728 4.75528261015885 0.0 $MD 0.5
+13 0.782172222063809 4.93844171931104 0.0 $MD 0.5
+14 -1.16025516665722e-07 5.0 0.0 $MD 0.5
+#POLYLINE
+  $NAME
+   PLY_0
+  $POINTS
+   3
+   14
+   13
+   12
+   11
+   10
+   9
+   2
+   3
+#POLYLINE
+  $NAME
+   PLY_1
+  $POINTS
+   2
+   9
+   8
+   7
+   6
+   5
+   4
+   1
+   2
+#POLYLINE
+  $NAME
+   PLY_2
+  $POINTS
+   9
+   10
+   11
+   12
+   13
+   14
+   0
+   9
+#POLYLINE
+  $NAME
+   PLY_3
+  $POINTS
+   4
+   5
+   6
+   7
+   8
+   9
+   0
+   4
+#POLYLINE
+  $NAME
+   PLY_4
+  $POINTS
+   3
+   14
+#POLYLINE
+  $NAME
+   PLY_5
+  $POINTS
+   14
+   0
+#POLYLINE
+  $NAME
+   PLY_6
+  $POINTS
+   0
+   4
+#POLYLINE
+  $NAME
+   PLY_7
+  $POINTS
+   4
+   1
+#POLYLINE
+  $NAME
+   PLY_8
+  $POINTS
+   1
+   2
+#POLYLINE
+  $NAME
+   PLY_9
+  $POINTS
+   14
+   13
+   12
+   11
+   10
+   9
+#POLYLINE
+  $NAME
+   PLY_10
+  $POINTS
+   9
+   8
+   7
+   6
+   5
+   4
+#POLYLINE
+  $NAME
+   PLY_11
+  $POINTS
+   4
+   5
+   6
+   7
+   8
+   9
+   10
+   11
+   12
+   13
+   14
+#POLYLINE
+  $NAME
+   PLY_12
+  $POINTS
+   3
+   2
+#POLYLINE
+  $NAME
+   PLY_13
+  $POINTS
+   0
+   3
+#POLYLINE
+  $NAME
+   PLY_14
+  $POINTS
+   0
+   2
+#POLYLINE
+  $NAME
+   PLY_15
+  $POINTS
+   0
+   1
+#SURFACE
+  $NAME
+   SURF_0
+  $POLYLINES
+   PLY_0
+#SURFACE
+  $NAME
+   SURF_1
+  $POLYLINES
+   PLY_1
+#SURFACE
+  $NAME
+   SURF_2
+  $POLYLINES
+   PLY_2
+#SURFACE
+  $NAME
+   SURF_3
+  $POLYLINES
+   PLY_3
+#STOP
+|-- Written with ogs5py (0.5.0) on: 2019-01-18_23-54-57 --|

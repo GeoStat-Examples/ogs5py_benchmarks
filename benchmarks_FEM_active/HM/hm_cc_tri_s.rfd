@@ -1,0 +1,11 @@
+|-------------- Written with ogs5py --------------|
+#PROJECT
+   BENCHMARK: CONSOLIDATION: CAM-CLAY MODEL
+#CURVE
+   0.0 -50.0
+   1100000000.0 -200.0
+#CURVE
+   0.0 0.0
+   110000000.0 0.6
+#STOP
+|-- Written with ogs5py (0.5.0) on: 2019-01-18_23-54-57 --|

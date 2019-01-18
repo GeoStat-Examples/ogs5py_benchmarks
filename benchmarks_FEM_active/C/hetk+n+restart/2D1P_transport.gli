@@ -1,0 +1,196 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0 $NAME POINT0 $MD 3.0
+1 100.0 0.0 0.0 $NAME POINT1 $MD 3.0
+2 100.0 100.0 0.0 $NAME POINT2 $MD 3.0
+3 0.0 100.0 0.0 $NAME POINT3 $MD 3.0
+4 0.0 50.0 0.0 $NAME POINT4 $MD 3.0
+5 100.0 50.0 0.0 $NAME POINT5 $MD 3.0
+6 0.0 20.0 0.0 $NAME POINT6 $MD 3.0
+7 0.0 30.0 0.0 $NAME POINT7 $MD 3.0
+8 0.0 70.0 0.0 $NAME POINT8 $MD 3.0
+9 0.0 80.0 0.0 $NAME POINT9 $MD 3.0
+10 20.0 25.0 0.0 $NAME POINT10 $MD 3.0
+11 20.0 75.0 0.0 $NAME POINT11 $MD 3.0
+#POLYLINE
+  $ID
+   0
+  $NAME
+   Matr
+  $TYPE
+   0
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   0
+  $POINTS
+   0
+   1
+   5
+   4
+   0
+#POLYLINE
+  $ID
+   1
+  $NAME
+   Napl
+  $TYPE
+   0
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   1
+  $POINTS
+   4
+   5
+   2
+   3
+   4
+#POLYLINE
+  $ID
+   2
+  $NAME
+   L_BC
+  $TYPE
+   0
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   0
+  $POINTS
+   0
+   4
+   3
+#POLYLINE
+  $ID
+   3
+  $NAME
+   R_BC
+  $TYPE
+   0
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   0
+  $POINTS
+   1
+   5
+   2
+#POLYLINE
+  $ID
+   4
+  $NAME
+   U_BC
+  $TYPE
+   0
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   0
+  $POINTS
+   3
+   2
+#POLYLINE
+  $ID
+   4
+  $NAME
+   LO_BC
+  $TYPE
+   0
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   0
+  $POINTS
+   0
+   1
+#POLYLINE
+  $ID
+   5
+  $NAME
+   BCTracer1
+  $TYPE
+   0
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   0
+  $POINTS
+   6
+   7
+#POLYLINE
+  $ID
+   6
+  $NAME
+   BCTracer2
+  $TYPE
+   0
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   0
+  $POINTS
+   8
+   9
+#POLYLINE
+  $ID
+   7
+  $NAME
+   BCWater1
+  $TYPE
+   0
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   0
+  $POINTS
+   0
+   6
+#POLYLINE
+  $ID
+   8
+  $NAME
+   BCWater2
+  $TYPE
+   0
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   0
+  $POINTS
+   7
+   8
+#POLYLINE
+  $ID
+   9
+  $NAME
+   BCWater3
+  $TYPE
+   0
+  $EPSILON
+   0.01
+  $MAT_GROUP
+   0
+  $POINTS
+   9
+   3
+#SURFACE
+  $ID
+   0
+  $NAME
+   Matrix
+  $MAT_GROUP
+   0
+  $POLYLINES
+   Matr
+#SURFACE
+  $ID
+   1
+  $NAME
+   Naplsource
+  $MAT_GROUP
+   0
+  $POLYLINES
+   Napl
+#STOP
+|-- Written with ogs5py (0.5.0) on: 2019-01-18_23-54-57 --|

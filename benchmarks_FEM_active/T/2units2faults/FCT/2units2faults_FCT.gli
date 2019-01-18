@@ -1,0 +1,95 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 -100.0 -100.0 -75.0
+1 100.0 -100.0 -75.0
+2 100.0 -100.0 75.0
+3 -100.0 -100.0 75.0
+4 -100.0 100.0 -75.0
+5 100.0 100.0 -75.0
+6 100.0 100.0 75.0
+7 -100.0 100.0 75.0
+8 27.16641003057594 14.75585580797469 58.6911721739709
+9 -19.30232847087628 -10.48435827015222 -41.7013614374399
+10 -70.0 -90.0 65.0
+11 -90.0 -80.0 -65.0
+12 90.0 -40.0 70.0
+13 40.0 -90.0 -70.0
+14 -77.0 -83.0 5.12 $NAME POINT15
+15 58.9 -61.1 -3.18 $NAME POINT16
+16 0.0 0.0 0.0 $NAME POINT17
+#POLYLINE
+  $ID
+   0
+  $NAME
+   South
+  $TYPE
+   2
+  $EPSILON
+   0.0001
+  $MAT_GROUP
+   -1
+  $POINTS
+   0
+   1
+   2
+   3
+   0
+#POLYLINE
+  $ID
+   1
+  $NAME
+   North
+  $TYPE
+   2
+  $EPSILON
+   1.0
+  $MAT_GROUP
+   -1
+  $POINTS
+   4
+   5
+   6
+   7
+   4
+#POLYLINE
+  $ID
+   2
+  $NAME
+   Intersection
+  $TYPE
+   2
+  $EPSILON
+   0.1
+  $MAT_GROUP
+   -1
+  $POINTS
+   8
+   9
+#SURFACE
+  $ID
+   0
+  $NAME
+   South
+  $EPSILON
+   0.1
+  $TYPE
+   0
+  $MAT_GROUP
+   -1
+  $POLYLINES
+   South
+#SURFACE
+  $ID
+   0
+  $NAME
+   North
+  $EPSILON
+   0.1
+  $TYPE
+   0
+  $MAT_GROUP
+   -1
+  $POLYLINES
+   North
+#STOP
+|-- Written with ogs5py (0.5.0) on: 2019-01-18_23-54-57 --|

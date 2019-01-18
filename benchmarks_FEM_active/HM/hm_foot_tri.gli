@@ -1,0 +1,106 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0
+1 1.0 0.0 0.0
+2 0.0 0.0 0.0
+3 0.0 -5.0 0.0
+4 1.0 0.0 0.0
+5 1.0 -5.0 0.0
+6 0.0 0.0 0.0
+7 1.0 0.0 0.0
+8 8.0 0.0 0.0
+9 8.0 0.0 0.0
+10 8.0 -5.0 0.0
+11 8.0 -5.0 0.0
+#POLYLINE
+  $NAME
+   TRACTION_Y
+  $TYPE
+   2
+  $EPSILON
+   0.0001
+  $POINTS
+   0
+   1
+#POLYLINE
+  $NAME
+   ex2_Out_axis
+  $TYPE
+   2
+  $EPSILON
+   0.0001
+  $POINTS
+   2
+   3
+#POLYLINE
+  $NAME
+   ex2_out_Bedge
+  $TYPE
+   2
+  $EPSILON
+   0.0001
+  $POINTS
+   4
+   5
+#POLYLINE
+  $NAME
+   ex2_foot
+  $TYPE
+   2
+  $EPSILON
+   0.0001
+  $POINTS
+   6
+   7
+#POLYLINE
+  $NAME
+   P_TOP
+  $TYPE
+   2
+  $EPSILON
+   0.0001
+  $POINTS
+   0
+   8
+#POLYLINE
+  $NAME
+   UX_LEFT
+  $TYPE
+   2
+  $EPSILON
+   0.0001
+  $POINTS
+   0
+   3
+#POLYLINE
+  $NAME
+   UX_RIGHT
+  $TYPE
+   2
+  $EPSILON
+   0.0001
+  $POINTS
+   9
+   10
+#POLYLINE
+  $NAME
+   UX_BOTTOM
+  $TYPE
+   2
+  $EPSILON
+   0.0001
+  $POINTS
+   3
+   11
+#POLYLINE
+  $NAME
+   UY_BOTTOM
+  $TYPE
+   2
+  $EPSILON
+   0.0001
+  $POINTS
+   3
+   11
+#STOP
+|-- Written with ogs5py (0.5.0) on: 2019-01-18_23-54-57 --|

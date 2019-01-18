@@ -1,0 +1,67 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 10.0 0.0
+1 0.0 0.0 0.0
+2 5.0 0.0 0.0 $NAME POINT2
+3 5.0 10.0 0.0 $NAME POINT3
+4 10.0 10.0 0.0
+5 10.0 0.0 0.0
+6 0.0 5.0 0.0 $NAME POINT6
+7 5.0 5.0 0.0 $NAME POINT7
+8 10.0 5.0 0.0 $NAME POINT8
+#POLYLINE
+  $NAME
+   PLY_0
+  $POINTS
+   0
+   1
+   2
+   3
+   0
+#POLYLINE
+  $NAME
+   PLY_1
+  $POINTS
+   3
+   2
+   5
+   4
+   3
+#POLYLINE
+  $NAME
+   PLY_2
+  $POINTS
+   0
+   1
+#POLYLINE
+  $NAME
+   PLY_3
+  $POINTS
+   3
+   2
+#POLYLINE
+  $NAME
+   PLY_4
+  $POINTS
+   4
+   5
+#POLYLINE
+  $NAME
+   PLY_5
+  $POINTS
+   0
+   4
+#POLYLINE
+  $NAME
+   PLY_6
+  $POINTS
+   1
+   5
+#POLYLINE
+  $NAME
+   PLY_7
+  $POINTS
+   6
+   8
+#STOP
+|-- Written with ogs5py (0.5.0) on: 2019-01-18_23-54-57 --|

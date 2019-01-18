@@ -1,0 +1,20 @@
+|-------------- Written with ogs5py --------------|
+#POINTS
+0 0.0 0.0 0.0 $NAME WELL
+1 300.0 0.0 0.0
+2 1000.0 0.0 0.0 $NAME INIFINIT
+3 9.639 0.0 0.0 $NAME OBS
+#POLYLINE
+  $NAME
+   LEFT
+  $POINTS
+   0
+   1
+#POLYLINE
+  $NAME
+   RIGHT
+  $POINTS
+   1
+   2
+#STOP
+|-- Written with ogs5py (0.5.0) on: 2019-01-18_23-54-57 --|
