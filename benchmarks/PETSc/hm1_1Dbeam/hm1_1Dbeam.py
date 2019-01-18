@@ -189,12 +189,7 @@ model.pcs.add_block(
     PCS_TYPE='DEFORMATION',
     ELEMENT_MATRIX_OUTPUT=0,
 )
-model.rfd.add_block(
-    CURVE=[
-        [-1, 1],
-        [2, 1],
-    ],
-)
+model.rfd.read_file('hm1_1Dbeam.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='LIQUID_FLOW',

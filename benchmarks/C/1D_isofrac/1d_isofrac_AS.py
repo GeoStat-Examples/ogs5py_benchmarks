@@ -281,21 +281,7 @@ model.pcs.add_block(
     PCS_TYPE='MASS_TRANSPORT',
     NUM_TYPE='NEW',
 )
-model.rfd.add_block(
-    PROJECT=['Benchmark', '1D', 'Transport'],
-)
-model.rfd.add_block(
-    ITERATION_PROPERTIES_CONCENTRATION=[
-        [0],
-        [0, 1000, 1e-06, 0],
-    ],
-)
-model.rfd.add_block(
-    REFERENCE_CONDITIONS=[9.81, 0.0, 101325.0],
-)
-model.rfd.add_block(
-    APRIORI_REFINE_ELEMENT=[0, 0],
-)
+model.rfd.read_file('1d_isofrac_AS.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='GROUNDWATER_FLOW',

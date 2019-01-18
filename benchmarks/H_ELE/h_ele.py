@@ -106,12 +106,7 @@ model.pcs.add_block(
     NUM_TYPE='NEW',
     ELEMENT_MATRIX_OUTPUT=1,
 )
-model.rfd.add_block(
-    PROJECT='Stroemungsmodell',
-)
-model.rfd.add_block(
-    RENUMBER=[2, -1],
-)
+model.rfd.read_file('h_ele.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='GROUNDWATER_FLOW',

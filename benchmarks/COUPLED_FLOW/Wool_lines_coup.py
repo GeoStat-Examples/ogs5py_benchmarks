@@ -133,15 +133,7 @@ model.pcs.add_block(
     PCS_TYPE='RICHARDS_FLOW',
     NUM_TYPE='NEW',
 )
-model.rfd.add_block(
-    PROJECT='Woolhiser',
-)
-model.rfd.add_block(
-    CURVE=[
-        [0, 7e-05],
-        [12000, 7e-05],
-    ],
-)
+model.rfd.read_file('Wool_lines_coup.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='OVERLAND_FLOW',

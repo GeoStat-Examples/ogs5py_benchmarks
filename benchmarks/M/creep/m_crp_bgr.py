@@ -114,21 +114,7 @@ model.pcs.add_block(
     main_key='PROCESS',
     PCS_TYPE='DEFORMATION',
 )
-model.rfd.add_block(
-    PROJECT=['BGR-BENCHMARK:CREEP', 'DEFORMATION', 'BGRa'],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0, 5],
-        [1.0, 5.0],
-        [2.0, 5.0],
-        [3, 5.0],
-        [100, 5.0],
-    ],
-)
-model.rfd.add_block(
-    REFERENCE_CONDITIONS=[9.81, 0.0, 101325],
-)
+model.rfd.read_file('m_crp_bgr.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='DEFORMATION',

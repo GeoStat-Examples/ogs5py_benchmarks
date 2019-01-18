@@ -92,14 +92,7 @@ model.pcs.add_block(
     main_key='PROCESS',
     PCS_TYPE='DEFORMATION',
 )
-model.rfd.add_block(
-    CURVE=[
-        [0, 0],
-        [1, 1],
-        [2, 0],
-        [10, 0],
-    ],
-)
+model.rfd.read_file('m_sphere_plastic.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='DEFORMATION',

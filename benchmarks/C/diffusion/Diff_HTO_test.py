@@ -210,12 +210,7 @@ model.pcs.add_block(
     PCS_TYPE='MASS_TRANSPORT',
     NUM_TYPE='NEW',
 )
-model.rfd.add_block(
-    PROJECT=['TR2003_02', 'radial'],
-)
-model.rfd.add_block(
-    REFERENCE_CONDITIONS=[9.81, 293, 101325],
-)
+model.rfd.read_file('Diff_HTO_test.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='LIQUID_FLOW',

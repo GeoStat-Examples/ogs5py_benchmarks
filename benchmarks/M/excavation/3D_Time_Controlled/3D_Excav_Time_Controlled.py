@@ -156,26 +156,7 @@ model.pcs.add_block(
     PCS_TYPE='DEFORMATION',
     TIME_CONTROLLED_EXCAVATION=[1, 1, 0, 1],
 )
-model.rfd.add_block(
-    PROJECT=['Strecke,', 1000, 'm', 'Teufe,', 'Viertel'],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.0, 0.0],
-        [3600, 1.5],
-        [7200, 3],
-        [10800, 4.5],
-        [14400, 6],
-        [18000, 6],
-    ],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0, 1],
-        [1, 0],
-        [18000, 0],
-    ],
-)
+model.rfd.read_file('3D_Excav_Time_Controlled.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='DEFORMATION',

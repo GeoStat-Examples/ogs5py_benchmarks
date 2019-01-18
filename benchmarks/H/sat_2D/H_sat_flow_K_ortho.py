@@ -169,12 +169,7 @@ model.pcs.add_block(
     PCS_TYPE='MASS_TRANSPORT',
     NUM_TYPE='NEW',
 )
-model.rfd.add_block(
-    PROJECT=['Diffusion', 'mir', 'Anisotropie'],
-)
-model.rfd.add_block(
-    REFERENCE_CONDITIONS=[9.81, 293, 101325],
-)
+model.rfd.read_file('H_sat_flow_K_ortho.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='LIQUID_FLOW',

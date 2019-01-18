@@ -64,12 +64,7 @@ model.pcs.add_block(
     PCS_TYPE='HEAT_TRANSPORT',
     TEMPERATURE_UNIT='KELVIN',
 )
-model.rfd.add_block(
-    PROJECT=['HEAT', 'TRANSPORT', '1D', 'axisymmetric'],
-)
-model.rfd.add_block(
-    REFERENCE_CONDITIONS=[9.81, 293, 101325],
-)
+model.rfd.read_file('T_1D_axi.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='HEAT_TRANSPORT',

@@ -151,24 +151,7 @@ model.pcs.add_block(
     PCS_TYPE='DEFORMATION',
     BOUNDARY_CONDITION_OUTPUT=[],
 )
-model.rfd.add_block(
-    PROJECT='svv',
-)
-model.rfd.add_block(
-    CURVE=[
-        [0, 0.0],
-        [20, 1.0],
-        [5000, 1.0],
-    ],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0, 0.0],
-        [20, 0.0],
-        [1460, 1.0],
-        [5000, 1.0],
-    ],
-)
+model.rfd.read_file('m_triax_lubby1.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='DEFORMATION',

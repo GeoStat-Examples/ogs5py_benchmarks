@@ -42,32 +42,7 @@ model.bc.add_block(
     GEO_TYPE=['POINT', 'POINT1'],
     DIS_TYPE=['CONSTANT', 20000.0],
 )
-model.ddc.add_block(
-    main_key='DOMAIN',
-    ELEMENTS=[
-        [0],
-        [3],
-    ],
-    NODES_INNER=[
-        [0],
-        [1],
-        [4],
-        [3],
-    ],
-)
-model.ddc.add_block(
-    main_key='DOMAIN',
-    ELEMENTS=[
-        [1],
-        [2],
-    ],
-    NODES_INNER=[
-        [1],
-        [2],
-        [3],
-        [4],
-    ],
-)
+model.ddc.read_file('hm_tri.ddc')
 model.gli.read_file('hm_tri.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
@@ -141,12 +116,7 @@ model.pcs.add_block(
     PCS_TYPE='DEFORMATION',
     ELEMENT_MATRIX_OUTPUT=0,
 )
-model.rfd.add_block(
-    PROJECT=[
-        ['Triangle', 'elements', 'for', 'flow'],
-        ['Test', 'of', 'OUT', 'method', 7],
-    ],
-)
+model.rfd.read_file('hm_tri.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='LIQUID_FLOW',

@@ -1,0 +1,12 @@
+|-------------- Written with ogs5py --------------|
+#PROJECT
+   BENCHMARK: PLASTIC DEFORMATION DRUCKER-PRAGER MODEL
+#CURVE
+   0.0 0.0
+   100.0 -4.1
+   200 0.0
+   300 4.1
+   500 0.0
+   600 -4.1
+#STOP
+|-- Written with ogs5py (0.5.0) on: 2019-01-18_16-33-27 --|

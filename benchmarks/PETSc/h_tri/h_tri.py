@@ -64,12 +64,7 @@ model.pcs.add_block(
     NUM_TYPE='NEW',
     ELEMENT_MATRIX_OUTPUT=0,
 )
-model.rfd.add_block(
-    PROJECT=[
-        ['Triangle', 'elements', 'for', 'flow'],
-        ['Test', 'of', 'OUT', 'method', 7],
-    ],
-)
+model.rfd.read_file('h_tri.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='LIQUID_FLOW',

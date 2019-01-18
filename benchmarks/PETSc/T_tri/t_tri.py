@@ -58,9 +58,7 @@ model.pcs.add_block(
     PCS_TYPE='HEAT_TRANSPORT',
     NUM_TYPE='NEW',
 )
-model.rfd.add_block(
-    PROJECT=['HEAT', 'TRANSPORT', '(WITH', 'AN', 'ANLYTICSOLUTION)', 'WW'],
-)
+model.rfd.read_file('t_tri.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='HEAT_TRANSPORT',

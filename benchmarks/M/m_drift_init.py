@@ -239,12 +239,7 @@ model.pcs.add_block(
     PCS_TYPE='DEFORMATION',
     NUM_TYPE='EXCAVATION',
 )
-model.rfd.add_block(
-    PROJECT=['Strecke,', 1000, 'm', 'Teufe,', 'Viertelkreis'],
-)
-model.rfd.add_block(
-    REFERENCE_CONDITIONS=[9.81, 0.0, 101325],
-)
+model.rfd.read_file('m_drift_init.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='DEFORMATION',

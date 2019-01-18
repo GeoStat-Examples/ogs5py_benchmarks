@@ -102,12 +102,7 @@ model.pcs.add_block(
     PCS_TYPE='DEFORMATION',
     NUM_TYPE='NEW',
 )
-model.rfd.add_block(
-    CURVE=[
-        [-1, 1],
-        [2, 1],
-    ],
-)
+model.rfd.read_file('m2_2Dload.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='DEFORMATION',

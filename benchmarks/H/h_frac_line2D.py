@@ -61,9 +61,7 @@ model.pcs.add_block(
     NUM_TYPE='NEW',
     ELEMENT_MATRIX_OUTPUT=0,
 )
-model.rfd.add_block(
-    PROJECT=['Line', 'element', 'in', '2D.', 'WW'],
-)
+model.rfd.read_file('h_frac_line2D.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='LIQUID_FLOW',

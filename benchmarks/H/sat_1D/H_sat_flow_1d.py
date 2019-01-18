@@ -65,12 +65,7 @@ model.pcs.add_block(
     PCS_TYPE='LIQUID_FLOW',
     NUM_TYPE='NEW',
 )
-model.rfd.add_block(
-    PROJECT=['Benchmark', '1D', 'Groundwater', 'flow'],
-)
-model.rfd.add_block(
-    REFERENCE_CONDITIONS=[9.81, 0.0, 0],
-)
+model.rfd.read_file('H_sat_flow_1d.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='LIQUID_FLOW',

@@ -237,9 +237,7 @@ model.pcs.add_block(
     PCS_TYPE='DEFORMATION',
     NUM_TYPE='NEW',
 )
-model.rfd.add_block(
-    PROJECT=['3D', 'thermomechanische', 'Berechnung'],
-)
+model.rfd.read_file('tm3d.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='DEFORMATION',

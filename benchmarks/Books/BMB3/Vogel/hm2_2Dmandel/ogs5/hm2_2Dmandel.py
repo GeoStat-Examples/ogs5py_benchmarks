@@ -163,12 +163,7 @@ model.pcs.add_block(
     ],
     NUM_TYPE='NEW',
 )
-model.rfd.add_block(
-    CURVE=[
-        [-1, 1],
-        [10, 1],
-    ],
-)
+model.rfd.read_file('hm2_2Dmandel.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='DEFORMATION_FLOW',

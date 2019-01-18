@@ -1,0 +1,13 @@
+|-------------- Written with ogs5py --------------|
+#PROJECT
+   BENCHMARK: ELASTIC DEFORMATION ITER. COUPLED WITH SAT. FLUID FLOW, 3D
+#RENUMBER
+   0
+#REFERENCE_CONDITIONS
+   9.81 0.0 0.0.000000
+#CURVE
+   0.0 1.0
+   1296000.0 1.0
+   2592000.0 1.0
+#STOP
+|-- Written with ogs5py (0.5.0) on: 2019-01-18_16-33-27 --|

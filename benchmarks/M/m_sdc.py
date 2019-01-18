@@ -146,15 +146,7 @@ model.pcs.add_block(
     NUM_TYPE='STRONG_DISCONTINUITY',
     ELEMENT_MATRIX_OUTPUT=0,
 )
-model.rfd.add_block(
-    PROJECT=['BENCHMARK:', 'PLASTIC', 'DEFORMATION:', 'THE', 'SINGLE', 'YIELD', 'SURFACE', 'MODEL'],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.0, 0.0],
-        [20.0, -0.04],
-    ],
-)
+model.rfd.read_file('m_sdc.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='DEFORMATION',

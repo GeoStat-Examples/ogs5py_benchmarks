@@ -119,13 +119,7 @@ model.pcs.add_block(
     TEMPERATURE_UNIT='KELVIN',
     ELEMENT_MATRIX_OUTPUT=0,
 )
-model.rfd.add_block(
-    CURVE=[
-        [0.0, 0.0],
-        [5.0, 1.0],
-        [100000, 1.0],
-    ],
-)
+model.rfd.read_file('conv_2D_cart.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='TNEQ',

@@ -127,9 +127,7 @@ model.pcs.add_block(
     PCS_TYPE='LIQUID_FLOW',
     NUM_TYPE='NEW',
 )
-model.rfd.add_block(
-    PROJECT=['H_FRACTURE', 'WW'],
-)
+model.rfd.read_file('h_frac.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='LIQUID_FLOW',

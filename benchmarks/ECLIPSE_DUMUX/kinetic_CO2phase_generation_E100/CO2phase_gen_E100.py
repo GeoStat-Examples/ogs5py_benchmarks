@@ -274,15 +274,7 @@ model.pcs.add_block(
     NUM_TYPE='NEW',
     BOUNDARY_CONDITION_OUTPUT=[],
 )
-model.rfd.add_block(
-    PROJECT=['Buckley-Leverett', 'benchmark', 'one.', 'Prepared', 'by', 'WW'],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.3, 30000],
-        [1, 0],
-    ],
-)
+model.rfd.read_file('CO2phase_gen_E100.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='MULTI_PHASE_FLOW',

@@ -81,17 +81,7 @@ model.pcs.add_block(
     PCS_TYPE='OVERLAND_FLOW',
     NUM_TYPE='NEW',
 )
-model.rfd.add_block(
-    PROJECT=['Triangle', 'elements', 'for', 'flow'],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0, 3e-06],
-        [5399, 3e-06],
-        [5400, 0.0],
-        [10800, 0.0],
-    ],
-)
+model.rfd.read_file('gian_tri.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='OVERLAND_FLOW',

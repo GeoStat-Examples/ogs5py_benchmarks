@@ -104,21 +104,7 @@ model.pcs.add_block(
     PCS_TYPE='DEFORMATION',
     ELEMENT_MATRIX_OUTPUT=0,
 )
-model.rfd.add_block(
-    PROJECT=['BENCHMARK:', 'PLASTIC', 'DEFORMATION:', 'CAM-CLAY', 'MODEL'],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.0, -50.0],
-        [110.0, -200.0],
-    ],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.0, 0.0],
-        [110.0, 0.6],
-    ],
-)
+model.rfd.read_file('m_cc_tri_s.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='DEFORMATION',

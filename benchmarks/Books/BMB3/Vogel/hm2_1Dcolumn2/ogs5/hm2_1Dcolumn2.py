@@ -163,12 +163,7 @@ model.pcs.add_block(
     ],
     NUM_TYPE='NEW',
 )
-model.rfd.add_block(
-    CURVE=[
-        [-1, 1],
-        [11, 1],
-    ],
-)
+model.rfd.read_file('hm2_1Dcolumn2.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='DEFORMATION_FLOW',

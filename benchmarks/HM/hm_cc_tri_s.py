@@ -133,21 +133,7 @@ model.pcs.add_block(
     ],
     ELEMENT_MATRIX_OUTPUT=0,
 )
-model.rfd.add_block(
-    PROJECT=['BENCHMARK:', 'CONSOLIDATION:', 'CAM-CLAY', 'MODEL'],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.0, -50.0],
-        [1100000000.0, -200.0],
-    ],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.0, 0.0],
-        [110000000.0, 0.6],
-    ],
-)
+model.rfd.read_file('hm_cc_tri_s.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='DEFORMATION_FLOW',

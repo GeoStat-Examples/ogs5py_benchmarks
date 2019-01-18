@@ -128,16 +128,7 @@ model.pcs.add_block(
     PCS_TYPE='MASS_TRANSPORT',
     BOUNDARY_CONDITION_OUTPUT=[],
 )
-model.rfd.add_block(
-    CURVE=[
-        [0, 0.267],
-        [10000, 0.267],
-        [10001, 0.262],
-        [20000, 0.262],
-        [20001, 0.2655],
-        [40000, 0.2655],
-    ],
-)
+model.rfd.read_file('HM.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='RICHARDS_FLOW',

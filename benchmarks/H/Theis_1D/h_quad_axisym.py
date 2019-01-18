@@ -67,9 +67,7 @@ model.pcs.add_block(
     NUM_TYPE='NEW',
     PRIMARY_VARIABLE='HEAD',
 )
-model.rfd.add_block(
-    PROJECT=['Well', 'simulation', '(axisymmetry', 'case,', 'QUAD', 'element)', 'WW'],
-)
+model.rfd.read_file('h_quad_axisym.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='LIQUID_FLOW',

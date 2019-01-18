@@ -146,40 +146,7 @@ model.pcs.add_block(
     main_key='PROCESS',
     PCS_TYPE='DEFORMATION',
 )
-model.rfd.add_block(
-    PROJECT=['BENCHMARK:', 'PLASTIC', 'DEFORMATION:', 'THE', 'SINGLE', 'YIELD', 'SURFACE', 'MODEL'],
-)
-model.rfd.add_block(
-    RENUMBER=0,
-)
-model.rfd.add_block(
-    REFERENCE_CONDITIONS=[
-        [0.0],
-        [273.0, 101325.0],
-    ],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.0, 0.0],
-        [120.0, 1.0],
-        [2400.0, 1.0],
-    ],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.0, 0.0],
-        [10.0, -0.0005],
-    ],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.0, 50000.0],
-        [1200.0, 50000.0],
-        [2400.0, 50000.0],
-        [4800.0, 50000.0],
-        [9600.0, 50000.0],
-    ],
-)
+model.rfd.read_file('m_ssy_quad.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='DEFORMATION',

@@ -250,18 +250,7 @@ model.pcs.add_block(
     main_key='PROCESS',
     PCS_TYPE='DEFORMATION',
 )
-model.rfd.add_block(
-    PROJECT='HEAT_TRANSPORT',
-)
-model.rfd.add_block(
-    REFERENCE_CONDITIONS=[9.81, 293, 101325],
-)
-model.rfd.add_block(
-    PROJECT='DEFORMATION',
-)
-model.rfd.add_block(
-    REFERENCE_CONDITIONS=[9.81, 293, 101325],
-)
+model.rfd.read_file('tm2d.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='DEFORMATION',

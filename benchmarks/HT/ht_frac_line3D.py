@@ -111,9 +111,7 @@ model.pcs.add_block(
     PCS_TYPE='HEAT_TRANSPORT',
     NUM_TYPE='NEW',
 )
-model.rfd.add_block(
-    PROJECT=['Line', 'element', 'in', '3D.', 'WW'],
-)
+model.rfd.read_file('ht_frac_line3D.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='LIQUID_FLOW',

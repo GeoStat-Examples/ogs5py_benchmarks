@@ -156,6 +156,7 @@ for num_root, root in enumerate(roots):
                 script_dir=model.task_root,
                 task_root=task_id + "_root",
                 output_dir="out",
+                separate_files=["ddc", "rfd"]
             )
 
         model.task_root = os.path.join(model.task_root, task_id + "_root")

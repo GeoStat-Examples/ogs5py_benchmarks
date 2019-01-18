@@ -76,12 +76,7 @@ model.pcs.add_block(
     main_key='PROCESS',
     PCS_TYPE='DEFORMATION',
 )
-model.rfd.add_block(
-    CURVE=[
-        [-1, 1],
-        [2, 1],
-    ],
-)
+model.rfd.read_file('m1_3Dload.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='DEFORMATION',

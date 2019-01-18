@@ -28,32 +28,7 @@ model.bc.add_block(
     GEO_TYPE=['POLYLINE', 'TOP'],
     DIS_TYPE=['CONSTANT', -0.0001],
 )
-model.ddc.add_block(
-    main_key='DOMAIN',
-    ELEMENTS=[
-        [0],
-        [3],
-    ],
-    NODES_INNER=[
-        [0],
-        [1],
-        [4],
-        [3],
-    ],
-)
-model.ddc.add_block(
-    main_key='DOMAIN',
-    ELEMENTS=[
-        [1],
-        [2],
-    ],
-    NODES_INNER=[
-        [1],
-        [2],
-        [3],
-        [4],
-    ],
-)
+model.ddc.read_file('m_tri.ddc')
 model.gli.read_file('m_tri.gli')
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
@@ -96,12 +71,7 @@ model.pcs.add_block(
     main_key='PROCESS',
     PCS_TYPE='DEFORMATION',
 )
-model.rfd.add_block(
-    PROJECT=[
-        ['Triangle', 'elements', 'for', 'flow'],
-        ['Test', 'of', 'OUT', 'method', 7],
-    ],
-)
+model.rfd.read_file('m_tri.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='LIQUID_FLOW',

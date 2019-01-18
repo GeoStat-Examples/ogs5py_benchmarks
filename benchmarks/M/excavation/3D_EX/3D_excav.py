@@ -195,75 +195,7 @@ model.pcs.add_block(
     PCS_TYPE='DEFORMATION',
     RELOAD=2,
 )
-model.rfd.add_block(
-    PROJECT=['Strecke,', 1000, 'm', 'Teufe,', 'Viertel'],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.0, 0.0],
-        [1.0, 0.0],
-        [2.0, 0.0],
-        [3.0, 0.0],
-        [4.0, 0.0],
-        [5.0, 0.0],
-        [6.0, 0.0],
-    ],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.0, 1.0],
-        [1.0, 1.0],
-        [2.0, 0.0],
-        [3.0, 0.0],
-        [4.0, 0.0],
-        [5.0, 0.0],
-        [6.0, 0.0],
-    ],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.0, 1.0],
-        [1.0, 1.0],
-        [2.0, 1.0],
-        [3.0, 0.0],
-        [4.0, 0.0],
-        [5.0, 0.0],
-        [6.0, 0.0],
-    ],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.0, 1.0],
-        [1.0, 1.0],
-        [2.0, 1.0],
-        [3.0, 1.0],
-        [4.0, 0.0],
-        [5.0, 0.0],
-        [6.0, 0.0],
-    ],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.0, 0.0],
-        [1.0, 1.0],
-        [2.0, 1.0],
-        [3.0, 1.0],
-        [4.0, 1.0],
-        [5.0, 0.0],
-        [6.0, 0.0],
-    ],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.0, 0.0],
-        [1.0, 1.0],
-        [2.0, 1.0],
-        [3.0, 1.0],
-        [4.0, 1.0],
-        [5.0, 1.0],
-        [6.0, 0.0],
-    ],
-)
+model.rfd.read_file('3D_excav.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='DEFORMATION',

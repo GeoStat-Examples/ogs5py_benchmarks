@@ -64,12 +64,7 @@ model.pcs.add_block(
     main_key='PROCESS',
     PCS_TYPE='DEFORMATION',
 )
-model.rfd.add_block(
-    PROJECT=[
-        ['Triangle', 'elements', 'for', 'flow'],
-        ['Test', 'of', 'OUT', 'method', 7],
-    ],
-)
+model.rfd.read_file('m_tri.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='DEFORMATION',

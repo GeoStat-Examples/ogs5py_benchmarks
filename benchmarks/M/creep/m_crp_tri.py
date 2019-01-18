@@ -88,9 +88,7 @@ model.pcs.add_block(
     PCS_TYPE='DEFORMATION',
     ELEMENT_MATRIX_OUTPUT=0,
 )
-model.rfd.add_block(
-    PROJECT=['BENCHMARK:', 'CREAP', 'DEFORMATION', 'WW'],
-)
+model.rfd.read_file('m_crp_tri.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='DEFORMATION',

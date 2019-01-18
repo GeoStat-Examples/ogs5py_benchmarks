@@ -98,53 +98,7 @@ model.pcs.add_block(
     PCS_TYPE='DEFORMATION',
     BOUNDARY_CONDITION_OUTPUT=[],
 )
-model.rfd.add_block(
-    PROJECT=['BENCHMARK:', 'PLASTIC', 'DEFORMATION:', 'CAM-CLAY', 'MODEL'],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.0, -50.0],
-        [110.0, -200.0],
-    ],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.0, 0.0],
-        [400.0, 400],
-        [500, 500],
-        [600, 600],
-        [2000, 2000],
-        [100000.0, 100000.0],
-    ],
-)
-model.rfd.add_block(
-    CURVE=[
-        [-100, 20],
-        [0, 20],
-        [100, 20],
-    ],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.5, 14200000.0],
-        [0.55, 12200000.0],
-        [0.6, 10100000.0],
-        [0.65, 8080000.0],
-        [0.7, 6510000.0],
-        [0.75, 5560000.0],
-        [0.8, 5360000.0],
-        [0.85, 6000000.0],
-        [0.9, 7510000.0],
-        [0.95, 9860000.0],
-        [1, 13000000.0],
-    ],
-)
-model.rfd.add_block(
-    CURVE=[
-        [-100, 6670000.0],
-        [100, 6670000.0],
-    ],
-)
+model.rfd.read_file('3D_UniAxiLoad.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='DEFORMATION',

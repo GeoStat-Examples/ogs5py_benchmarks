@@ -21,100 +21,7 @@ model.bc.add_block(
     GEO_TYPE=['POINT', 'POINT1'],
     DIS_TYPE=['CONSTANT', 20000.0],
 )
-model.ddc.add_block(
-    main_key='DOMAIN',
-    ELEMENTS=[
-        [9],
-        [11],
-        [16],
-        [17],
-        [18],
-    ],
-    NODES_INNER=[
-        [6],
-        [11],
-        [10],
-        [12],
-        [16],
-        [15],
-    ],
-)
-model.ddc.add_block(
-    main_key='DOMAIN',
-    ELEMENTS=[
-        [0],
-        [1],
-        [2],
-        [8],
-    ],
-    NODES_INNER=[
-        [0],
-        [6],
-        [5],
-        [1],
-        [2],
-        [10],
-    ],
-)
-model.ddc.add_block(
-    main_key='DOMAIN',
-    ELEMENTS=[
-        [14],
-        [15],
-        [19],
-        [21],
-        [22],
-        [23],
-    ],
-    NODES_INNER=[
-        [8],
-        [9],
-        [14],
-        [13],
-        [12],
-        [17],
-        [16],
-        [18],
-        [19],
-    ],
-)
-model.ddc.add_block(
-    main_key='DOMAIN',
-    ELEMENTS=[
-        [5],
-        [10],
-        [12],
-        [13],
-        [20],
-    ],
-    NODES_INNER=[
-        [2],
-        [8],
-        [7],
-        [6],
-        [12],
-        [13],
-        [18],
-    ],
-)
-model.ddc.add_block(
-    main_key='DOMAIN',
-    ELEMENTS=[
-        [3],
-        [4],
-        [6],
-        [7],
-    ],
-    NODES_INNER=[
-        [2],
-        [7],
-        [6],
-        [3],
-        [8],
-        [4],
-        [9],
-    ],
-)
+model.ddc.read_file('h_tri.ddc')
 model.gli.read_file('h_tri.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
@@ -158,12 +65,7 @@ model.pcs.add_block(
     NUM_TYPE='NEW',
     ELEMENT_MATRIX_OUTPUT=0,
 )
-model.rfd.add_block(
-    PROJECT=[
-        ['Triangle', 'elements', 'for', 'flow'],
-        ['Test', 'of', 'OUT', 'method', 7],
-    ],
-)
+model.rfd.read_file('h_tri.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='LIQUID_FLOW',

@@ -116,15 +116,7 @@ model.pcs.add_block(
     NUM_TYPE='NEW',
     ELEMENT_MATRIX_OUTPUT=0,
 )
-model.rfd.add_block(
-    PROJECT=['Buckley-Leverett', 'benchmark', 'one.', 'Prepared', 'by', 'WW'],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.2, 3.0],
-        [0.84, 0.0],
-    ],
-)
+model.rfd.read_file('buck.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='MULTI_PHASE_FLOW',

@@ -129,24 +129,7 @@ model.pcs.add_block(
     main_key='PROCESS',
     PCS_TYPE='DEFORMATION',
 )
-model.rfd.add_block(
-    PROJECT=['BENCHMARK:', 'PLASTIC', '3D', 'DEFORMATION:', 'DRUCKER-PRAGER'],
-)
-model.rfd.add_block(
-    RENUMBER=0,
-)
-model.rfd.add_block(
-    REFERENCE_CONDITIONS=[
-        [0.0],
-        [0.0, 0.0],
-    ],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.0, 0.0],
-        [20.0, -50000.0],
-    ],
-)
+model.rfd.read_file('m_brick_l.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='DEFORMATION',

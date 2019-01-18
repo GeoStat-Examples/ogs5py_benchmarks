@@ -157,12 +157,7 @@ model.pcs.add_block(
     PCS_TYPE='DEFORMATION',
     NUM_TYPE='NEW',
 )
-model.rfd.add_block(
-    CURVE=[
-        [-1, 1],
-        [2, 1],
-    ],
-)
+model.rfd.read_file('tm1_3Dorigin.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='HEAT_TRANSPORT',

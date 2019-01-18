@@ -114,12 +114,7 @@ model.pcs.add_block(
     main_key='PROCESS',
     PCS_TYPE='HEAT_TRANSPORT',
 )
-model.rfd.add_block(
-    CURVE=[
-        [0.0, 25],
-        [8640000, 125],
-    ],
-)
+model.rfd.read_file('exp1.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='LIQUID_FLOW',

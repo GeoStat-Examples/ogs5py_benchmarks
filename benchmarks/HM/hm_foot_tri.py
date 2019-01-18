@@ -153,22 +153,7 @@ model.pcs.add_block(
         ['DEFORMATION'],
     ],
 )
-model.rfd.add_block(
-    PROJECT=['BENCHMARK:', 'ELASTIC', 'DEFORMATION', 'ITER.', 'COUPLED', 'WITH', 'SAT.', 'FLUID', 'FLOW,', 'PLANE', 'STRAIN'],
-)
-model.rfd.add_block(
-    RENUMBER=0,
-)
-model.rfd.add_block(
-    REFERENCE_CONDITIONS=[9.81, 0.0, '0.0.000000'],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.0, 1.0],
-        [1296000.0, 1.0],
-        [2592000.0, 1.0],
-    ],
-)
+model.rfd.read_file('hm_foot_tri.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='DEFORMATION_FLOW',

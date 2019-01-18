@@ -111,13 +111,7 @@ model.pcs.add_block(
     TEMPERATURE_UNIT='KELVIN',
     ELEMENT_MATRIX_OUTPUT=0,
 )
-model.rfd.add_block(
-    CURVE=[
-        [0.0, 0.0],
-        [5.0, 1.0],
-        [100000, 1.0],
-    ],
-)
+model.rfd.read_file('reaction_heat.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='TES',

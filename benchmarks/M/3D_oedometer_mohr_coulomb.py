@@ -129,24 +129,7 @@ model.pcs.add_block(
     main_key='PROCESS',
     PCS_TYPE='DEFORMATION',
 )
-model.rfd.add_block(
-    PROJECT=['BENCHMARK:', 'PLASTIC', 'DEFORMATION:', 'CAM-CLAY', 'MODEL'],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.0, -50.0],
-        [110.0, -200.0],
-    ],
-)
-model.rfd.add_block(
-    CURVE=[
-        [0.0, 0.0],
-        [400.0, 400],
-        [500, 500],
-        [600, 600],
-        [2000, 2000],
-    ],
-)
+model.rfd.read_file('3D_oedometer_mohr_coulomb.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='DEFORMATION',

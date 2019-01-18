@@ -135,9 +135,7 @@ model.pcs.add_block(
     PCS_TYPE='DEFORMATION',
     ELEMENT_MATRIX_OUTPUT=0,
 )
-model.rfd.add_block(
-    PROJECT=['BGR-BENCHMARK:CREEP', 'DEFORMATION', 'BGRa'],
-)
+model.rfd.read_file('BGRa.rfd')
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='DEFORMATION',

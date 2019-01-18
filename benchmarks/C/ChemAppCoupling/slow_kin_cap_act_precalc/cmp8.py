@@ -597,18 +597,7 @@ model.rei.add_block(
     TEMPERATURE=['CONSTANT', 298.15],
     RESIDUAL='REMOVE',
 )
-model.rfd.add_block(
-    ITERATION_PROPERTIES_CONCENTRATION=[
-        [0],
-        [0, 100, 1e-06, 0],
-    ],
-)
-model.rfd.add_block(
-    REFERENCE_CONDITIONS=[9.81, 0.0, 101325.0],
-)
-model.rfd.add_block(
-    APRIORI_REFINE_ELEMENT=[0, 0],
-)
+model.rfd.read_file('cmp8.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='GROUNDWATER_FLOW',
