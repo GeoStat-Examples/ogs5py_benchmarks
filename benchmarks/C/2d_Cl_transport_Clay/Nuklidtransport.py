@@ -82,7 +82,7 @@ model.mmp.add_block(
     STORAGE=[1, 0.0002],
     PERMEABILITY_TENSOR=['ISOTROPIC', 1e-13],
     DENSITY=[1, 1770.0],
-    MASS_DISPERSION=[1, 0.1, 0.1],
+#    MASS_DISPERSION=[1, 0.1, 0.1],
     MASS_DISPERSION=[1, 0.25, 0.25],
 )
 model.msh.read_file('Nuklidtransport.msh')

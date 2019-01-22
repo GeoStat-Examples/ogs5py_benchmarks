@@ -215,7 +215,7 @@ model.out.add_block(
         ['DENSITY1'],
         ['VISCOSITY1'],
     ],
-    TIM_TYPE='TIME',
+#    TIM_TYPE='TIME',
     GEO_TYPE=['POINT', 'OB'],
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEPS', 1],

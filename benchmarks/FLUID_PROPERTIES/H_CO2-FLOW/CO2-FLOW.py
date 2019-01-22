@@ -10821,7 +10821,7 @@ model.out.add_block(
 )
 model.out.add_block(
     main_key='OUTPUT',
-    DAT_TYPE='TECPLOT',
+#    DAT_TYPE='TECPLOT',
     NOD_VALUES=[
         ['TEMPERATURE1'],
         ['PRESSURE1'],
