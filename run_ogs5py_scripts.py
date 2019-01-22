@@ -42,6 +42,7 @@ def find(pattern, path):
 if __name__ == "__main__":
     timeout = 3  # None for no timeout
     out_dir = os.path.join(os.getcwd(), "benchmarks")
+#    out_dir = os.path.join(os.getcwd(), "benchmarks_FEM_active")
     scripts = find("*.py", out_dir)
     log_name = os.path.join(
         out_dir, "run_log_" + time.strftime("%Y-%m-%d_%H-%M-%S") + ".txt"

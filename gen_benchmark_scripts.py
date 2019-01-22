@@ -32,24 +32,24 @@ skip_dirs = [
     ".git",  # ignore git config dir
 ]
 skip_task = [
-    #    "model_1",  # $AREA keyword in POINTS --> not in GUI/HM (catch load error)
+    "2d_h_us_line_Warrick",  # lonesome mmp
+    "model_1",  # $AREA keyword in POINTS --> not in GUI/HM but repeated key
     "bact_growth_new",  # #THERMAL in mfp
-    "HT_var_density_1D",  # $AREA in mmp
     "thm_quad",  # $STORATIVITY in mmp
+    "HT_var_density_1D",  # $AREA in mmp
     "viscosity_yaws",  # $AREA in mmp
     "uc_pris",  # GLI not valid (SRF not present for VOLUME)
     "brand_m1_l1",  # GLI not valid (TIN and Polylines at the same time[?])
-    "2d_h_us_line_Warrick",  # lonesome mmp
     # repeated Keywords ... ogs5py can't handle this
     "lag2d",  # repeated Keywords NEIGHBOR (cct)
     "decal",  # repeated Keywords NEIGHBOR (cct)
-    "2D1P_transport",  # repeated Keywords POROSITY (mmp)
-    "Nuklidtransport",  # repeated Keywords MASS_DISPERSION (mmp)
-    "cement2d",  # repeated Keywords KINETIC_GEM (gem)
-    "model_1",  # repeated Keywords DAT_TYPE (out)
-    "Leakage",  # repeated Keywords TIM_TYPE (out)
-    "CO2-FLOW",  # repeated Keywords DAT_TYPE (out)
-    "2pf_2pt",  # repeated Keywords SIMULATOR (pcs)
+#    "2D1P_transport",  # repeated Keywords POROSITY (mmp)
+#    "Nuklidtransport",  # repeated Keywords MASS_DISPERSION (mmp)
+#    "cement2d",  # repeated Keywords KINETIC_GEM (gem)
+#    "model_1",  # repeated Keywords DAT_TYPE (out)
+#    "Leakage",  # repeated Keywords TIM_TYPE (out)
+#    "CO2-FLOW",  # repeated Keywords DAT_TYPE (out)
+#    "2pf_2pt",  # repeated Keywords SIMULATOR (pcs)
 ]
 
 # search for all root folders
