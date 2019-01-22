@@ -1,14 +1,14 @@
 |-------------- Written with ogs5py --------------|
 #PROJECT
    BENCHMARK: PLASTIC DEFORMATION: CAM-CLAY MODEL
-#CURVE
+#CURVES
    0.0 -50.0
    110.0 -200.0
-#CURVE
+#CURVES
    0.0 0.0
    400.0 400
    500 500
    600 600
    2000 2000
 #STOP
-|-- Written with ogs5py (0.5.0) on: 2019-01-18_23-54-57 --|
+|-- Written with ogs5py (0.6.1) on: 2019-01-22_19-36-21 --|

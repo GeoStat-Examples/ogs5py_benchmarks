@@ -1,11 +1,11 @@
 |-------------- Written with ogs5py --------------|
 #PROJECT
    OGS BM, based on DECOVALEX 2015 Task B2 Step 01 (JM)
-#CURVE
+#CURVES
    0.0 288.15
    864000 373.15
    1e+99 373.15
-#CURVE
+#CURVES
    0.0 0.0
    0.001 0.0001
    0.01 0.0025
@@ -114,7 +114,7 @@
    0.9995 0.9994
    0.9999 0.9999
    1.0 1.0
-#CURVE
+#CURVES
    0.0 0.001
    0.01 1.0
    0.1 1.0
@@ -122,4 +122,4 @@
    0.9 1.0
    1.0 1.0
 #STOP
-|-- Written with ogs5py (0.5.0) on: 2019-01-18_23-54-57 --|
+|-- Written with ogs5py (0.6.1) on: 2019-01-22_19-36-21 --|

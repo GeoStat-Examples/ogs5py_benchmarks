@@ -1,7 +1,7 @@
 |-------------- Written with ogs5py --------------|
 #PROJECT
    Buckley-Leverett benchmark one. Prepared by WW
-#CURVE
+#CURVES
    0.0 50990.2
    0.025 36055.51
    0.05 29439.2
@@ -44,4 +44,4 @@
    0.975 10000.0
    1.0 10000.0
 #STOP
-|-- Written with ogs5py (0.5.0) on: 2019-01-18_16-33-27 --|
+|-- Written with ogs5py (0.6.1) on: 2019-01-22_19-37-18 --|

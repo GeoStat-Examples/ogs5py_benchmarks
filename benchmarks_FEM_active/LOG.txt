@@ -151,7 +151,7 @@ OK...loading successfull
 76 M/pressure/Tube - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/pressure/Tube/m_tube_elastic
 OK...loading successfull
 77 T - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/HT_var_density_1D
-FAIL.../home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/HT_var_density_1D.mmp: Unknown subkey: AREA
+FAIL.../home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/HT_var_density_1D.mmp: Unknown sub-key: AREA
 78 T/Lauwerier - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Lauwerier/Lauwerier
 OK...loading successfull
 79 T/Ogata-Banks - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Ogata-Banks/Ogata-Banks
@@ -163,7 +163,7 @@ OK...loading successfull
 82 T - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/T_1D_axi
 OK...loading successfull
 83 T/Viscosity - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Viscosity/viscosity_yaws
-FAIL.../home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Viscosity/viscosity_yaws.mmp: Unknown subkey: AREA
+FAIL.../home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Viscosity/viscosity_yaws.mmp: Unknown sub-key: AREA
 84 T - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/t_tri
 OK...loading successfull
 85 NUMERICS/DISCRETE_FEATURES/InclinedFeature - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/NUMERICS/DISCRETE_FEATURES/InclinedFeature/H_incline_45r_line

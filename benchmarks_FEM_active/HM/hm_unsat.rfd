@@ -1,7 +1,7 @@
 |-------------- Written with ogs5py --------------|
 #PROJECT
    BENCHMARK: Staggered scheme for unsaturated consolidation. WW
-#CURVE
+#CURVES
    0.9 9938.064
    0.91 9516.018
    0.92 9065.393
@@ -19,7 +19,7 @@
    0.995 2893.579
    0.9975 2174.942
    1.0 0.0
-#CURVE
+#CURVES
    0.575 0.0
    0.6 0.12693
    0.625 0.18214
@@ -39,4 +39,4 @@
    0.975 0.94723
    1.0 1.0
 #STOP
-|-- Written with ogs5py (0.5.0) on: 2019-01-18_23-54-57 --|
+|-- Written with ogs5py (0.6.1) on: 2019-01-22_19-36-21 --|

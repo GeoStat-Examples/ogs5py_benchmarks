@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from __future__ import division, print_function
 from ogs5py import OGS, ASC
 
 model = OGS(
@@ -248,8 +247,8 @@ model.pcs.add_block(
     USE_PRECALCULATED_FILES=[],
     SAVE_ECLIPSE_DATA_FILES=[],
     SIMULATOR='ECLIPSE',
-    SIMULATOR='C:\ecl\2012.1\bin\pc_x86_64\e300.exe',
-    SIMULATOR='./eclipse/ECL.DATA',
+    SIMULATOR_PATH='C:\ecl\2012.1\bin\pc_x86_64\e300.exe',
+    SIMULATOR_MODEL_PATH='./eclipse/ECL.DATA',
     ELEMENT_MATRIX_OUTPUT=0,
     ST_RHS=1,
     BOUNDARY_CONDITION_OUTPUT=[],

@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from __future__ import division, print_function
 from ogs5py import OGS, GEMinit
 
 model = OGS(
