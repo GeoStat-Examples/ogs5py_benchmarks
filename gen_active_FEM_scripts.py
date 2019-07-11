@@ -24,7 +24,7 @@ def download_benchmarks(zip_dir):
 
 # get all FEM models which have an active benchmark check
 with open('active_names.csv') as csvfile:
-    active_names = csv.reader(csvfile, delimiter='\t')
+    active_names = csv.reader(csvfile)
     use_names = []
     for row in active_names:
         if row[0] == 'Linux-FEM':
