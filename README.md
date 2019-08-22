@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3374718.svg)](https://doi.org/10.5281/zenodo.3374718)
+
 # Welcome to the ogs5py benchmarks
 
 <p align="center">
