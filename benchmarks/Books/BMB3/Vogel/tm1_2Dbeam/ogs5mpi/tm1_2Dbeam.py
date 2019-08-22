@@ -6,6 +6,20 @@ model = OGS(
     task_id='tm1_2Dbeam',
     output_dir='out',
 )
+model.msh.read_file('tm1_2Dbeam.msh')
+model.gli.read_file('tm1_2Dbeam.gli')
+model.ddc.read_file('tm1_2Dbeam.ddc')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='HEAT_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='DEFORMATION',
+    NUM_TYPE='NEW',
+)
+model.rfd.read_file('tm1_2Dbeam.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='DEFORMATION',
@@ -90,8 +104,6 @@ model.bc.add_block(
     ],
     TIM_TYPE=['CURVE', 1],
 )
-model.ddc.read_file('tm1_2Dbeam.ddc')
-model.gli.read_file('tm1_2Dbeam.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='HEAT_TRANSPORT',
@@ -99,18 +111,10 @@ model.ic.add_block(
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 1e-10],
 )
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='LIQUID',
-    PCS_TYPE='PRESSURE1',
-    DENSITY=[1, 0.0],
-    VISCOSITY=[1, 0.001],
-)
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
     GEOMETRY_DIMENSION=3,
 )
-model.msh.read_file('tm1_2Dbeam.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     DENSITY=[1, 0.0],
@@ -127,6 +131,13 @@ model.msp.add_block(
         [1, 10000000000.0],
     ],
 )
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='LIQUID',
+    PCS_TYPE='PRESSURE1',
+    DENSITY=[1, 0.0],
+    VISCOSITY=[1, 0.001],
+)
 model.num.add_block(
     main_key='NUMERICS',
     PCS_TYPE='HEAT_TRANSPORT',
@@ -136,6 +147,22 @@ model.num.add_block(
     main_key='NUMERICS',
     PCS_TYPE='DEFORMATION',
     LINEAR_SOLVER=[2, 1, 1e-10, 10000, 1.0, 101, 4],
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='HEAT_TRANSPORT',
+    TIME_UNIT='SECOND',
+    TIME_STEPS=[2, 1.0],
+    TIME_END=1.0,
+    TIME_START=0.0,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='DEFORMATION',
+    TIME_UNIT='SECOND',
+    TIME_STEPS=[2, 1.0],
+    TIME_END=1.0,
+    TIME_START=0.0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -160,33 +187,6 @@ model.out.add_block(
     GEO_TYPE='DOMAIN',
     DAT_TYPE='TECPLOT',
     TIM_TYPE=1,
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='HEAT_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='DEFORMATION',
-    NUM_TYPE='NEW',
-)
-model.rfd.read_file('tm1_2Dbeam.rfd')
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='HEAT_TRANSPORT',
-    TIME_UNIT='SECOND',
-    TIME_STEPS=[2, 1.0],
-    TIME_END=1.0,
-    TIME_START=0.0,
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='DEFORMATION',
-    TIME_UNIT='SECOND',
-    TIME_STEPS=[2, 1.0],
-    TIME_END=1.0,
-    TIME_START=0.0,
 )
 model.write_input()
 model.run_model()

@@ -6,6 +6,13 @@ model = OGS(
     task_id='th2m_quad',
     output_dir='out',
 )
+model.msh.read_file('th2m_quad.msh')
+model.gli.read_file('th2m_quad.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='DEFORMATION_H2',
+)
+model.rfd.read_file('th2m_quad.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='DEFORMATION_H2',
@@ -28,7 +35,6 @@ model.bc.add_block(
     GEO_TYPE=['POLYLINE', 'BOTTOM'],
     DIS_TYPE=['CONSTANT', 0.0],
 )
-model.gli.read_file('th2m_quad.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='DEFORMATION_H2',
@@ -42,6 +48,29 @@ model.ic.add_block(
     PRIMARY_VARIABLE='PRESSURE2',
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 1000.0],
+)
+model.mmp.add_block(
+    main_key='MEDIUM_PROPERTIES',
+    GEOMETRY_DIMENSION=2,
+    GEOMETRY_AREA=1.0,
+    POROSITY=[1, 0.2],
+    TORTUOSITY=[1, 0.8],
+    DIFFUSION=373,
+    PERMEABILITY_TENSOR=['ISOTROPIC', 5e-14],
+    PERMEABILITY_SATURATION=[
+        [0, 4],
+        [0, 5],
+    ],
+    CAPILLARY_PRESSURE=[0, 3],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    DENSITY=[1, -2000.0],
+    ELASTICITY=[
+        ['POISSION', 0.4],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
 )
 model.mfp.add_block(
     main_key='FLUID_PROPERTIES',
@@ -62,30 +91,6 @@ model.mfp.add_block(
     HEAT_CONDUCTIVITY=[1, 0.026],
     PHASE_DIFFUSION=[1, 2.13e-06],
 )
-model.mmp.add_block(
-    main_key='MEDIUM_PROPERTIES',
-    GEOMETRY_DIMENSION=2,
-    GEOMETRY_AREA=1.0,
-    POROSITY=[1, 0.2],
-    TORTUOSITY=[1, 0.8],
-    DIFFUSION=373,
-    PERMEABILITY_TENSOR=['ISOTROPIC', 5e-14],
-    PERMEABILITY_SATURATION=[
-        [0, 4],
-        [0, 5],
-    ],
-    CAPILLARY_PRESSURE=[0, 3],
-)
-model.msh.read_file('th2m_quad.msh')
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    DENSITY=[1, -2000.0],
-    ELASTICITY=[
-        ['POISSION', 0.4],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
 model.num.add_block(
     main_key='NUMERICS',
     PCS_TYPE='DEFORMATION_H2',
@@ -93,6 +98,13 @@ model.num.add_block(
     ELE_MASS_LUMPING=1,
     NON_LINEAR_SOLVER=['JFNK', 0.001, 1e-11, 5, 1.0],
     LINEAR_SOLVER=[2, 0, 1e-09, 2000, 1.0, 0, 4],
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='DEFORMATION_H2',
+    TIME_STEPS=[30, 1.0],
+    TIME_END=30.0,
+    TIME_START=0.0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -201,18 +213,6 @@ model.out.add_block(
     GEO_TYPE=['POINT', 'POINT7'],
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEPS', 1],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='DEFORMATION_H2',
-)
-model.rfd.read_file('th2m_quad.rfd')
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='DEFORMATION_H2',
-    TIME_STEPS=[30, 1.0],
-    TIME_END=30.0,
-    TIME_START=0.0,
 )
 model.write_input()
 model.run_model()

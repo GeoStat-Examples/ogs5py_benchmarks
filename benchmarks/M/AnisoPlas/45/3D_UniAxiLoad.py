@@ -6,6 +6,14 @@ model = OGS(
     task_id='3D_UniAxiLoad',
     output_dir='out',
 )
+model.msh.read_file('3D_UniAxiLoad.msh')
+model.gli.read_file('3D_UniAxiLoad.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='DEFORMATION',
+    BOUNDARY_CONDITION_OUTPUT=[],
+)
+model.rfd.read_file('3D_UniAxiLoad.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='DEFORMATION',
@@ -21,14 +29,12 @@ model.bc.add_block(
     DIS_TYPE=['CONSTANT', -5e-07],
     TIM_TYPE=['CURVE', 2],
 )
-model.gli.read_file('3D_UniAxiLoad.gli')
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
     GEOMETRY_DIMENSION=3,
     GEOMETRY_AREA=1.0,
     POROSITY=[1, 0.0],
 )
-model.msh.read_file('3D_UniAxiLoad.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     DENSITY=[1, 0.0],
@@ -59,6 +65,13 @@ model.num.add_block(
     NON_LINEAR_SOLVER=['NEWTON', 0.001, 2e-10, 100, 0.0],
     LINEAR_SOLVER=[2, 5, 1e-12, 2000, 1.0, 100, 4],
     ELE_GAUSS_POINTS=3,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='DEFORMATION',
+    TIME_STEPS=[20, 50],
+    TIME_END=1000,
+    TIME_START=0.0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -91,19 +104,6 @@ model.out.add_block(
     GEO_TYPE=['POINT', 'POINT2'],
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEPS', 1],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='DEFORMATION',
-    BOUNDARY_CONDITION_OUTPUT=[],
-)
-model.rfd.read_file('3D_UniAxiLoad.rfd')
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='DEFORMATION',
-    TIME_STEPS=[20, 50],
-    TIME_END=1000,
-    TIME_START=0.0,
 )
 model.write_input()
 model.run_model()

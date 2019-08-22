@@ -6,6 +6,17 @@ model = OGS(
     task_id='exp1',
     output_dir='out',
 )
+model.msh.read_file('exp1.msh')
+model.gli.read_file('exp1.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='LIQUID_FLOW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='HEAT_TRANSPORT',
+)
+model.rfd.read_file('exp1.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='LIQUID_FLOW',
@@ -21,7 +32,6 @@ model.bc.add_block(
     DIS_TYPE=['CONSTANT', 1],
     TIM_TYPE=['CURVE', 1],
 )
-model.gli.read_file('exp1.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='LIQUID_FLOW',
@@ -36,14 +46,6 @@ model.ic.add_block(
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 25],
 )
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='LIQUID',
-    DENSITY=[6, 1000.0, 1000000.0, 4.6e-10, 25, -0.0002],
-    VISCOSITY=[1, 0.001],
-    SPECIFIC_HEAT_CAPACITY=[1, 4280.0],
-    HEAT_CONDUCTIVITY=[1, 0.6],
-)
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
     GEOMETRY_DIMENSION=2,
@@ -52,7 +54,6 @@ model.mmp.add_block(
     PERMEABILITY_TENSOR=['ISOTROPIC', 1e-15],
     TORTUOSITY=[1, 1.0],
 )
-model.msh.read_file('exp1.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     DENSITY=[1, 2600],
@@ -69,6 +70,14 @@ model.msp.add_block(
         [1, 317000000.0],
     ],
 )
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='LIQUID',
+    DENSITY=[6, 1000.0, 1000000.0, 4.6e-10, 25, -0.0002],
+    VISCOSITY=[1, 0.001],
+    SPECIFIC_HEAT_CAPACITY=[1, 4280.0],
+    HEAT_CONDUCTIVITY=[1, 0.6],
+)
 model.num.add_block(
     main_key='NUMERICS',
     PCS_TYPE='LIQUID_FLOW',
@@ -82,6 +91,13 @@ model.num.add_block(
     ELE_GAUSS_POINTS=2,
     LINEAR_SOLVER=[2, 6, 1e-14, 1000, 1.0, 0, 4],
     COUPLING_CONTROL=['LMAX', 0.001],
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='LIQUID_FLOW',
+    TIME_STEPS=[10, 86400],
+    TIME_END=1e+99,
+    TIME_START=0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -104,22 +120,6 @@ model.out.add_block(
     GEO_TYPE=['POINT', 'POINT_RIGHT'],
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEPS', 1],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='LIQUID_FLOW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='HEAT_TRANSPORT',
-)
-model.rfd.read_file('exp1.rfd')
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='LIQUID_FLOW',
-    TIME_STEPS=[10, 86400],
-    TIME_END=1e+99,
-    TIME_START=0,
 )
 model.write_input()
 model.run_model()

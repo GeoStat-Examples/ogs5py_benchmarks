@@ -11,6 +11,7 @@ from ogs5py import OGS, search_task_id
 
 
 def download_benchmarks(zip_dir):
+    """Downlaod the ogs5 benchmarks."""
     print("Downloading OGS5 Benchmarks")
     data_filename = "data.zip"
     data_url = "https://github.com/ufz/ogs5-benchmarks/archive/master.zip"
@@ -40,16 +41,16 @@ skip_task = [
     "viscosity_yaws",  # $AREA in mmp
     "uc_pris",  # GLI not valid (SRF not present for VOLUME)
     "brand_m1_l1",  # GLI not valid (TIN and Polylines at the same time[?])
-    # repeated Keywords ... ogs5py can't handle this
-    "lag2d",  # repeated Keywords NEIGHBOR (cct)
-    "decal",  # repeated Keywords NEIGHBOR (cct)
-#    "2D1P_transport",  # repeated Keywords POROSITY (mmp)
-#    "Nuklidtransport",  # repeated Keywords MASS_DISPERSION (mmp)
-#    "cement2d",  # repeated Keywords KINETIC_GEM (gem)
-#    "model_1",  # repeated Keywords DAT_TYPE (out)
-#    "Leakage",  # repeated Keywords TIM_TYPE (out)
-#    "CO2-FLOW",  # repeated Keywords DAT_TYPE (out)
-#    "2pf_2pt",  # repeated Keywords SIMULATOR (pcs)
+    # repeated Keywords ... ogs5py can handle this NOW!
+    # "lag2d",  # repeated Keywords NEIGHBOR (cct)
+    # "decal",  # repeated Keywords NEIGHBOR (cct)
+    # "2D1P_transport",  # repeated Keywords POROSITY (mmp)
+    # "Nuklidtransport",  # repeated Keywords MASS_DISPERSION (mmp)
+    # "cement2d",  # repeated Keywords KINETIC_GEM (gem)
+    # "model_1",  # repeated Keywords DAT_TYPE (out)
+    # "Leakage",  # repeated Keywords TIM_TYPE (out)
+    # "CO2-FLOW",  # repeated Keywords DAT_TYPE (out)
+    # "2pf_2pt",  # repeated Keywords SIMULATOR (pcs)
 ]
 
 # search for all root folders
@@ -147,8 +148,8 @@ for num_root, root in enumerate(roots):
             log_str.append("FAIL..." + str(valerr))
         else:
             load_success = True
-            print("OK...loading successfull")
-            log_str.append("OK...loading successfull")
+            print("OK...loading successful")
+            log_str.append("OK...loading successful")
 
         if gen_scr and load_success:
             model.gen_script(

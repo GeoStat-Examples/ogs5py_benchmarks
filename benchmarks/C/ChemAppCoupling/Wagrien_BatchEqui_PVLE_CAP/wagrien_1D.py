@@ -6,6 +6,208 @@ model = OGS(
     task_id='wagrien_1D',
     output_dir='out',
 )
+model.msh.read_file('wagrien_1D.msh')
+model.gli.read_file('wagrien_1D.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='GROUNDWATER_FLOW',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='GROUNDWATER_FLOW',
@@ -20,7 +222,6 @@ model.bc.add_block(
     GEO_TYPE=['POINT', 'POINT1'],
     DIS_TYPE=['CONSTANT', 2],
 )
-model.gli.read_file('wagrien_1D.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='GROUNDWATER_FLOW',
@@ -301,6 +502,38 @@ model.ic.add_block(
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 95],
 )
+model.mmp.add_block(
+    main_key='MEDIUM_PROPERTIES',
+    GEOMETRY_DIMENSION=1,
+    GEOMETRY_AREA=1.0,
+    POROSITY=[13, 0.2],
+    VOL_MAT=[1, 0.8],
+    TORTUOSITY=[1, 1.0],
+    PERMEABILITY_TENSOR=['ISOTROPIC', 1.157e-12],
+    PERMEABILITY_FUNCTION_POROSITY=[8, 'Kozeny_Carman'],
+    MASS_DISPERSION=[1, 0.001, 0.0],
+    HEAT_DISPERSION=[1, 0.0, 0.0],
+    DENSITY=[1, 1800.0],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    DENSITY=[1, 1800.0],
+    THERMAL=[
+        ['EXPANSION'],
+        [1e-05],
+        ['CAPACITY'],
+        [1, 1000.0],
+        ['CONDUCTIVITY'],
+        [1, 0.1],
+    ],
+)
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='LIQUID',
+    PCS_TYPE='HEAD',
+    DENSITY=[1, 1000.0],
+    VISCOSITY=[1, 0.001],
+)
 model.mcp.add_block(
     main_key='COMPONENT_PROPERTIES',
     NAME='water_liquid',
@@ -569,38 +802,32 @@ model.mcp.add_block(
     NAME='PCO2',
     MOBILE=0,
 )
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='LIQUID',
-    PCS_TYPE='HEAD',
-    DENSITY=[1, 1000.0],
-    VISCOSITY=[1, 0.001],
-)
-model.mmp.add_block(
-    main_key='MEDIUM_PROPERTIES',
-    GEOMETRY_DIMENSION=1,
-    GEOMETRY_AREA=1.0,
-    POROSITY=[13, 0.2],
-    VOL_MAT=[1, 0.8],
-    TORTUOSITY=[1, 1.0],
-    PERMEABILITY_TENSOR=['ISOTROPIC', 1.157e-12],
-    PERMEABILITY_FUNCTION_POROSITY=[8, 'Kozeny_Carman'],
-    MASS_DISPERSION=[1, 0.001, 0.0],
-    HEAT_DISPERSION=[1, 0.0, 0.0],
-    DENSITY=[1, 1800.0],
-)
-model.msh.read_file('wagrien_1D.msh')
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    DENSITY=[1, 1800.0],
-    THERMAL=[
-        ['EXPANSION'],
-        [1e-05],
-        ['CAPACITY'],
-        [1, 1000.0],
-        ['CONDUCTIVITY'],
-        [1, 0.1],
+model.rei.add_block(
+    main_key='REACTION_INTERFACE',
+    MOL_PER='VOLUME',
+    WATER_CONCENTRATION=[
+        ['VARIABLE'],
+        ['Al[3+]'],
+        ['CO3[2-]'],
+        ['Ca[2+]'],
+        ['Cl[-]'],
+        ['Fe[2+]'],
+        ['Fe[3+]'],
+        ['H[+]'],
+        ['HCO3[-]'],
+        ['HS[-]'],
+        ['K[+]'],
+        ['Mg[2+]'],
+        ['Na[+]'],
+        ['OH[-]'],
+        ['SO4[2-]'],
     ],
+    WATER_SPECIES_NAME='water_liquid',
+    DISSOLVED_NEUTRAL_CO2_SPECIES_NAME='CO2',
+    PRESSURE=['CONSTANT', 305.87],
+    TEMPERATURE=['CONSTANT', 367.15],
+    RESIDUAL='RECORD',
+    P_VLE=['PCO2', 'CO2'],
 )
 model.num.add_block(
     main_key='NUMERICS',
@@ -613,6 +840,20 @@ model.num.add_block(
     PCS_TYPE='MASS_TRANSPORT',
     LINEAR_SOLVER=[2, 6, 1e-14, 1000, 0.5, 1, 2],
     ELE_GAUSS_POINTS=3,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='GROUNDWATER_FLOW',
+    TIME_STEPS=[10, 86400],
+    TIME_END=315360000000.0,
+    TIME_START=0.0,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='MASS_TRANSPORT',
+    TIME_STEPS=[10, 86400],
+    TIME_END=315360000000.0,
+    TIME_START=0.0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -670,247 +911,6 @@ model.out.add_block(
     GEO_TYPE='DOMAIN',
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEPS', 10],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='GROUNDWATER_FLOW',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.rei.add_block(
-    main_key='REACTION_INTERFACE',
-    MOL_PER='VOLUME',
-    WATER_CONCENTRATION=[
-        ['VARIABLE'],
-        ['Al[3+]'],
-        ['CO3[2-]'],
-        ['Ca[2+]'],
-        ['Cl[-]'],
-        ['Fe[2+]'],
-        ['Fe[3+]'],
-        ['H[+]'],
-        ['HCO3[-]'],
-        ['HS[-]'],
-        ['K[+]'],
-        ['Mg[2+]'],
-        ['Na[+]'],
-        ['OH[-]'],
-        ['SO4[2-]'],
-    ],
-    WATER_SPECIES_NAME='water_liquid',
-    DISSOLVED_NEUTRAL_CO2_SPECIES_NAME='CO2',
-    PRESSURE=['CONSTANT', 305.87],
-    TEMPERATURE=['CONSTANT', 367.15],
-    RESIDUAL='RECORD',
-    P_VLE=['PCO2', 'CO2'],
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='GROUNDWATER_FLOW',
-    TIME_STEPS=[10, 86400],
-    TIME_END=315360000000.0,
-    TIME_START=0.0,
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='MASS_TRANSPORT',
-    TIME_STEPS=[10, 86400],
-    TIME_END=315360000000.0,
-    TIME_START=0.0,
 )
 model.write_input()
 model.run_model()

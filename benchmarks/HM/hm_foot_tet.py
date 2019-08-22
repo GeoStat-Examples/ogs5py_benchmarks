@@ -1,11 +1,23 @@
 # -*- coding: utf-8 -*-
-from ogs5py import OGS, ASC
+from ogs5py import OGS
 
 model = OGS(
     task_root='hm_foot_tet_root',
     task_id='hm_foot_tet',
     output_dir='out',
 )
+model.msh.read_file('hm_foot_tet.msh')
+model.gli.read_file('hm_foot_tet.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE=[
+        ['LIQUID_FLOW'],
+        ['DEFORMATION'],
+    ],
+    MEMORY_TYPE=0,
+    ST_RHS=2,
+)
+model.rfd.read_file('hm_foot_tet.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='DEFORMATION_FLOW',
@@ -62,7 +74,6 @@ model.bc.add_block(
     GEO_TYPE=['SURFACE', 'BOTTOM'],
     DIS_TYPE=['CONSTANT', 0.0],
 )
-model.gli.read_file('hm_foot_tet.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='DEFORMATION_FLOW',
@@ -70,12 +81,12 @@ model.ic.add_block(
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 0.0],
 )
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='LIQUID',
-    PCS_TYPE='PRESSURE1',
-    DENSITY=[1, 0.0],
-    VISCOSITY=[1, 0.001],
+model.st.add_block(
+    main_key='SOURCE_TERM',
+    PCS_TYPE='DEFORMATION_FLOW',
+    PRIMARY_VARIABLE='DISPLACEMENT_Z1',
+    GEO_TYPE=['SURFACE', 'FOOT'],
+    DIS_TYPE=['CONSTANT_NEUMANN', -1000.0],
 )
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
@@ -85,7 +96,6 @@ model.mmp.add_block(
     TORTUOSITY=[1, 1.0],
     PERMEABILITY_TENSOR=['ISOTROPIC:', 1e-10],
 )
-model.msh.read_file('hm_foot_tet.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     ELASTICITY=[
@@ -102,11 +112,26 @@ model.msp.add_block(
         [0.0],
     ],
 )
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='LIQUID',
+    PCS_TYPE='PRESSURE1',
+    DENSITY=[1, 0.0],
+    VISCOSITY=[1, 0.001],
+)
 model.num.add_block(
     main_key='NUMERICS',
     PCS_TYPE='DEFORMATION_FLOW',
     LINEAR_SOLVER=[2, 5, 1e-10, 3000, 1.0, 100, 4],
     ELE_GAUSS_POINTS=3,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='DEFORMATION_FLOW',
+    TIME_STEPS=[1, 1.0],
+    TIME_END=20.0,
+    TIME_START=0.0,
+    TIME_CONTROL=[],
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -165,36 +190,10 @@ model.out.add_block(
         [100.0],
     ],
 )
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE=[
-        ['LIQUID_FLOW'],
-        ['DEFORMATION'],
-    ],
-    MEMORY_TYPE=0,
-    ST_RHS=2,
-)
-model.rfd.read_file('hm_foot_tet.rfd')
-model.st.add_block(
-    main_key='SOURCE_TERM',
-    PCS_TYPE='DEFORMATION_FLOW',
-    PRIMARY_VARIABLE='DISPLACEMENT_Z1',
-    GEO_TYPE=['SURFACE', 'FOOT'],
-    DIS_TYPE=['CONSTANT_NEUMANN', -1000.0],
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='DEFORMATION_FLOW',
-    TIME_STEPS=[1, 1.0],
-    TIME_END=20.0,
-    TIME_START=0.0,
-    TIME_CONTROL=[],
-)
-asc_file = ASC(
-    file_name='hm_foot_tet_DEFORMATION_FLOW_ST_RHS',
+model.asc.add(
+    name='hm_foot_tet_DEFORMATION_FLOW_ST_RHS',
     file_ext='.asc',
 )
-asc_file.read_file('hm_foot_tet_DEFORMATION_FLOW_ST_RHS.asc')
-model.add_asc(asc_file)
+model.asc.read_file('hm_foot_tet_DEFORMATION_FLOW_ST_RHS.asc')
 model.write_input()
 model.run_model()

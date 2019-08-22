@@ -1,4 +1,4 @@
-|-------------- Written with ogs5py --------------|
+|------------------ Written with ogs5py ------------------|
 #PROJECT
    OGS BM, based on DECOVALEX 2015 Task B2 Step 01 (JM)
 #CURVES
@@ -122,4 +122,4 @@
    0.9 1.0
    1.0 1.0
 #STOP
-|-- Written with ogs5py (0.6.1) on: 2019-01-22_19-37-18 --|
+|-- Written with ogs5py (1.0.0.rc1) on: 2019-08-22_15-03-32 --|

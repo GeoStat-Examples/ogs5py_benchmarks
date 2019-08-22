@@ -6,6 +6,22 @@ model = OGS(
     task_id='hm_swelling',
     output_dir='out',
 )
+model.msh.read_file('hm_swelling.msh')
+model.gli.read_file('hm_swelling.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='RICHARDS_FLOW',
+    NUM_TYPE='NEW',
+    DEACTIVATED_SUBDOMAIN=[
+        [1],
+        [2],
+    ],
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='DEFORMATION',
+)
+model.rfd.read_file('hm_swelling.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='RICHARDS_FLOW',
@@ -48,7 +64,6 @@ model.bc.add_block(
     GEO_TYPE=['POLYLINE', 'TOP'],
     DIS_TYPE=['CONSTANT:', 0.0],
 )
-model.gli.read_file('hm_swelling.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='RICHARDS_FLOW',
@@ -72,15 +87,6 @@ model.ic.add_block(
         [1, 25.0],
         [2, 25.0],
     ],
-)
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='LIQUID',
-    PCS_TYPE='PRESSURE1',
-    DENSITY=[1, 1000.0],
-    VISCOSITY=[1, 0.001],
-    SPECIFIC_HEAT_CAPACITY=[1, 4280.0],
-    HEAT_CONDUCTIVITY=[1, 0.6],
 )
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
@@ -125,7 +131,6 @@ model.mmp.add_block(
     ],
     CAPILLARY_PRESSURE=[1, 0.0],
 )
-model.msh.read_file('hm_swelling.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     DENSITY=[1, -1600.0],
@@ -178,6 +183,15 @@ model.msp.add_block(
     ],
     BIOT_CONSTANT=0.0,
 )
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='LIQUID',
+    PCS_TYPE='PRESSURE1',
+    DENSITY=[1, 1000.0],
+    VISCOSITY=[1, 0.001],
+    SPECIFIC_HEAT_CAPACITY=[1, 4280.0],
+    HEAT_CONDUCTIVITY=[1, 0.6],
+)
 model.num.add_block(
     main_key='NUMERICS',
     PCS_TYPE='RICHARDS_FLOW',
@@ -197,6 +211,56 @@ model.num.add_block(
     PCS_TYPE='DEFORMATION',
     LINEAR_SOLVER=[2, 0, 1e-10, 2000, 1.0, 100, 4],
     ELE_GAUSS_POINTS=3,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='RICHARDS_FLOW',
+    TIME_STEPS=[
+        [4, 0.001],
+        [1, 0.006],
+        [9, 0.01],
+        [9, 0.1],
+        [9, 1],
+        [30, 1],
+        [2, 2],
+        [1, 10],
+        [1, 16],
+        [1, 30],
+        [1, 40],
+        [10, 86],
+        [90, 100],
+        [100, 900],
+        [90, 10000],
+    ],
+    TIME_END=10000.0,
+    TIME_START=0.0,
+    TIME_UNIT='YEAR',
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='HEAT_TRANSPORT',
+    TIME_STEPS=[
+        [4, 0.001],
+        [1, 0.006],
+        [9, 0.01],
+        [9, 0.1],
+        [9, 1],
+        [30, 1],
+        [2, 2],
+        [1, 10],
+        [1, 16],
+        [1, 30],
+        [1, 40],
+        [10, 86],
+        [90, 100],
+        [100, 900],
+        [90, 10000],
+        [100, 900],
+        [90, 10000],
+    ],
+    TIME_END=10000.0,
+    TIME_START=0.0,
+    TIME_UNIT='YEAR',
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -343,70 +407,6 @@ model.out.add_block(
     GEO_TYPE=['POINT', 'POINT9'],
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEPS', 2],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='RICHARDS_FLOW',
-    NUM_TYPE='NEW',
-    DEACTIVATED_SUBDOMAIN=[
-        [1],
-        [2],
-    ],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='DEFORMATION',
-)
-model.rfd.read_file('hm_swelling.rfd')
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='RICHARDS_FLOW',
-    TIME_STEPS=[
-        [4, 0.001],
-        [1, 0.006],
-        [9, 0.01],
-        [9, 0.1],
-        [9, 1],
-        [30, 1],
-        [2, 2],
-        [1, 10],
-        [1, 16],
-        [1, 30],
-        [1, 40],
-        [10, 86],
-        [90, 100],
-        [100, 900],
-        [90, 10000],
-    ],
-    TIME_END=10000.0,
-    TIME_START=0.0,
-    TIME_UNIT='YEAR',
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='HEAT_TRANSPORT',
-    TIME_STEPS=[
-        [4, 0.001],
-        [1, 0.006],
-        [9, 0.01],
-        [9, 0.1],
-        [9, 1],
-        [30, 1],
-        [2, 2],
-        [1, 10],
-        [1, 16],
-        [1, 30],
-        [1, 40],
-        [10, 86],
-        [90, 100],
-        [100, 900],
-        [90, 10000],
-        [100, 900],
-        [90, 10000],
-    ],
-    TIME_END=10000.0,
-    TIME_START=0.0,
-    TIME_UNIT='YEAR',
 )
 model.write_input()
 model.run_model()

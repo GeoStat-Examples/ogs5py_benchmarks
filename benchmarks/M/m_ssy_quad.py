@@ -6,6 +6,13 @@ model = OGS(
     task_id='m_ssy_quad',
     output_dir='out',
 )
+model.msh.read_file('m_ssy_quad.msh')
+model.gli.read_file('m_ssy_quad.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='DEFORMATION',
+)
+model.rfd.read_file('m_ssy_quad.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='DEFORMATION',
@@ -35,14 +42,12 @@ model.bc.add_block(
     DIS_TYPE=['CONSTANT', 1.0],
     TIM_TYPE=['CURVE', 2],
 )
-model.gli.read_file('m_ssy_quad.gli')
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
     GEOMETRY_DIMENSION=2,
     GEOMETRY_AREA=1.0,
     POROSITY=[1, 0.0],
 )
-model.msh.read_file('m_ssy_quad.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     ELASTICITY=[
@@ -83,6 +88,13 @@ model.num.add_block(
     NON_LINEAR_SOLVER=['NEWTON', 0.0001, 1e-10, 100, 0.0],
     LINEAR_SOLVER=[2, 0, 1e-10, 10000, 1.0, 100, 4],
     ELE_GAUSS_POINTS=3,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='DEFORMATION',
+    TIME_STEPS=[10, 1.0],
+    TIME_END=6.0,
+    TIME_START=0.0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -140,18 +152,6 @@ model.out.add_block(
     GEO_TYPE=['POINT', 'POINT3'],
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEPS', 1],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='DEFORMATION',
-)
-model.rfd.read_file('m_ssy_quad.rfd')
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='DEFORMATION',
-    TIME_STEPS=[10, 1.0],
-    TIME_END=6.0,
-    TIME_START=0.0,
 )
 model.write_input()
 model.run_model()

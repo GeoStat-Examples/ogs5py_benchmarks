@@ -6,6 +6,14 @@ model = OGS(
     task_id='m1_3Dtorsion',
     output_dir='out',
 )
+model.msh.read_file('m1_3Dtorsion.msh')
+model.gli.read_file('m1_3Dtorsion.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='DEFORMATION',
+    NUM_TYPE='NEW',
+)
+model.rfd.read_file('m1_3Dtorsion.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='DEFORMATION',
@@ -48,55 +56,6 @@ model.bc.add_block(
     ],
     TIM_TYPE=['CURVE', 1],
 )
-model.gli.read_file('m1_3Dtorsion.gli')
-model.mmp.add_block(
-    main_key='MEDIUM_PROPERTIES',
-    GEOMETRY_DIMENSION=3,
-)
-model.msh.read_file('m1_3Dtorsion.msh')
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    DENSITY=[1, 0.0],
-    ELASTICITY=[
-        ['POISSION', 0.25],
-        ['YOUNGS_MODULUS'],
-        [1, 25000000000.0],
-    ],
-)
-model.num.add_block(
-    main_key='NUMERICS',
-    PCS_TYPE='DEFORMATION',
-    LINEAR_SOLVER=[2, 1, 1e-10, 10000, 1.0, 101, 4],
-)
-model.out.add_block(
-    main_key='OUTPUT',
-    NOD_VALUES=[
-        ['DISPLACEMENT_X1'],
-        ['DISPLACEMENT_Y1'],
-        ['DISPLACEMENT_Z1'],
-        ['STRESS_XX'],
-        ['STRESS_XY'],
-        ['STRESS_YY'],
-        ['STRESS_ZZ'],
-        ['STRESS_XZ'],
-        ['STRESS_YZ'],
-        ['STRAIN_XX'],
-        ['STRAIN_XY'],
-        ['STRAIN_YY'],
-        ['STRAIN_ZZ'],
-        ['STRAIN_XZ'],
-        ['STRAIN_YZ'],
-    ],
-    GEO_TYPE='DOMAIN',
-    DAT_TYPE='TECPLOT',
-    TIM_TYPE=1,
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='DEFORMATION',
-    NUM_TYPE='NEW',
-)
-model.rfd.read_file('m1_3Dtorsion.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='DEFORMATION',
@@ -349,6 +308,24 @@ model.st.add_block(
     ],
     TIM_TYPE=['CURVE', 1],
 )
+model.mmp.add_block(
+    main_key='MEDIUM_PROPERTIES',
+    GEOMETRY_DIMENSION=3,
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    DENSITY=[1, 0.0],
+    ELASTICITY=[
+        ['POISSION', 0.25],
+        ['YOUNGS_MODULUS'],
+        [1, 25000000000.0],
+    ],
+)
+model.num.add_block(
+    main_key='NUMERICS',
+    PCS_TYPE='DEFORMATION',
+    LINEAR_SOLVER=[2, 1, 1e-10, 10000, 1.0, 101, 4],
+)
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='DEFORMATION',
@@ -356,6 +333,29 @@ model.tim.add_block(
     TIME_STEPS=[1, 1],
     TIME_END=1.0,
     TIME_START=0.0,
+)
+model.out.add_block(
+    main_key='OUTPUT',
+    NOD_VALUES=[
+        ['DISPLACEMENT_X1'],
+        ['DISPLACEMENT_Y1'],
+        ['DISPLACEMENT_Z1'],
+        ['STRESS_XX'],
+        ['STRESS_XY'],
+        ['STRESS_YY'],
+        ['STRESS_ZZ'],
+        ['STRESS_XZ'],
+        ['STRESS_YZ'],
+        ['STRAIN_XX'],
+        ['STRAIN_XY'],
+        ['STRAIN_YY'],
+        ['STRAIN_ZZ'],
+        ['STRAIN_XZ'],
+        ['STRAIN_YZ'],
+    ],
+    GEO_TYPE='DOMAIN',
+    DAT_TYPE='TECPLOT',
+    TIM_TYPE=1,
 )
 model.write_input()
 model.run_model()

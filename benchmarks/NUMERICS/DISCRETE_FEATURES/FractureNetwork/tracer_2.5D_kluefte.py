@@ -6,6 +6,16 @@ model = OGS(
     task_id='tracer_2.5D_kluefte',
     output_dir='out',
 )
+model.msh.read_file('tracer_2.5D_kluefte.msh')
+model.gli.read_file('tracer_2.5D_kluefte.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='LIQUID_FLOW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+)
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='LIQUID_FLOW',
@@ -27,29 +37,12 @@ model.bc.add_block(
     GEO_TYPE=['POINT', 'POINT0'],
     DIS_TYPE=['CONSTANT', 1],
 )
-model.gli.read_file('tracer_2.5D_kluefte.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='LIQUID_FLOW',
     PRIMARY_VARIABLE='PRESSURE1',
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 0],
-)
-model.mcp.add_block(
-    main_key='COMPONENT_PROPERTIES',
-    NAME='CONCENTRATION1',
-    MOBILE=1,
-    DIFFUSION=[1, 1e-08],
-    ISOTHERM=[1, 0.0004],
-)
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='LIQUID',
-    DAT_TYPE='LIQUID',
-    DENSITY=[1, 1000.0],
-    VISCOSITY=[1, 0.001],
-    SPECIFIC_HEAT_CAPACITY=[1, 4680.0],
-    SPECIFIC_HEAT_CONDUCTIVITY=[1, 0.6],
 )
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
@@ -135,7 +128,6 @@ model.mmp.add_block(
     MASS_DISPERSION=[1, 6.0, 1.0],
     DENSITY=[1, 1000.0],
 )
-model.msh.read_file('tracer_2.5D_kluefte.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     DENSITY=[1, 1000.0],
@@ -219,6 +211,22 @@ model.msp.add_block(
         ['CONDUCTIVITY'],
         [1, 0.63],
     ],
+)
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='LIQUID',
+    DAT_TYPE='LIQUID',
+    DENSITY=[1, 1000.0],
+    VISCOSITY=[1, 0.001],
+    SPECIFIC_HEAT_CAPACITY=[1, 4680.0],
+    SPECIFIC_HEAT_CONDUCTIVITY=[1, 0.6],
+)
+model.mcp.add_block(
+    main_key='COMPONENT_PROPERTIES',
+    NAME='CONCENTRATION1',
+    MOBILE=1,
+    DIFFUSION=[1, 1e-08],
+    ISOTHERM=[1, 0.0004],
 )
 model.num.add_block(
     main_key='NUMERICS',
@@ -230,6 +238,13 @@ model.num.add_block(
     PCS_TYPE='MASS_TRANSPORT',
     LINEAR_SOLVER=[2, 6, 1e-14, 1000, 0.5, 1, 4],
     ELE_GAUSS_POINTS=3,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='LIQUID_FLOW',
+    TIME_STEPS=[10, 25920],
+    TIME_END=1e+99,
+    TIME_START=0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -258,21 +273,6 @@ model.out.add_block(
     GEO_TYPE=['POINT', 'POINT1'],
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEPS', 1],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='LIQUID_FLOW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='LIQUID_FLOW',
-    TIME_STEPS=[10, 25920],
-    TIME_END=1e+99,
-    TIME_START=0,
 )
 model.write_input()
 model.run_model()

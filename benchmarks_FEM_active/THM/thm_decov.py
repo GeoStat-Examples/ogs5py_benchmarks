@@ -6,6 +6,34 @@ model = OGS(
     task_id='thm_decov',
     output_dir='out',
 )
+model.msh.read_file('thm_decov.msh')
+model.gli.read_file('thm_decov.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='RICHARDS_FLOW',
+    NEGLECT_H_INI_EFFECT=2,
+    DEACTIVATED_SUBDOMAIN=[
+        [1],
+        [2],
+    ],
+    ELEMENT_MATRIX_OUTPUT=0,
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='HEAT_TRANSPORT',
+    NEGLECT_H_INI_EFFECT=2,
+    DEACTIVATED_SUBDOMAIN=[
+        [1],
+        [2],
+    ],
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='DEFORMATION',
+    RELOAD=2,
+    NEGLECT_H_INI_EFFECT=2,
+)
+model.rfd.read_file('thm_decov.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='RICHARDS_FLOW',
@@ -67,7 +95,6 @@ model.bc.add_block(
     DIS_TYPE=['CONSTANT:', 1.0],
     TIM_TYPE=['CURVE', 6],
 )
-model.gli.read_file('thm_decov.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='RICHARDS_FLOW',
@@ -92,14 +119,13 @@ model.ic.add_block(
         [2, 25.0],
     ],
 )
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='LIQUID',
-    PCS_TYPE='PRESSURE1',
-    DENSITY=[1, 1000.0],
-    VISCOSITY=[1, 0.001],
-    SPECIFIC_HEAT_CAPACITY=[1, 4280.0],
-    HEAT_CONDUCTIVITY=[1, 0.6],
+model.st.add_block(
+    main_key='SOURCE_TERM',
+    PCS_TYPE='HEAT_TRANSPORT',
+    PRIMARY_VARIABLE='TEMPERATURE1',
+    GEO_TYPE=['POLYLINE', 'ARC1'],
+    DIS_TYPE=['CONSTANT_NEUMANN', 1.0],
+    TIM_TYPE=['CURVE', 1],
 )
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
@@ -144,7 +170,6 @@ model.mmp.add_block(
     ],
     CAPILLARY_PRESSURE=[2, 1.0],
 )
-model.msh.read_file('thm_decov.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     DENSITY=[1, -1600.0],
@@ -194,6 +219,15 @@ model.msp.add_block(
         [1, 200000000000.0],
     ],
 )
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='LIQUID',
+    PCS_TYPE='PRESSURE1',
+    DENSITY=[1, 1000.0],
+    VISCOSITY=[1, 0.001],
+    SPECIFIC_HEAT_CAPACITY=[1, 4280.0],
+    HEAT_CONDUCTIVITY=[1, 0.6],
+)
 model.num.add_block(
     main_key='NUMERICS',
     PCS_TYPE='RICHARDS_FLOW',
@@ -216,6 +250,56 @@ model.num.add_block(
     LINEAR_SOLVER=[2, 0, 1e-10, 2000, 1.0, 100, 4],
     ELE_GAUSS_POINTS=3,
     COUPLING_CONTROL=['LMAX', 0.001],
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='RICHARDS_FLOW',
+    TIME_STEPS=[
+        [4, 0.001],
+        [1, 0.006],
+        [9, 0.01],
+        [9, 0.1],
+        [9, 1],
+        [30, 1],
+        [2, 2],
+        [1, 10],
+        [1, 16],
+        [1, 30],
+        [1, 40],
+        [10, 86],
+        [90, 100],
+        [100, 900],
+        [90, 10000],
+    ],
+    TIME_END=10000.0,
+    TIME_START=0.0,
+    TIME_UNIT='YEAR',
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='HEAT_TRANSPORT',
+    TIME_STEPS=[
+        [4, 0.001],
+        [1, 0.006],
+        [9, 0.01],
+        [9, 0.1],
+        [9, 1],
+        [30, 1],
+        [2, 2],
+        [1, 10],
+        [1, 16],
+        [1, 30],
+        [1, 40],
+        [10, 86],
+        [90, 100],
+        [100, 900],
+        [90, 10000],
+        [100, 900],
+        [90, 10000],
+    ],
+    TIME_END=10000.0,
+    TIME_START=0.0,
+    TIME_UNIT='YEAR',
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -594,90 +678,6 @@ model.out.add_block(
     GEO_TYPE=['POINT', 'POINT6'],
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEPS', 1],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='RICHARDS_FLOW',
-    NEGLECT_H_INI_EFFECT=2,
-    DEACTIVATED_SUBDOMAIN=[
-        [1],
-        [2],
-    ],
-    ELEMENT_MATRIX_OUTPUT=0,
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='HEAT_TRANSPORT',
-    NEGLECT_H_INI_EFFECT=2,
-    DEACTIVATED_SUBDOMAIN=[
-        [1],
-        [2],
-    ],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='DEFORMATION',
-    RELOAD=2,
-    NEGLECT_H_INI_EFFECT=2,
-)
-model.rfd.read_file('thm_decov.rfd')
-model.st.add_block(
-    main_key='SOURCE_TERM',
-    PCS_TYPE='HEAT_TRANSPORT',
-    PRIMARY_VARIABLE='TEMPERATURE1',
-    GEO_TYPE=['POLYLINE', 'ARC1'],
-    DIS_TYPE=['CONSTANT_NEUMANN', 1.0],
-    TIM_TYPE=['CURVE', 1],
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='RICHARDS_FLOW',
-    TIME_STEPS=[
-        [4, 0.001],
-        [1, 0.006],
-        [9, 0.01],
-        [9, 0.1],
-        [9, 1],
-        [30, 1],
-        [2, 2],
-        [1, 10],
-        [1, 16],
-        [1, 30],
-        [1, 40],
-        [10, 86],
-        [90, 100],
-        [100, 900],
-        [90, 10000],
-    ],
-    TIME_END=10000.0,
-    TIME_START=0.0,
-    TIME_UNIT='YEAR',
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='HEAT_TRANSPORT',
-    TIME_STEPS=[
-        [4, 0.001],
-        [1, 0.006],
-        [9, 0.01],
-        [9, 0.1],
-        [9, 1],
-        [30, 1],
-        [2, 2],
-        [1, 10],
-        [1, 16],
-        [1, 30],
-        [1, 40],
-        [10, 86],
-        [90, 100],
-        [100, 900],
-        [90, 10000],
-        [100, 900],
-        [90, 10000],
-    ],
-    TIME_END=10000.0,
-    TIME_START=0.0,
-    TIME_UNIT='YEAR',
 )
 model.write_input()
 model.run_model()

@@ -1,12 +1,19 @@
 # -*- coding: utf-8 -*-
-from ogs5py import OGS, GLIext
+from ogs5py import OGS
 
 model = OGS(
     task_root='gian_tri_root',
     task_id='gian_tri',
     output_dir='out',
 )
+model.msh.read_file('gian_tri.msh')
 model.gli.read_file('gian_tri.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='OVERLAND_FLOW',
+    NUM_TYPE='NEW',
+)
+model.rfd.read_file('gian_tri.rfd')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='OVERLAND_FLOW',
@@ -14,73 +21,6 @@ model.ic.add_block(
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 0.0001],
 )
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='LIQUID',
-    PCS_TYPE='HEAD',
-    DENSITY=[1, 1000.0],
-    VISCOSITY=[1, 0.001],
-)
-model.mmp.add_block(
-    main_key='MEDIUM_PROPERTIES',
-    SURFACE_FRICTION=[66.67, 0.5, 0.67],
-    RILL=[0.0, 0.0],
-)
-model.mmp.add_block(
-    main_key='MEDIUM_PROPERTIES',
-    SURFACE_FRICTION=[6.67, 0.5, 0.67],
-    RILL=[0.0, 0.0],
-)
-model.msh.read_file('gian_tri.msh')
-model.num.add_block(
-    main_key='NUMERICS',
-    PCS_TYPE='OVERLAND_FLOW',
-    LINEAR_SOLVER=[2, 5, 1e-10, 1000, 1.0, 100, 4],
-    NON_LINEAR_SOLVER=['NEWTON', 1e-05, 1e-08, 100, 0.0],
-    ELE_GAUSS_POINTS=2,
-)
-model.out.add_block(
-    main_key='OUTPUT',
-    NOD_VALUES=[
-        ['HEAD'],
-        ['WDEPTH'],
-        ['FLUX'],
-    ],
-    PCS_TYPE='OVERLAND_FLOW',
-    GEO_TYPE='DOMAIN',
-    DAT_TYPE='TECPLOT',
-    TIM_TYPE=['STEPS', 10],
-)
-model.out.add_block(
-    main_key='OUTPUT',
-    NOD_VALUES=[
-        ['WDEPTH'],
-        ['HEAD'],
-        ['FLUX'],
-    ],
-    PCS_TYPE='OVERLAND_FLOW',
-    GEO_TYPE=['POINT', 'POINT4'],
-    DAT_TYPE='TECPLOT',
-    TIM_TYPE=['STEPS', 10],
-)
-model.out.add_block(
-    main_key='OUTPUT',
-    NOD_VALUES=[
-        ['WDEPTH'],
-        ['HEAD'],
-        ['FLUX'],
-    ],
-    PCS_TYPE='OVERLAND_FLOW',
-    GEO_TYPE=['POINT', 'POINT5'],
-    DAT_TYPE='TECPLOT',
-    TIM_TYPE=['STEPS', 10],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='OVERLAND_FLOW',
-    NUM_TYPE='NEW',
-)
-model.rfd.read_file('gian_tri.rfd')
 model.st.add_block(
     main_key='SOURCE_TERM',
     PCS_TYPE='OVERLAND_FLOW',
@@ -98,6 +38,30 @@ model.st.add_block(
         ['CRITICALDEPTH', 1],
         [0.0],
     ],
+)
+model.mmp.add_block(
+    main_key='MEDIUM_PROPERTIES',
+    SURFACE_FRICTION=[66.67, 0.5, 0.67],
+    RILL=[0.0, 0.0],
+)
+model.mmp.add_block(
+    main_key='MEDIUM_PROPERTIES',
+    SURFACE_FRICTION=[6.67, 0.5, 0.67],
+    RILL=[0.0, 0.0],
+)
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='LIQUID',
+    PCS_TYPE='HEAD',
+    DENSITY=[1, 1000.0],
+    VISCOSITY=[1, 0.001],
+)
+model.num.add_block(
+    main_key='NUMERICS',
+    PCS_TYPE='OVERLAND_FLOW',
+    LINEAR_SOLVER=[2, 5, 1e-10, 1000, 1.0, 100, 4],
+    NON_LINEAR_SOLVER=['NEWTON', 1e-05, 1e-08, 100, 0.0],
+    ELE_GAUSS_POINTS=2,
 )
 model.tim.add_block(
     main_key='TIME_STEPPING',
@@ -376,11 +340,46 @@ model.tim.add_block(
     TIME_START=0.0,
     TIME_CONTROL=[],
 )
-gli_ext_file = GLIext(
-    file_name='gian_tri_sfc',
+model.out.add_block(
+    main_key='OUTPUT',
+    NOD_VALUES=[
+        ['HEAD'],
+        ['WDEPTH'],
+        ['FLUX'],
+    ],
+    PCS_TYPE='OVERLAND_FLOW',
+    GEO_TYPE='DOMAIN',
+    DAT_TYPE='TECPLOT',
+    TIM_TYPE=['STEPS', 10],
+)
+model.out.add_block(
+    main_key='OUTPUT',
+    NOD_VALUES=[
+        ['WDEPTH'],
+        ['HEAD'],
+        ['FLUX'],
+    ],
+    PCS_TYPE='OVERLAND_FLOW',
+    GEO_TYPE=['POINT', 'POINT4'],
+    DAT_TYPE='TECPLOT',
+    TIM_TYPE=['STEPS', 10],
+)
+model.out.add_block(
+    main_key='OUTPUT',
+    NOD_VALUES=[
+        ['WDEPTH'],
+        ['HEAD'],
+        ['FLUX'],
+    ],
+    PCS_TYPE='OVERLAND_FLOW',
+    GEO_TYPE=['POINT', 'POINT5'],
+    DAT_TYPE='TECPLOT',
+    TIM_TYPE=['STEPS', 10],
+)
+model.gli_ext.add(
+    name='gian_tri_sfc',
     file_ext='.tin',
 )
-gli_ext_file.read_file('gian_tri_sfc.tin')
-model.add_gli_ext(gli_ext_file)
+model.gli_ext.read_file('gian_tri_sfc.tin')
 model.write_input()
 model.run_model()

@@ -6,6 +6,19 @@ model = OGS(
     task_id='fivespot',
     output_dir='out',
 )
+model.msh.read_file('fivespot.msh')
+model.gli.read_file('fivespot.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MULTI_PHASE_FLOW',
+    NEGLECT_H_INI_EFFECT=2,
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='DEFORMATION',
+    NEGLECT_H_INI_EFFECT=2,
+)
+model.rfd.read_file('fivespot.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='MULTI_PHASE_FLOW',
@@ -76,7 +89,6 @@ model.bc.add_block(
     GEO_TYPE=['SURFACE', 'bottom'],
     DIS_TYPE=['CONSTANT', 0],
 )
-model.gli.read_file('fivespot.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='MULTI_PHASE_FLOW',
@@ -90,6 +102,28 @@ model.ic.add_block(
     PRIMARY_VARIABLE='PRESSURE2',
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 105018.5554],
+)
+model.mmp.add_block(
+    main_key='MEDIUM_PROPERTIES',
+    NAME='RESERVOIR',
+    GEOMETRY_DIMENSION=3,
+    POROSITY=[1, 0.206],
+    PERMEABILITY_TENSOR=['ORTHOTROPIC', 1e-13, 1e-13, 1e-13],
+    PERMEABILITY_SATURATION=[
+        [0, 1],
+        [0, 2],
+    ],
+    CAPILLARY_PRESSURE=[0, 3],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    DENSITY=[1, 0.0],
+    ELASTICITY=[
+        ['POISSION', 0.3],
+        ['YOUNGS_MODULUS:'],
+        [1, 35000000000.0],
+    ],
+    BIOT_CONSTANT=1.0,
 )
 model.mfp.add_block(
     main_key='FLUID_PROPERTIES',
@@ -105,29 +139,6 @@ model.mfp.add_block(
     DENSITY=[1, 1000.0],
     VISCOSITY=[1, 0.004],
     GRAVITY=0.0,
-)
-model.mmp.add_block(
-    main_key='MEDIUM_PROPERTIES',
-    NAME='RESERVOIR',
-    GEOMETRY_DIMENSION=3,
-    POROSITY=[1, 0.206],
-    PERMEABILITY_TENSOR=['ORTHOTROPIC', 1e-13, 1e-13, 1e-13],
-    PERMEABILITY_SATURATION=[
-        [0, 1],
-        [0, 2],
-    ],
-    CAPILLARY_PRESSURE=[0, 3],
-)
-model.msh.read_file('fivespot.msh')
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    DENSITY=[1, 0.0],
-    ELASTICITY=[
-        ['POISSION', 0.3],
-        ['YOUNGS_MODULUS:'],
-        [1, 35000000000.0],
-    ],
-    BIOT_CONSTANT=1.0,
 )
 model.num.add_block(
     main_key='NUMERICS',
@@ -145,6 +156,38 @@ model.num.add_block(
     ELE_GAUSS_POINTS=2,
     COUPLING_CONTROL=['LMAX', 0.001],
 )
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='MULTI_PHASE_FLOW',
+    TIME_END=20,
+    TIME_START=0.0,
+    TIME_UNIT='DAY',
+    TIME_STEPS=[
+        [1, 0.01],
+        [1, 0.04],
+        [1, 0.05],
+        [2, 0.25],
+        [1, 0.4],
+        [5, 1.0],
+        [8, 2.0],
+    ],
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='DEFORMATION',
+    TIME_END=20,
+    TIME_START=0.0,
+    TIME_UNIT='DAY',
+    TIME_STEPS=[
+        [1, 0.01],
+        [1, 0.04],
+        [1, 0.05],
+        [2, 0.25],
+        [1, 0.4],
+        [5, 1.0],
+        [8, 2.0],
+    ],
+)
 model.out.add_block(
     main_key='OUTPUT',
     PCS_TYPE='MULTI_PHASE_FLOW',
@@ -398,49 +441,6 @@ model.out.add_block(
     GEO_TYPE=['POINT', 'inject_b'],
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEPS', 1],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MULTI_PHASE_FLOW',
-    NEGLECT_H_INI_EFFECT=2,
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='DEFORMATION',
-    NEGLECT_H_INI_EFFECT=2,
-)
-model.rfd.read_file('fivespot.rfd')
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='MULTI_PHASE_FLOW',
-    TIME_END=20,
-    TIME_START=0.0,
-    TIME_UNIT='DAY',
-    TIME_STEPS=[
-        [1, 0.01],
-        [1, 0.04],
-        [1, 0.05],
-        [2, 0.25],
-        [1, 0.4],
-        [5, 1.0],
-        [8, 2.0],
-    ],
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='DEFORMATION',
-    TIME_END=20,
-    TIME_START=0.0,
-    TIME_UNIT='DAY',
-    TIME_STEPS=[
-        [1, 0.01],
-        [1, 0.04],
-        [1, 0.05],
-        [2, 0.25],
-        [1, 0.4],
-        [5, 1.0],
-        [8, 2.0],
-    ],
 )
 model.write_input()
 model.run_model()

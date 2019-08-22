@@ -1,4 +1,4 @@
-|-------------- Written with ogs5py --------------|
+|------------------ Written with ogs5py ------------------|
 #POINTS
 0 66.506075 0.95690785 3.3761759 $NAME POINT0
 1 67.493091 1.6484466 3.1752245 $NAME POINT1
@@ -94,4 +94,4 @@
   $MAT_GROUP
    -1
 #STOP
-|-- Written with ogs5py (0.6.1) on: 2019-01-22_19-37-18 --|
+|-- Written with ogs5py (1.0.0.rc1) on: 2019-08-22_15-03-32 --|

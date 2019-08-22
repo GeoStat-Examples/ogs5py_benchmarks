@@ -6,6 +6,19 @@ model = OGS(
     task_id='HM',
     output_dir='out',
 )
+model.msh.read_file('HM.msh')
+model.gli.read_file('HM.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='RICHARDS_FLOW',
+    BOUNDARY_CONDITION_OUTPUT=[],
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    BOUNDARY_CONDITION_OUTPUT=[],
+)
+model.rfd.read_file('HM.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='RICHARDS_FLOW',
@@ -30,7 +43,6 @@ model.bc.add_block(
     GEO_TYPE=['POLYLINE', 'LEFT'],
     DIS_TYPE=['CONSTANT', 1],
 )
-model.gli.read_file('HM.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='RICHARDS_FLOW',
@@ -52,18 +64,6 @@ model.ic.add_block(
     GEO_TYPE=['POLYLINE', 'LEFT'],
     DIS_TYPE=['CONSTANT', 1],
 )
-model.mcp.add_block(
-    main_key='COMPONENT_PROPERTIES',
-    NAME='CONCENTRATION1',
-    MOBILE=1,
-    DIFFUSION=[1, 0],
-)
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='LIQUID',
-    DENSITY=[3, 1000, 0, 0.026],
-    VISCOSITY=[1, 0.001],
-)
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
     GEOMETRY_DIMENSION=2,
@@ -76,10 +76,21 @@ model.mmp.add_block(
     MASS_DISPERSION=[1, 0.005, 0.0005],
     STORAGE=10,
 )
-model.msh.read_file('HM.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     DENSITY=[1, 2000.0],
+)
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='LIQUID',
+    DENSITY=[3, 1000, 0, 0.026],
+    VISCOSITY=[1, 0.001],
+)
+model.mcp.add_block(
+    main_key='COMPONENT_PROPERTIES',
+    NAME='CONCENTRATION1',
+    MOBILE=1,
+    DIFFUSION=[1, 0],
 )
 model.num.add_block(
     main_key='NUMERICS',
@@ -93,6 +104,54 @@ model.num.add_block(
     PCS_TYPE='MASS_TRANSPORT',
     LINEAR_SOLVER=[2, 6, 1e-14, 5000, 1, 100, 4],
     COUPLING_CONTROL=['ERNORM', 0.005],
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='RICHARDS_FLOW',
+    TIME_END=30000,
+    TIME_START=0.0,
+    TIME_CONTROL=[
+        ['SELF_ADAPTIVE'],
+        ['MULTIPLIER'],
+        [3, 1.3],
+        [5, 1.01],
+        [7, 0.8],
+        [9, 0.5],
+        ['MIN_TIME_STEP'],
+        [0.001],
+        ['MAX_TIME_STEP'],
+        [10000],
+        ['INITIAL_STEP_SIZE'],
+        [10.0],
+        ['ITERATIVE_TYPE'],
+        ['COUPLED'],
+        ['STAY'],
+        [3],
+    ],
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='MASS_TRANSPORT',
+    TIME_END=30000,
+    TIME_START=0.0,
+    TIME_CONTROL=[
+        ['SELF_ADAPTIVE'],
+        ['MULTIPLIER'],
+        [3, 1.3],
+        [5, 1.01],
+        [7, 0.8],
+        [9, 0.5],
+        ['MIN_TIME_STEP'],
+        [0.001],
+        ['MAX_TIME_STEP'],
+        [10000],
+        ['INITIAL_STEP_SIZE'],
+        [10.0],
+        ['ITERATIVE_TYPE'],
+        ['COUPLED'],
+        ['STAY'],
+        [3],
+    ],
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -115,65 +174,6 @@ model.out.add_block(
         [9000],
         [19000],
         [29000],
-    ],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='RICHARDS_FLOW',
-    BOUNDARY_CONDITION_OUTPUT=[],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    BOUNDARY_CONDITION_OUTPUT=[],
-)
-model.rfd.read_file('HM.rfd')
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='RICHARDS_FLOW',
-    TIME_END=30000,
-    TIME_START=0.0,
-    TIME_CONTROL=[
-        ['SELF_ADAPTIVE'],
-        ['MULTIPLIER'],
-        [3, 1.3],
-        [5, 1.01],
-        [7, 0.8],
-        [9, 0.5],
-        ['MIN_TIME_STEP'],
-        [0.001],
-        ['MAX_TIME_STEP'],
-        [10000],
-        ['INITIAL_STEP_SIZE'],
-        [10.0],
-        ['ITERATIVE_TYPE'],
-        ['COUPLED'],
-        ['STAY'],
-        [3],
-    ],
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='MASS_TRANSPORT',
-    TIME_END=30000,
-    TIME_START=0.0,
-    TIME_CONTROL=[
-        ['SELF_ADAPTIVE'],
-        ['MULTIPLIER'],
-        [3, 1.3],
-        [5, 1.01],
-        [7, 0.8],
-        [9, 0.5],
-        ['MIN_TIME_STEP'],
-        [0.001],
-        ['MAX_TIME_STEP'],
-        [10000],
-        ['INITIAL_STEP_SIZE'],
-        [10.0],
-        ['ITERATIVE_TYPE'],
-        ['COUPLED'],
-        ['STAY'],
-        [3],
     ],
 )
 model.write_input()

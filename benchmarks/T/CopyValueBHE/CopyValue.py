@@ -6,6 +6,24 @@ model = OGS(
     task_id='CopyValue',
     output_dir='out',
 )
+model.msh.read_file('CopyValue.msh')
+model.gli.read_file('CopyValue.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='LIQUID_FLOW',
+    NUM_TYPE='NEW',
+    BOUNDARY_CONDITION_OUTPUT=[],
+    DEACTIVATED_SUBDOMAIN=[
+        [1],
+        [1],
+    ],
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='HEAT_TRANSPORT',
+    NUM_TYPE='NEW',
+    BOUNDARY_CONDITION_OUTPUT=[],
+)
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='LIQUID_FLOW',
@@ -70,7 +88,6 @@ model.bc.add_block(
     DIS_TYPE=['CONSTANT', 1],
     COPY_VALUE=['POINT', 'P07'],
 )
-model.gli.read_file('CopyValue.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='LIQUID_FLOW',
@@ -85,13 +102,19 @@ model.ic.add_block(
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 283.0],
 )
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='LIQUID',
-    DENSITY=[1, 1000.0],
-    VISCOSITY=[1, 0.001],
-    SPECIFIC_HEAT_CAPACITY=[1, 4185],
-    HEAT_CONDUCTIVITY=[1, 0.56],
+model.st.add_block(
+    main_key='SOURCE_TERM',
+    PCS_TYPE='LIQUID_FLOW',
+    PRIMARY_VARIABLE='PRESSURE1',
+    GEO_TYPE=['POLYLINE', 'BC_UP_LEFT'],
+    DIS_TYPE=['CONSTANT_NEUMANN', 0.00312],
+)
+model.st.add_block(
+    main_key='SOURCE_TERM',
+    PCS_TYPE='LIQUID_FLOW',
+    PRIMARY_VARIABLE='PRESSURE1',
+    GEO_TYPE=['POLYLINE', 'BC_UP_RIGHT'],
+    DIS_TYPE=['CONSTANT_NEUMANN', -0.00312],
 )
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
@@ -137,7 +160,6 @@ model.mmp.add_block(
     DENSITY=[1, 2100],
     HEAT_DISPERSION=[1, 0.1, 0.1],
 )
-model.msh.read_file('CopyValue.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     DENSITY=[1, 999.7],
@@ -182,6 +204,14 @@ model.msp.add_block(
         [1, 2.86],
     ],
 )
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='LIQUID',
+    DENSITY=[1, 1000.0],
+    VISCOSITY=[1, 0.001],
+    SPECIFIC_HEAT_CAPACITY=[1, 4185],
+    HEAT_CONDUCTIVITY=[1, 0.56],
+)
 model.num.add_block(
     main_key='NUMERICS',
     PCS_TYPE='LIQUID_FLOW',
@@ -193,6 +223,20 @@ model.num.add_block(
     PCS_TYPE='HEAT_TRANSPORT',
     ELE_GAUSS_POINTS=3,
     LINEAR_SOLVER=[2, 6, 1e-10, 2000, 1.0, 1, 4],
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='LIQUID_FLOW',
+    TIME_STEPS=[100, 10],
+    TIME_END=3153600000,
+    TIME_START=0.0,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='HEAT_TRANSPORT',
+    TIME_STEPS=[100, 10],
+    TIME_END=3153600000,
+    TIME_START=0.0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -235,50 +279,6 @@ model.out.add_block(
     GEO_TYPE=['POINT', 'P13'],
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEPS', 1],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='LIQUID_FLOW',
-    NUM_TYPE='NEW',
-    BOUNDARY_CONDITION_OUTPUT=[],
-    DEACTIVATED_SUBDOMAIN=[
-        [1],
-        [1],
-    ],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='HEAT_TRANSPORT',
-    NUM_TYPE='NEW',
-    BOUNDARY_CONDITION_OUTPUT=[],
-)
-model.st.add_block(
-    main_key='SOURCE_TERM',
-    PCS_TYPE='LIQUID_FLOW',
-    PRIMARY_VARIABLE='PRESSURE1',
-    GEO_TYPE=['POLYLINE', 'BC_UP_LEFT'],
-    DIS_TYPE=['CONSTANT_NEUMANN', 0.00312],
-)
-model.st.add_block(
-    main_key='SOURCE_TERM',
-    PCS_TYPE='LIQUID_FLOW',
-    PRIMARY_VARIABLE='PRESSURE1',
-    GEO_TYPE=['POLYLINE', 'BC_UP_RIGHT'],
-    DIS_TYPE=['CONSTANT_NEUMANN', -0.00312],
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='LIQUID_FLOW',
-    TIME_STEPS=[100, 10],
-    TIME_END=3153600000,
-    TIME_START=0.0,
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='HEAT_TRANSPORT',
-    TIME_STEPS=[100, 10],
-    TIME_END=3153600000,
-    TIME_START=0.0,
 )
 model.write_input()
 model.run_model()

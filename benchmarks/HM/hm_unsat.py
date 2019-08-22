@@ -6,6 +6,18 @@ model = OGS(
     task_id='hm_unsat',
     output_dir='out',
 )
+model.msh.read_file('hm_unsat.msh')
+model.gli.read_file('hm_unsat.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='RICHARDS_FLOW',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='DEFORMATION',
+)
+model.rfd.read_file('hm_unsat.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='RICHARDS_FLOW',
@@ -34,7 +46,6 @@ model.bc.add_block(
     GEO_TYPE=['POLYLINE', 'BOTTOM'],
     DIS_TYPE=['CONSTANT', 0.0],
 )
-model.gli.read_file('hm_unsat.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='RICHARDS_FLOW',
@@ -42,12 +53,8 @@ model.ic.add_block(
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 0.0],
 )
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='LIQUID',
-    PCS_TYPE='PRESSURE1',
-    DENSITY=[1, 1000.0],
-    VISCOSITY=[1, 0.001],
+model.st.add_block(
+    main_key='SOURCE_TERM',
 )
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
@@ -61,7 +68,6 @@ model.mmp.add_block(
     ],
     CAPILLARY_PRESSURE=[0, 1],
 )
-model.msh.read_file('hm_unsat.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     DENSITY=[1, -2000.0],
@@ -70,6 +76,13 @@ model.msp.add_block(
         ['YOUNGS_MODULUS'],
         [1, 1300000.0],
     ],
+)
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='LIQUID',
+    PCS_TYPE='PRESSURE1',
+    DENSITY=[1, 1000.0],
+    VISCOSITY=[1, 0.001],
 )
 model.num.add_block(
     main_key='NUMERICS',
@@ -84,6 +97,14 @@ model.num.add_block(
     PCS_TYPE='DEFORMATION',
     LINEAR_SOLVER=[2, 5, 1e-10, 1000, 1.0, 100, 4],
     ELE_GAUSS_POINTS=3,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='RICHARDS_FLOW',
+    TIME_STEPS=[120, 1.0],
+    TIME_END=120.0,
+    TIME_START=0.0,
+    TIME_UNIT='MINUTE',
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -151,27 +172,6 @@ model.out.add_block(
     ],
     GEO_TYPE=['POINT', 'POINT0'],
     DAT_TYPE='TECPLOT',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='RICHARDS_FLOW',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='DEFORMATION',
-)
-model.rfd.read_file('hm_unsat.rfd')
-model.st.add_block(
-    main_key='SOURCE_TERM',
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='RICHARDS_FLOW',
-    TIME_STEPS=[120, 1.0],
-    TIME_END=120.0,
-    TIME_START=0.0,
-    TIME_UNIT='MINUTE',
 )
 model.write_input()
 model.run_model()

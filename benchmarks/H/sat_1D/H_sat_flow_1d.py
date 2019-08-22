@@ -6,6 +6,14 @@ model = OGS(
     task_id='H_sat_flow_1d',
     output_dir='out',
 )
+model.msh.read_file('H_sat_flow_1d.msh')
+model.gli.read_file('H_sat_flow_1d.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='LIQUID_FLOW',
+    NUM_TYPE='NEW',
+)
+model.rfd.read_file('H_sat_flow_1d.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='LIQUID_FLOW',
@@ -13,7 +21,6 @@ model.bc.add_block(
     GEO_TYPE=['POINT', 'POINT1'],
     DIS_TYPE=['CONSTANT', 20000],
 )
-model.gli.read_file('H_sat_flow_1d.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='LIQUID_FLOW',
@@ -21,12 +28,12 @@ model.ic.add_block(
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 0],
 )
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='LIQUID',
-    PCS_TYPE='PRESSURE1',
-    DENSITY=[1, 1000.0],
-    VISCOSITY=[1, 0.001],
+model.st.add_block(
+    main_key='SOURCE_TERM',
+    PCS_TYPE='LIQUID_FLOW',
+    PRIMARY_VARIABLE='PRESSURE1',
+    GEO_TYPE=['POINT', 'POINT0'],
+    DIS_TYPE=['CONSTANT_NEUMANN', 1.157407e-06],
 )
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
@@ -39,10 +46,16 @@ model.mmp.add_block(
     MASS_DISPERSION=[1, 0],
     DENSITY=[1, 1000.0],
 )
-model.msh.read_file('H_sat_flow_1d.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     DENSITY=[1, 1000.0],
+)
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='LIQUID',
+    PCS_TYPE='PRESSURE1',
+    DENSITY=[1, 1000.0],
+    VISCOSITY=[1, 0.001],
 )
 model.num.add_block(
     main_key='NUMERICS',
@@ -51,6 +64,13 @@ model.num.add_block(
     NON_LINEAR_SOLVER=['PICARD', 1e-10, 1000, 0.0],
     ELE_GAUSS_POINTS=2,
 )
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='LIQUID_FLOW',
+    TIME_STEPS=[1, 1],
+    TIME_END=1,
+    TIME_START=0.0,
+)
 model.out.add_block(
     main_key='OUTPUT',
     PCS_TYPE='LIQUID_FLOW',
@@ -58,26 +78,6 @@ model.out.add_block(
     GEO_TYPE='DOMAIN',
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEPS', 1],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='LIQUID_FLOW',
-    NUM_TYPE='NEW',
-)
-model.rfd.read_file('H_sat_flow_1d.rfd')
-model.st.add_block(
-    main_key='SOURCE_TERM',
-    PCS_TYPE='LIQUID_FLOW',
-    PRIMARY_VARIABLE='PRESSURE1',
-    GEO_TYPE=['POINT', 'POINT0'],
-    DIS_TYPE=['CONSTANT_NEUMANN', 1.157407e-06],
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='LIQUID_FLOW',
-    TIME_STEPS=[1, 1],
-    TIME_END=1,
-    TIME_START=0.0,
 )
 model.write_input()
 model.run_model()

@@ -1,11 +1,19 @@
 # -*- coding: utf-8 -*-
-from ogs5py import OGS, RFR
+from ogs5py import OGS
 
 model = OGS(
     task_root='Transient_root',
     task_id='Transient',
     output_dir='out',
 )
+model.msh.read_file('Transient.msh')
+model.gli.read_file('Transient.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='RICHARDS_FLOW',
+    NUM_TYPE='NEW',
+)
+model.rfd.read_file('Transient.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='RICHARDS_FLOW',
@@ -13,7 +21,6 @@ model.bc.add_block(
     GEO_TYPE=['POINT', 'POINT0'],
     DIS_TYPE=['CONSTANT', -31800],
 )
-model.gli.read_file('Transient.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='RICHARDS_FLOW',
@@ -21,12 +28,13 @@ model.ic.add_block(
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['RESTART', 'Transient.rfr'],
 )
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='LIQUID',
-    PCS_TYPE='PRESSURE1',
-    DENSITY=[1, 1000.0],
-    VISCOSITY=[1, 0.001],
+model.st.add_block(
+    main_key='SOURCE_TERM',
+    PCS_TYPE='RICHARDS_FLOW',
+    PRIMARY_VARIABLE='PRESSURE1',
+    GEO_TYPE=['POINT', 'POINT10'],
+    DIS_TYPE=['CONSTANT', 1],
+    TIM_TYPE=['CURVE', 1],
 )
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
@@ -40,7 +48,13 @@ model.mmp.add_block(
     CAPILLARY_PRESSURE=[0, 8],
     MASS_DISPERSION=[1, 0.1, 0.01],
 )
-model.msh.read_file('Transient.msh')
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='LIQUID',
+    PCS_TYPE='PRESSURE1',
+    DENSITY=[1, 1000.0],
+    VISCOSITY=[1, 0.001],
+)
 model.num.add_block(
     main_key='NUMERICS',
     PCS_TYPE='RICHARDS_FLOW',
@@ -49,6 +63,17 @@ model.num.add_block(
     LINEAR_SOLVER=[3, 6, 1e-10, 1000, 1.0, 101, 4],
     NON_LINEAR_SOLVER=['PICARD', 0.001, 50, 0.0],
     ELE_GAUSS_POINTS=3,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='RICHARDS_FLOW',
+    TIME_UNIT='HOUR',
+    TIME_START=0.0,
+    TIME_END=2880,
+    TIME_STEPS=[
+        [2880, 0.5],
+        [3000, 1],
+    ],
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -120,36 +145,10 @@ model.out.add_block(
     TIM_TYPE=['STEPS', 1],
     DAT_TYPE='TECPLOT',
 )
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='RICHARDS_FLOW',
-    NUM_TYPE='NEW',
-)
-model.rfd.read_file('Transient.rfd')
-model.st.add_block(
-    main_key='SOURCE_TERM',
-    PCS_TYPE='RICHARDS_FLOW',
-    PRIMARY_VARIABLE='PRESSURE1',
-    GEO_TYPE=['POINT', 'POINT10'],
-    DIS_TYPE=['CONSTANT', 1],
-    TIM_TYPE=['CURVE', 1],
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='RICHARDS_FLOW',
-    TIME_UNIT='HOUR',
-    TIME_START=0.0,
-    TIME_END=2880,
-    TIME_STEPS=[
-        [2880, 0.5],
-        [3000, 1],
-    ],
-)
-rfr_file = RFR(
-    file_name='Transient',
+model.rfr.add(
+    name='Transient',
     file_ext='.rfr',
 )
-rfr_file.read_file('Transient.rfr')
-model.add_rfr(rfr_file)
+model.rfr.read_file('Transient.rfr')
 model.write_input()
 model.run_model()

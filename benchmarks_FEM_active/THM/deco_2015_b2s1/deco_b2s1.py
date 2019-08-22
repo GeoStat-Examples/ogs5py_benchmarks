@@ -6,63 +6,28 @@ model = OGS(
     task_id='deco_b2s1',
     output_dir='out',
 )
-model.bc.add_block(
-    main_key='BOUNDARY_CONDITION',
-    PCS_TYPE='DEFORMATION',
-    PRIMARY_VARIABLE='DISPLACEMENT_X1',
-    GEO_TYPE=['POLYLINE', 'b1'],
-    DIS_TYPE=['CONSTANT', 0],
+model.msh.read_file('deco_b2s1.msh')
+model.gli.read_file('deco_b2s1.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='HEAT_TRANSPORT',
+    TEMPERATURE_UNIT='KELVIN',
 )
-model.bc.add_block(
-    main_key='BOUNDARY_CONDITION',
-    PCS_TYPE='DEFORMATION',
-    PRIMARY_VARIABLE='DISPLACEMENT_Y1',
-    GEO_TYPE=['POLYLINE', 'unten'],
-    DIS_TYPE=['CONSTANT', 0],
-)
-model.bc.add_block(
-    main_key='BOUNDARY_CONDITION',
-    PCS_TYPE='DEFORMATION',
-    PRIMARY_VARIABLE='DISPLACEMENT_X1',
-    GEO_TYPE=['POLYLINE', 'rechts'],
-    DIS_TYPE=['CONSTANT', 0],
-)
-model.bc.add_block(
-    main_key='BOUNDARY_CONDITION',
-    PCS_TYPE='DEFORMATION',
-    PRIMARY_VARIABLE='DISPLACEMENT_Y1',
-    GEO_TYPE=['POLYLINE', 'oben'],
-    DIS_TYPE=['CONSTANT', 0],
-)
-model.bc.add_block(
-    main_key='BOUNDARY_CONDITION',
+model.pcs.add_block(
+    main_key='PROCESS',
     PCS_TYPE='RICHARDS_FLOW',
-    PRIMARY_VARIABLE='PRESSURE1',
-    GEO_TYPE=['POLYLINE', 'rechts'],
-    DIS_TYPE=['CONSTANT', 0.0],
+    NEGLECT_H_INI_EFFECT=2,
 )
-model.bc.add_block(
-    main_key='BOUNDARY_CONDITION',
-    PCS_TYPE='HEAT_TRANSPORT',
-    PRIMARY_VARIABLE='TEMPERATURE1',
-    GEO_TYPE=['POLYLINE', 'rechts'],
-    DIS_TYPE=['CONSTANT', 288.15],
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='DEFORMATION',
+    NEGLECT_H_INI_EFFECT=2,
 )
-model.bc.add_block(
-    main_key='BOUNDARY_CONDITION',
-    PCS_TYPE='HEAT_TRANSPORT',
-    PRIMARY_VARIABLE='TEMPERATURE1',
-    GEO_TYPE=['POLYLINE', 'b1'],
-    DIS_TYPE=['CONSTANT', 1.0],
-    TIM_TYPE=['CURVE', 1],
-)
-model.bc.add_block(
-    main_key='BOUNDARY_CONDITION',
+model.pcs.add_block(
+    main_key='PROCESS',
     PCS_TYPE='MASS_TRANSPORT',
-    PRIMARY_VARIABLE='SALT',
-    GEO_TYPE=['POLYLINE', 'rechts'],
-    DIS_TYPE=['CONSTANT', 1.0],
 )
+model.rfd.read_file('deco_b2s1.rfd')
 model.fct.add_block(
     main_key='FUNCTION',
     TYPE='WATER',
@@ -1952,7 +1917,63 @@ model.fct.add_block(
         [1.1, 999.9, 1.7429],
     ],
 )
-model.gli.read_file('deco_b2s1.gli')
+model.bc.add_block(
+    main_key='BOUNDARY_CONDITION',
+    PCS_TYPE='DEFORMATION',
+    PRIMARY_VARIABLE='DISPLACEMENT_X1',
+    GEO_TYPE=['POLYLINE', 'b1'],
+    DIS_TYPE=['CONSTANT', 0],
+)
+model.bc.add_block(
+    main_key='BOUNDARY_CONDITION',
+    PCS_TYPE='DEFORMATION',
+    PRIMARY_VARIABLE='DISPLACEMENT_Y1',
+    GEO_TYPE=['POLYLINE', 'unten'],
+    DIS_TYPE=['CONSTANT', 0],
+)
+model.bc.add_block(
+    main_key='BOUNDARY_CONDITION',
+    PCS_TYPE='DEFORMATION',
+    PRIMARY_VARIABLE='DISPLACEMENT_X1',
+    GEO_TYPE=['POLYLINE', 'rechts'],
+    DIS_TYPE=['CONSTANT', 0],
+)
+model.bc.add_block(
+    main_key='BOUNDARY_CONDITION',
+    PCS_TYPE='DEFORMATION',
+    PRIMARY_VARIABLE='DISPLACEMENT_Y1',
+    GEO_TYPE=['POLYLINE', 'oben'],
+    DIS_TYPE=['CONSTANT', 0],
+)
+model.bc.add_block(
+    main_key='BOUNDARY_CONDITION',
+    PCS_TYPE='RICHARDS_FLOW',
+    PRIMARY_VARIABLE='PRESSURE1',
+    GEO_TYPE=['POLYLINE', 'rechts'],
+    DIS_TYPE=['CONSTANT', 0.0],
+)
+model.bc.add_block(
+    main_key='BOUNDARY_CONDITION',
+    PCS_TYPE='HEAT_TRANSPORT',
+    PRIMARY_VARIABLE='TEMPERATURE1',
+    GEO_TYPE=['POLYLINE', 'rechts'],
+    DIS_TYPE=['CONSTANT', 288.15],
+)
+model.bc.add_block(
+    main_key='BOUNDARY_CONDITION',
+    PCS_TYPE='HEAT_TRANSPORT',
+    PRIMARY_VARIABLE='TEMPERATURE1',
+    GEO_TYPE=['POLYLINE', 'b1'],
+    DIS_TYPE=['CONSTANT', 1.0],
+    TIM_TYPE=['CURVE', 1],
+)
+model.bc.add_block(
+    main_key='BOUNDARY_CONDITION',
+    PCS_TYPE='MASS_TRANSPORT',
+    PRIMARY_VARIABLE='SALT',
+    GEO_TYPE=['POLYLINE', 'rechts'],
+    DIS_TYPE=['CONSTANT', 1.0],
+)
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='DEFORMATION',
@@ -2038,33 +2059,6 @@ model.ic.add_block(
         [1, 1.0],
     ],
 )
-model.mcp.add_block(
-    main_key='COMPONENT_PROPERTIES',
-    NAME='SALT',
-    MOBILE=1,
-    DIFFUSION=[1, 3e-10],
-)
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='LIQUID',
-    FLUID_NAME='WATER',
-    PCS_TYPE=[
-        ['PRESSURE1'],
-        ['TEMPERATURE1'],
-    ],
-    NON_GRAVITY=[],
-    TEMPERATURE=273.15,
-    COMPRESSIBILITY=[
-        [1, 4.4e-07],
-        [3, 2.0],
-        [1, 4.4e-07],
-        [3, 2.0],
-    ],
-    DENSITY=[10, 273.15],
-    VISCOSITY=[3, 273.15],
-    SPECIFIC_HEAT_CAPACITY=[1, 4180.0],
-    HEAT_CONDUCTIVITY=[1, 0.6],
-)
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
     GEOMETRY_DIMENSION=2,
@@ -2089,7 +2083,6 @@ model.mmp.add_block(
     CAPILLARY_PRESSURE=[4, 1007300.0, 0.0, 1.0, 0.50301, 1e+16, 0],
     MASS_DISPERSION=[1, 0.1, 0.01],
 )
-model.msh.read_file('deco_b2s1.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     NAME='BUFFER',
@@ -2139,6 +2132,33 @@ model.msp.add_block(
     GRAVITY_CONSTANT=0,
     SOLID_BULK_MODULUS=1e-09,
 )
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='LIQUID',
+    FLUID_NAME='WATER',
+    PCS_TYPE=[
+        ['PRESSURE1'],
+        ['TEMPERATURE1'],
+    ],
+    NON_GRAVITY=[],
+    TEMPERATURE=273.15,
+    COMPRESSIBILITY=[
+        [1, 4.4e-07],
+        [3, 2.0],
+        [1, 4.4e-07],
+        [3, 2.0],
+    ],
+    DENSITY=[10, 273.15],
+    VISCOSITY=[3, 273.15],
+    SPECIFIC_HEAT_CAPACITY=[1, 4180.0],
+    HEAT_CONDUCTIVITY=[1, 0.6],
+)
+model.mcp.add_block(
+    main_key='COMPONENT_PROPERTIES',
+    NAME='SALT',
+    MOBILE=1,
+    DIFFUSION=[1, 3e-10],
+)
 model.num.add_block(
     main_key='NUMERICS',
     PCS_TYPE='RICHARDS_FLOW',
@@ -2168,6 +2188,98 @@ model.num.add_block(
     LINEAR_SOLVER=[3, 6, 1e-10, 2000, 0.5, 1, 2],
     ELE_GAUSS_POINTS=2,
     COUPLING_CONTROL=['LMAX', 1e-06],
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='DEFORMATION',
+    TIME_STEPS=[
+        [1, 1],
+        [1, 10],
+        [1, 100],
+        [1, 1000],
+        [1, 2000],
+        [1, 4000],
+        [1, 10000],
+        [1, 20000],
+        [1, 40000],
+        [2, 47844.5],
+        [5, 86400],
+        [1, 172800],
+        [1, 345600],
+        [1, 691200],
+        [19, 864000],
+    ],
+    TIME_END=18230400,
+    TIME_START=0.0,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='RICHARDS_FLOW',
+    TIME_STEPS=[
+        [1, 1],
+        [1, 10],
+        [1, 100],
+        [1, 1000],
+        [1, 2000],
+        [1, 4000],
+        [1, 10000],
+        [1, 20000],
+        [1, 40000],
+        [2, 47844.5],
+        [5, 86400],
+        [1, 172800],
+        [1, 345600],
+        [1, 691200],
+        [19, 864000],
+    ],
+    TIME_END=18230400,
+    TIME_START=0.0,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='HEAT_TRANSPORT',
+    TIME_STEPS=[
+        [1, 1],
+        [1, 10],
+        [1, 100],
+        [1, 1000],
+        [1, 2000],
+        [1, 4000],
+        [1, 10000],
+        [1, 20000],
+        [1, 40000],
+        [2, 47844.5],
+        [5, 86400],
+        [1, 172800],
+        [1, 345600],
+        [1, 691200],
+        [19, 864000],
+    ],
+    TIME_END=18230400,
+    TIME_START=0.0,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='MASS_TRANSPORT',
+    TIME_STEPS=[
+        [1, 1],
+        [1, 10],
+        [1, 100],
+        [1, 1000],
+        [1, 2000],
+        [1, 4000],
+        [1, 10000],
+        [1, 20000],
+        [1, 40000],
+        [2, 47844.5],
+        [5, 86400],
+        [1, 172800],
+        [1, 345600],
+        [1, 691200],
+        [19, 864000],
+    ],
+    TIME_END=18230400,
+    TIME_START=0.0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -2205,118 +2317,6 @@ model.out.add_block(
         [63072000.0],
         [72576000.0],
     ],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='HEAT_TRANSPORT',
-    TEMPERATURE_UNIT='KELVIN',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='RICHARDS_FLOW',
-    NEGLECT_H_INI_EFFECT=2,
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='DEFORMATION',
-    NEGLECT_H_INI_EFFECT=2,
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-)
-model.rfd.read_file('deco_b2s1.rfd')
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='DEFORMATION',
-    TIME_STEPS=[
-        [1, 1],
-        [1, 10],
-        [1, 100],
-        [1, 1000],
-        [1, 2000],
-        [1, 4000],
-        [1, 10000],
-        [1, 20000],
-        [1, 40000],
-        [2, 47844.5],
-        [5, 86400],
-        [1, 172800],
-        [1, 345600],
-        [1, 691200],
-        [19, 864000],
-    ],
-    TIME_END=18230400,
-    TIME_START=0.0,
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='RICHARDS_FLOW',
-    TIME_STEPS=[
-        [1, 1],
-        [1, 10],
-        [1, 100],
-        [1, 1000],
-        [1, 2000],
-        [1, 4000],
-        [1, 10000],
-        [1, 20000],
-        [1, 40000],
-        [2, 47844.5],
-        [5, 86400],
-        [1, 172800],
-        [1, 345600],
-        [1, 691200],
-        [19, 864000],
-    ],
-    TIME_END=18230400,
-    TIME_START=0.0,
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='HEAT_TRANSPORT',
-    TIME_STEPS=[
-        [1, 1],
-        [1, 10],
-        [1, 100],
-        [1, 1000],
-        [1, 2000],
-        [1, 4000],
-        [1, 10000],
-        [1, 20000],
-        [1, 40000],
-        [2, 47844.5],
-        [5, 86400],
-        [1, 172800],
-        [1, 345600],
-        [1, 691200],
-        [19, 864000],
-    ],
-    TIME_END=18230400,
-    TIME_START=0.0,
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='MASS_TRANSPORT',
-    TIME_STEPS=[
-        [1, 1],
-        [1, 10],
-        [1, 100],
-        [1, 1000],
-        [1, 2000],
-        [1, 4000],
-        [1, 10000],
-        [1, 20000],
-        [1, 40000],
-        [2, 47844.5],
-        [5, 86400],
-        [1, 172800],
-        [1, 345600],
-        [1, 691200],
-        [19, 864000],
-    ],
-    TIME_END=18230400,
-    TIME_START=0.0,
 )
 model.write_input()
 model.run_model()

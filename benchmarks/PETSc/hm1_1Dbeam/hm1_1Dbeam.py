@@ -6,6 +6,19 @@ model = OGS(
     task_id='hm1_1Dbeam',
     output_dir='out',
 )
+model.msh.read_file('hm1_1Dbeam.msh')
+model.gli.read_file('hm1_1Dbeam.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='LIQUID_FLOW',
+    ELEMENT_MATRIX_OUTPUT=0,
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='DEFORMATION',
+    ELEMENT_MATRIX_OUTPUT=0,
+)
+model.rfd.read_file('hm1_1Dbeam.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='DEFORMATION',
@@ -104,7 +117,6 @@ model.bc.add_block(
     ],
     TIM_TYPE=['CURVE', 1],
 )
-model.gli.read_file('hm1_1Dbeam.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='LIQUID_FLOW',
@@ -112,20 +124,12 @@ model.ic.add_block(
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 500000.0],
 )
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='LIQUID',
-    PCS_TYPE='PRESSURE1',
-    DENSITY=[1, 0.0],
-    VISCOSITY=[1, 0.001],
-)
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
     GEOMETRY_DIMENSION=3,
     POROSITY=[1, 0.0],
     PERMEABILITY_TENSOR=['ISOTROPIC', 1e-12],
 )
-model.msh.read_file('hm1_1Dbeam.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     DENSITY=[1, 0.0],
@@ -136,6 +140,13 @@ model.msp.add_block(
     ],
     BIOT_CONSTANT=1.0,
 )
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='LIQUID',
+    PCS_TYPE='PRESSURE1',
+    DENSITY=[1, 0.0],
+    VISCOSITY=[1, 0.001],
+)
 model.num.add_block(
     main_key='NUMERICS',
     PCS_TYPE='LIQUID_FLOW',
@@ -145,6 +156,22 @@ model.num.add_block(
     main_key='NUMERICS',
     PCS_TYPE='DEFORMATION',
     LINEAR_SOLVER=['petsc', 'bcgs', 'bjacobi', 1e-10, 10000],
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='LIQUID_FLOW',
+    TIME_UNIT='SECOND',
+    TIME_STEPS=[2, 1.0],
+    TIME_END=1.0,
+    TIME_START=0.0,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='DEFORMATION',
+    TIME_UNIT='SECOND',
+    TIME_STEPS=[2, 1.0],
+    TIME_END=1.0,
+    TIME_START=0.0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -177,33 +204,6 @@ model.out.add_block(
     GEO_TYPE='DOMAIN',
     DAT_TYPE='TECPLOT',
     TIM_TYPE=1,
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='LIQUID_FLOW',
-    ELEMENT_MATRIX_OUTPUT=0,
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='DEFORMATION',
-    ELEMENT_MATRIX_OUTPUT=0,
-)
-model.rfd.read_file('hm1_1Dbeam.rfd')
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='LIQUID_FLOW',
-    TIME_UNIT='SECOND',
-    TIME_STEPS=[2, 1.0],
-    TIME_END=1.0,
-    TIME_START=0.0,
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='DEFORMATION',
-    TIME_UNIT='SECOND',
-    TIME_STEPS=[2, 1.0],
-    TIME_END=1.0,
-    TIME_START=0.0,
 )
 model.write_input()
 model.run_model()

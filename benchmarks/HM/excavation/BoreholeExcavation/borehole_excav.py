@@ -6,6 +6,28 @@ model = OGS(
     task_id='borehole_excav',
     output_dir='out',
 )
+model.msh.read_file('borehole_excav.msh')
+model.gli.read_file('borehole_excav.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='RICHARDS_FLOW',
+    BOUNDARY_CONDITION_OUTPUT=[],
+    TIME_CONTROLLED_EXCAVATION=[1, 1, 0, 1],
+    NEGLECT_H_INI_EFFECT=1,
+    UPDATE_INI_STATE=1,
+    ELEMENT_MATRIX_OUTPUT=0,
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='DEFORMATION',
+    NUM_TYPE='NEW',
+    BOUNDARY_CONDITION_OUTPUT=[],
+    TIME_CONTROLLED_EXCAVATION=[1, 1, 0, 1],
+    NEGLECT_H_INI_EFFECT=1,
+    UPDATE_INI_STATE=1,
+    ELEMENT_MATRIX_OUTPUT=0,
+)
+model.rfd.read_file('borehole_excav.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='RICHARDS_FLOW',
@@ -98,7 +120,6 @@ model.bc.add_block(
     GEO_TYPE=['SURFACE', 'upper'],
     DIS_TYPE=['CONSTANT', 0],
 )
-model.gli.read_file('borehole_excav.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='DEFORMATION',
@@ -139,6 +160,46 @@ model.ic.add_block(
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 5000000.0],
 )
+model.mmp.add_block(
+    main_key='MEDIUM_PROPERTIES',
+    GEOMETRY_DIMENSION=3,
+    PERMEABILITY_TENSOR=['A', 1e-19, 0.0, 0.0, 0.0, 1e-19, 0.0, 0.0, 0.0, 1e-20],
+    POROSITY=[1, 0.156],
+    PERMEABILITY_SATURATION=[4, 0, 1, 0.5],
+    CAPILLARY_PRESSURE=[4, 0.00049],
+    STORAGE=[1, 5e-10],
+)
+model.mmp.add_block(
+    main_key='MEDIUM_PROPERTIES',
+    GEOMETRY_DIMENSION=3,
+    PERMEABILITY_TENSOR=['A', 1e-19, 0.0, 0.0, 0.0, 1e-19, 0.0, 0.0, 0.0, 1e-20],
+    POROSITY=[1, 0.156],
+    PERMEABILITY_SATURATION=[4, 0, 1, 0.5],
+    CAPILLARY_PRESSURE=[4, 0.00049],
+    STORAGE=[1, 5e-10],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    DENSITY=[1, 0],
+    ELASTICITY=[
+        ['POISSION', 0.25],
+        ['YOUNGS_MODULUS'],
+        [1, 5600000000.0],
+    ],
+    GRAVITY_CONSTANT=0,
+    BIOT_CONSTANT=0.6,
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    DENSITY=[1, 0],
+    ELASTICITY=[
+        ['POISSION', 0.25],
+        ['YOUNGS_MODULUS'],
+        [1, 5600000000.0],
+    ],
+    GRAVITY_CONSTANT=0,
+    BIOT_CONSTANT=0.6,
+)
 model.mfp.add_block(
     main_key='FLUID_PROPERTIES',
     FLUID_TYPE='LIQUID',
@@ -146,47 +207,6 @@ model.mfp.add_block(
     DENSITY=[1, 1000.0],
     VISCOSITY=[1, 0.001],
     NON_GRAVITY=[],
-)
-model.mmp.add_block(
-    main_key='MEDIUM_PROPERTIES',
-    GEOMETRY_DIMENSION=3,
-    PERMEABILITY_TENSOR=['A', 1e-19, 0.0, 0.0, 0.0, 1e-19, 0.0, 0.0, 0.0, 1e-20],
-    POROSITY=[1, 0.156],
-    PERMEABILITY_SATURATION=[4, 0, 1, 0.5],
-    CAPILLARY_PRESSURE=[4, 0.00049],
-    STORAGE=[1, 5e-10],
-)
-model.mmp.add_block(
-    main_key='MEDIUM_PROPERTIES',
-    GEOMETRY_DIMENSION=3,
-    PERMEABILITY_TENSOR=['A', 1e-19, 0.0, 0.0, 0.0, 1e-19, 0.0, 0.0, 0.0, 1e-20],
-    POROSITY=[1, 0.156],
-    PERMEABILITY_SATURATION=[4, 0, 1, 0.5],
-    CAPILLARY_PRESSURE=[4, 0.00049],
-    STORAGE=[1, 5e-10],
-)
-model.msh.read_file('borehole_excav.msh')
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    DENSITY=[1, 0],
-    ELASTICITY=[
-        ['POISSION', 0.25],
-        ['YOUNGS_MODULUS'],
-        [1, 5600000000.0],
-    ],
-    GRAVITY_CONSTANT=0,
-    BIOT_CONSTANT=0.6,
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    DENSITY=[1, 0],
-    ELASTICITY=[
-        ['POISSION', 0.25],
-        ['YOUNGS_MODULUS'],
-        [1, 5600000000.0],
-    ],
-    GRAVITY_CONSTANT=0,
-    BIOT_CONSTANT=0.6,
 )
 model.num.add_block(
     main_key='NUMERICS',
@@ -202,6 +222,20 @@ model.num.add_block(
     ELE_GAUSS_POINTS=3,
     LINEAR_SOLVER=[2, 5, 1e-10, 10000, 1.0, 100, 4],
     COUPLING_CONTROL=['LMAX', 1.0],
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='DEFORMATION',
+    TIME_STEPS=[1, 3600],
+    TIME_END=43200,
+    TIME_START=0.0,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='RICHARDS_FLOW',
+    TIME_STEPS=[1, 3600],
+    TIME_END=43200,
+    TIME_START=0.0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -300,40 +334,6 @@ model.out.add_block(
     GEO_TYPE=['POLYLINE', 'vertikal'],
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEPS', 1],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='RICHARDS_FLOW',
-    BOUNDARY_CONDITION_OUTPUT=[],
-    TIME_CONTROLLED_EXCAVATION=[1, 1, 0, 1],
-    NEGLECT_H_INI_EFFECT=1,
-    UPDATE_INI_STATE=1,
-    ELEMENT_MATRIX_OUTPUT=0,
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='DEFORMATION',
-    NUM_TYPE='NEW',
-    BOUNDARY_CONDITION_OUTPUT=[],
-    TIME_CONTROLLED_EXCAVATION=[1, 1, 0, 1],
-    NEGLECT_H_INI_EFFECT=1,
-    UPDATE_INI_STATE=1,
-    ELEMENT_MATRIX_OUTPUT=0,
-)
-model.rfd.read_file('borehole_excav.rfd')
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='DEFORMATION',
-    TIME_STEPS=[1, 3600],
-    TIME_END=43200,
-    TIME_START=0.0,
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='RICHARDS_FLOW',
-    TIME_STEPS=[1, 3600],
-    TIME_END=43200,
-    TIME_START=0.0,
 )
 model.write_input()
 model.run_model()

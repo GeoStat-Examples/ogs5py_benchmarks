@@ -1,46 +1,35 @@
-Welcome to the ogs5py benchmarks
-================================
+# Welcome to the ogs5py benchmarks
 
-Purpose
--------
-Most of the OGS5 benchmarks were rewritten into a ogs5py-script in this repository.
+<p align="center">
+<img src="https://raw.githubusercontent.com/GeoStat-Framework/ogs5py/master/docs/source/pics/OGS.png" alt="ogs5py-LOGO" width="251px"/>
+</p>
 
-The following were skipped:
+## Purpose
 
-+ `HT_EOS`   (folder) \*.bat files to copy stuff... uarg.. (maybe rewrite with ogs5py)
-+ `bact_growth_new`    #THERMAL in mfp
-+ `HT_var_density_1D`    $AREA in mmp
-+ `thm_quad`    $STORATIVITY in mmp
-+ `viscosity_yaws`    $AREA in mmp
-+ `uc_pris`    GLI not valid (SRF not present for VOLUME)
-+ `brand_m1_l1`    GLI not valid (TIN and Polylines at the same time[?])
-+ `2d_h_us_line_Warrick`    lonesome mmp
-+ `model_1`    $AREA in msh (not supported by ogs5py)
+To get in touch with [``ogs5py``][ogs5_link], most of the OGS5 benchmarks were rewritten into a ogs5py-script in this repository.
+These benchmarks can be seen as a smorgasbord to provide a starting point for your own ogs5py model.
 
-The following benchmarks have multiple sub keywords in some files, which is
-not convertable to a ogs5py script at the moment. Therefore the following are skipped as well:
+You can clone this repository with:
 
-+ `lag2d`    repeated NEIGHBOR (cct)
-+ `decal`    repeated NEIGHBOR (cct)
-+ `2D1P_transport`    repeated POROSITY (mmp)
-+ `Nuklidtransport`    repeated MASS_DISPERSION (mmp)
-+ `cement2d`    repeated KINETIC_GEM (gem)
-+ `model_1`    repeated DAT_TYPE (out)
-+ `Leakage`    repeated TIM_TYPE (out)
-+ `CO2-FLOW`    repeated DAT_TYPE (out)
-+ `2pf_2pt`    repeated SIMULATOR (pcs)
+    git clone https://github.com/GeoStat-Framework/ogs5py_benchmarks.git
+
+Or simply download it as a [zip-file][zip].
+
+The original Benchmarks can be found here: https://github.com/ufz/ogs5-benchmarks
 
 
-Generation
-----------
+## Generation
 
 The scripts were generated with the python script
 
         gen_benchmark_scripts.py
-        
+
 You can run all generated scripts for testing with the python script
- 
+
         run_ogs5py_scripts.py
 
 
-Created January 2019, Copyright Sebastian Müller 2019
+Copyright Sebastian Müller 2019
+
+[ogs5_link]: https://github.com/GeoStat-Framework/ogs5py
+[zip]: https://github.com/GeoStat-Framework/ogs5py_benchmarks/archive/master.zip

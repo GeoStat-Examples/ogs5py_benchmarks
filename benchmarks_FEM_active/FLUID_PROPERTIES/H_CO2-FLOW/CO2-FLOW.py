@@ -6,19 +6,16 @@ model = OGS(
     task_id='CO2-FLOW',
     output_dir='out',
 )
-model.bc.add_block(
-    main_key='BOUNDARY_CONDITION',
+model.msh.read_file('CO2-FLOW.msh')
+model.gli.read_file('CO2-FLOW.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
     PCS_TYPE='LIQUID_FLOW',
-    PRIMARY_VARIABLE='PRESSURE1',
-    GEO_TYPE=['POINT', 'POINT0'],
-    DIS_TYPE=['CONSTANT', 40000000.0],
 )
-model.bc.add_block(
-    main_key='BOUNDARY_CONDITION',
-    PCS_TYPE='LIQUID_FLOW',
-    PRIMARY_VARIABLE='PRESSURE1',
-    GEO_TYPE=['POINT', 'POINT1'],
-    DIS_TYPE=['CONSTANT', 30000000.0],
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='HEAT_TRANSPORT',
+    TEMPERATURE_UNIT='KELVIN',
 )
 model.fct.add_block(
     main_key='FUNCTION',
@@ -10740,7 +10737,20 @@ model.fct.add_block(
         [500, 70000000.0, 202.3446],
     ],
 )
-model.gli.read_file('CO2-FLOW.gli')
+model.bc.add_block(
+    main_key='BOUNDARY_CONDITION',
+    PCS_TYPE='LIQUID_FLOW',
+    PRIMARY_VARIABLE='PRESSURE1',
+    GEO_TYPE=['POINT', 'POINT0'],
+    DIS_TYPE=['CONSTANT', 40000000.0],
+)
+model.bc.add_block(
+    main_key='BOUNDARY_CONDITION',
+    PCS_TYPE='LIQUID_FLOW',
+    PRIMARY_VARIABLE='PRESSURE1',
+    GEO_TYPE=['POINT', 'POINT1'],
+    DIS_TYPE=['CONSTANT', 30000000.0],
+)
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='LIQUID_FLOW',
@@ -10755,6 +10765,35 @@ model.ic.add_block(
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 400],
 )
+model.st.add_block(
+    main_key='SOURCE_TERM',
+    PCS_TYPE='LIQUID_FLOW',
+    PRIMARY_VARIABLE='PRESSURE1',
+    GEO_TYPE=['POINT', 'POINT0'],
+    DIS_TYPE=['CONSTANT', 0.001],
+)
+model.mmp.add_block(
+    main_key='MEDIUM_PROPERTIES',
+    GEOMETRY_DIMENSION=1,
+    GEOMETRY_AREA=1.0,
+    POROSITY=[1, 0.26],
+    STORAGE=[1, 0.0],
+    TORTUOSITY=[1, 1.0],
+    PERMEABILITY_TENSOR=['ISOTROPIC', 3e-13],
+    HEAT_DISPERSION=[1, 0.0, 0.0],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    DENSITY=[1, 2500],
+    THERMAL=[
+        ['EXPANSION'],
+        [1e-05],
+        ['CAPACITY'],
+        [1, 6000.0],
+        ['CONDUCTIVITY'],
+        [1, 5],
+    ],
+)
 model.mfp.add_block(
     main_key='FLUID_PROPERTIES',
     FLUID_TYPE='LIQUID',
@@ -10768,29 +10807,6 @@ model.mfp.add_block(
     SPECIFIC_HEAT_CAPACITY=[1, 40],
     HEAT_CONDUCTIVITY=[1, 0.06],
 )
-model.mmp.add_block(
-    main_key='MEDIUM_PROPERTIES',
-    GEOMETRY_DIMENSION=1,
-    GEOMETRY_AREA=1.0,
-    POROSITY=[1, 0.26],
-    STORAGE=[1, 0.0],
-    TORTUOSITY=[1, 1.0],
-    PERMEABILITY_TENSOR=['ISOTROPIC', 3e-13],
-    HEAT_DISPERSION=[1, 0.0, 0.0],
-)
-model.msh.read_file('CO2-FLOW.msh')
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    DENSITY=[1, 2500],
-    THERMAL=[
-        ['EXPANSION'],
-        [1e-05],
-        ['CAPACITY'],
-        [1, 6000.0],
-        ['CONDUCTIVITY'],
-        [1, 5],
-    ],
-)
 model.num.add_block(
     main_key='NUMERICS',
     PCS_TYPE='LIQUID_FLOW',
@@ -10803,6 +10819,20 @@ model.num.add_block(
     LINEAR_SOLVER=[2, 0, 1e-12, 1000, 1.0, 100, 4],
     ELE_GAUSS_POINTS=2,
     NON_LINEAR_SOLVER=['PICARD', 0.001, 25, 0.0],
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='LIQUID_FLOW',
+    TIME_STEPS=[50, 100000.0],
+    TIME_END=1000000000.0,
+    TIME_START=0,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='HEAT_TRANSPORT',
+    TIME_STEPS=[50, 100000.0],
+    TIME_END=1000000000.0,
+    TIME_START=0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -10821,52 +10851,32 @@ model.out.add_block(
 )
 model.out.add_block(
     main_key='OUTPUT',
-#    DAT_TYPE='TECPLOT',
+    DAT_TYPE='TECPLOT',
+)
+model.out.append_to_block(
     NOD_VALUES=[
         ['TEMPERATURE1'],
         ['PRESSURE1'],
     ],
+)
+model.out.append_to_block(
     MFP_VALUES=[
         ['VISCOSITY'],
         ['DENSITY'],
         ['HEAT_CONDUCTIVITY'],
     ],
+)
+model.out.append_to_block(
     DAT_TYPE='TECPLOT',
+)
+model.out.append_to_block(
     GEO_TYPE='DOMAIN',
+)
+model.out.append_to_block(
     TIM_TYPE=[
         ['STEPS', 1],
         [1],
     ],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='LIQUID_FLOW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='HEAT_TRANSPORT',
-    TEMPERATURE_UNIT='KELVIN',
-)
-model.st.add_block(
-    main_key='SOURCE_TERM',
-    PCS_TYPE='LIQUID_FLOW',
-    PRIMARY_VARIABLE='PRESSURE1',
-    GEO_TYPE=['POINT', 'POINT0'],
-    DIS_TYPE=['CONSTANT', 0.001],
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='LIQUID_FLOW',
-    TIME_STEPS=[50, 100000.0],
-    TIME_END=1000000000.0,
-    TIME_START=0,
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='HEAT_TRANSPORT',
-    TIME_STEPS=[50, 100000.0],
-    TIME_END=1000000000.0,
-    TIME_START=0,
 )
 model.write_input()
 model.run_model()

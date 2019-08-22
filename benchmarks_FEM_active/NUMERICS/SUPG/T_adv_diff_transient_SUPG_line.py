@@ -6,6 +6,24 @@ model = OGS(
     task_id='T_adv_diff_transient_SUPG_line',
     output_dir='out',
 )
+model.msh.read_file('T_adv_diff_transient_SUPG_line.msh')
+model.gli.read_file('T_adv_diff_transient_SUPG_line.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='LIQUID_FLOW',
+    NUM_TYPE=[
+        ['NEW'],
+        [1],
+    ],
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='HEAT_TRANSPORT',
+    NUM_TYPE=[
+        ['NEW'],
+        [1],
+    ],
+)
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='LIQUID_FLOW',
@@ -20,7 +38,6 @@ model.bc.add_block(
     GEO_TYPE=['POINT', 'POINT0'],
     DIS_TYPE=['CONSTANT', 1],
 )
-model.gli.read_file('T_adv_diff_transient_SUPG_line.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='LIQUID_FLOW',
@@ -35,17 +52,12 @@ model.ic.add_block(
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 0],
 )
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='LIQUID',
-    PCS_TYPE=[
-        ['PRESSURE1'],
-        ['TEMPERATURE1'],
-    ],
-    DENSITY=[1, 1000],
-    VISCOSITY=[1, 0.001],
-    SPECIFIC_HEAT_CAPACITY=[1, 4000],
-    HEAT_CONDUCTIVITY=[1, 0.6],
+model.st.add_block(
+    main_key='SOURCE_TERM',
+    PCS_TYPE='LIQUID_FLOW',
+    PRIMARY_VARIABLE='PRESSURE1',
+    GEO_TYPE=['POINT', 'POINT0'],
+    DIS_TYPE=['CONSTANT', 1e-09],
 )
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
@@ -57,7 +69,6 @@ model.mmp.add_block(
     PERMEABILITY_TENSOR=['ISOTROPIC', 1e-11],
     HEAT_DISPERSION=[1, 0.0, 0.0],
 )
-model.msh.read_file('T_adv_diff_transient_SUPG_line.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     DENSITY=[1, 2850],
@@ -69,6 +80,18 @@ model.msp.add_block(
         ['CONDUCTIVITY'],
         [1, 5],
     ],
+)
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='LIQUID',
+    PCS_TYPE=[
+        ['PRESSURE1'],
+        ['TEMPERATURE1'],
+    ],
+    DENSITY=[1, 1000],
+    VISCOSITY=[1, 0.001],
+    SPECIFIC_HEAT_CAPACITY=[1, 4000],
+    HEAT_CONDUCTIVITY=[1, 0.6],
 )
 model.num.add_block(
     main_key='NUMERICS',
@@ -83,6 +106,20 @@ model.num.add_block(
     ELE_GAUSS_POINTS=2,
     NON_LINEAR_SOLVER=['PICARD', 0.001, 1, 0.0],
     ELE_SUPG=[1, 0, 0],
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='LIQUID_FLOW',
+    TIME_STEPS=[2000, 100000],
+    TIME_END=1000000000.0,
+    TIME_START=0,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='HEAT_TRANSPORT',
+    TIME_STEPS=[2000, 100000],
+    TIME_END=1000000000.0,
+    TIME_START=0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -105,43 +142,6 @@ model.out.add_block(
     GEO_TYPE=['POLYLINE', 'PLY_0'],
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEPS', 1],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='LIQUID_FLOW',
-    NUM_TYPE=[
-        ['NEW'],
-        [1],
-    ],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='HEAT_TRANSPORT',
-    NUM_TYPE=[
-        ['NEW'],
-        [1],
-    ],
-)
-model.st.add_block(
-    main_key='SOURCE_TERM',
-    PCS_TYPE='LIQUID_FLOW',
-    PRIMARY_VARIABLE='PRESSURE1',
-    GEO_TYPE=['POINT', 'POINT0'],
-    DIS_TYPE=['CONSTANT', 1e-09],
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='LIQUID_FLOW',
-    TIME_STEPS=[2000, 100000],
-    TIME_END=1000000000.0,
-    TIME_START=0,
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='HEAT_TRANSPORT',
-    TIME_STEPS=[2000, 100000],
-    TIME_END=1000000000.0,
-    TIME_START=0,
 )
 model.write_input()
 model.run_model()

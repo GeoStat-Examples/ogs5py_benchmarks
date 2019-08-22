@@ -1,4 +1,4 @@
-|-------------- Written with ogs5py --------------|
+|------------------ Written with ogs5py ------------------|
 #PROJECT
    NETZ AUS 1D-ELEMENTEN
 #CURVES
@@ -138,4 +138,4 @@
    0.99 0.979126161
    1 1
 #STOP
-|-- Written with ogs5py (0.6.1) on: 2019-01-22_19-37-18 --|
+|-- Written with ogs5py (1.0.0.rc1) on: 2019-08-22_15-03-32 --|

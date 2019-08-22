@@ -6,6 +6,17 @@ model = OGS(
     task_id='hm2_2Dmandel',
     output_dir='out',
 )
+model.msh.read_file('hm2_2Dmandel.msh')
+model.gli.read_file('hm2_2Dmandel.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE=[
+        ['LIQUID_FLOW'],
+        ['DEFORMATION'],
+    ],
+    NUM_TYPE='NEW',
+)
+model.rfd.read_file('hm2_2Dmandel.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='DEFORMATION_FLOW',
@@ -90,7 +101,6 @@ model.bc.add_block(
     ],
     TIM_TYPE=['CURVE', 1],
 )
-model.gli.read_file('hm2_2Dmandel.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='DEFORMATION_FLOW',
@@ -98,20 +108,12 @@ model.ic.add_block(
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 0.0],
 )
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='LIQUID',
-    PCS_TYPE='PRESSURE1',
-    DENSITY=[1, 0.0],
-    VISCOSITY=[1, 0.001],
-)
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
     GEOMETRY_DIMENSION=3,
     POROSITY=[1, 0.0],
     PERMEABILITY_TENSOR=['ISOTROPIC', 1e-10],
 )
-model.msh.read_file('hm2_2Dmandel.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     DENSITY=[1, 0.0],
@@ -122,10 +124,25 @@ model.msp.add_block(
     ],
     BIOT_CONSTANT=1.0,
 )
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='LIQUID',
+    PCS_TYPE='PRESSURE1',
+    DENSITY=[1, 0.0],
+    VISCOSITY=[1, 0.001],
+)
 model.num.add_block(
     main_key='NUMERICS',
     PCS_TYPE='DEFORMATION_FLOW',
     LINEAR_SOLVER=[2, 1, 1e-10, 10000, 1.0, 100, 4],
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='DEFORMATION_FLOW',
+    TIME_UNIT='SECOND',
+    TIME_STEPS=[165, 0.05],
+    TIME_END=8.0,
+    TIME_START=0.0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -153,23 +170,6 @@ model.out.add_block(
         [2],
         [8],
     ],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE=[
-        ['LIQUID_FLOW'],
-        ['DEFORMATION'],
-    ],
-    NUM_TYPE='NEW',
-)
-model.rfd.read_file('hm2_2Dmandel.rfd')
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='DEFORMATION_FLOW',
-    TIME_UNIT='SECOND',
-    TIME_STEPS=[165, 0.05],
-    TIME_END=8.0,
-    TIME_START=0.0,
 )
 model.write_input()
 model.run_model()

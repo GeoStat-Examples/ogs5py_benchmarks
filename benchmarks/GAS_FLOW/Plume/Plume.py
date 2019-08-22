@@ -6,6 +6,14 @@ model = OGS(
     task_id='Plume',
     output_dir='out',
 )
+model.msh.read_file('Plume.msh')
+model.gli.read_file('Plume.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MULTI_COMPONENTIAL_FLOW',
+    TEMPERATURE_UNIT='KELVIN',
+)
+model.rfd.read_file('Plume.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='MULTI_COMPONENTIAL_FLOW',
@@ -28,7 +36,6 @@ model.bc.add_block(
     DIS_TYPE=['CONSTANT', 1.0],
     TIM_TYPE=['CURVE', 1],
 )
-model.gli.read_file('Plume.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='MULTI_COMPONENTIAL_FLOW',
@@ -50,6 +57,35 @@ model.ic.add_block(
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 0],
 )
+model.st.add_block(
+    main_key='SOURCE_TERM',
+    PCS_TYPE='MULTI_COMPONENTIAL_FLOW',
+    PRIMARY_VARIABLE='PRESSURE1',
+    GEO_TYPE=['POINT', 'POINT4'],
+    DIS_TYPE=['CONSTANT', 1.0],
+    TIM_TYPE=['CURVE', 2],
+)
+model.mmp.add_block(
+    main_key='MEDIUM_PROPERTIES',
+    GEOMETRY_DIMENSION=2,
+    GEOMETRY_AREA=1,
+    POROSITY=[1, 0.39],
+    TORTUOSITY=[1, 1.0],
+    PERMEABILITY_TENSOR=['ISOTROPIC', 1.120795e-09],
+    MASS_DISPERSION=[1, 0.0005, 5e-05],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    DENSITY=[1, 2500],
+    THERMAL=[
+        ['EXPANSION:'],
+        [1e-05],
+        ['CAPACITY:'],
+        [1, 1000],
+        ['CONDUCTIVITY:'],
+        [1, 2.5],
+    ],
+)
 model.mfp.add_block(
     main_key='FLUID_PROPERTIES',
     FLUID_TYPE='LIQUID',
@@ -69,34 +105,19 @@ model.mfp.add_block(
     DECAY=[1, 0],
     DIFFUSION=[1, 1.477e-09],
 )
-model.mmp.add_block(
-    main_key='MEDIUM_PROPERTIES',
-    GEOMETRY_DIMENSION=2,
-    GEOMETRY_AREA=1,
-    POROSITY=[1, 0.39],
-    TORTUOSITY=[1, 1.0],
-    PERMEABILITY_TENSOR=['ISOTROPIC', 1.120795e-09],
-    MASS_DISPERSION=[1, 0.0005, 5e-05],
-)
-model.msh.read_file('Plume.msh')
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    DENSITY=[1, 2500],
-    THERMAL=[
-        ['EXPANSION:'],
-        [1e-05],
-        ['CAPACITY:'],
-        [1, 1000],
-        ['CONDUCTIVITY:'],
-        [1, 2.5],
-    ],
-)
 model.num.add_block(
     main_key='NUMERICS',
     PCS_TYPE='MULTI_COMPONENTIAL_FLOW',
     ELE_MASS_LUMPING=1,
     LINEAR_SOLVER=[2, 0, 1e-15, 2500, 1, 100, 4],
     NON_LINEAR_SOLVER=['PICARD', 1e-05, 25, 1],
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='MULTI_COMPONENTIAL_FLOW',
+    TIME_STEPS=[8, 10],
+    TIME_END=30000,
+    TIME_START=0.0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -118,27 +139,6 @@ model.out.add_block(
         [1426],
         [2672],
     ],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MULTI_COMPONENTIAL_FLOW',
-    TEMPERATURE_UNIT='KELVIN',
-)
-model.rfd.read_file('Plume.rfd')
-model.st.add_block(
-    main_key='SOURCE_TERM',
-    PCS_TYPE='MULTI_COMPONENTIAL_FLOW',
-    PRIMARY_VARIABLE='PRESSURE1',
-    GEO_TYPE=['POINT', 'POINT4'],
-    DIS_TYPE=['CONSTANT', 1.0],
-    TIM_TYPE=['CURVE', 2],
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='MULTI_COMPONENTIAL_FLOW',
-    TIME_STEPS=[8, 10],
-    TIME_END=30000,
-    TIME_START=0.0,
 )
 model.write_input()
 model.run_model()

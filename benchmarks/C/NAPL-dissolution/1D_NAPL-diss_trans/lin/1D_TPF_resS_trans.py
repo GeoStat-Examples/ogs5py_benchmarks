@@ -6,6 +6,19 @@ model = OGS(
     task_id='1D_TPF_resS_trans',
     output_dir='out',
 )
+model.msh.read_file('1D_TPF_resS_trans.msh')
+model.gli.read_file('1D_TPF_resS_trans.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='PS_GLOBAL',
+    NUM_TYPE='dPcdSwGradSnw',
+    ELEMENT_MATRIX_OUTPUT=0,
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='PS_GLOBAL',
@@ -27,7 +40,6 @@ model.bc.add_block(
     GEO_TYPE=['POINT', 'POINT0'],
     DIS_TYPE=['CONSTANT', 1.0],
 )
-model.gli.read_file('1D_TPF_resS_trans.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='PS_GLOBAL',
@@ -91,11 +103,31 @@ model.ic.add_block(
     GEO_TYPE=['POLYLINE', 'LEFTPLINE'],
     DIS_TYPE=['CONSTANT', 1.0],
 )
-model.mcp.add_block(
-    main_key='COMPONENT_PROPERTIES',
-    NAME='Tracer',
-    MOBILE=1,
-    DIFFUSION=[1, 1e-09],
+model.st.add_block(
+    main_key='SOURCE_TERM',
+    PCS_TYPE='PS_GLOBAL',
+    PRIMARY_VARIABLE='PRESSURE1',
+    GEO_TYPE=['POLYLINE', 'RIGHTPLINE'],
+    DIS_TYPE=['CONSTANT', 0.0],
+)
+model.mmp.add_block(
+    main_key='MEDIUM_PROPERTIES',
+    GEOMETRY_DIMENSION=1,
+    GEOMETRY_AREA=1.0,
+    POROSITY=[1, 0.25],
+    TORTUOSITY=[1, 1.0],
+    PERMEABILITY_TENSOR=['ISOTROPIC', 1.54249e-11],
+    PERMEABILITY_SATURATION=[
+        [61, 0.2, 1.0, 3.86],
+        [66, 0.2, 1.0, 3.86, 0.0],
+    ],
+    CAPILLARY_PRESSURE=[6, 0.0],
+    MASS_DISPERSION=[1, 0.5, 1e-10],
+    DENSITY=[1, 2650.0],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    DENSITY=[1, 2650.0],
 )
 model.mfp.add_block(
     main_key='FLUID_PROPERTIES',
@@ -113,25 +145,11 @@ model.mfp.add_block(
     VISCOSITY=[1, 0.001307],
     PHASE_DIFFUSION=[1, 7.66e-10],
 )
-model.mmp.add_block(
-    main_key='MEDIUM_PROPERTIES',
-    GEOMETRY_DIMENSION=1,
-    GEOMETRY_AREA=1.0,
-    POROSITY=[1, 0.25],
-    TORTUOSITY=[1, 1.0],
-    PERMEABILITY_TENSOR=['ISOTROPIC', 1.54249e-11],
-    PERMEABILITY_SATURATION=[
-        [61, 0.2, 1.0, 3.86],
-        [66, 0.2, 1.0, 3.86, 0.0],
-    ],
-    CAPILLARY_PRESSURE=[6, 0.0],
-    MASS_DISPERSION=[1, 0.5, 1e-10],
-    DENSITY=[1, 2650.0],
-)
-model.msh.read_file('1D_TPF_resS_trans.msh')
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    DENSITY=[1, 2650.0],
+model.mcp.add_block(
+    main_key='COMPONENT_PROPERTIES',
+    NAME='Tracer',
+    MOBILE=1,
+    DIFFUSION=[1, 1e-09],
 )
 model.num.add_block(
     main_key='NUMERICS',
@@ -147,6 +165,20 @@ model.num.add_block(
     PCS_TYPE='MASS_TRANSPORT',
     LINEAR_SOLVER=[2, 6, 1e-14, 1000, 1.0, 1, 2],
     ELE_GAUSS_POINTS=3,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='PS_GLOBAL',
+    TIME_STEPS=[500, 21600.0],
+    TIME_END=864000000.0,
+    TIME_START=0.0,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='MASS_TRANSPORT',
+    TIME_STEPS=[500, 21600.0],
+    TIME_END=864000000.0,
+    TIME_START=0.0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -199,38 +231,6 @@ model.out.add_block(
         [43200.0],
         [64800.0],
     ],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='PS_GLOBAL',
-    NUM_TYPE='dPcdSwGradSnw',
-    ELEMENT_MATRIX_OUTPUT=0,
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.st.add_block(
-    main_key='SOURCE_TERM',
-    PCS_TYPE='PS_GLOBAL',
-    PRIMARY_VARIABLE='PRESSURE1',
-    GEO_TYPE=['POLYLINE', 'RIGHTPLINE'],
-    DIS_TYPE=['CONSTANT', 0.0],
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='PS_GLOBAL',
-    TIME_STEPS=[500, 21600.0],
-    TIME_END=864000000.0,
-    TIME_START=0.0,
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='MASS_TRANSPORT',
-    TIME_STEPS=[500, 21600.0],
-    TIME_END=864000000.0,
-    TIME_START=0.0,
 )
 model.write_input()
 model.run_model()

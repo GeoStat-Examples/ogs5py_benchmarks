@@ -6,6 +6,14 @@ model = OGS(
     task_id='m_excav',
     output_dir='out',
 )
+model.msh.read_file('m_excav.msh')
+model.gli.read_file('m_excav.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='DEFORMATION',
+    NUM_TYPE='EXCAVATION',
+)
+model.rfd.read_file('m_excav.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='DEFORMATION',
@@ -34,11 +42,23 @@ model.bc.add_block(
     GEO_TYPE=['POLYLINE', 'BOTTOM'],
     DIS_TYPE=['CONSTANT:', 0.0],
 )
-model.gli.read_file('m_excav.gli')
-model.mmp.add_block(
-    main_key='MEDIUM_PROPERTIES',
-    GEOMETRY_DIMENSION=2,
-    GEOMETRY_AREA=1.0,
+model.st.add_block(
+    main_key='SOURCE_TERM',
+    PCS_TYPE='DEFORMATION',
+    PRIMARY_VARIABLE='EXCAVATION',
+    GEO_TYPE=[
+        ['NULL', 'NULL'],
+        ['EXCAVATION_DOMAIN', 0],
+    ],
+)
+model.st.add_block(
+    main_key='SOURCE_TERM',
+    PCS_TYPE='DEFORMATION',
+    PRIMARY_VARIABLE='EXCAVATION',
+    GEO_TYPE=[
+        ['POLYLINE', 'ARC2'],
+        ['EXCAVATION_DOMAIN', 2],
+    ],
 )
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
@@ -50,7 +70,11 @@ model.mmp.add_block(
     GEOMETRY_DIMENSION=2,
     GEOMETRY_AREA=1.0,
 )
-model.msh.read_file('m_excav.msh')
+model.mmp.add_block(
+    main_key='MEDIUM_PROPERTIES',
+    GEOMETRY_DIMENSION=2,
+    GEOMETRY_AREA=1.0,
+)
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     DENSITY=[1, 2700.0],
@@ -105,6 +129,13 @@ model.num.add_block(
     LINEAR_SOLVER=[2, 0, 1e-12, 5000, 1.0, 100, 4],
     ELE_GAUSS_POINTS=3,
     GRAVITY_PROFILE=1,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='DEFORMATION',
+    TIME_STEPS=[1, 0.02],
+    TIME_END=0.02,
+    TIME_START=0.0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -368,37 +399,6 @@ model.out.add_block(
     GEO_TYPE=['POINT', 'POINT13'],
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEP', 4],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='DEFORMATION',
-    NUM_TYPE='EXCAVATION',
-)
-model.rfd.read_file('m_excav.rfd')
-model.st.add_block(
-    main_key='SOURCE_TERM',
-    PCS_TYPE='DEFORMATION',
-    PRIMARY_VARIABLE='EXCAVATION',
-    GEO_TYPE=[
-        ['NULL', 'NULL'],
-        ['EXCAVATION_DOMAIN', 0],
-    ],
-)
-model.st.add_block(
-    main_key='SOURCE_TERM',
-    PCS_TYPE='DEFORMATION',
-    PRIMARY_VARIABLE='EXCAVATION',
-    GEO_TYPE=[
-        ['POLYLINE', 'ARC2'],
-        ['EXCAVATION_DOMAIN', 2],
-    ],
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='DEFORMATION',
-    TIME_STEPS=[1, 0.02],
-    TIME_END=0.02,
-    TIME_START=0.0,
 )
 model.write_input()
 model.run_model()

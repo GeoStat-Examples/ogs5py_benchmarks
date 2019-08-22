@@ -6,6 +6,19 @@ model = OGS(
     task_id='h2t_line',
     output_dir='out',
 )
+model.msh.read_file('h2t_line.msh')
+model.gli.read_file('h2t_line.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='PS_GLOBAL',
+    NUM_TYPE='dPcdSwGradSnw',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='HEAT_TRANSPORT',
+    TEMPERATURE_UNIT='KELVIN',
+)
+model.rfd.read_file('h2t_line.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='PS_GLOBAL',
@@ -31,7 +44,6 @@ model.bc.add_block(
         [1, 420],
     ],
 )
-model.gli.read_file('h2t_line.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='PS_GLOBAL',
@@ -52,6 +64,33 @@ model.ic.add_block(
     PRIMARY_VARIABLE='TEMPERATURE1',
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 420],
+)
+model.st.add_block(
+    main_key='SOURCE_TERM',
+)
+model.mmp.add_block(
+    main_key='MEDIUM_PROPERTIES',
+    GEOMETRY_DIMENSION=1,
+    POROSITY=[1, 0.03],
+    TORTUOSITY=[1, 1.0],
+    PERMEABILITY_TENSOR=['ISOTROPIC', 1e-12],
+    PERMEABILITY_SATURATION=[
+        [6, 0.0, 1.0, 2.0],
+        [66, 0.0, 1.0, 2.0, 1e-09],
+    ],
+    CAPILLARY_PRESSURE=[6, 5000],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    DENSITY=[1, 2500],
+    THERMAL=[
+        ['EXPANSION'],
+        [1, 0],
+        ['CAPACITY'],
+        [1, 100],
+        ['CONDUCTIVITY'],
+        [1, 1],
+    ],
 )
 model.mfp.add_block(
     main_key='FLUID_PROPERTIES',
@@ -79,31 +118,6 @@ model.mfp.add_block(
     VISCOSITY=9,
     SPECIFIC_HEAT_CAPACITY=[1, 1000],
 )
-model.mmp.add_block(
-    main_key='MEDIUM_PROPERTIES',
-    GEOMETRY_DIMENSION=1,
-    POROSITY=[1, 0.03],
-    TORTUOSITY=[1, 1.0],
-    PERMEABILITY_TENSOR=['ISOTROPIC', 1e-12],
-    PERMEABILITY_SATURATION=[
-        [6, 0.0, 1.0, 2.0],
-        [66, 0.0, 1.0, 2.0, 1e-09],
-    ],
-    CAPILLARY_PRESSURE=[6, 5000],
-)
-model.msh.read_file('h2t_line.msh')
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    DENSITY=[1, 2500],
-    THERMAL=[
-        ['EXPANSION'],
-        [1, 0],
-        ['CAPACITY'],
-        [1, 100],
-        ['CONDUCTIVITY'],
-        [1, 1],
-    ],
-)
 model.num.add_block(
     main_key='NUMERICS',
     PCS_TYPE='PS_GLOBAL',
@@ -119,6 +133,36 @@ model.num.add_block(
     LINEAR_SOLVER=[805, 0, 1e-12, 1000, 0.0, 1, 4],
     ELE_GAUSS_POINTS=2,
     NON_LINEAR_SOLVER=['PICARD', 0.001, 50, 0.0],
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='PS_GLOBAL',
+    TIME_STEPS=[
+        [50, 0.1],
+        [45, 1],
+        [50, 2],
+        [70, 5],
+        [150, 10],
+        [100, 20],
+        [60, 100],
+    ],
+    TIME_END=10001,
+    TIME_START=0.0,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='HEAT_TRANSPORT',
+    TIME_STEPS=[
+        [50, 0.1],
+        [45, 1],
+        [50, 2],
+        [70, 5],
+        [150, 10],
+        [100, 20],
+        [60, 100],
+    ],
+    TIME_END=10001,
+    TIME_START=0.0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -151,50 +195,6 @@ model.out.add_block(
         [9000],
         [10000],
     ],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='PS_GLOBAL',
-    NUM_TYPE='dPcdSwGradSnw',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='HEAT_TRANSPORT',
-    TEMPERATURE_UNIT='KELVIN',
-)
-model.rfd.read_file('h2t_line.rfd')
-model.st.add_block(
-    main_key='SOURCE_TERM',
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='PS_GLOBAL',
-    TIME_STEPS=[
-        [50, 0.1],
-        [45, 1],
-        [50, 2],
-        [70, 5],
-        [150, 10],
-        [100, 20],
-        [60, 100],
-    ],
-    TIME_END=10001,
-    TIME_START=0.0,
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='HEAT_TRANSPORT',
-    TIME_STEPS=[
-        [50, 0.1],
-        [45, 1],
-        [50, 2],
-        [70, 5],
-        [150, 10],
-        [100, 20],
-        [60, 100],
-    ],
-    TIME_END=10001,
-    TIME_START=0.0,
 )
 model.write_input()
 model.run_model()

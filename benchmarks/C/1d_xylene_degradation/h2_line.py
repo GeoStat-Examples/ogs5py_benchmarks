@@ -6,6 +6,88 @@ model = OGS(
     task_id='h2_line',
     output_dir='out',
 )
+model.msh.read_file('h2_line.msh')
+model.gli.read_file('h2_line.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='GROUNDWATER_FLOW',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='MASS_TRANSPORT',
+    NUM_TYPE='NEW',
+)
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='GROUNDWATER_FLOW',
@@ -93,7 +175,6 @@ model.bc.add_block(
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
 )
-model.gli.read_file('h2_line.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='GROUNDWATER_FLOW',
@@ -205,6 +286,145 @@ model.ic.add_block(
     PRIMARY_VARIABLE='Biomass_Sulfatereducer',
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 1e-06],
+)
+model.st.add_block(
+    main_key='SOURCE_TERM',
+    PCS_TYPE='GROUNDWATER_FLOW',
+    PRIMARY_VARIABLE='PRESSURE1',
+    GEO_TYPE=['POINT', 'POINT0'],
+    DIS_TYPE=['CONSTANT', -0.0],
+)
+model.mmp.add_block(
+    main_key='MEDIUM_PROPERTIES',
+    NAME='Layer1',
+    GEO_TYPE=['LAYER', 1],
+    GEOMETRY_DIMENSION=1,
+    GEOMETRY_AREA=1.0,
+    POROSITY=[1, 0.24],
+    VOL_BIO=[1, 0.01],
+    VOL_MAT=[1, 0.75],
+    TORTUOSITY=[1, 1.0],
+    PERMEABILITY_TENSOR=['ISOTROPIC', 0.00215],
+    MASS_DISPERSION=[1, 0.25, 0.05],
+    DENSITY=[1, 2000.0],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    DENSITY=[1, 2000.0],
+)
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='LIQUID',
+    PCS_TYPE='HEAD',
+    DENSITY=[1, 1000.0],
+    VISCOSITY=[1, 0.001],
+    HEAT_CAPACITY=[1, 0.0],
+    HEAT_CONDUCTIVITY=[1, 0.0],
+)
+model.mcp.add_block(
+    main_key='COMPONENT_PROPERTIES',
+    NAME='Cons_Tracer',
+    MOBILE=1,
+    DIFFUSION=[1, 1e-09],
+    TRANSPORT_PHASE=0,
+)
+model.mcp.add_block(
+    main_key='COMPONENT_PROPERTIES',
+    NAME='Xylene',
+    MOBILE=1,
+    DIFFUSION=[1, 1e-09],
+    TRANSPORT_PHASE=0,
+)
+model.mcp.add_block(
+    main_key='COMPONENT_PROPERTIES',
+    NAME='Oxygen',
+    MOBILE=1,
+    DIFFUSION=[1, 1e-09],
+    TRANSPORT_PHASE=0,
+)
+model.mcp.add_block(
+    main_key='COMPONENT_PROPERTIES',
+    NAME='Metab_O',
+    MOBILE=0,
+    DIFFUSION=[1, 1e-09],
+    TRANSPORT_PHASE=2,
+)
+model.mcp.add_block(
+    main_key='COMPONENT_PROPERTIES',
+    NAME='CO2',
+    MOBILE=0,
+    DIFFUSION=[1, 1e-09],
+    TRANSPORT_PHASE=2,
+)
+model.mcp.add_block(
+    main_key='COMPONENT_PROPERTIES',
+    NAME='Biomass_Aerobic',
+    MOBILE=0,
+    DIFFUSION=[1, 0.0],
+    TRANSPORT_PHASE=2,
+)
+model.mcp.add_block(
+    main_key='COMPONENT_PROPERTIES',
+    NAME='Goethite',
+    MOBILE=0,
+    DIFFUSION=[1, 1e-09],
+    TRANSPORT_PHASE=1,
+)
+model.mcp.add_block(
+    main_key='COMPONENT_PROPERTIES',
+    NAME='bioFe3',
+    MOBILE=0,
+    DIFFUSION=[1, 1e-09],
+    TRANSPORT_PHASE=2,
+)
+model.mcp.add_block(
+    main_key='COMPONENT_PROPERTIES',
+    NAME='Fe2',
+    MOBILE=1,
+    DIFFUSION=[1, 1e-09],
+    TRANSPORT_PHASE=0,
+)
+model.mcp.add_block(
+    main_key='COMPONENT_PROPERTIES',
+    NAME='Metab_Fe3',
+    MOBILE=0,
+    DIFFUSION=[1, 1e-09],
+    TRANSPORT_PHASE=1,
+)
+model.mcp.add_block(
+    main_key='COMPONENT_PROPERTIES',
+    NAME='Biomass_Ironreducer',
+    MOBILE=0,
+    DIFFUSION=[1, 0.0],
+    TRANSPORT_PHASE=2,
+)
+model.mcp.add_block(
+    main_key='COMPONENT_PROPERTIES',
+    NAME='Sulfate',
+    MOBILE=1,
+    DIFFUSION=[1, 1e-09],
+    TRANSPORT_PHASE=0,
+)
+model.mcp.add_block(
+    main_key='COMPONENT_PROPERTIES',
+    NAME='S',
+    MOBILE=1,
+    DIFFUSION=[1, 1e-09],
+    TRANSPORT_PHASE=0,
+)
+model.mcp.add_block(
+    main_key='COMPONENT_PROPERTIES',
+    NAME='Meta_ProductS',
+    MOBILE=0,
+    DIFFUSION=[1, 1e-09],
+    TRANSPORT_PHASE=2,
+)
+model.mcp.add_block(
+    main_key='COMPONENT_PROPERTIES',
+    NAME='Biomass_Sulfatereducer',
+    MOBILE=0,
+    DIFFUSION=[1, 0.0],
+    TRANSPORT_PHASE=2,
 )
 model.krc.add_block(
     main_key='KINREACTIONDATA',
@@ -321,139 +541,6 @@ model.krc.add_block(
     INHIBITIONTERMS=[],
     PRODUCTIONTERMS=[],
 )
-model.mcp.add_block(
-    main_key='COMPONENT_PROPERTIES',
-    NAME='Cons_Tracer',
-    MOBILE=1,
-    DIFFUSION=[1, 1e-09],
-    TRANSPORT_PHASE=0,
-)
-model.mcp.add_block(
-    main_key='COMPONENT_PROPERTIES',
-    NAME='Xylene',
-    MOBILE=1,
-    DIFFUSION=[1, 1e-09],
-    TRANSPORT_PHASE=0,
-)
-model.mcp.add_block(
-    main_key='COMPONENT_PROPERTIES',
-    NAME='Oxygen',
-    MOBILE=1,
-    DIFFUSION=[1, 1e-09],
-    TRANSPORT_PHASE=0,
-)
-model.mcp.add_block(
-    main_key='COMPONENT_PROPERTIES',
-    NAME='Metab_O',
-    MOBILE=0,
-    DIFFUSION=[1, 1e-09],
-    TRANSPORT_PHASE=2,
-)
-model.mcp.add_block(
-    main_key='COMPONENT_PROPERTIES',
-    NAME='CO2',
-    MOBILE=0,
-    DIFFUSION=[1, 1e-09],
-    TRANSPORT_PHASE=2,
-)
-model.mcp.add_block(
-    main_key='COMPONENT_PROPERTIES',
-    NAME='Biomass_Aerobic',
-    MOBILE=0,
-    DIFFUSION=[1, 0.0],
-    TRANSPORT_PHASE=2,
-)
-model.mcp.add_block(
-    main_key='COMPONENT_PROPERTIES',
-    NAME='Goethite',
-    MOBILE=0,
-    DIFFUSION=[1, 1e-09],
-    TRANSPORT_PHASE=1,
-)
-model.mcp.add_block(
-    main_key='COMPONENT_PROPERTIES',
-    NAME='bioFe3',
-    MOBILE=0,
-    DIFFUSION=[1, 1e-09],
-    TRANSPORT_PHASE=2,
-)
-model.mcp.add_block(
-    main_key='COMPONENT_PROPERTIES',
-    NAME='Fe2',
-    MOBILE=1,
-    DIFFUSION=[1, 1e-09],
-    TRANSPORT_PHASE=0,
-)
-model.mcp.add_block(
-    main_key='COMPONENT_PROPERTIES',
-    NAME='Metab_Fe3',
-    MOBILE=0,
-    DIFFUSION=[1, 1e-09],
-    TRANSPORT_PHASE=1,
-)
-model.mcp.add_block(
-    main_key='COMPONENT_PROPERTIES',
-    NAME='Biomass_Ironreducer',
-    MOBILE=0,
-    DIFFUSION=[1, 0.0],
-    TRANSPORT_PHASE=2,
-)
-model.mcp.add_block(
-    main_key='COMPONENT_PROPERTIES',
-    NAME='Sulfate',
-    MOBILE=1,
-    DIFFUSION=[1, 1e-09],
-    TRANSPORT_PHASE=0,
-)
-model.mcp.add_block(
-    main_key='COMPONENT_PROPERTIES',
-    NAME='S',
-    MOBILE=1,
-    DIFFUSION=[1, 1e-09],
-    TRANSPORT_PHASE=0,
-)
-model.mcp.add_block(
-    main_key='COMPONENT_PROPERTIES',
-    NAME='Meta_ProductS',
-    MOBILE=0,
-    DIFFUSION=[1, 1e-09],
-    TRANSPORT_PHASE=2,
-)
-model.mcp.add_block(
-    main_key='COMPONENT_PROPERTIES',
-    NAME='Biomass_Sulfatereducer',
-    MOBILE=0,
-    DIFFUSION=[1, 0.0],
-    TRANSPORT_PHASE=2,
-)
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='LIQUID',
-    PCS_TYPE='HEAD',
-    DENSITY=[1, 1000.0],
-    VISCOSITY=[1, 0.001],
-    HEAT_CAPACITY=[1, 0.0],
-    HEAT_CONDUCTIVITY=[1, 0.0],
-)
-model.mmp.add_block(
-    main_key='MEDIUM_PROPERTIES',
-    NAME='Layer1',
-    GEO_TYPE=['LAYER', 1],
-    GEOMETRY_DIMENSION=1,
-    GEOMETRY_AREA=1.0,
-    POROSITY=[1, 0.24],
-    VOL_BIO=[1, 0.01],
-    VOL_MAT=[1, 0.75],
-    TORTUOSITY=[1, 1.0],
-    PERMEABILITY_TENSOR=['ISOTROPIC', 0.00215],
-    MASS_DISPERSION=[1, 0.25, 0.05],
-    DENSITY=[1, 2000.0],
-)
-model.msh.read_file('h2_line.msh')
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    DENSITY=[1, 2000.0],
-)
 model.num.add_block(
     main_key='NUMERICS',
     PCS_TYPE='GROUNDWATER_FLOW',
@@ -465,6 +552,20 @@ model.num.add_block(
     PCS_TYPE='MASS_TRANSPORT',
     LINEAR_SOLVER=[2, 6, 1e-14, 2000, 0.5, 1, 2],
     ELE_GAUSS_POINTS=3,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='GROUNDWATER_FLOW',
+    TIME_STEPS=[200, 432000.0],
+    TIME_END=1.44e+65,
+    TIME_START=0.0,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='MASS_TRANSPORT',
+    TIME_STEPS=[200, 432000.0],
+    TIME_END=1.44e+65,
+    TIME_START=0.0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -490,107 +591,6 @@ model.out.add_block(
     GEO_TYPE='DOMAIN',
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEPS', 20],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='GROUNDWATER_FLOW',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.st.add_block(
-    main_key='SOURCE_TERM',
-    PCS_TYPE='GROUNDWATER_FLOW',
-    PRIMARY_VARIABLE='PRESSURE1',
-    GEO_TYPE=['POINT', 'POINT0'],
-    DIS_TYPE=['CONSTANT', -0.0],
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='GROUNDWATER_FLOW',
-    TIME_STEPS=[200, 432000.0],
-    TIME_END=1.44e+65,
-    TIME_START=0.0,
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='MASS_TRANSPORT',
-    TIME_STEPS=[200, 432000.0],
-    TIME_END=1.44e+65,
-    TIME_START=0.0,
 )
 model.write_input()
 model.run_model()

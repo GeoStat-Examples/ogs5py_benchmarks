@@ -1,330 +1,330 @@
 1 GAS_FLOW/EoS/CO2 - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/EoS/CO2/CO2
-OK...loading successfull
+OK...loading successful
 2 GAS_FLOW/EoS/H2O - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/EoS/H2O/H2O
-OK...loading successfull
+OK...loading successful
 3 GAS_FLOW/Gravity - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/Gravity/Gravity
-OK...loading successfull
+OK...loading successful
 4 GAS_FLOW/Tracertest/AdvDiff - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/Tracertest/AdvDiff/advdiff
-OK...loading successfull
+OK...loading successful
 5 GAS_FLOW/Tracertest/AdvDiffSorption - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/Tracertest/AdvDiffSorption/advdiffsorption
-OK...loading successfull
+OK...loading successful
 6 GAS_FLOW/gas_flow - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/gas_flow/h_gas_line
-OK...loading successfull
+OK...loading successful
 7 GAS_FLOW/nonisothermal_gas_flow - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/GAS_FLOW/nonisothermal_gas_flow/h_gas_line
-OK...loading successfull
+OK...loading successful
 8 H_us/Drainage - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Drainage/h_us_drainage
-OK...loading successfull
+OK...loading successful
 9 H_us/Dual - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Dual/dual_van
-OK...loading successfull
+OK...loading successful
 10 H_us/Dual - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Dual/dual_vl
-OK...loading successfull
+OK...loading successful
 11 H_us/RSM - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/RSM/AT_5
-OK...loading successfull
+OK...loading successful
 12 H_us/Wet - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet/Transient
-OK...loading successfull
+OK...loading successful
 13 H_us/Wet - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet/h_us_line_Forsyth
-OK...loading successfull
+OK...loading successful
 14 H_us/Wet - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet/h_us_line_Warrick
-OK...loading successfull
+OK...loading successful
 15 H_us/Wet - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet/h_us_line_celia
-OK...loading successfull
+OK...loading successful
 16 H_us/Wet - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet/h_us_quad
-OK...loading successfull
+OK...loading successful
 17 H_us/Wet - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Wet/h_us_tri_freebc
-OK...loading successfull
+OK...loading successful
 18 C/2d_Cl_transport_Clay - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/2d_Cl_transport_Clay/Nuklidtransport
-OK...loading successfull
+OK...loading successful
 19 ECLIPSE_DUMUX/2phase_flow_radialmodel - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/ECLIPSE_DUMUX/2phase_flow_radialmodel/2pf_radialmodel
-OK...loading successfull
+OK...loading successful
 20 C/ChemAppCoupling/cation_exchange - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/ChemAppCoupling/cation_exchange/cmp9
-OK...loading successfull
+OK...loading successful
 21 C/NAPL-dissolution/1D_NAPL-diss_flow/hex - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_flow/hex/1D_TPF_resS_flow
-OK...loading successfull
+OK...loading successful
 22 C/NAPL-dissolution/1D_NAPL-diss_flow/lin - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_flow/lin/1D_TPF_resS_flow
-OK...loading successfull
+OK...loading successful
 23 C/NAPL-dissolution/1D_NAPL-diss_flow/pri - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_flow/pri/1D_TPF_resS_flow
-OK...loading successfull
+OK...loading successful
 24 C/NAPL-dissolution/1D_NAPL-diss_flow/quad - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_flow/quad/1D_TPF_resS_flow
-OK...loading successfull
+OK...loading successful
 25 C/NAPL-dissolution/1D_NAPL-diss_flow/tet - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_flow/tet/1D_TPF_resS_flow
-OK...loading successfull
+OK...loading successful
 26 C/NAPL-dissolution/1D_NAPL-diss_flow/tri - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_flow/tri/1D_TPF_resS_flow
-OK...loading successfull
+OK...loading successful
 27 C/NAPL-dissolution/1D_NAPL-diss_trans/hex - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_trans/hex/1D_TPF_resS_trans
-OK...loading successfull
+OK...loading successful
 28 C/NAPL-dissolution/1D_NAPL-diss_trans/lin - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_trans/lin/1D_TPF_resS_trans
-OK...loading successfull
+OK...loading successful
 29 C/NAPL-dissolution/1D_NAPL-diss_trans/pri - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_trans/pri/1D_TPF_resS_trans
-OK...loading successfull
+OK...loading successful
 30 C/NAPL-dissolution/1D_NAPL-diss_trans/quad - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_trans/quad/1D_TPF_resS_trans
-OK...loading successfull
+OK...loading successful
 31 C/NAPL-dissolution/1D_NAPL-diss_trans/tet - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_trans/tet/1D_TPF_resS_trans
-OK...loading successfull
+OK...loading successful
 32 C/NAPL-dissolution/1D_NAPL-diss_trans/tri - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/NAPL-dissolution/1D_NAPL-diss_trans/tri/1D_TPF_resS_trans
-OK...loading successfull
+OK...loading successful
 33 C/hetk+n+restart - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/hetk+n+restart/2D1P_transport
-OK...loading successfull
+OK...loading successful
 34 GROUNDWATER_FLOW/Transient_flow - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/GROUNDWATER_FLOW/Transient_flow/trans_bd_homo
-OK...loading successfull
+OK...loading successful
 35 TCR/Temperature_Diff - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/TCR/Temperature_Diff/HBr_10C_Diff_new
-OK...loading successfull
+OK...loading successful
 36 TCR/Temperature_Disp - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/TCR/Temperature_Disp/HBr_Disp
-OK...loading successfull
+OK...loading successful
 37 Anisotropy/moleculardiffusion - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/Anisotropy/moleculardiffusion/soil_layer
-OK...loading successfull
+OK...loading successful
 38 Anisotropy/permeability - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/Anisotropy/permeability/soil_layer
-OK...loading successfull
+OK...loading successful
 39 DENSITY-DEPENDENT_FLOW/Elder - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/DENSITY-DEPENDENT_FLOW/Elder/elder
-OK...loading successfull
+OK...loading successful
 40 FLUID_MOMENTUM/1d_hex - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/FLUID_MOMENTUM/1d_hex/1d_hex
-OK...loading successfull
+OK...loading successful
 41 FLUID_MOMENTUM/1d_line - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/FLUID_MOMENTUM/1d_line/1d_line
-OK...loading successfull
+OK...loading successful
 42 FLUID_MOMENTUM/1d_pri - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/FLUID_MOMENTUM/1d_pri/1d_pri
-OK...loading successfull
+OK...loading successful
 43 FLUID_MOMENTUM/1d_pyra - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/FLUID_MOMENTUM/1d_pyra/1d_pyra
-OK...loading successfull
+OK...loading successful
 44 FLUID_MOMENTUM/1d_quad - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/FLUID_MOMENTUM/1d_quad/1d_quad
-OK...loading successfull
+OK...loading successful
 45 FLUID_MOMENTUM/1d_tet - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/FLUID_MOMENTUM/1d_tet/1d_tet
-OK...loading successfull
+OK...loading successful
 46 FLUID_MOMENTUM/1d_tri - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/FLUID_MOMENTUM/1d_tri/1d_tri
-OK...loading successfull
+OK...loading successful
 47 MULTIPHASE/KueperProblem-PcPnw - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/MULTIPHASE/KueperProblem-PcPnw/kueper
-OK...loading successfull
+OK...loading successful
 48 TES/Convection_2D - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/TES/Convection_2D/conv_2D_cart
-OK...loading successfull
+OK...loading successful
 49 TES/Convection_2D_axi - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/TES/Convection_2D_axi/conv_2D_axi
-OK...loading successfull
+OK...loading successful
 50 TES/friction - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/TES/friction/Friction_test
-OK...loading successfull
+OK...loading successful
 51 TES/heat_of_reaction - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/TES/heat_of_reaction/reaction_heat
-OK...loading successfull
+OK...loading successful
 52 C/1d_analyt - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/1d_analyt/1d_1
-OK...loading successfull
+OK...loading successful
 53 C/2d_analyt - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/2d_analyt/2d_1
-OK...loading successfull
+OK...loading successful
 54 C/decay - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/decay/HC_decay_1Du
-OK...loading successfull
+OK...loading successful
 55 C/diffusion - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/diffusion/Diff_HTO_test
-OK...loading successfull
+OK...loading successful
 56 C/diffusion - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/diffusion/diff_aniso
-OK...loading successfull
+OK...loading successful
 57 C/sorption/Freundlich - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/sorption/Freundlich/HC_sorp_Freundl_1D
-OK...loading successfull
+OK...loading successful
 58 C/sorption/Henry - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/sorption/Henry/HC_sorp_henry_1D
-OK...loading successfull
+OK...loading successful
 59 C/sorption/Langmuir - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/sorption/Langmuir/HC_sorp_langmuir_1D
-OK...loading successfull
+OK...loading successful
 60 C/sorption_decay - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/C/sorption_decay/HC_decay_sorp_henry_1Du
-OK...loading successfull
+OK...loading successful
 61 THM/deco_2015_b2s1 - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/THM/deco_2015_b2s1/deco_b2s1
-OK...loading successfull
+OK...loading successful
 62 OVERLAND_FLOW - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/OVERLAND_FLOW/Wool_quad
-OK...loading successfull
+OK...loading successful
 63 OVERLAND_FLOW - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/OVERLAND_FLOW/gian_quad
-OK...loading successfull
+OK...loading successful
 64 OVERLAND_FLOW - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/OVERLAND_FLOW/gian_tri
-OK...loading successfull
+OK...loading successful
 65 OVERLAND_FLOW - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/OVERLAND_FLOW/govin_line
-OK...loading successfull
+OK...loading successful
 66 OVERLAND_FLOW - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/OVERLAND_FLOW/govin_quad
-OK...loading successfull
+OK...loading successful
 67 T/2units2faults - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/2units2faults/2units2faults
-OK...loading successfull
+OK...loading successful
 68 T/2units2faults/FCT - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/2units2faults/FCT/2units2faults_FCT
-OK...loading successfull
+OK...loading successful
 69 DENSITY-DEPENDENT_FLOW/goswami-clement/constrBC_PressAsHead_tri - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/DENSITY-DEPENDENT_FLOW/goswami-clement/constrBC_PressAsHead_tri/HM
-OK...loading successfull
+OK...loading successful
 70 DENSITY-DEPENDENT_FLOW/goswami-clement/wholeBC_PressAsHead_tri - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/DENSITY-DEPENDENT_FLOW/goswami-clement/wholeBC_PressAsHead_tri/HM
-OK...loading successfull
+OK...loading successful
 71 H_us/Darcy/unconf_WO_rch - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Darcy/unconf_WO_rch/unconf
-OK...loading successfull
+OK...loading successful
 72 H_us/Darcy/unconf_W_rch - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H_us/Darcy/unconf_W_rch/unconf
-OK...loading successfull
+OK...loading successful
 73 FLUID_PROPERTIES/HT_EOS - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/FLUID_PROPERTIES/HT_EOS/FLUID_PROP
-OK...loading successfull
+OK...loading successful
 74 FLUID_PROPERTIES/H_CO2-FLOW - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/FLUID_PROPERTIES/H_CO2-FLOW/CO2-FLOW
-OK...loading successfull
+OK...loading successful
 75 M/pressure/Sphere_elastic - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/pressure/Sphere_elastic/m_sphere_elastic
-OK...loading successfull
+OK...loading successful
 76 M/pressure/Tube - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/pressure/Tube/m_tube_elastic
-OK...loading successfull
+OK...loading successful
 77 T - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/HT_var_density_1D
-FAIL.../home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/HT_var_density_1D.mmp: Unknown sub-key: AREA
+OK...loading successful
 78 T/Lauwerier - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Lauwerier/Lauwerier
-OK...loading successfull
+OK...loading successful
 79 T/Ogata-Banks - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Ogata-Banks/Ogata-Banks
-OK...loading successfull
+OK...loading successful
 80 T/TDiff - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff/TDiff
-OK...loading successfull
+OK...loading successful
 81 T/TDiff-wall - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/TDiff-wall/TDiff-Wall
-OK...loading successfull
+OK...loading successful
 82 T - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/T_1D_axi
-OK...loading successfull
+OK...loading successful
 83 T/Viscosity - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Viscosity/viscosity_yaws
-FAIL.../home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/Viscosity/viscosity_yaws.mmp: Unknown sub-key: AREA
+OK...loading successful
 84 T - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/t_tri
-OK...loading successfull
+OK...loading successful
 85 NUMERICS/DISCRETE_FEATURES/InclinedFeature - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/NUMERICS/DISCRETE_FEATURES/InclinedFeature/H_incline_45r_line
-OK...loading successfull
+OK...loading successful
 86 NUMERICS/DISCRETE_FEATURES/InclinedFeature - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/NUMERICS/DISCRETE_FEATURES/InclinedFeature/H_incline_45r_quad
-OK...loading successfull
+OK...loading successful
 87 NUMERICS/DISCRETE_FEATURES/Lauwerier - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/NUMERICS/DISCRETE_FEATURES/Lauwerier/Lauwerier
-OK...loading successfull
+OK...loading successful
 88 NUMERICS/FEM_FCT - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/NUMERICS/FEM_FCT/mass_adv_line
-OK...loading successfull
+OK...loading successful
 89 NUMERICS/SUPG - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/NUMERICS/SUPG/T_adv_diff_steady_SUPG_line
-OK...loading successfull
+OK...loading successful
 90 NUMERICS/SUPG - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/NUMERICS/SUPG/T_adv_diff_transient_SUPG_line
-OK...loading successfull
+OK...loading successful
 91 T/1d_thermal_expansion - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/1d_thermal_expansion/exp1
-OK...loading successfull
+OK...loading successful
 92 T/t3d - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T/t3d/t3d
-OK...loading successfull
+OK...loading successful
 93 THM - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/THM/thm_decov
-OK...loading successfull
+OK...loading successful
 94 TM - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/TM/TM_axi
-OK...loading successfull
+OK...loading successful
 95 TM - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/TM/tm2d
-OK...loading successfull
+OK...loading successful
 96 TM - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/TM/tm3d
-OK...loading successfull
+OK...loading successful
 97 TM - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/TM/tm_01_3Du
-OK...loading successfull
+OK...loading successful
 98 TM - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/TM/tm_02_3Du
-OK...loading successfull
+OK...loading successful
 99 GROUNDWATER_FLOW - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/GROUNDWATER_FLOW/q_hex
-OK...loading successfull
+OK...loading successful
 100 GROUNDWATER_FLOW - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/GROUNDWATER_FLOW/q_quad
-OK...loading successfull
+OK...loading successful
 101 GROUNDWATER_FLOW - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/GROUNDWATER_FLOW/uc_pris
-FAIL...GLI.load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/GROUNDWATER_FLOW/uc_pris.gli: given gli is not valid
+OK...loading successful
 102 GROUNDWATER_FLOW - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/GROUNDWATER_FLOW/uc_quad
-OK...loading successfull
+OK...loading successful
 103 GROUNDWATER_FLOW - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/GROUNDWATER_FLOW/uc_tri
-OK...loading successfull
+OK...loading successful
 104 H/HetGWFlow/2D - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/HetGWFlow/2D/2D1P-GWFlow
-OK...loading successfull
+OK...loading successful
 105 H/HetGWFlow/3D - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/HetGWFlow/3D/3D_HGW
-OK...loading successfull
+OK...loading successful
 106 H/Theis/GWF_Theis_1-5D - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/Theis/GWF_Theis_1-5D/GWF_Theis
-OK...loading successfull
+OK...loading successful
 107 H/Theis/GWF_Theis_2D - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/Theis/GWF_Theis_2D/GWF_Theis_2d
-OK...loading successfull
+OK...loading successful
 108 H/Theis/GWF_Theis_2-5D - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/Theis/GWF_Theis_2-5D/GWF_Theis
-OK...loading successfull
+OK...loading successful
 109 H/Theis/GWF_Theis_3D - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/Theis/GWF_Theis_3D/GWF_Theis_3D
-OK...loading successfull
+OK...loading successful
 110 H/Theis/LF_Theis_1-5D - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/Theis/LF_Theis_1-5D/LF_Theis
-OK...loading successfull
+OK...loading successful
 111 H/Theis/LF_Theis_2D - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/Theis/LF_Theis_2D/LF_Theis_2D
-OK...loading successfull
+OK...loading successful
 112 H/Theis/LF_Theis_2-5D - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/Theis/LF_Theis_2-5D/LF_Theis
-OK...loading successfull
+OK...loading successful
 113 H/Theis/LF_Theis_3D - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/Theis/LF_Theis_3D/LF_Theis_3D
-OK...loading successfull
+OK...loading successful
 114 H/Theis_1D - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/Theis_1D/h_quad_axisym
-OK...loading successfull
+OK...loading successful
 115 H/Theis_2D - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/Theis_2D/Thies_quad_2d
-OK...loading successfull
+OK...loading successful
 116 H/sat_1D - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/sat_1D/H_sat_flow_1d
-OK...loading successfull
+OK...loading successful
 117 H/sat_2D - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H/sat_2D/H_sat_flow_K_ortho
-OK...loading successfull
+OK...loading successful
 118 T2HC/Convection_2D - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T2HC/Convection_2D/conv_2D_cart
-OK...loading successfull
+OK...loading successful
 119 T2HC/Convection_2D_axi - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T2HC/Convection_2D_axi/conv_2D_axi
-OK...loading successfull
+OK...loading successful
 120 T2HC/friction - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T2HC/friction/Friction_test
-OK...loading successfull
+OK...loading successful
 121 T2HC/heat_of_reaction - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T2HC/heat_of_reaction/reaction_heat
-OK...loading successfull
+OK...loading successful
 122 T2HC/heat_transfer - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/T2HC/heat_transfer/heat_transfer
-OK...loading successfull
+OK...loading successful
 123 HM - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/HM/hm_cc_tri_s
-OK...loading successfull
+OK...loading successful
 124 HM - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/HM/hm_dyn_tri
-OK...loading successfull
+OK...loading successful
 125 HM - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/HM/hm_foot_tet
-OK...loading successfull
+OK...loading successful
 126 HM - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/HM/hm_foot_tri
-OK...loading successfull
+OK...loading successful
 127 HM - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/HM/hm_tri
-OK...loading successfull
+OK...loading successful
 128 HM - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/HM/hm_unsat
-OK...loading successfull
+OK...loading successful
 129 M/creep - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/creep/m_crp_tri
-OK...loading successfull
+OK...loading successful
 130 M/creep - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/creep/m_triax_lubby2
-OK...loading successfull
+OK...loading successful
 131 M/creep - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/creep/uc_creep01
-OK...loading successfull
+OK...loading successful
 132 M/elasticity - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/elasticity/M_e_displacement_3Du
-OK...loading successfull
+OK...loading successful
 133 M/elasticity - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/elasticity/M_e_stress_3Du
-OK...loading successfull
+OK...loading successful
 134 M/elasticity - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/elasticity/m_e_transiso_3D
-OK...loading successfull
+OK...loading successful
 135 M - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_brick_l
-OK...loading successfull
+OK...loading successful
 136 M - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_cc_quad_s
-OK...loading successfull
+OK...loading successful
 137 M - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_cc_tri_s
-OK...loading successfull
+OK...loading successful
 138 M - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_drift
-OK...loading successfull
+OK...loading successful
 139 M - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_drift_init
-OK...loading successfull
+OK...loading successful
 140 M - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_e_transiso_2D
-OK...loading successfull
+OK...loading successful
 141 M - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_excav
-OK...loading successfull
+OK...loading successful
 142 M - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_mises
-OK...loading successfull
+OK...loading successful
 143 M - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_sdc
-OK...loading successfull
+OK...loading successful
 144 M - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_ssy_quad
-OK...loading successfull
+OK...loading successful
 145 M - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/m_triax_lubby1
-OK...loading successfull
+OK...loading successful
 146 H2/BuckleyLeverett - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/BuckleyLeverett/buck
-OK...loading successfull
+OK...loading successful
 147 H2/Liakopoulos/Hex - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/Liakopoulos/Hex/h2_Liako
-OK...loading successfull
+OK...loading successful
 148 H2/Liakopoulos/Line - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/Liakopoulos/Line/h2_Liako
-OK...loading successfull
+OK...loading successful
 149 H2/Liakopoulos/Quad - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/Liakopoulos/Quad/h2_Liako
-OK...loading successfull
+OK...loading successful
 150 H2/Liakopoulos/Tet - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/Liakopoulos/Tet/h2_Liako
-OK...loading successfull
+OK...loading successful
 151 H2/Liakopoulos/Tri - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/Liakopoulos/Tri/h2_Liako
-OK...loading successfull
+OK...loading successful
 152 H2/McWhorter/1D - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/McWhorter/1D/mcwt
-OK...loading successfull
+OK...loading successful
 153 H2/McWhorter - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/McWhorter/mcwt
-OK...loading successfull
+OK...loading successful
 154 HM/excavation/BoreholeExcavation - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/HM/excavation/BoreholeExcavation/borehole_excav
-OK...loading successfull
+OK...loading successful
 155 TH2M/H2M_TEP - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/TH2M/H2M_TEP/w_exp
-OK...loading successfull
+OK...loading successful
 156 TH2M/Newton - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/TH2M/Newton/th2m_quad
-OK...loading successfull
+OK...loading successful
 157 TH2M - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/TH2M/th2m_quad
-OK...loading successfull
+OK...loading successful
 158 H2/LabGasInjec - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/H2/LabGasInjec/H2_Permeability_GasPressure
-OK...loading successfull
+OK...loading successful
 159 M - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/3D_oedometer_mohr_coulomb
-OK...loading successfull
+OK...loading successful
 160 M/excavation/3D_Time_Controlled - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/M/excavation/3D_Time_Controlled/3D_Excav_Time_Controlled
-OK...loading successfull
+OK...loading successful
 161 RWPT/2DGrains - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/RWPT/2DGrains/2d_grains
-OK...loading successfull
+OK...loading successful
 162 RWPT/3DGrain - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/RWPT/3DGrain/3d_grain
-OK...loading successfull
+OK...loading successful
 163 RWPT/Forchheimer - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/RWPT/Forchheimer/forchheimer_rwpt
-OK...loading successfull
+OK...loading successful
 164 RWPT/Harter - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/RWPT/Harter/colloid_t
-OK...loading successfull
+OK...loading successful
 165 RWPT/HomoCube - load: /home/muellese/AtWork/Cloud/UFZ-Arbeit/GIT/GeoStat/ogs5py_benchmarks/ogs5_benchmarks_raw/ogs5-benchmarks-master/RWPT/HomoCube/3DRWPTCubTet
-OK...loading successfull
+OK...loading successful

@@ -6,6 +6,12 @@ model = OGS(
     task_id='m_e_transiso_3D',
     output_dir='out',
 )
+model.msh.read_file('m_e_transiso_3D.msh')
+model.gli.read_file('m_e_transiso_3D.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='DEFORMATION',
+)
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='DEFORMATION',
@@ -48,14 +54,19 @@ model.bc.add_block(
     GEO_TYPE=['POINT', 'POINT8'],
     DIS_TYPE=['CONSTANT', 0],
 )
-model.gli.read_file('m_e_transiso_3D.gli')
+model.st.add_block(
+    main_key='SOURCE_TERM',
+    PCS_TYPE='DEFORMATION',
+    PRIMARY_VARIABLE='DISPLACEMENT_X1',
+    GEO_TYPE=['SURFACE', 'SURF_RIGHT'],
+    DIS_TYPE=['CONSTANT_NEUMANN', 200000.0],
+)
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
     GEOMETRY_DIMENSION=3,
     GEOMETRY_AREA=1.0,
     POROSITY=[1, 0.0],
 )
-model.msh.read_file('m_e_transiso_3D.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     ELASTICITY=[
@@ -69,6 +80,13 @@ model.num.add_block(
     PCS_TYPE='DEFORMATION',
     LINEAR_SOLVER=[2, 5, 1e-16, 10000, 1.0, 100, 4],
     ELE_GAUSS_POINTS=3,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='DEFORMATION',
+    TIME_STEPS=[1, 10.0],
+    TIME_END=600.0,
+    TIME_START=0.0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -261,24 +279,6 @@ model.out.add_block(
     GEO_TYPE=['POINT', 'POINT7'],
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEPS', 1],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='DEFORMATION',
-)
-model.st.add_block(
-    main_key='SOURCE_TERM',
-    PCS_TYPE='DEFORMATION',
-    PRIMARY_VARIABLE='DISPLACEMENT_X1',
-    GEO_TYPE=['SURFACE', 'SURF_RIGHT'],
-    DIS_TYPE=['CONSTANT_NEUMANN', 200000.0],
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='DEFORMATION',
-    TIME_STEPS=[1, 10.0],
-    TIME_END=600.0,
-    TIME_START=0.0,
 )
 model.write_input()
 model.run_model()

@@ -6,6 +6,24 @@ model = OGS(
     task_id='thm_cube',
     output_dir='out',
 )
+model.msh.read_file('thm_cube.msh')
+model.gli.read_file('thm_cube.gli')
+model.ddc.read_file('thm_cube.ddc')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='RICHARDS_FLOW',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='HEAT_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='DEFORMATION',
+)
+model.rfd.read_file('thm_cube.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='DEFORMATION',
@@ -73,8 +91,6 @@ model.bc.add_block(
     DIS_TYPE=['CONSTANT', 1.0],
     TIM_TYPE=['CURVE', 10],
 )
-model.ddc.read_file('thm_cube.ddc')
-model.gli.read_file('thm_cube.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='RICHARDS_FLOW',
@@ -99,6 +115,106 @@ model.ic.add_block(
         [2, 20.0],
     ],
 )
+model.st.add_block(
+    main_key='SOURCE_TERM',
+    PCS_TYPE='DEFORMATION',
+    PRIMARY_VARIABLE='DISPLACEMENT_Z1',
+    GEO_TYPE=['SURFACE', 'TOP'],
+    DIS_TYPE=['CONSTANT_NEUMANN', -12766950.0],
+)
+model.mmp.add_block(
+    main_key='MEDIUM_PROPERTIES',
+    GEOMETRY_DIMENSION=3,
+    GEOMETRY_AREA=1.0,
+    POROSITY=[1, 0.01],
+    DIFFUSION=273,
+    TORTUOSITY=[1, 0.8],
+    PERMEABILITY_TENSOR=['ISOTROPIC', 1e-17],
+    HEAT_DISPERSION=[1, 1.0, 1.0],
+    PERMEABILITY_SATURATION=[
+        [4, 0.0, 1.0, 0.6],
+        [4, 0.0, 1.0, 0.6],
+    ],
+    CAPILLARY_PRESSURE=[4, 0.006673469387755102],
+)
+model.mmp.add_block(
+    main_key='MEDIUM_PROPERTIES',
+    GEOMETRY_DIMENSION=3,
+    GEOMETRY_AREA=1.0,
+    POROSITY=[1, 0.01],
+    DIFFUSION=273,
+    TORTUOSITY=[1, 0.8],
+    PERMEABILITY_TENSOR=['ISOTROPIC', 1e-17],
+    HEAT_DISPERSION=[1, 1.0, 1.0],
+    PERMEABILITY_SATURATION=[
+        [4, 0.0, 1.0, 0.6],
+        [4, 0.0, 1.0, 0.6],
+    ],
+    CAPILLARY_PRESSURE=[4, 0.006673469387755102],
+)
+model.mmp.add_block(
+    main_key='MEDIUM_PROPERTIES',
+    GEOMETRY_DIMENSION=3,
+    GEOMETRY_AREA=1.0,
+    POROSITY=[1, 0.01],
+    DIFFUSION=273,
+    TORTUOSITY=[1, 0.8],
+    PERMEABILITY_TENSOR=['ISOTROPIC', 1e-17],
+    HEAT_DISPERSION=[1, 1.0, 1.0],
+    PERMEABILITY_SATURATION=[
+        [4, 0.0, 1.0, 0.6],
+        [4, 0.0, 1.0, 0.6],
+    ],
+    CAPILLARY_PRESSURE=[4, 0.006673469387755102],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    DENSITY=[1, -2700.0],
+    THERMAL=[
+        ['EXPANSION', 1e-05],
+        ['CAPACITY:'],
+        [1, 900],
+        ['CONDUCTIVITY:'],
+        [1, 3.0],
+    ],
+    ELASTICITY=[
+        ['POISSION', 0.3],
+        ['YOUNGS_MODULUS:'],
+        [1, 35000000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    DENSITY=[1, -2700.0],
+    THERMAL=[
+        ['EXPANSION', 1e-05],
+        ['CAPACITY:'],
+        [1, 900],
+        ['CONDUCTIVITY:'],
+        [1, 3.0],
+    ],
+    ELASTICITY=[
+        ['POISSION', 0.3],
+        ['YOUNGS_MODULUS:'],
+        [1, 35000000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    DENSITY=[1, -2700.0],
+    THERMAL=[
+        ['EXPANSION', 1e-05],
+        ['CAPACITY:'],
+        [1, 900],
+        ['CONDUCTIVITY:'],
+        [1, 3.0],
+    ],
+    ELASTICITY=[
+        ['POISSION', 0.3],
+        ['YOUNGS_MODULUS:'],
+        [1, 35000000000.0],
+    ],
+)
 model.mfp.add_block(
     main_key='FLUID_PROPERTIES',
     FLUID_TYPE='LIQUID',
@@ -107,100 +223,6 @@ model.mfp.add_block(
     VISCOSITY=[1, 0.001],
     SPECIFIC_HEAT_CAPACITY=[1, 4280.0],
     HEAT_CONDUCTIVITY=[1, 0.6],
-)
-model.mmp.add_block(
-    main_key='MEDIUM_PROPERTIES',
-    GEOMETRY_DIMENSION=3,
-    GEOMETRY_AREA=1.0,
-    POROSITY=[1, 0.01],
-    DIFFUSION=273,
-    TORTUOSITY=[1, 0.8],
-    PERMEABILITY_TENSOR=['ISOTROPIC', 1e-17],
-    HEAT_DISPERSION=[1, 1.0, 1.0],
-    PERMEABILITY_SATURATION=[
-        [4, 0.0, 1.0, 0.6],
-        [4, 0.0, 1.0, 0.6],
-    ],
-    CAPILLARY_PRESSURE=[4, 0.006673469387755102],
-)
-model.mmp.add_block(
-    main_key='MEDIUM_PROPERTIES',
-    GEOMETRY_DIMENSION=3,
-    GEOMETRY_AREA=1.0,
-    POROSITY=[1, 0.01],
-    DIFFUSION=273,
-    TORTUOSITY=[1, 0.8],
-    PERMEABILITY_TENSOR=['ISOTROPIC', 1e-17],
-    HEAT_DISPERSION=[1, 1.0, 1.0],
-    PERMEABILITY_SATURATION=[
-        [4, 0.0, 1.0, 0.6],
-        [4, 0.0, 1.0, 0.6],
-    ],
-    CAPILLARY_PRESSURE=[4, 0.006673469387755102],
-)
-model.mmp.add_block(
-    main_key='MEDIUM_PROPERTIES',
-    GEOMETRY_DIMENSION=3,
-    GEOMETRY_AREA=1.0,
-    POROSITY=[1, 0.01],
-    DIFFUSION=273,
-    TORTUOSITY=[1, 0.8],
-    PERMEABILITY_TENSOR=['ISOTROPIC', 1e-17],
-    HEAT_DISPERSION=[1, 1.0, 1.0],
-    PERMEABILITY_SATURATION=[
-        [4, 0.0, 1.0, 0.6],
-        [4, 0.0, 1.0, 0.6],
-    ],
-    CAPILLARY_PRESSURE=[4, 0.006673469387755102],
-)
-model.msh.read_file('thm_cube.msh')
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    DENSITY=[1, -2700.0],
-    THERMAL=[
-        ['EXPANSION', 1e-05],
-        ['CAPACITY:'],
-        [1, 900],
-        ['CONDUCTIVITY:'],
-        [1, 3.0],
-    ],
-    ELASTICITY=[
-        ['POISSION', 0.3],
-        ['YOUNGS_MODULUS:'],
-        [1, 35000000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    DENSITY=[1, -2700.0],
-    THERMAL=[
-        ['EXPANSION', 1e-05],
-        ['CAPACITY:'],
-        [1, 900],
-        ['CONDUCTIVITY:'],
-        [1, 3.0],
-    ],
-    ELASTICITY=[
-        ['POISSION', 0.3],
-        ['YOUNGS_MODULUS:'],
-        [1, 35000000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    DENSITY=[1, -2700.0],
-    THERMAL=[
-        ['EXPANSION', 1e-05],
-        ['CAPACITY:'],
-        [1, 900],
-        ['CONDUCTIVITY:'],
-        [1, 3.0],
-    ],
-    ELASTICITY=[
-        ['POISSION', 0.3],
-        ['YOUNGS_MODULUS:'],
-        [1, 35000000000.0],
-    ],
 )
 model.num.add_block(
     main_key='NUMERICS',
@@ -222,6 +244,22 @@ model.num.add_block(
     PCS_TYPE='DEFORMATION',
     LINEAR_SOLVER=[2, 0, 1e-10, 3000, 1.0, 100, 4],
     ELE_GAUSS_POINTS=3,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='RICHARDS_FLOW',
+    TIME_STEPS=[4, 0.001],
+    TIME_END=1000000.0,
+    TIME_START=0.0,
+    TIME_UNIT='YEAR',
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='HEAT_TRANSPORT',
+    TIME_STEPS=[4, 0.001],
+    TIME_END=1000000.0,
+    TIME_START=0.0,
+    TIME_UNIT='YEAR',
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -431,44 +469,6 @@ model.out.add_block(
     GEO_TYPE=['POINT', 'POINT6'],
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEPS', 1],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='RICHARDS_FLOW',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='HEAT_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='DEFORMATION',
-)
-model.rfd.read_file('thm_cube.rfd')
-model.st.add_block(
-    main_key='SOURCE_TERM',
-    PCS_TYPE='DEFORMATION',
-    PRIMARY_VARIABLE='DISPLACEMENT_Z1',
-    GEO_TYPE=['SURFACE', 'TOP'],
-    DIS_TYPE=['CONSTANT_NEUMANN', -12766950.0],
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='RICHARDS_FLOW',
-    TIME_STEPS=[4, 0.001],
-    TIME_END=1000000.0,
-    TIME_START=0.0,
-    TIME_UNIT='YEAR',
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='HEAT_TRANSPORT',
-    TIME_STEPS=[4, 0.001],
-    TIME_END=1000000.0,
-    TIME_START=0.0,
-    TIME_UNIT='YEAR',
 )
 model.write_input()
 model.run_model()

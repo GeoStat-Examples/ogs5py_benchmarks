@@ -1,32 +1,22 @@
 # -*- coding: utf-8 -*-
-from ogs5py import OGS, MPD
+from ogs5py import OGS
 
 model = OGS(
     task_root='mdif_root',
     task_id='mdif',
     output_dir='out',
 )
-model.bc.add_block(
-    main_key='BOUNDARY_CONDITION',
+model.msh.read_file('mdif.msh')
+model.gli.read_file('mdif.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
     PCS_TYPE='GROUNDWATER_FLOW',
-    PRIMARY_VARIABLE='HEAD',
-    GEO_TYPE=['POLYLINE', 'TOP'],
-    DIS_TYPE=['CONSTANT', 0.0],
+    NUM_TYPE='NEW',
 )
-model.bc.add_block(
-    main_key='BOUNDARY_CONDITION',
+model.pcs.add_block(
+    main_key='PROCESS',
     PCS_TYPE='MASS_TRANSPORT',
-    PRIMARY_VARIABLE='ConsTracer',
-    GEO_TYPE=['POLYLINE', 'BOTTOM'],
-    DIS_TYPE=['CONSTANT', 1.0],
-    FCT_TYPE='STEP_FUNCTION',
-)
-model.bc.add_block(
-    main_key='BOUNDARY_CONDITION',
-    PCS_TYPE='MASS_TRANSPORT',
-    PRIMARY_VARIABLE='ConsTracer',
-    GEO_TYPE=['POLYLINE', 'TOP'],
-    DIS_TYPE=['CONSTANT', 0.0],
+    NUM_TYPE='NEW',
 )
 model.fct.add_block(
     main_key='FUNCTION',
@@ -2230,7 +2220,28 @@ model.fct.add_block(
         [1000000000.0, 0.0],
     ],
 )
-model.gli.read_file('mdif.gli')
+model.bc.add_block(
+    main_key='BOUNDARY_CONDITION',
+    PCS_TYPE='GROUNDWATER_FLOW',
+    PRIMARY_VARIABLE='HEAD',
+    GEO_TYPE=['POLYLINE', 'TOP'],
+    DIS_TYPE=['CONSTANT', 0.0],
+)
+model.bc.add_block(
+    main_key='BOUNDARY_CONDITION',
+    PCS_TYPE='MASS_TRANSPORT',
+    PRIMARY_VARIABLE='ConsTracer',
+    GEO_TYPE=['POLYLINE', 'BOTTOM'],
+    DIS_TYPE=['CONSTANT', 1.0],
+    FCT_TYPE='STEP_FUNCTION',
+)
+model.bc.add_block(
+    main_key='BOUNDARY_CONDITION',
+    PCS_TYPE='MASS_TRANSPORT',
+    PRIMARY_VARIABLE='ConsTracer',
+    GEO_TYPE=['POLYLINE', 'TOP'],
+    DIS_TYPE=['CONSTANT', 0.0],
+)
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='GROUNDWATER_FLOW',
@@ -2244,515 +2255,6 @@ model.ic.add_block(
     PRIMARY_VARIABLE='ConsTracer',
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 0.0],
-)
-model.mcp.add_block(
-    main_key='COMPONENT_PROPERTIES',
-    NAME='ConsTracer',
-    MOBILE=1,
-    DIFFUSION=[1, 1e-08],
-)
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='WATER',
-    DAT_TYPE='WATER',
-    DENSITY=[1, 1000.0],
-    VISCOSITY=[1, 0.00089],
-    SPECIFIC_HEAT_CAPACITY=[1, 4680.0],
-    SPECIFIC_HEAT_CONDUCTIVITY=[1, 0.6],
-)
-model.mmp.add_block(
-    main_key='MEDIUM_PROPERTIES',
-    NAME='FRACTURE',
-    GEOMETRY_DIMENSION=2,
-    GEOMETRY_AREA=['FILE', 'apertures.txt'],
-    POROSITY=[1, 1.0],
-    TORTUOSITY=[1, 1.0],
-    PERMEABILITY_TENSOR=['ISOTROPIC', 1.0],
-    PERMEABILITY_DISTRIBUTION='permeabilities.txt',
-    MASS_DISPERSION=[1, 0.1, 0.001],
-)
-model.msh.read_file('mdif.msh')
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.msp.add_block(
-    main_key='SOLID_PROPERTIES',
-    ELASTICITY=[
-        ['POISSION:'],
-        [0.2],
-        ['YOUNGS_MODULUS:'],
-        [1, 30000000.0],
-    ],
-)
-model.num.add_block(
-    main_key='NUMERICS',
-    PCS_TYPE='GROUNDWATER_FLOW',
-    LINEAR_SOLVER=[2, 1, 1e-12, 5000, 1.0, 1, 2],
-    ELE_GAUSS_POINTS=3,
-    ELE_MASS_LUMPING=0,
-    ELE_UPWINDING=0.0,
-)
-model.num.add_block(
-    main_key='NUMERICS',
-    PCS_TYPE='MASS_TRANSPORT',
-    LINEAR_SOLVER=[2, 6, 1e-12, 3000, 0.5, 1, 2],
-    ELE_GAUSS_POINTS=3,
-)
-model.out.add_block(
-    main_key='OUTPUT',
-    PCS_TYPE='MASS_TRANSPORT',
-    NOD_VALUES='ConsTracer',
-    GEO_TYPE=['POINT', 'POINT555'],
-    DAT_TYPE='TECPLOT',
-    TIM_TYPE=['STEPS', 1],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='GROUNDWATER_FLOW',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='MASS_TRANSPORT',
-    NUM_TYPE='NEW',
 )
 model.st.add_block(
     main_key='SOURCE_TERM',
@@ -2768,6 +2270,496 @@ model.st.add_block(
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['ANALYTICAL', 0, 7.4e-11, 0.3, 1.0, 0.008, 1869.0, 20000, 1, 1.0],
 )
+model.mmp.add_block(
+    main_key='MEDIUM_PROPERTIES',
+    NAME='FRACTURE',
+    GEOMETRY_DIMENSION=2,
+    GEOMETRY_AREA=['FILE', 'apertures.txt'],
+    POROSITY=[1, 1.0],
+    TORTUOSITY=[1, 1.0],
+    PERMEABILITY_TENSOR=['ISOTROPIC', 1.0],
+    PERMEABILITY_DISTRIBUTION='permeabilities.txt',
+    MASS_DISPERSION=[1, 0.1, 0.001],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.msp.add_block(
+    main_key='SOLID_PROPERTIES',
+    ELASTICITY=[
+        ['POISSION:'],
+        [0.2],
+        ['YOUNGS_MODULUS:'],
+        [1, 30000000.0],
+    ],
+)
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='WATER',
+    DAT_TYPE='WATER',
+    DENSITY=[1, 1000.0],
+    VISCOSITY=[1, 0.00089],
+    SPECIFIC_HEAT_CAPACITY=[1, 4680.0],
+    SPECIFIC_HEAT_CONDUCTIVITY=[1, 0.6],
+)
+model.mcp.add_block(
+    main_key='COMPONENT_PROPERTIES',
+    NAME='ConsTracer',
+    MOBILE=1,
+    DIFFUSION=[1, 1e-08],
+)
+model.num.add_block(
+    main_key='NUMERICS',
+    PCS_TYPE='GROUNDWATER_FLOW',
+    LINEAR_SOLVER=[2, 1, 1e-12, 5000, 1.0, 1, 2],
+    ELE_GAUSS_POINTS=3,
+    ELE_MASS_LUMPING=0,
+    ELE_UPWINDING=0.0,
+)
+model.num.add_block(
+    main_key='NUMERICS',
+    PCS_TYPE='MASS_TRANSPORT',
+    LINEAR_SOLVER=[2, 6, 1e-12, 3000, 0.5, 1, 2],
+    ELE_GAUSS_POINTS=3,
+)
 model.tim.add_block(
     main_key='TIME_STEPPING',
     PCS_TYPE='GROUNDWATER_FLOW',
@@ -2792,17 +2784,23 @@ model.tim.add_block(
         [1000, 100.0],
     ],
 )
-mpd_file = MPD(
-    file_name='permeabilities',
+model.out.add_block(
+    main_key='OUTPUT',
+    PCS_TYPE='MASS_TRANSPORT',
+    NOD_VALUES='ConsTracer',
+    GEO_TYPE=['POINT', 'POINT555'],
+    DAT_TYPE='TECPLOT',
+    TIM_TYPE=['STEPS', 1],
+)
+model.mpd.add(
+    name='permeabilities',
     file_ext='.txt',
 )
-mpd_file.read_file('permeabilities.txt')
-model.add_mpd(mpd_file)
-mpd_file = MPD(
-    file_name='apertures',
+model.mpd.read_file('permeabilities.txt')
+model.mpd.add(
+    name='apertures',
     file_ext='.txt',
 )
-mpd_file.read_file('apertures.txt')
-model.add_mpd(mpd_file)
+model.mpd.read_file('apertures.txt')
 model.write_input()
 model.run_model()

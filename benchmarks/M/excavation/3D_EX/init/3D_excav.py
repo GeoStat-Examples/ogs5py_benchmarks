@@ -6,6 +6,14 @@ model = OGS(
     task_id='3D_excav',
     output_dir='out',
 )
+model.msh.read_file('3D_excav.msh')
+model.gli.read_file('3D_excav.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='DEFORMATION',
+    RELOAD=[1, 1],
+)
+model.rfd.read_file('3D_excav.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='DEFORMATION',
@@ -41,7 +49,6 @@ model.bc.add_block(
     GEO_TYPE=['SURFACE', 'SURF_52'],
     DIS_TYPE=['CONSTANT', 0],
 )
-model.gli.read_file('3D_excav.gli')
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
     GEOMETRY_DIMENSION=3,
@@ -77,7 +84,6 @@ model.mmp.add_block(
     GEOMETRY_DIMENSION=3,
     POROSITY=[1, 0.0],
 )
-model.msh.read_file('3D_excav.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     DENSITY=[1, 2500.0],
@@ -147,6 +153,14 @@ model.num.add_block(
     LINEAR_SOLVER=[2, 0, 1e-12, 4000, 1.0, 1, 4],
     ELE_GAUSS_POINTS=2,
 )
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='DEFORMATION',
+    TIME_STEPS=[1, 10],
+    TIME_UNIT='DAY',
+    TIME_END=10,
+    TIME_START=0,
+)
 model.out.add_block(
     main_key='OUTPUT',
     NOD_VALUES=[
@@ -164,20 +178,6 @@ model.out.add_block(
     GEO_TYPE='DOMAIN',
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEPS', 1],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='DEFORMATION',
-    RELOAD=[1, 1],
-)
-model.rfd.read_file('3D_excav.rfd')
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='DEFORMATION',
-    TIME_STEPS=[1, 10],
-    TIME_UNIT='DAY',
-    TIME_END=10,
-    TIME_START=0,
 )
 model.write_input()
 model.run_model()

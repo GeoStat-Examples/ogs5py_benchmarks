@@ -12,6 +12,7 @@ from ogs5py import OGS
 
 
 def download_benchmarks(zip_dir):
+    """Downlaod the ogs5 benchmarks."""
     print("Downloading OGS5 Benchmarks")
     data_filename = "data.zip"
     data_url = "https://github.com/ufz/ogs5-benchmarks/archive/master.zip"
@@ -30,6 +31,7 @@ with open('active_names.csv') as csvfile:
         if row[0] == 'Linux-FEM':
             # get rid of the authors initials
             use_names.append("_".join(row[1].split("_")[1:]))
+
 
 # set directories
 out_dir = os.path.join(os.getcwd(), "benchmarks_FEM_active")
@@ -90,8 +92,8 @@ for name in use_names:
         log_str.append("FAIL..." + str(valerr))
     else:
         load_success = True
-        print("OK...loading successfull")
-        log_str.append("OK...loading successfull")
+        print("OK...loading successful")
+        log_str.append("OK...loading successful")
 
     if gen_scr and load_success:
         model.gen_script(

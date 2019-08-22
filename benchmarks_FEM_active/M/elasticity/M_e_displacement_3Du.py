@@ -6,6 +6,12 @@ model = OGS(
     task_id='M_e_displacement_3Du',
     output_dir='out',
 )
+model.msh.read_file('M_e_displacement_3Du.msh')
+model.gli.read_file('M_e_displacement_3Du.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='DEFORMATION',
+)
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='DEFORMATION',
@@ -34,14 +40,12 @@ model.bc.add_block(
     GEO_TYPE=['SURFACE', 'SURF_2'],
     DIS_TYPE=['CONSTANT', 0],
 )
-model.gli.read_file('M_e_displacement_3Du.gli')
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
     GEOMETRY_DIMENSION=3,
     GEOMETRY_AREA=1.0,
     POROSITY=[1, 0.0],
 )
-model.msh.read_file('M_e_displacement_3Du.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     DENSITY=[1, 0.0],
@@ -57,6 +61,13 @@ model.num.add_block(
     PCS_TYPE='DEFORMATION',
     LINEAR_SOLVER=[2, 0, 1e-10, 1000, 1.0, 100, 4],
     ELE_GAUSS_POINTS=3,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='DEFORMATION',
+    TIME_STEPS=[1, 1],
+    TIME_END=1.0,
+    TIME_START=0.0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -82,17 +93,6 @@ model.out.add_block(
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEPS', 1],
     AMPLIFIER=100.0,
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='DEFORMATION',
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='DEFORMATION',
-    TIME_STEPS=[1, 1],
-    TIME_END=1.0,
-    TIME_START=0.0,
 )
 model.write_input()
 model.run_model()

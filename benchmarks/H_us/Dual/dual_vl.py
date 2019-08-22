@@ -6,21 +6,29 @@ model = OGS(
     task_id='dual_vl',
     output_dir='out',
 )
-model.bc.add_block(
-    main_key='BOUNDARY_CONDITION',
-    PCS_TYPE='RICHARDS_FLOW',
-    PRIMARY_VARIABLE='PRESSURE1',
-    GEO_TYPE=['POINT', 'POINT1'],
-    DIS_TYPE=['CONSTANT', 98],
-)
-model.bc.add_block(
-    main_key='BOUNDARY_CONDITION',
-    PCS_TYPE='RICHARDS_FLOW',
-    PRIMARY_VARIABLE='PRESSURE2',
-    GEO_TYPE=['POINT', 'POINT1'],
-    DIS_TYPE=['CONSTANT', 98],
-)
+model.msh.read_file('dual_vl.msh')
 model.gli.read_file('dual_vl.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='RICHARDS_FLOW',
+    NUM_TYPE='NEW',
+    MEDIUM_TYPE=['CONTINUUM', 0.95],
+)
+model.rfd.read_file('dual_vl.rfd')
+model.bc.add_block(
+    main_key='BOUNDARY_CONDITION',
+    PCS_TYPE='RICHARDS_FLOW',
+    PRIMARY_VARIABLE='PRESSURE1',
+    GEO_TYPE=['POINT', 'POINT1'],
+    DIS_TYPE=['CONSTANT', 98],
+)
+model.bc.add_block(
+    main_key='BOUNDARY_CONDITION',
+    PCS_TYPE='RICHARDS_FLOW',
+    PRIMARY_VARIABLE='PRESSURE2',
+    GEO_TYPE=['POINT', 'POINT1'],
+    DIS_TYPE=['CONSTANT', 98],
+)
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='RICHARDS_FLOW',
@@ -34,13 +42,6 @@ model.ic.add_block(
     PRIMARY_VARIABLE='PRESSURE2',
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['GRADIENT', 0.6, -27440, 9800],
-)
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='LIQUID',
-    PCS_TYPE='PRESSURE1',
-    DENSITY=[1, 1000.0],
-    VISCOSITY=[1, 0.001],
 )
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
@@ -64,7 +65,6 @@ model.mmp.add_block(
     CAPILLARY_PRESSURE=[4, 5.6],
     TRANSFER_COEFFICIENT=500.0,
 )
-model.msh.read_file('dual_vl.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     DENSITY=[1, 2000.0],
@@ -88,6 +88,13 @@ model.msp.add_block(
         ['CONDUCTIVITY:'],
         [1, 0.00118799939],
     ],
+)
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='LIQUID',
+    PCS_TYPE='PRESSURE1',
+    DENSITY=[1, 1000.0],
+    VISCOSITY=[1, 0.001],
 )
 model.num.add_block(
     main_key='NUMERICS',
@@ -97,6 +104,18 @@ model.num.add_block(
     LINEAR_SOLVER=[3, 6, 1e-10, 1000, 1.0, 101, 4],
     NON_LINEAR_SOLVER=['PICARD', 0.001, 50, 0.0],
     ELE_GAUSS_POINTS=3,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='RICHARDS_FLOW',
+    TIME_STEPS=[
+        [1000, 1],
+        [1000, 1],
+        [100, 10.0],
+        [1000, 100.0],
+    ],
+    TIME_END=1900.0,
+    TIME_START=0.0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -124,25 +143,6 @@ model.out.add_block(
         [93600.0],
     ],
     DAT_TYPE='TECPLOT',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='RICHARDS_FLOW',
-    NUM_TYPE='NEW',
-    MEDIUM_TYPE=['CONTINUUM', 0.95],
-)
-model.rfd.read_file('dual_vl.rfd')
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='RICHARDS_FLOW',
-    TIME_STEPS=[
-        [1000, 1],
-        [1000, 1],
-        [100, 10.0],
-        [1000, 100.0],
-    ],
-    TIME_END=1900.0,
-    TIME_START=0.0,
 )
 model.write_input()
 model.run_model()

@@ -6,6 +6,18 @@ model = OGS(
     task_id='m_crp_bgr',
     output_dir='out',
 )
+model.msh.read_file('m_crp_bgr.msh')
+model.gli.read_file('m_crp_bgr.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='HEAT_TRANSPORT',
+    TIM_TYPE='STEADY',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='DEFORMATION',
+)
+model.rfd.read_file('m_crp_bgr.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='DEFORMATION',
@@ -13,7 +25,6 @@ model.bc.add_block(
     GEO_TYPE=['POLYLINE', 'PLY_2'],
     DIS_TYPE=['CONSTANT', 0],
 )
-model.gli.read_file('m_crp_bgr.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='HEAT_TRANSPORT',
@@ -21,14 +32,13 @@ model.ic.add_block(
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 100],
 )
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='LIQUID',
-    PCS_TYPE='PRESSURE1',
-    DENSITY=[1, 1000.0],
-    VISCOSITY=[1, 0.001],
-    SPECIFIC_HEAT_CAPACITY=[1, 1.0],
-    HEAT_CONDUCTIVITY=[1, 100.0],
+model.st.add_block(
+    main_key='SOURCE_TERM',
+    PCS_TYPE='DEFORMATION',
+    PRIMARY_VARIABLE='DISPLACEMENT_Y1',
+    GEO_TYPE=['POLYLINE', 'PLY_3'],
+    DIS_TYPE=['CONSTANT_NEUMANN', 1.0],
+    TIM_TYPE=['CURVE', 1],
 )
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
@@ -36,7 +46,6 @@ model.mmp.add_block(
     GEOMETRY_AREA=1.0,
     POROSITY=[1, 0.0],
 )
-model.msh.read_file('m_crp_bgr.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     DENSITY=[1, 0.0],
@@ -52,8 +61,16 @@ model.msp.add_block(
         ['YOUNGS_MODULUS'],
         [1, 25000.0],
     ],
-    STRESS_UNIT='MegaPascal',
     CREEP=[0.18, 5.0, 54000.0],
+)
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='LIQUID',
+    PCS_TYPE='PRESSURE1',
+    DENSITY=[1, 1000.0],
+    VISCOSITY=[1, 0.001],
+    SPECIFIC_HEAT_CAPACITY=[1, 1.0],
+    HEAT_CONDUCTIVITY=[1, 100.0],
 )
 model.num.add_block(
     main_key='NUMERICS',
@@ -67,6 +84,23 @@ model.num.add_block(
     PCS_TYPE='HEAT_TRANSPORT',
     LINEAR_SOLVER=[2, 0, 1e-10, 200, 1.0, 100, 4],
     NON_LINEAR_SOLVER=['PICARD', 0.001, 25, 0.0],
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='DEFORMATION',
+    TIME_STEPS=[1000, 0.1],
+    TIME_END=100,
+    TIME_START=0.0,
+    TIME_UNIT='DAY',
+    INDEPENDENT=0,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='HEAT_TRANSPORT',
+    TIME_STEPS=[1000, 0.1],
+    TIME_END=100,
+    TIME_START=0.0,
+    TIME_UNIT='DAY',
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -84,7 +118,7 @@ model.out.add_block(
     ],
     GEO_TYPE='DOMAIN',
     DAT_TYPE='TECPLOT',
-    TIM_TYPE=['STEPS', 1],
+    TIM_TYPE=['STEPS', 100],
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -104,40 +138,6 @@ model.out.add_block(
     GEO_TYPE=['POINT', 'POINT1'],
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEPS', 1],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='HEAT_TRANSPORT',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='DEFORMATION',
-)
-model.rfd.read_file('m_crp_bgr.rfd')
-model.st.add_block(
-    main_key='SOURCE_TERM',
-    PCS_TYPE='DEFORMATION',
-    PRIMARY_VARIABLE='DISPLACEMENT_Y1',
-    GEO_TYPE=['POLYLINE', 'PLY_3'],
-    DIS_TYPE=['CONSTANT_NEUMANN', 1.0],
-    TIM_TYPE=['CURVE', 1],
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='DEFORMATION',
-    TIME_STEPS=[1000, 0.1],
-    TIME_END=100,
-    TIME_START=0.0,
-    TIME_UNIT='DAY',
-    INDEPENDENT=0,
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='HEAT_TRANSPORT',
-    TIME_STEPS=[1000, 0.1],
-    TIME_END=100,
-    TIME_START=0.0,
-    TIME_UNIT='DAY',
 )
 model.write_input()
 model.run_model()

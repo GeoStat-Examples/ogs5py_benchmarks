@@ -6,6 +6,18 @@ model = OGS(
     task_id='tm_01_3Du',
     output_dir='out',
 )
+model.msh.read_file('tm_01_3Du.msh')
+model.gli.read_file('tm_01_3Du.gli')
+model.ddc.read_file('tm_01_3Du.ddc')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='HEAT_TRANSPORT',
+    NUM_TYPE='NEW',
+)
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='DEFORMATION',
+)
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='HEAT_TRANSPORT',
@@ -62,8 +74,6 @@ model.bc.add_block(
     GEO_TYPE=['SURFACE', 'bottom'],
     DIS_TYPE=['CONSTANT', 0],
 )
-model.ddc.read_file('tm_01_3Du.ddc')
-model.gli.read_file('tm_01_3Du.gli')
 model.ic.add_block(
     main_key='INITIAL_CONDITION',
     PCS_TYPE='HEAT_TRANSPORT',
@@ -71,21 +81,11 @@ model.ic.add_block(
     GEO_TYPE='DOMAIN',
     DIS_TYPE=['CONSTANT', 298],
 )
-model.mfp.add_block(
-    main_key='FLUID_PROPERTIES',
-    FLUID_TYPE='LIQUID',
-    PCS_TYPE='PRESSURE1',
-    DENSITY=[1, 2200.0],
-    VISCOSITY=[1, 0.001],
-    SPECIFIC_HEAT_CAPACITY=[1, 0.9],
-    HEAT_CONDUCTIVITY=[1, 5.5],
-)
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
     GEOMETRY_DIMENSION=3,
     GEOMETRY_AREA=1.0,
 )
-model.msh.read_file('tm_01_3Du.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     DENSITY=[1, -2200.0],
@@ -102,17 +102,40 @@ model.msp.add_block(
         [1, 1],
     ],
 )
+model.mfp.add_block(
+    main_key='FLUID_PROPERTIES',
+    FLUID_TYPE='LIQUID',
+    PCS_TYPE='PRESSURE1',
+    DENSITY=[1, 2200.0],
+    VISCOSITY=[1, 0.001],
+    SPECIFIC_HEAT_CAPACITY=[1, 0.9],
+    HEAT_CONDUCTIVITY=[1, 5.5],
+)
 model.num.add_block(
     main_key='NUMERICS',
     PCS_TYPE='HEAT_TRANSPORT',
-    LINEAR_SOLVER=[2, 1, 1e-12, 1000, 0.5, 100, 4],
+    LINEAR_SOLVER=[2, 1, 1e-20, 1000, 0.5, 100, 4],
     ELE_GAUSS_POINTS=3,
 )
 model.num.add_block(
     main_key='NUMERICS',
     PCS_TYPE='DEFORMATION',
-    LINEAR_SOLVER=[2, 1, 1e-12, 1000, 0.5, 100, 4],
+    LINEAR_SOLVER=[2, 1, 1e-20, 1000, 0.5, 100, 4],
     ELE_GAUSS_POINTS=3,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='HEAT_TRANSPORT',
+    TIME_STEPS=[1, 900],
+    TIME_END=360000,
+    TIME_START=0.0,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='DEFORMATION',
+    TIME_STEPS=[1, 900],
+    TIME_END=360000,
+    TIME_START=0.0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -126,29 +149,6 @@ model.out.add_block(
     GEO_TYPE='DOMAIN',
     DAT_TYPE='TECPLOT',
     TIM_TYPE=['STEPS', 1],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='HEAT_TRANSPORT',
-    NUM_TYPE='NEW',
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='DEFORMATION',
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='HEAT_TRANSPORT',
-    TIME_STEPS=[1, 900],
-    TIME_END=360000,
-    TIME_START=0.0,
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='DEFORMATION',
-    TIME_STEPS=[1, 900],
-    TIME_END=360000,
-    TIME_START=0.0,
 )
 model.write_input()
 model.run_model()

@@ -6,6 +6,13 @@ model = OGS(
     task_id='m_mises',
     output_dir='out',
 )
+model.msh.read_file('m_mises.msh')
+model.gli.read_file('m_mises.gli')
+model.pcs.add_block(
+    main_key='PROCESS',
+    PCS_TYPE='DEFORMATION',
+)
+model.rfd.read_file('m_mises.rfd')
 model.bc.add_block(
     main_key='BOUNDARY_CONDITION',
     PCS_TYPE='DEFORMATION',
@@ -20,14 +27,20 @@ model.bc.add_block(
     GEO_TYPE=['POLYLINE', 'BOTTOM'],
     DIS_TYPE=['CONSTANT', 0.0],
 )
-model.gli.read_file('m_mises.gli')
+model.st.add_block(
+    main_key='SOURCE_TERM',
+    PCS_TYPE='DEFORMATION',
+    PRIMARY_VARIABLE='DISPLACEMENT_Y1',
+    GEO_TYPE=['POLYLINE', 'TOP'],
+    DIS_TYPE=['CONSTANT_NEUMANN', 100.0],
+    TIM_TYPE=['CURVE', 1],
+)
 model.mmp.add_block(
     main_key='MEDIUM_PROPERTIES',
     GEOMETRY_DIMENSION=2,
     GEOMETRY_AREA=1.0,
     POROSITY=[1, 0.0],
 )
-model.msh.read_file('m_mises.msh')
 model.msp.add_block(
     main_key='SOLID_PROPERTIES',
     ELASTICITY=[
@@ -50,6 +63,13 @@ model.num.add_block(
     NON_LINEAR_SOLVER=['NEWTON', 0.0001, 1e-10, 100, 0.0],
     LINEAR_SOLVER=[2, 5, 1e-11, 10000, 1.0, 100, 4],
     ELE_GAUSS_POINTS=3,
+)
+model.tim.add_block(
+    main_key='TIME_STEPPING',
+    PCS_TYPE='DEFORMATION',
+    TIME_STEPS=[10, 10.0],
+    TIME_END=600.0,
+    TIME_START=0.0,
 )
 model.out.add_block(
     main_key='OUTPUT',
@@ -108,26 +128,6 @@ model.out.add_block(
         ['TECPLOT'],
         ['STEPS', 1],
     ],
-)
-model.pcs.add_block(
-    main_key='PROCESS',
-    PCS_TYPE='DEFORMATION',
-)
-model.rfd.read_file('m_mises.rfd')
-model.st.add_block(
-    main_key='SOURCE_TERM',
-    PCS_TYPE='DEFORMATION',
-    PRIMARY_VARIABLE='DISPLACEMENT_Y1',
-    GEO_TYPE=['POLYLINE', 'TOP'],
-    DIS_TYPE=['CONSTANT_NEUMANN', 100.0],
-    TIM_TYPE=['CURVE', 1],
-)
-model.tim.add_block(
-    main_key='TIME_STEPPING',
-    PCS_TYPE='DEFORMATION',
-    TIME_STEPS=[10, 10.0],
-    TIME_END=600.0,
-    TIME_START=0.0,
 )
 model.write_input()
 model.run_model()
